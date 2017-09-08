@@ -17,8 +17,8 @@ my %chapter_ord_masc = (
     'V' => 'piąty',
     'VI' => 'szósty',
     'VII' => 'siódmy',
-    'VIII' => 'siódmy',
-    'IX' => 'siódmy',
+    'VIII' => 'ósmy',
+    'IX' => 'dziewiąty',
     'X' => 'dziesiąty',
     'XI' => 'jedenasty',
     'XII' => 'dwunasty',
@@ -41,8 +41,8 @@ my %chapter_ord_fem = (
     'V' => 'piąta',
     'VI' => 'szósta',
     'VII' => 'siódma',
-    'VIII' => 'siódma',
-    'IX' => 'siódma',
+    'VIII' => 'ósma',
+    'IX' => 'dziewiąta',
     'X' => 'dziesiąta',
     'XI' => 'jedenasta',
     'XII' => 'dwunasta',
@@ -57,7 +57,7 @@ my %chapter_ord_fem = (
     'XXX' => 'trzydziesta',
 );
 
-my $units = "IX|IV|III|II|I|VIII|VII|VII";
+my $units = "IX|IV|III|II|I|VIII|VII|VI|V";
 my $tens = "XXX|XX|X";
 
 while(<STDIN>) {
@@ -65,42 +65,48 @@ while(<STDIN>) {
     s/\r//;
     next if(/^tłum\./);
     next if(/^ISBN/);
-    if(/^Rozdział ($tens)($units) *$/) {
-        my $tn = $1;
-        my $un = $2;
+    if(/^(Rozdział) ($tens)($units) *$/) {
+        my $what = $1;
+        my $tn = $2;
+        my $un = $3;
         if($tn eq 'X') {
-            print "Rozdział " . $chapter_ord_masc{$tn . $un} . "\n";
+            print "$what " . $chapter_ord_masc{$tn . $un} . "\n";
             next;
         } else {
-            print "Rozdział " . $chapter_ord_masc{$tn} . " " . $chapter_ord_masc{$un} . "\n";
+            print "$what " . $chapter_ord_masc{$tn} . " " . $chapter_ord_masc{$un} . "\n";
             next;
         }
-    } elsif(/^Rozdział ($tens) *$/) {
-        my $tn = $1;
-        print "Rozdział " . $chapter_ord_masc{$tn} . "\n";
+    } elsif(/^(Rozdział) ($tens) *$/) {
+        my $what = $1;
+        my $tn = $2;
+        print "$what " . $chapter_ord_masc{$tn} . "\n";
         next;
-    } elsif(/^Rozdział ($units) *$/) {
-        my $un = $1;
-        print "Rozdział " . $chapter_ord_masc{$un} . "\n";
+    } elsif(/^(Rozdział) ($units) *$/) {
+        my $what = $1;
+        my $un = $2;
+        print "$what " . $chapter_ord_masc{$un} . "\n";
         next;
     }
-    if(/^Pieśń ($tens)($units) *$/) {
-        my $tn = $1;
-        my $un = $2;
+    if(/^(Pieśń) ($tens)($units) *$/) {
+        my $what = $1;
+        my $tn = $2;
+        my $un = $3;
         if($tn eq 'X') {
-            print "Pieśń " . $chapter_ord_fem{$tn . $un} . "\n";
+            print "$what " . $chapter_ord_fem{$tn . $un} . "\n";
             next;
         } else {
-            print "Pieśń " . $chapter_ord_fem{$tn} . " " . $chapter_ord_fem{$un} . "\n";
+            print "$what " . $chapter_ord_fem{$tn} . " " . $chapter_ord_fem{$un} . "\n";
             next;
         }
-    } elsif(/^Pieśń ($tens) *$/) {
-        my $tn = $1;
-        print "Pieśń " . $chapter_ord_fem{$tn} . "\n";
+    } elsif(/^(Pieśń) ($tens) *$/) {
+        my $what = $1;
+        my $tn = $2;
+        print "$what " . $chapter_ord_fem{$tn} . "\n";
         next;
-    } elsif(/^Pieśń ($units) *$/) {
-        my $un = $1;
-        print "Pieśń " . $chapter_ord_fem{$un} . "\n";
+    } elsif(/^(Pieśń) ($units) *$/) {
+        my $what = $1;
+        my $un = $2;
+        print "$what " . $chapter_ord_fem{$un} . "\n";
         next;
     }
     if(/^-----$/) {
