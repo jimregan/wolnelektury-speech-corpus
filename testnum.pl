@@ -188,6 +188,8 @@ sub num2text {
         
         if($i != $#parts && $part eq 'jeden') {
             $part = $thisnumpart;
+        } elsif($part eq '') {
+        # Do nothing, else it'll be milion tysięcy etc.
         } elsif($j != 0) {
             if($part =~ / (dwa|trzy|cztery)$/ || $part =~ /^(dwa|trzy|cztery)$/) {
                 $part .= " " . $plurals{$thisnumpart}->[1];
@@ -214,3 +216,7 @@ print num2text("233") . "\n";
 print num2text("1233") . "\n";
 print num2text("12233") . "\n";
 print num2text("923233") . "\n";
+print num2text("1000") . "\n";
+print num2text("1000000") . "\n";
+print num2text("10000000") . "\n";
+print num2text("1013000000") . "\n";
