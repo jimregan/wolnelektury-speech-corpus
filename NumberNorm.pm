@@ -7,9 +7,9 @@ use utf8;
 use Exporter;
 
 our @ISA = qw/Exporter/;
-our @EXPORT = qw/num2text/;
+our @EXPORT = qw/num2text inflect_ordinal/;
 
-my %chapter_ord_masc = (
+my %roman_ord_masc = (
     'I' => 'pierwszy',
     'II' => 'drugi',
     'III' => 'trzeci',
@@ -113,6 +113,45 @@ my %ones = (
     8 => 'osiem',
     9 => 'dziewięć'
 );
+
+sub inflect_ordinal {
+    my $ordinal = $_[0];
+    my $gender = 'm';
+    if($#_ > 0) {
+        $gender = $_[1];
+    }
+    my $case = 'nom';
+    if($#_ > 1) {
+        $case = $_[2];
+    }
+    if($gender eq 'm') {
+        if($case eq 'nom') {
+            return $ordinal;
+        } elsif($case eq 'loc' || $case eq 'ins') {
+            return $ordinal . "m";
+        } elsif($case eq 'gen') {
+            $ordinal =~ s/y$/ego/;
+            $ordinal =~ s/i$/iego/;
+            return $ordinal;
+        }
+    } elsif($gender eq 'f') {
+        if($case eq 'nom') {
+            $ordinal =~ s/y$/a/;
+            $ordinal =~ s/gi$/ga/;
+            $ordinal =~ s/i$/ia/;
+            return $ordinal;
+        } elsif($case eq 'acc' || $case eq 'ins') {
+            $ordinal =~ s/y$/ą/;
+            $ordinal =~ s/gi$/gą/;
+            $ordinal =~ s/i$/ią/;
+            return $ordinal;
+        } elsif($case eq 'gen' || $case eq 'dat' || $case eq 'loc') {
+            $ordinal =~ s/y$/ej/;
+            $ordinal =~ s/i$/iej/;
+            return $ordinal;
+        }
+    }
+}
 
 sub num2text_hundreds {
     my $num = $_[0];
