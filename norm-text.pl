@@ -63,9 +63,9 @@ my $tens = "XXX|XX|X";
 while(<STDIN>) {
     chomp;
     s/\r//;
-    next if(/^tłum\./);
+    #next if(/^tłum\./);
     next if(/^ISBN/);
-    if(/^(Rozdział) ($tens)($units) *$/) {
+    if(/^(Rozdział|ROZDZIAŁ) ($tens)($units) *$/) {
         my $what = $1;
         my $tn = $2;
         my $un = $3;
@@ -76,12 +76,12 @@ while(<STDIN>) {
             print "$what " . $chapter_ord_masc{$tn} . " " . $chapter_ord_masc{$un} . "\n";
             next;
         }
-    } elsif(/^(Rozdział) ($tens) *$/) {
+    } elsif(/^(Rozdział|ROZDZIAŁ) ($tens) *$/) {
         my $what = $1;
         my $tn = $2;
         print "$what " . $chapter_ord_masc{$tn} . "\n";
         next;
-    } elsif(/^(Rozdział) ($units) *$/) {
+    } elsif(/^(Rozdział|ROZDZIAŁ) ($units) *$/) {
         my $what = $1;
         my $un = $2;
         print "$what " . $chapter_ord_masc{$un} . "\n";
