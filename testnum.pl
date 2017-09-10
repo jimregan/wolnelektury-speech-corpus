@@ -2,6 +2,7 @@
 use warnings;
 use strict;
 use utf8;
+use Data::Dumper;
 
 binmode(STDIN, ":utf8");
 binmode(STDOUT, ":utf8");
@@ -148,11 +149,68 @@ sub num2text_hundreds {
     }
 }
 
-print num2text_hundreds("1") . "\n";
-print num2text_hundreds("10") . "\n";
-print num2text_hundreds("20") . "\n";
-print num2text_hundreds("11") . "\n";
-print num2text_hundreds("21") . "\n";
-print num2text_hundreds("23") . "\n";
-print num2text_hundreds("123") . "\n";
-print num2text_hundreds("233") . "\n";
+my %numparts = (
+    0 => '',
+    1 => 'tysiąc',
+    2 => 'milion',
+    3 => 'miliard',
+);
+
+sub num2text {
+    my $num = $_[0];
+    my @parts = ();
+    
+    my $num_work = $num;
+    while(length($num_work) != 0) {
+        my $mod3 = length($num_work) % 3;
+        my $cont_len = ($mod3 != 0) ? $mod3 : 3;
+
+        my $start = substr($num_work, 0, $cont_len);
+        my $txtpart = ($start eq '000') ? '' : num2text_hundreds($start);
+        push @parts, $txtpart;
+        if(length($num_work) == 3) {
+            $num_work = '';
+        } else {
+            $num_work = substr($num_work, $cont_len);
+        }
+    }
+    my $out = '';
+    if($#parts == 0) {
+        return $parts[0];
+    }
+    for(my $i = 0; $i <= $#parts; $i++) {
+        my $j = $#parts - $i;
+        
+        my $part = $parts[$i];
+        my $space = ($out eq '') ? '' : ' ';
+
+        my $thisnumpart = $numparts{$j};
+        
+        if($i != $#parts && $part eq 'jeden') {
+            $part = $thisnumpart;
+        } elsif($j != 0) {
+            if($part =~ / (dwa|trzy|cztery)$/ || $part =~ /^(dwa|trzy|cztery)$/) {
+                $part .= " " . $plurals{$thisnumpart}->[1];
+            } else {
+                $part .= " " . $plurals{$thisnumpart}->[2];
+            }
+        }
+        if($part ne '') {
+            $out .= $space . $part;
+        }
+    }
+    return $out;
+}
+
+
+print num2text("1") . "\n";
+print num2text("10") . "\n";
+print num2text("20") . "\n";
+print num2text("11") . "\n";
+print num2text("21") . "\n";
+print num2text("23") . "\n";
+print num2text("123") . "\n";
+print num2text("233") . "\n";
+print num2text("1233") . "\n";
+print num2text("12233") . "\n";
+print num2text("923233") . "\n";
