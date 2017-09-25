@@ -64,6 +64,8 @@ while(<STDIN>) {
     chomp;
     s/\r//;
     #next if(/^tłum\./);
+    next if(/^tłum\. A\. W\./);
+    s/^tłum\./tłumaczenie/;
     next if(/^ISBN/);
     if(/^(Rozdział|ROZDZIAŁ) ($tens)($units) *$/) {
         my $what = $1;
