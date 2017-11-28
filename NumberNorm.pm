@@ -158,8 +158,8 @@ my %card_to_ord_years = (
 
 sub year_card_to_ord {
     my $num = $_[0];
-    my $gen = ($#_ > 0) ? $_[1] : 'm';
-    my $case = ($#_ > 1) ? $_[2] : 'nom';
+    my $gen = 'm';
+    my $case = ($#_ > 0) ? $_[1] : 'nom';
     if(exists $card_to_ord_years{$num}) {
         return inflect_ordinal($card_to_ord_years{$num}, $gen, $case);
     } else {
@@ -170,9 +170,8 @@ sub year_card_to_ord {
 sub expand_year {
     my $year = $_[0];
     my $text = num2text($year);
-    my $gen = ($#_ > 0) ? $_[1] : 'm';
-    my $case = ($#_ > 1) ? $_[2] : 'nom';
-    return join(" ", (map({year_card_to_ord}, split(/ /, $text));
+    my $case = ($#_ > 0) ? $_[1] : 'nom';
+    return join(" ", (map({year_card_to_ord($_, $case)}, split(/ /, $text));
 }
 
 sub inflect_ordinal {
