@@ -171,7 +171,9 @@ sub expand_year {
     my $year = $_[0];
     my $text = num2text($year);
     my $case = ($#_ > 0) ? $_[1] : 'nom';
-    return join(" ", (map({year_card_to_ord($_, $case)}, split(/ /, $text));
+    my @parts = split/ /, $text;
+    my @ords = map {local $_ = $_; year_card_to_ord($_, $case)} @parts;
+    return join(" ", @ords);
 }
 
 sub inflect_ordinal {
