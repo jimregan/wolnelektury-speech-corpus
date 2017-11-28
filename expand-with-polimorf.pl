@@ -59,7 +59,7 @@ while(<POLIMORF>) {
     } else {
         $tag = $tags;
     }
-    if(exists $tograb{"$lem:$tag"}) {
+    if(exists $tograb{"$lem:$tag"} && !exists $dict{$a[0]}) {
         print "$a[0]\n";
     }
 }
