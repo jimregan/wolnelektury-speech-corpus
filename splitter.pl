@@ -6,10 +6,16 @@ use utf8;
 
 my %patterns = (
     'wyspa-skarbow.txt' => '^Część ',
+    'sztuka-kochania.txt' => '^Księga ',
 );
 
 my %firstpatterns = (
     'wyspa-skarbow.txt' => '^Część pierwsza',
+    'sztuka-kochania.txt' => '^Księga pierwsza',
+);
+
+my %skipfirst = (
+    'sztuka-kochania.txt' => 1,
 );
 
 my $filename = $ARGV[0];
@@ -30,13 +36,12 @@ if(!exists $patterns{$fn}) {
     $pattern = $patterns{$fn};
 }
 my $firstpattern = '';
-if(!exists $firstpatterns{$fn}) {
-    die "No pattern for filename $fn";
-} else {
+if(exists $firstpatterns{$fn}) {
     $firstpattern = $firstpatterns{$fn};
 }
 
 my $count = 1;
+my $printing = (exists $skipfirst{$fn}) ? 0 : 1;
 my $outfile = $filename . "-" . sprintf("%02d.txt", $count);
 open(OUTPUT, '>', $outfile);
 binmode(OUTPUT, ":utf8");
@@ -44,6 +49,7 @@ binmode(OUTPUT, ":utf8");
 while(<INPUT>) {
     chomp;
     if(/$pattern/) {
+        $printing = 1;
         if($_ !~ /$firstpattern/) {
             $count++;
             $outfile = $filename . "-" . sprintf("%02d.txt", $count);
@@ -55,6 +61,8 @@ while(<INPUT>) {
             print OUTPUT "$_\n";
         }
     } else {
-        print OUTPUT "$_\n";
+        if($printing) {
+            print OUTPUT "$_\n";
+        }
     }
 }
