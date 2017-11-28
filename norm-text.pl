@@ -1,4 +1,5 @@
 #!/usr/bin/perl
+# Broad first pass to strip metadata footers, and do some broad expansions.
 
 use warnings;
 use strict;
@@ -66,6 +67,7 @@ while(<STDIN>) {
     #next if(/^tłum\./);
     next if(/^tłum\. A\. W\./);
     s/^tłum\./tłumaczenie/;
+    s/^E\. T\. A\. Hoffmann$/Ernst Teodor Amadeusz Hoffmann/;
     next if(/^ISBN/);
     if(/^(Rozdział|ROZDZIAŁ) ($tens)($units) *$/) {
         my $what = $1;
