@@ -40,8 +40,8 @@ for my $file(keys %norms) {
         if(/($regex)/) {
             my $m = $1;
             my $in = quotemeta($m);
-            my $out = $curnorms{$m};
-            s/$in/$out/;
+            my $out = encode('utf-8', $curnorms{$m});
+            s/$m/$out/;
         }
         print OUT "$_\n";
     }
