@@ -7,7 +7,7 @@ use utf8;
 use Exporter;
 
 our @ISA = qw/Exporter/;
-our @EXPORT = qw/num2text inflect_ordinal/;
+our @EXPORT = qw/num2text inflect_ordinal expand_year/;
 
 my %roman_ord_masc = (
     'I' => 'pierwszy',
@@ -126,7 +126,7 @@ my %ones_ord = (
     9 => 'dziewiąty'
 );
 
-my %card_to_ord = (
+my %card_to_ord_years = (
     'jeden' => 'pierwszy',
     'dwa' => 'drugi',
     'trzy' => 'trzeci',
@@ -155,6 +155,25 @@ my %card_to_ord = (
     'osiemdziesiąt' => 'osiemdziesiąty',
     'dziewięćdziesiąt' => 'dziewięćdziesiąty'
 );
+
+sub year_card_to_ord {
+    my $num = $_[0];
+    my $gen = ($#_ > 0) ? $_[1] : 'm';
+    my $case = ($#_ > 1) ? $_[2] : 'nom';
+    if(exists $card_to_ord_years{$num}) {
+        return inflect_ordinal($card_to_ord_years{$num}, $gen, $case);
+    } else {
+        return $num;
+    }
+}
+
+sub expand_year {
+    my $year = $_[0];
+    my $text = num2text($year);
+    my $gen = ($#_ > 0) ? $_[1] : 'm';
+    my $case = ($#_ > 1) ? $_[2] : 'nom';
+    return join(" ", (map({year_card_to_ord}, split(/ /, $text));
+}
 
 sub inflect_ordinal {
     my $ordinal = $_[0];
