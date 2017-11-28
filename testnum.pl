@@ -10,7 +10,7 @@ binmode(STDERR, ":utf8");
 
 use File::Basename;
 use lib dirname (__FILE__);
-use NumberNorm qw/num2text inflect_ordinal/;
+use NumberNorm qw/num2text inflect_ordinal expand_year/;
 
 print num2text("1") . "\n";
 print num2text("10") . "\n";
@@ -41,3 +41,7 @@ print inflect_ordinal("trzeci", "m", "gen") . "\n";
 print inflect_ordinal("trzeci", "f", "nom") . "\n";
 print inflect_ordinal("trzeci", "f", "gen") . "\n";
 print inflect_ordinal("trzeci", "m", "loc") . "\n";
+
+print expand_year("1825") . "\n";
+print expand_year("1825", "gen") . "\n";
+print expand_year("1836", "gen") . "\n";
