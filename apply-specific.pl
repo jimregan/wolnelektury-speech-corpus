@@ -12,6 +12,7 @@ binmode(STDOUT, ":utf8");
 binmode(STDIN, ":utf8");
 
 open(NORMS, '<', 'specific-norms.tsv');
+binmode(NORMS, ":utf8");
 
 my %norms = ();
 
@@ -37,10 +38,10 @@ for my $file(keys %norms) {
     my $regex = join("|", map{quotemeta} @keys);
     while(<IN>) {
         chomp;
-        if(/($regex)/) {
+        while(/($regex)/) {
             my $m = $1;
             my $in = quotemeta($m);
-            my $out = encode('utf-8', $curnorms{$m});
+            my $out = $curnorms{$m};
             s/$m/$out/;
         }
         print OUT "$_\n";
