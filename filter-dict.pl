@@ -17,6 +17,19 @@ while(<DICT>) {
 	my @a = split/\t/;
 	$dict{$a[0]} = 1;
 }
+close(DICT);
+
+if($#ARGV > 1) {
+  open(DICT, '<', $ARGV[1]);
+  binmode(DICT, ":utf8");
+  while(<DICT>) {
+	  chomp;
+	  next if(/^$/);
+	  my @a = split/\t/;
+	  $dict{lc($a[0])} = 1;
+  }
+  close(DICT);
+}
 
 while(<STDIN>) {
 	chomp;
