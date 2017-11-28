@@ -73,7 +73,7 @@ my %teens_ord = (
     15 => 'piętnasty',
     16 => 'szesnasty',
     17 => 'siedemnasty',
-    19 => 'osiemnasty',
+    18 => 'osiemnasty',
     19 => 'dziewiętnasty',
 );
 
@@ -86,7 +86,7 @@ my %teens = (
     15 => 'piętnaście',
     16 => 'szesnaście',
     17 => 'siedemnaście',
-    19 => 'osiemnaście',
+    18 => 'osiemnaście',
     19 => 'dziewiętnaście',
 );
 
@@ -112,6 +112,48 @@ my %ones = (
     7 => 'siedem',
     8 => 'osiem',
     9 => 'dziewięć'
+);
+
+my %ones_ord = (
+    1 => 'pierwszy',
+    2 => 'drugi',
+    3 => 'trzeci',
+    4 => 'czwarty',
+    5 => 'piąty',
+    6 => 'szósty',
+    7 => 'siódmy',
+    8 => 'ósmy',
+    9 => 'dziewiąty'
+);
+
+my %card_to_ord = (
+    'jeden' => 'pierwszy',
+    'dwa' => 'drugi',
+    'trzy' => 'trzeci',
+    'cztery' => 'czwarty',
+    'pięć' => 'piąty',
+    'sześć' => 'szósty',
+    'siedem' => 'siódmy',
+    'osiem' => 'ósmy',
+    'dziewięć' => 'dziewiąty',
+    'dziesięć' => 'dziesiąty',
+    'jedenaście' => 'jedenasty',
+    'dwanaście' => 'dwunasty',
+    'trzynaście' => 'trzynasty',
+    'czternaście' => 'czternasty',
+    'piętnaście' => 'piętnasty',
+    'szesnaście' => 'szesnasty',
+    'siedemnaście' => 'siedemnasty',
+    'osiemnaście' => 'osiemnasty',
+    'dziewiętnaście' => 'dziewiętnasty',
+    'dwadzieścia' => 'dwudziesty',
+    'trzydzieści' => 'trzydziesty',
+    'czterdzieści' => 'czterdziesty',
+    'pięćdziesiąt' => 'pięćdziesiąty',
+    'sześćdziesiąt' => 'sześćdziesiąty',
+    'siedemdziesiąt' => 'siedemdziesiąty',
+    'osiemdziesiąt' => 'osiemdziesiąty',
+    'dziewięćdziesiąt' => 'dziewięćdziesiąty'
 );
 
 sub inflect_ordinal {
