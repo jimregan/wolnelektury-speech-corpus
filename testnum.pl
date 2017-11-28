@@ -44,4 +44,4 @@ print inflect_ordinal("trzeci", "m", "loc") . "\n";
 
 print expand_year("1825") . "\n";
 print expand_year("1825", "gen") . "\n";
-print expand_year("1826", "gen") . "\n";
+print expand_year("1836", "gen") . "\n";
