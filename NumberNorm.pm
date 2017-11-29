@@ -1,7 +1,7 @@
 package NumberNorm;
 
 use warnings;
-use strict;
+#use strict;
 use utf8;
 
 use Exporter;
@@ -168,6 +168,7 @@ sub year_card_to_ord {
 }
 
 sub expand_year {
+    shift if($_[0] eq 'expand_year');
     my $year = $_[0];
     my $text = num2text($year);
     my $case = ($#_ > 0) ? $_[1] : 'nom';
@@ -259,7 +260,7 @@ my %numparts = (
 );
 
 sub num2text {
-    my $num = $_[0];
+    my $num = ($#_ == 1 && $_[0] eq 'num2text') ? $_[1] : $_[0];
     my @parts = ();
     
     my $num_work = $num;
@@ -305,5 +306,8 @@ sub num2text {
     }
     return $out;
 }
-
+unless (caller) {
+    binmode(STDOUT, ":utf8");
+    print shift->(@ARGV) . "\n";
+}
 1;
