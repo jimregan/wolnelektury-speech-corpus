@@ -15,6 +15,8 @@ while(<>) {
 	chomp;
 	s/\r//;
 	next if(/^$/);
-	print $splitter->split($_);
-	print "\n";
+	my $firstpass = $splitter->split($_);
+	$firstpass =~ s/— ([A-ZĄĆĘÓŁŚŻŹ])/\n— $1/g;
+	$firstpass =~ s/… ([A-ZĄĆĘÓŁŚŻŹ])/…\n$1/g;
+	print "$firstpass\n";
 }
