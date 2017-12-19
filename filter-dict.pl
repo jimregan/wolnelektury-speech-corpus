@@ -19,7 +19,7 @@ while(<DICT>) {
 }
 close(DICT);
 
-if($#ARGV > 1) {
+if($#ARGV >= 1) {
   open(DICT, '<', $ARGV[1]);
   binmode(DICT, ":utf8");
   while(<DICT>) {
