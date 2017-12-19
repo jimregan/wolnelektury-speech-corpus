@@ -11,9 +11,13 @@ binmode(INPUT, ":utf8");
 
 my %skip_until = (
     'balzac-komedia-ludzka-bank-nucingena.txt' => '^Wiadomo, jak cienkie',
+    'fortepian-chopina.txt' => 'Byłem u Ciebie w te dni przedostatnie',
+    'boy-swietoszek.txt' => 'Wstęp',
 );
 my %head_replace = (
     'balzac-komedia-ludzka-bank-nucingena.txt' => "Bank Nucingena\nHonoré Balzac\ntłumaczenie Tadeusz Boy-Żeleński",
+    'fortepian-chopina.txt' => "Cyprian Kamil Norwid\nFortepian Chopina",
+    'boy-swietoszek.txt' => '',
 );
 
 if (!exists $skip_until{$ARGV[0]}) {
