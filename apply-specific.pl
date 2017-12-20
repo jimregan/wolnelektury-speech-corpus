@@ -7,11 +7,12 @@ use warnings;
 use strict;
 use utf8;
 use Encode;
+use FindBin qw($RealBin);
 
 binmode(STDOUT, ":utf8");
 binmode(STDIN, ":utf8");
 
-open(NORMS, '<', 'specific-norms.tsv');
+open(NORMS, '<', "$RealBin/specific-norms.tsv");
 binmode(NORMS, ":utf8");
 
 my %norms = ();

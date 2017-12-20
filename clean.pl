@@ -9,6 +9,7 @@ binmode(STDOUT, ":utf8");
 
 while(<>) {
 	chomp;
+	s/\*\-\*/ /g;
 	s/[,;:!?—…„”\.«»\*\(\)]//g;
 	s/^ //;
 	s/ $//;

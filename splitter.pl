@@ -7,11 +7,13 @@ use utf8;
 my %patterns = (
     'wyspa-skarbow.txt' => '^Część ',
     'sztuka-kochania.txt' => '^Księga ',
+    'robinson-crusoe.txt' => 'Rozdział ',
 );
 
 my %firstpatterns = (
     'wyspa-skarbow.txt' => '^Część pierwsza',
     'sztuka-kochania.txt' => '^Księga pierwsza',
+    'robinson-crusoe.txt' => 'Rozdział pierwszy',
 );
 
 my %skipfirst = (
