@@ -8,12 +8,14 @@ my %patterns = (
     'wyspa-skarbow.txt' => '^Część ',
     'sztuka-kochania.txt' => '^Księga ',
     'robinson-crusoe.txt' => 'Rozdział ',
+    'wspomnienia-niebieskiego-mundurka.txt' => 'rozdział ',
 );
 
 my %firstpatterns = (
     'wyspa-skarbow.txt' => '^Część pierwsza',
     'sztuka-kochania.txt' => '^Księga pierwsza',
     'robinson-crusoe.txt' => 'Rozdział pierwszy',
+    'wspomnienia-niebieskiego-mundurka.txt' => 'DUMMY_TO_SKIP',
 );
 
 my %skipfirst = (
@@ -53,6 +55,11 @@ if(exists $firstpatterns{$fn}) {
 
 my $count = 1;
 my $printing = (exists $skipfirst{$fn}) ? 0 : 1;
+if($filename eq 'wspomnienia-niebieskiego-mundurka.txt') {
+    $count = 0;
+    $printing = 1;
+}
+
 my $outfile = $filename . "-" . sprintf("%02d.txt", $count);
 open(OUTPUT, '>', $outfile);
 binmode(OUTPUT, ":utf8");
