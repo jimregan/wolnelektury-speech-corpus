@@ -14,12 +14,16 @@ my %skip_until = (
     'fortepian-chopina.txt' => 'Byłem u Ciebie w te dni przedostatnie',
     'boy-swietoszek.txt' => 'Wstęp',
     'wspomnienia-niebieskiego-mundurka.txt' => 'Ze starego kufra',
+    'powiesci-fantastyczne-wybor-narzeczonej.txt' => 'Rozdział pierwszy',
+
+
 );
 my %head_replace = (
     'balzac-komedia-ludzka-bank-nucingena.txt' => "Bank Nucingena\nHonoré Balzac\ntłumaczenie Tadeusz Boy-Żeleński",
     'fortepian-chopina.txt' => "Cyprian Kamil Norwid\nFortepian Chopina",
     'boy-swietoszek.txt' => '',
     'wspomnienia-niebieskiego-mundurka.txt' => "Wiktor Gomulicki\nWspomnienia niebieskiego mundurka\nPamięci Bronisława Dembowskiego, towarzysza lat chłopięcych, urodzonego w Pułtusku, zmarłego w Zakopanem, te wspomnienia dni razem przeżytych poświęcam\nWiktor Gomulicki",
+    'powiesci-fantastyczne-wybor-narzeczonej.txt' => "Ernst Teodor Amadeusz Hoffmann\nPowieści fantastyczne\ntłumaczenie Antoni Lange\nWybór narzeczonej\nhistoria, w której zachodzą rozmaite\nnieprawdopodobne przygody",
 );
 
 if (!exists $skip_until{$ARGV[0]}) {

@@ -9,6 +9,7 @@ my %patterns = (
     'sztuka-kochania.txt' => '^Księga ',
     'robinson-crusoe.txt' => 'Rozdział ',
     'wspomnienia-niebieskiego-mundurka.txt' => 'rozdział ',
+    'powiesci-fantastyczne-wybor-narzeczonej.txt' => 'Rozdział ',
 );
 
 my %firstpatterns = (
@@ -16,6 +17,7 @@ my %firstpatterns = (
     'sztuka-kochania.txt' => '^Księga pierwsza',
     'robinson-crusoe.txt' => 'Rozdział pierwszy',
     'wspomnienia-niebieskiego-mundurka.txt' => 'DUMMY_TO_SKIP',
+    'powiesci-fantastyczne-wybor-narzeczonej.txt' => 'Rozdział pierwszy',
 );
 
 my %skipfirst = (
