@@ -20,6 +20,15 @@ my %skipfirst = (
     'sztuka-kochania.txt' => 1,
 );
 
+my %split_by_starts = (
+    'balzac-komedia-ludzka-corka-ewy.txt' => [
+        'Córka Ewy',
+        'Pani de Vandenesse, która widocznie',
+        'Były to niebezpieczne krewniaczki',
+        'Tak więc, podczas gdy biedna Ewa,'
+    ],
+);
+
 my $filename = $ARGV[0];
 open(INPUT, '<', $filename) or die "$!";
 binmode(INPUT, ":utf8");
