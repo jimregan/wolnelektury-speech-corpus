@@ -15,7 +15,7 @@ while(<DICT>) {
 	chomp;
 	next if(/^$/);
 	my @a = split/\t/;
-	$dict{$a[0]} = 1;
+	$dict{lc($a[0])} = 1;
 }
 close(DICT);
 
