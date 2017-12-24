@@ -3,6 +3,7 @@
 use warnings;
 use strict;
 use utf8;
+use Data::Dumper;
 
 my %patterns = (
     'wyspa-skarbow.txt' => '^Część ',
@@ -31,6 +32,28 @@ my %split_by_starts = (
         'Były to niebezpieczne krewniaczki',
         'Tak więc, podczas gdy biedna Ewa,'
     ],
+    'golem.txt' => [
+        'Sen',
+        'Dzień',
+        'J\\.',
+        'Praga',
+        'Poncz',
+        'Noc',
+        'Jawa',
+        'Śnieg',
+        'Strach',
+        'Światło',
+        'Nędza',
+        'Trwoga',
+        'Pęd',
+        'Kobieta',
+        'Podstęp',
+        'Męka',
+        'Maj',
+        'Księżyc',
+        'Wolny',
+        'Kres'
+    ],
 );
 
 my $filename = $ARGV[0];
@@ -45,14 +68,21 @@ if($filename =~ /.*\/([^\/]*)$/) {
 }
 
 my $pattern = '';
-if(!exists $patterns{$fn}) {
-    die "No pattern for filename $fn";
-} else {
-    $pattern = $patterns{$fn};
-}
+my @patterns = ();
 my $firstpattern = '';
 if(exists $firstpatterns{$fn}) {
     $firstpattern = $firstpatterns{$fn};
+}
+
+if(exists $patterns{$fn}) {
+    $pattern = $patterns{$fn};
+} elsif(exists $split_by_starts{$fn}) {
+    @patterns = @{ $split_by_starts{$fn} };
+    my $pat = shift @patterns;
+    $pattern = '^'. $pat;
+    $firstpattern = $pattern;
+} else {
+    die "No pattern for filename $fn";
 }
 
 my $count = 1;
@@ -79,6 +109,10 @@ while(<INPUT>) {
             print OUTPUT "$_\n";
         } else {
             print OUTPUT "$_\n";
+        }
+        if(exists $split_by_starts{$fn} && @patterns) {
+            my $pat = shift @patterns;
+            $pattern = '^'. $pat;
         }
     } else {
         if($printing) {
