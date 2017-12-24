@@ -27,10 +27,15 @@ my %skipfirst = (
 
 my %split_by_starts = (
     'balzac-komedia-ludzka-corka-ewy.txt' => [
+        'Honoré',
         'Córka Ewy',
         'Pani de Vandenesse, która widocznie',
         'Były to niebezpieczne krewniaczki',
-        'Tak więc, podczas gdy biedna Ewa,'
+        'Tak więc, podczas gdy biedna Ewa,',
+        'Paryż jest jedynym miejscem na świecie,',
+        'Fantazja Raula zespoliła niby',
+        'Pani Feliksowa de Vandenesse była trzy razy w lasku',
+        'W październiku zapadł termin weksli;'
     ],
     'golem.txt' => [
         'Sen',
@@ -55,6 +60,15 @@ my %split_by_starts = (
         'Kres'
     ],
 );
+
+my %split_inner = (
+    'balzac-komedia-ludzka-corka-ewy.txt' => [
+        'Paryż jest jedynym miejscem na świecie,',
+        'Fantazja Raula zespoliła niby',
+    ],
+);
+
+my %inner_split = ();
 
 my $filename = $ARGV[0];
 open(INPUT, '<', $filename) or die "$!";
@@ -85,6 +99,13 @@ if(exists $patterns{$fn}) {
     die "No pattern for filename $fn";
 }
 
+if(exists $split_inner{$fn}) {
+    for my $si (@{ $split_inner{$fn} }) {
+        $inner_split{$si} = 1;
+    }
+}
+my $is_inner = 0;
+
 my $count = 1;
 my $printing = (exists $skipfirst{$fn}) ? 0 : 1;
 if($filename eq 'wspomnienia-niebieskiego-mundurka.txt') {
@@ -99,8 +120,25 @@ binmode(OUTPUT, ":utf8");
 while(<INPUT>) {
     chomp;
     if(/$pattern/) {
+        my $point = $-[0];
         $printing = 1;
-        if($_ !~ /$firstpattern/) {
+        if($is_inner) {
+            my $pat = shift @patterns;
+            if(exists $inner_split{$pat}) {
+                $is_inner = 1;
+                $pattern = $pat;
+            } else {
+                $is_inner = 0;
+                $pattern = '^'. $pat;
+            }
+            print OUTPUT substr $_, 0, $point - 1 . "\n";
+            $count++;
+            $outfile = $filename . "-" . sprintf("%02d.txt", $count);
+            close OUTPUT;
+            open(OUTPUT, '>', $outfile);
+            binmode(OUTPUT, ":utf8");
+            print OUTPUT substr $_, $point . "\n";
+        } elsif($_ !~ /$firstpattern/) {
             $count++;
             $outfile = $filename . "-" . sprintf("%02d.txt", $count);
             close OUTPUT;
@@ -112,7 +150,13 @@ while(<INPUT>) {
         }
         if(exists $split_by_starts{$fn} && @patterns) {
             my $pat = shift @patterns;
-            $pattern = '^'. $pat;
+            if(exists $inner_split{$pat}) {
+                $is_inner = 1;
+                $pattern = $pat;
+            } else {
+                $is_inner = 0;
+                $pattern = '^'. $pat;
+            }
         }
     } else {
         if($printing) {
