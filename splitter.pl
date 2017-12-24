@@ -27,7 +27,7 @@ my %skipfirst = (
 
 my %split_by_starts = (
     'balzac-komedia-ludzka-corka-ewy.txt' => [
-        'Honoré',
+        'Od tłumacza',
         'Córka Ewy',
         'Pani de Vandenesse, która widocznie',
         'Były to niebezpieczne krewniaczki',
@@ -123,14 +123,6 @@ while(<INPUT>) {
         my $point = $-[0];
         $printing = 1;
         if($is_inner) {
-            my $pat = shift @patterns;
-            if(exists $inner_split{$pat}) {
-                $is_inner = 1;
-                $pattern = $pat;
-            } else {
-                $is_inner = 0;
-                $pattern = '^'. $pat;
-            }
             print OUTPUT substr $_, 0, $point - 1 . "\n";
             $count++;
             $outfile = $filename . "-" . sprintf("%02d.txt", $count);
