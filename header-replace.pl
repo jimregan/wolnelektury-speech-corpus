@@ -15,8 +15,6 @@ my %skip_until = (
     'boy-swietoszek.txt' => 'Wstęp',
     'wspomnienia-niebieskiego-mundurka.txt' => 'Ze starego kufra',
     'powiesci-fantastyczne-wybor-narzeczonej.txt' => 'Rozdział pierwszy',
-
-
 );
 my %head_replace = (
     'balzac-komedia-ludzka-bank-nucingena.txt' => "Bank Nucingena\nHonoré Balzac\ntłumaczenie Tadeusz Boy-Żeleński",
