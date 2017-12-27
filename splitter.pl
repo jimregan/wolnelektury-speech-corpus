@@ -12,6 +12,7 @@ my %patterns = (
     'wspomnienia-niebieskiego-mundurka.txt' => 'rozdział ',
     'powiesci-fantastyczne-wybor-narzeczonej.txt' => 'Rozdział ',
     'kim.txt' => 'Rozdział ',
+    'przygody-tomka-sawyera.txt' => 'Rozdział ',
 );
 
 my %firstpatterns = (
@@ -21,6 +22,7 @@ my %firstpatterns = (
     'wspomnienia-niebieskiego-mundurka.txt' => 'DUMMY_TO_SKIP',
     'powiesci-fantastyczne-wybor-narzeczonej.txt' => 'Rozdział pierwszy',
     'kim.txt' => 'DUMMY_TO_SKIP',
+    'przygody-tomka-sawyera.txt' => 'Rozdział pierwszy',
 );
 
 my %skipfirst = (
