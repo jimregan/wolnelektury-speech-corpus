@@ -11,6 +11,7 @@ my %patterns = (
     'robinson-crusoe.txt' => 'Rozdział ',
     'wspomnienia-niebieskiego-mundurka.txt' => 'rozdział ',
     'powiesci-fantastyczne-wybor-narzeczonej.txt' => 'Rozdział ',
+    'kim.txt' => 'Rozdział ',
 );
 
 my %firstpatterns = (
@@ -19,6 +20,7 @@ my %firstpatterns = (
     'robinson-crusoe.txt' => 'Rozdział pierwszy',
     'wspomnienia-niebieskiego-mundurka.txt' => 'DUMMY_TO_SKIP',
     'powiesci-fantastyczne-wybor-narzeczonej.txt' => 'Rozdział pierwszy',
+    'kim.txt' => 'DUMMY_TO_SKIP',
 );
 
 my %skipfirst = (
@@ -108,7 +110,7 @@ my $is_inner = 0;
 
 my $count = 1;
 my $printing = (exists $skipfirst{$fn}) ? 0 : 1;
-if($filename eq 'wspomnienia-niebieskiego-mundurka.txt') {
+if($filename eq 'wspomnienia-niebieskiego-mundurka.txt' || $filename eq 'kim.txt') {
     $count = 0;
     $printing = 1;
 }
