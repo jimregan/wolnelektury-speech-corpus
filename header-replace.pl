@@ -15,8 +15,7 @@ my %skip_until = (
     'boy-swietoszek.txt' => 'Wstęp',
     'wspomnienia-niebieskiego-mundurka.txt' => 'Ze starego kufra',
     'powiesci-fantastyczne-wybor-narzeczonej.txt' => 'Rozdział pierwszy',
-
-
+    'gloria-victis-gloria-victis.txt' => '(r. 1863)',
 );
 my %head_replace = (
     'balzac-komedia-ludzka-bank-nucingena.txt' => "Bank Nucingena\nHonoré Balzac\ntłumaczenie Tadeusz Boy-Żeleński",
@@ -24,6 +23,7 @@ my %head_replace = (
     'boy-swietoszek.txt' => '',
     'wspomnienia-niebieskiego-mundurka.txt' => "Wiktor Gomulicki\nWspomnienia niebieskiego mundurka\nPamięci Bronisława Dembowskiego, towarzysza lat chłopięcych, urodzonego w Pułtusku, zmarłego w Zakopanem, te wspomnienia dni razem przeżytych poświęcam\nWiktor Gomulicki",
     'powiesci-fantastyczne-wybor-narzeczonej.txt' => "Ernst Teodor Amadeusz Hoffmann\nPowieści fantastyczne\ntłumaczenie Antoni Lange\nWybór narzeczonej\nhistoria, w której zachodzą rozmaite\nnieprawdopodobne przygody",
+    'gloria-victis-gloria-victis.txt' => "Eliza Orzeszkowa\nGloria victis",
 );
 
 if (!exists $skip_until{$ARGV[0]}) {
