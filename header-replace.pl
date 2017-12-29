@@ -17,6 +17,7 @@ my %skip_until = (
     'powiesci-fantastyczne-wybor-narzeczonej.txt' => 'Rozdział pierwszy',
     'gloria-victis-gloria-victis.txt' => '(r. 1863)',
     'przygody-tomka-sawyera.txt' => 'Wstęp',
+    'ballada-z-tamtej-strony-imieniny.txt' => 'imieniny',
 );
 my %head_replace = (
     'balzac-komedia-ludzka-bank-nucingena.txt' => "Bank Nucingena\nHonoré Balzac\ntłumaczenie Tadeusz Boy-Żeleński",
@@ -26,6 +27,7 @@ my %head_replace = (
     'powiesci-fantastyczne-wybor-narzeczonej.txt' => "Ernst Teodor Amadeusz Hoffmann\nPowieści fantastyczne\ntłumaczenie Antoni Lange\nWybór narzeczonej\nhistoria, w której zachodzą rozmaite\nnieprawdopodobne przygody",
     'gloria-victis-gloria-victis.txt' => "Eliza Orzeszkowa\nGloria victis",
     'przygody-tomka-sawyera.txt' => "Mark Twain\nPrzygody Tomka Sawyera",
+    'ballada-z-tamtej-strony-imieniny.txt' => "Józef Czechowicz\nimieniny",
 );
 
 if (!exists $skip_until{$ARGV[0]}) {
