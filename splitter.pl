@@ -62,6 +62,13 @@ my %split_by_starts = (
         '',
         '',
     ],
+    'przedwiosnie.txt' => [
+        'Stefan Żeromski',
+        'Część pierwsza',
+        'Część druga',
+        'Część trzecia',
+        'Pewnego dnia rano Lulek',
+    ],
     'golem.txt' => [
         'Sen',
         'Dzień',
@@ -133,7 +140,7 @@ my $is_inner = 0;
 
 my $count = 1;
 my $printing = (exists $skipfirst{$fn}) ? 0 : 1;
-if($filename eq 'wspomnienia-niebieskiego-mundurka.txt' || $filename eq 'kim.txt') {
+if($filename eq 'wspomnienia-niebieskiego-mundurka.txt' || $filename eq 'kim.txt' || $filename eq 'przedwiosnie.txt') {
     $count = 0;
     $printing = 1;
 }
