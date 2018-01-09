@@ -12,6 +12,7 @@ my %patterns = (
     'wspomnienia-niebieskiego-mundurka.txt' => 'rozdział ',
     'powiesci-fantastyczne-wybor-narzeczonej.txt' => 'Rozdział ',
     'kim.txt' => 'Rozdział ',
+    'przygody-tomka-sawyera.txt' => 'Rozdział ',
 );
 
 my %firstpatterns = (
@@ -21,6 +22,7 @@ my %firstpatterns = (
     'wspomnienia-niebieskiego-mundurka.txt' => 'DUMMY_TO_SKIP',
     'powiesci-fantastyczne-wybor-narzeczonej.txt' => 'Rozdział pierwszy',
     'kim.txt' => 'DUMMY_TO_SKIP',
+    'przygody-tomka-sawyera.txt' => 'Rozdział pierwszy',
 );
 
 my %skipfirst = (
@@ -38,6 +40,34 @@ my %split_by_starts = (
         'Fantazja Raula zespoliła niby',
         'Pani Feliksowa de Vandenesse była trzy razy w lasku',
         'W październiku zapadł termin weksli;'
+    ],
+    'boy-swietoszek.txt' => [
+        'Wstęp',
+        'II. Wystawienie Świętoszka',
+        'III. Podłoże „Świętoszka”.',
+        'IV. Stosunek Moliera',
+        'V. Zdobycze komedii Moliera.',
+        'VI. Doniosłość',
+        'VII. Źródła „Świętoszka”.',
+        'VIII. Artyzm Świętoszka.',
+        'Przedmowa',
+        'Pierwsze podanie',
+        'Drugie podanie',
+        'Trzecie podanie',
+        '',
+        '',
+        '',
+        '',
+        '',
+        '',
+        '',
+    ],
+    'przedwiosnie.txt' => [
+        'Stefan Żeromski',
+        'Część pierwsza',
+        'Część druga',
+        'Część trzecia',
+        'Pewnego dnia rano Lulek',
     ],
     'golem.txt' => [
         'Sen',
@@ -110,7 +140,7 @@ my $is_inner = 0;
 
 my $count = 1;
 my $printing = (exists $skipfirst{$fn}) ? 0 : 1;
-if($filename eq 'wspomnienia-niebieskiego-mundurka.txt' || $filename eq 'kim.txt') {
+if($filename eq 'wspomnienia-niebieskiego-mundurka.txt' || $filename eq 'kim.txt' || $filename eq 'przedwiosnie.txt') {
     $count = 0;
     $printing = 1;
 }
