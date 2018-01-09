@@ -21,6 +21,7 @@ my $lineno = 0;
 while(<NORMS>) {
     chomp;
     $lineno++;
+    next if(/^#/);
     my @line = split/\t/;
     if ($#line != 2) {
         print "Incorrect number of fields at line $lineno: $_\n";
