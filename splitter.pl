@@ -22,6 +22,7 @@ my %firstpatterns = (
     'wspomnienia-niebieskiego-mundurka.txt' => 'DUMMY_TO_SKIP',
     'powiesci-fantastyczne-wybor-narzeczonej.txt' => 'Rozdział pierwszy',
     'kim.txt' => 'DUMMY_TO_SKIP',
+    'piesn-o-rolandzie.txt' => 'DUMMY_TO_SKIP',
     'przygody-tomka-sawyera.txt' => 'Rozdział pierwszy',
 );
 
@@ -91,7 +92,7 @@ my %split_by_starts = (
         'Wolny',
         'Kres'
     ],
-    'piesn-o-rolandzie' => [
+    'piesn-o-rolandzie.txt' => [
         "I",
         "II",
         "III",
@@ -374,6 +375,7 @@ my %split_by_starts = (
         "CCLXXX",
         "CCLXXXI",
         "CCLXXXII",
+        "CCLXXXIH",
         "CCLXXXIV",
         "CCLXXXV",
         "CCLXXXVI",
