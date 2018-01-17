@@ -22,8 +22,8 @@ my %firstpatterns = (
     'wspomnienia-niebieskiego-mundurka.txt' => 'DUMMY_TO_SKIP',
     'powiesci-fantastyczne-wybor-narzeczonej.txt' => 'Rozdział pierwszy',
     'kim.txt' => 'DUMMY_TO_SKIP',
-    'piesn-o-rolandzie.txt' => 'DUMMY_TO_SKIP',
     'przygody-tomka-sawyera.txt' => 'Rozdział pierwszy',
+    'piesn-o-rolandzie.txt' => '^I',
 );
 
 my %skipfirst = (
@@ -456,7 +456,7 @@ while(<INPUT>) {
             open(OUTPUT, '>', $outfile);
             binmode(OUTPUT, ":utf8");
             print OUTPUT substr $_, $point . "\n";
-        } elsif($_ !~ /$firstpattern/) {
+        } elsif($pattern ne $firstpattern || $_ !~ /$firstpattern/) {
             $count++;
             $outfile = $filename . "-" . sprintf("%02d.txt", $count);
             close OUTPUT;
