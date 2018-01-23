@@ -1,59 +1,3 @@
-ffmpeg version 2.8.11-0ubuntu0.16.04.1 Copyright (c) 2000-2017 the FFmpeg developers
-  built with gcc 5.4.0 (Ubuntu 5.4.0-6ubuntu1~16.04.4) 20160609
-  configuration: --prefix=/usr --extra-version=0ubuntu0.16.04.1 --build-suffix=-ffmpeg --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --cc=cc --cxx=g++ --enable-gpl --enable-shared --disable-stripping --disable-decoder=libopenjpeg --disable-decoder=libschroedinger --enable-avresample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libmodplug --enable-libmp3lame --enable-libopenjpeg --enable-libopus --enable-libpulse --enable-librtmp --enable-libschroedinger --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxvid --enable-libzvbi --enable-openal --enable-opengl --enable-x11grab --enable-libdc1394 --enable-libiec61883 --enable-libzmq --enable-frei0r --enable-libx264 --enable-libopencv
-  libavutil      54. 31.100 / 54. 31.100
-  libavcodec     56. 60.100 / 56. 60.100
-  libavformat    56. 40.101 / 56. 40.101
-  libavdevice    56.  4.100 / 56.  4.100
-  libavfilter     5. 40.101 /  5. 40.101
-  libavresample   2.  1.  0 /  2.  1.  0
-  libswscale      3.  1.101 /  3.  1.101
-  libswresample   1.  2.101 /  1.  2.101
-  libpostproc    53.  3.100 / 53.  3.100
-[mp3 @ 0xb1b8c0] Unknown attached picture mimetype: ('image/png', None), skipping.
-[mp3 @ 0xb1b8c0] Skipping 0 bytes of junk at 17522.
-Input #0, mp3, from 'tadeusz-boy-zelenski-slowka-zbior-piosenki-zielonego-balonika-nowa-piesn-o-rydzu.mp3':
-  Metadata:
-    title           : Tadeusz Boy-Żeleński, "Słówka" (zbiór), Nowa pieśń o rydzu.
-    artist          : Wiktor Korzeniewski
-    album           : Wolne Lektury
-    genre           : 0
-    encoder         : Lavf53.21.1
-    URL             : http://wolnelektury.pl/katalog/lektura/slowka-zbior
-    date            : 2013
-    CONDUCTOR       : Adam Bień
-    PROJECT         : Słuchamy Polski finansowanego przez Ministerstwo Kultury i Dziedzictwa Narodowego
-    TCD             : 75617262132
-    performer       : Adam Bień
-    album_artist    : Fundacja Nowoczesna Polska
-    copyright       : 2013 Fundacja Nowoczesna Polska. Licensed to the public under http://creativecommons.org/licenses/by-sa/3.0/deed.pl verify at http://wolnelektury.pl/katalog/lektura/slowka-zbior-piosenki-zb-nowa-piesn-o-rydzu
-    encoded_by      : Adam Bień
-    publisher       : Fundacja Nowoczesna Polska
-  Duration: 00:03:34.26, start: 0.000000, bitrate: 64 kb/s
-    Stream #0:0: Audio: mp3, 44100 Hz, mono, s16p, 64 kb/s
-Output #0, null, to 'pipe:':
-  Metadata:
-    title           : Tadeusz Boy-Żeleński, "Słówka" (zbiór), Nowa pieśń o rydzu.
-    artist          : Wiktor Korzeniewski
-    album           : Wolne Lektury
-    genre           : 0
-    URL             : http://wolnelektury.pl/katalog/lektura/slowka-zbior
-    date            : 2013
-    CONDUCTOR       : Adam Bień
-    PROJECT         : Słuchamy Polski finansowanego przez Ministerstwo Kultury i Dziedzictwa Narodowego
-    TCD             : 75617262132
-    performer       : Adam Bień
-    album_artist    : Fundacja Nowoczesna Polska
-    copyright       : 2013 Fundacja Nowoczesna Polska. Licensed to the public under http://creativecommons.org/licenses/by-sa/3.0/deed.pl verify at http://wolnelektury.pl/katalog/lektura/slowka-zbior-piosenki-zb-nowa-piesn-o-rydzu
-    encoded_by      : Adam Bień
-    publisher       : Fundacja Nowoczesna Polska
-    encoder         : Lavf56.40.101
-    Stream #0:0: Audio: pcm_s16le, 44100 Hz, mono, s16, 705 kb/s
-    Metadata:
-      encoder         : Lavc56.60.100 pcm_s16le
-Stream mapping:
-  Stream #0:0 -> #0:0 (mp3 (native) -> pcm_s16le (native))
-Press [q] to stop, [?] for help
 [silencedetect @ 0xb2eac0] silence_start: 8.12041
 [silencedetect @ 0xb2eac0] silence_end: 9.16898 | silence_duration: 1.04857
 [silencedetect @ 0xb2eac0] silence_start: 9.5049
@@ -110,5 +54,3 @@ Press [q] to stop, [?] for help
 [silencedetect @ 0xb2eac0] silence_end: 183.301 | silence_duration: 0.578367
 [silencedetect @ 0xb2eac0] silence_start: 202.027
 [silencedetect @ 0xb2eac0] silence_end: 202.658 | silence_duration: 0.630612
-size=N/A time=00:03:34.25 bitrate=N/A    
-video:0kB audio:18454kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown

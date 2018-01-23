@@ -1,56 +1,3 @@
-ffmpeg version 2.8.11-0ubuntu0.16.04.1 Copyright (c) 2000-2017 the FFmpeg developers
-  built with gcc 5.4.0 (Ubuntu 5.4.0-6ubuntu1~16.04.4) 20160609
-  configuration: --prefix=/usr --extra-version=0ubuntu0.16.04.1 --build-suffix=-ffmpeg --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --cc=cc --cxx=g++ --enable-gpl --enable-shared --disable-stripping --disable-decoder=libopenjpeg --disable-decoder=libschroedinger --enable-avresample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libmodplug --enable-libmp3lame --enable-libopenjpeg --enable-libopus --enable-libpulse --enable-librtmp --enable-libschroedinger --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxvid --enable-libzvbi --enable-openal --enable-opengl --enable-x11grab --enable-libdc1394 --enable-libiec61883 --enable-libzmq --enable-frei0r --enable-libx264 --enable-libopencv
-  libavutil      54. 31.100 / 54. 31.100
-  libavcodec     56. 60.100 / 56. 60.100
-  libavformat    56. 40.101 / 56. 40.101
-  libavdevice    56.  4.100 / 56.  4.100
-  libavfilter     5. 40.101 /  5. 40.101
-  libavresample   2.  1.  0 /  2.  1.  0
-  libswscale      3.  1.101 /  3.  1.101
-  libswresample   1.  2.101 /  1.  2.101
-  libpostproc    53.  3.100 / 53.  3.100
-[mp3 @ 0x26b58c0] Unknown attached picture mimetype: ('image/png', None), skipping.
-[mp3 @ 0x26b58c0] Skipping 0 bytes of junk at 17522.
-Input #0, mp3, from 'ignacy-krasicki-satyry-czesc-pierwsza-zona-modna.mp3':
-  Metadata:
-    title           : Ignacy Krasicki, Satyry, Część pierwsza, Żona modna
-    artist          : Jakub Falkowski
-    album           : Wolne Lektury
-    encoder         : Lavf53.21.0
-    genre           : Speech
-    originator_reference: VqjzwdWqnwhaaaGk
-    date            : 2008-09-25
-    performer       : Jakub Kowalski
-    album_artist    : Fundacja Nowoczesna Polska
-    time_reference  : 0
-    copyright       : 2008 Fundacja Nowoczesna Polska. Licensed to the public under http://creativecommons.org/licenses/by-sa/3.0/deed.pl verify at http://wolnelektury.pl/katalog/lektura/satyry-czesc-pierwsza-zona-modna/
-    creation_time   : 0018-05-24
-    encoded_by      : Pro Tools
-    publisher       : Fundacja Nowoczesna Polska
-  Duration: 00:10:55.39, start: 0.000000, bitrate: 64 kb/s
-    Stream #0:0: Audio: mp3, 44100 Hz, mono, s16p, 64 kb/s
-Output #0, null, to 'pipe:':
-  Metadata:
-    title           : Ignacy Krasicki, Satyry, Część pierwsza, Żona modna
-    artist          : Jakub Falkowski
-    album           : Wolne Lektury
-    publisher       : Fundacja Nowoczesna Polska
-    genre           : Speech
-    originator_reference: VqjzwdWqnwhaaaGk
-    date            : 2008-09-25
-    performer       : Jakub Kowalski
-    album_artist    : Fundacja Nowoczesna Polska
-    time_reference  : 0
-    copyright       : 2008 Fundacja Nowoczesna Polska. Licensed to the public under http://creativecommons.org/licenses/by-sa/3.0/deed.pl verify at http://wolnelektury.pl/katalog/lektura/satyry-czesc-pierwsza-zona-modna/
-    encoded_by      : Pro Tools
-    encoder         : Lavf56.40.101
-    Stream #0:0: Audio: pcm_s16le, 44100 Hz, mono, s16, 705 kb/s
-    Metadata:
-      encoder         : Lavc56.60.100 pcm_s16le
-Stream mapping:
-  Stream #0:0 -> #0:0 (mp3 (native) -> pcm_s16le (native))
-Press [q] to stop, [?] for help
 [silencedetect @ 0x26c8a80] silence_start: -0.00367347
 [silencedetect @ 0x26c8a80] silence_end: 0.600816 | silence_duration: 0.60449
 [silencedetect @ 0x26c8a80] silence_start: 1.77265
@@ -336,5 +283,3 @@ size=N/A time=00:09:15.75 bitrate=N/A    [silencedetect @ 0x26c8a80] silence_st
 [silencedetect @ 0x26c8a80] silence_start: 650.341
 [silencedetect @ 0x26c8a80] silence_end: 650.867 | silence_duration: 0.526122
 [silencedetect @ 0x26c8a80] silence_start: 652.822
-size=N/A time=00:10:55.38 bitrate=N/A    
-video:0kB audio:56450kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown

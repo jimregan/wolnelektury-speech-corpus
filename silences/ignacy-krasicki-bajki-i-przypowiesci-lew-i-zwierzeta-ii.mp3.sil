@@ -1,50 +1,3 @@
-ffmpeg version 2.8.11-0ubuntu0.16.04.1 Copyright (c) 2000-2017 the FFmpeg developers
-  built with gcc 5.4.0 (Ubuntu 5.4.0-6ubuntu1~16.04.4) 20160609
-  configuration: --prefix=/usr --extra-version=0ubuntu0.16.04.1 --build-suffix=-ffmpeg --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --cc=cc --cxx=g++ --enable-gpl --enable-shared --disable-stripping --disable-decoder=libopenjpeg --disable-decoder=libschroedinger --enable-avresample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libmodplug --enable-libmp3lame --enable-libopenjpeg --enable-libopus --enable-libpulse --enable-librtmp --enable-libschroedinger --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxvid --enable-libzvbi --enable-openal --enable-opengl --enable-x11grab --enable-libdc1394 --enable-libiec61883 --enable-libzmq --enable-frei0r --enable-libx264 --enable-libopencv
-  libavutil      54. 31.100 / 54. 31.100
-  libavcodec     56. 60.100 / 56. 60.100
-  libavformat    56. 40.101 / 56. 40.101
-  libavdevice    56.  4.100 / 56.  4.100
-  libavfilter     5. 40.101 /  5. 40.101
-  libavresample   2.  1.  0 /  2.  1.  0
-  libswscale      3.  1.101 /  3.  1.101
-  libswresample   1.  2.101 /  1.  2.101
-  libpostproc    53.  3.100 / 53.  3.100
-[mp3 @ 0x20b88c0] Skipping 0 bytes of junk at 4096.
-[mp3 @ 0x20b88c0] Estimating duration from bitrate, this may be inaccurate
-Input #0, mp3, from 'ignacy-krasicki-bajki-i-przypowiesci-lew-i-zwierzeta-ii.mp3':
-  Metadata:
-    TSS             : Logic Pro 8.0.2
-    TKE             : C
-    genre           : Speech
-    TBP             : 120
-    title           : Ignacy Krasicki, "Lew i zwierzęta"
-    album           : Wolne Lektury
-    artist          : Bartosz Mazur
-    performer       : Marcin Cisło
-    TPB             : Fundacja Nowoczesna Polska
-    date            : 2010-10-28 23:34
-  Duration: 00:01:12.99, start: 0.000000, bitrate: 320 kb/s
-    Stream #0:0: Audio: mp3, 44100 Hz, stereo, s16p, 320 kb/s
-Output #0, null, to 'pipe:':
-  Metadata:
-    TSS             : Logic Pro 8.0.2
-    TKE             : C
-    genre           : Speech
-    TBP             : 120
-    title           : Ignacy Krasicki, "Lew i zwierzęta"
-    album           : Wolne Lektury
-    artist          : Bartosz Mazur
-    performer       : Marcin Cisło
-    TPB             : Fundacja Nowoczesna Polska
-    date            : 2010-10-28 23:34
-    encoder         : Lavf56.40.101
-    Stream #0:0: Audio: pcm_s16le, 44100 Hz, stereo, s16, 1411 kb/s
-    Metadata:
-      encoder         : Lavc56.60.100 pcm_s16le
-Stream mapping:
-  Stream #0:0 -> #0:0 (mp3 (native) -> pcm_s16le (native))
-Press [q] to stop, [?] for help
 [silencedetect @ 0x20cae00] silence_start: 1.53755
 [silencedetect @ 0x20cae00] silence_end: 2.89959 | silence_duration: 1.36204
 [silencedetect @ 0x20cae00] silence_start: 4.3849
@@ -82,5 +35,3 @@ Press [q] to stop, [?] for help
 [silencedetect @ 0x20cae00] silence_start: 70.0567
 [silencedetect @ 0x20cae00] silence_end: 70.6612 | silence_duration: 0.60449
 [silencedetect @ 0x20cae00] silence_start: 72.3294
-size=N/A time=00:01:12.98 bitrate=N/A    
-video:0kB audio:12573kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
