@@ -1,0 +1,146 @@
+ffmpeg version 2.8.11-0ubuntu0.16.04.1 Copyright (c) 2000-2017 the FFmpeg developers
+  built with gcc 5.4.0 (Ubuntu 5.4.0-6ubuntu1~16.04.4) 20160609
+  configuration: --prefix=/usr --extra-version=0ubuntu0.16.04.1 --build-suffix=-ffmpeg --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --cc=cc --cxx=g++ --enable-gpl --enable-shared --disable-stripping --disable-decoder=libopenjpeg --disable-decoder=libschroedinger --enable-avresample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libmodplug --enable-libmp3lame --enable-libopenjpeg --enable-libopus --enable-libpulse --enable-librtmp --enable-libschroedinger --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxvid --enable-libzvbi --enable-openal --enable-opengl --enable-x11grab --enable-libdc1394 --enable-libiec61883 --enable-libzmq --enable-frei0r --enable-libx264 --enable-libopencv
+  libavutil      54. 31.100 / 54. 31.100
+  libavcodec     56. 60.100 / 56. 60.100
+  libavformat    56. 40.101 / 56. 40.101
+  libavdevice    56.  4.100 / 56.  4.100
+  libavfilter     5. 40.101 /  5. 40.101
+  libavresample   2.  1.  0 /  2.  1.  0
+  libswscale      3.  1.101 /  3.  1.101
+  libswresample   1.  2.101 /  1.  2.101
+  libpostproc    53.  3.100 / 53.  3.100
+[mp3 @ 0x239b8c0] Unknown attached picture mimetype: ('image/png', None), skipping.
+[mp3 @ 0x239b8c0] Skipping 0 bytes of junk at 17522.
+Input #0, mp3, from 'jan-kochanowski-fragmenta-albo-pozostale-pisma-piesn-czego-chcesz-od-nas-panie-za-twe-hojne-dary.mp3':
+  Metadata:
+    title           : Jan Kochanowski, Fragmenta albo pozostałe pisma, Pieśń (Czego chcesz od nas, Panie, za Twe hojne dary?)
+    artist          : Krzysztof Skonieczny
+    album           : Wolne Lektury
+    encoder         : Lavf53.21.0
+    genre           : Speech
+    originator_reference: w3KKfcW3bWaaaaGk
+    date            : 2008-10-30
+    performer       : Iwo Vedral
+    album_artist    : Fundacja Nowoczesna Polska
+    time_reference  : 410362533
+    copyright       : 2008 Fundacja Nowoczesna Polska. Licensed to the public under http://creativecommons.org/licenses/by-sa/3.0/deed.pl verify at http://wolnelektury.pl/katalog/lektura/fragmenta-piesn-czego-chcesz-od-nas-panie/
+    creation_time   : 0015-00-02
+    encoded_by      : Pro Tools
+    publisher       : Fundacja Nowoczesna Polska
+  Duration: 00:02:25.16, start: 0.000000, bitrate: 64 kb/s
+    Stream #0:0: Audio: mp3, 44100 Hz, mono, s16p, 64 kb/s
+Output #0, null, to 'pipe:':
+  Metadata:
+    title           : Jan Kochanowski, Fragmenta albo pozostałe pisma, Pieśń (Czego chcesz od nas, Panie, za Twe hojne dary?)
+    artist          : Krzysztof Skonieczny
+    album           : Wolne Lektury
+    publisher       : Fundacja Nowoczesna Polska
+    genre           : Speech
+    originator_reference: w3KKfcW3bWaaaaGk
+    date            : 2008-10-30
+    performer       : Iwo Vedral
+    album_artist    : Fundacja Nowoczesna Polska
+    time_reference  : 410362533
+    copyright       : 2008 Fundacja Nowoczesna Polska. Licensed to the public under http://creativecommons.org/licenses/by-sa/3.0/deed.pl verify at http://wolnelektury.pl/katalog/lektura/fragmenta-piesn-czego-chcesz-od-nas-panie/
+    encoded_by      : Pro Tools
+    encoder         : Lavf56.40.101
+    Stream #0:0: Audio: pcm_s16le, 44100 Hz, mono, s16, 705 kb/s
+    Metadata:
+      encoder         : Lavc56.60.100 pcm_s16le
+Stream mapping:
+  Stream #0:0 -> #0:0 (mp3 (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+[silencedetect @ 0x23aeac0] silence_start: -0.00367347
+[silencedetect @ 0x23aeac0] silence_end: 0.600816 | silence_duration: 0.60449
+[silencedetect @ 0x23aeac0] silence_start: 1.69429
+[silencedetect @ 0x23aeac0] silence_end: 2.69061 | silence_duration: 0.996327
+[silencedetect @ 0x23aeac0] silence_start: 3.28776
+[silencedetect @ 0x23aeac0] silence_end: 4.20571 | silence_duration: 0.917959
+[silencedetect @ 0x23aeac0] silence_start: 5.06408
+[silencedetect @ 0x23aeac0] silence_end: 6.03429 | silence_duration: 0.970204
+[silencedetect @ 0x23aeac0] silence_start: 7.4151
+[silencedetect @ 0x23aeac0] silence_end: 12.1731 | silence_duration: 4.75796
+[silencedetect @ 0x23aeac0] silence_start: 13.5278
+[silencedetect @ 0x23aeac0] silence_end: 15.0204 | silence_duration: 1.49265
+[silencedetect @ 0x23aeac0] silence_start: 16.2445
+[silencedetect @ 0x23aeac0] silence_end: 18.338 | silence_duration: 2.09347
+[silencedetect @ 0x23aeac0] silence_start: 20.8943
+[silencedetect @ 0x23aeac0] silence_end: 23.0661 | silence_duration: 2.17184
+[silencedetect @ 0x23aeac0] silence_start: 24.2902
+[silencedetect @ 0x23aeac0] silence_end: 25.7829 | silence_duration: 1.49265
+[silencedetect @ 0x23aeac0] silence_start: 27.1637
+[silencedetect @ 0x23aeac0] silence_end: 28.4735 | silence_duration: 1.3098
+[silencedetect @ 0x23aeac0] silence_start: 30.4812
+[silencedetect @ 0x23aeac0] silence_end: 31.3469 | silence_duration: 0.865714
+[silencedetect @ 0x23aeac0] silence_start: 32.5449
+[silencedetect @ 0x23aeac0] silence_end: 33.7241 | silence_duration: 1.17918
+[silencedetect @ 0x23aeac0] silence_start: 35.4184
+[silencedetect @ 0x23aeac0] silence_end: 36.6759 | silence_duration: 1.25755
+[silencedetect @ 0x23aeac0] silence_start: 37.8478
+[silencedetect @ 0x23aeac0] silence_end: 39.1576 | silence_duration: 1.3098
+[silencedetect @ 0x23aeac0] silence_start: 41.949
+[silencedetect @ 0x23aeac0] silence_end: 43.4416 | silence_duration: 1.49265
+[silencedetect @ 0x23aeac0] silence_start: 46.5727
+[silencedetect @ 0x23aeac0] silence_end: 47.4906 | silence_duration: 0.917959
+[silencedetect @ 0x23aeac0] silence_start: 49.9686
+[silencedetect @ 0x23aeac0] silence_end: 51.7747 | silence_duration: 1.80612
+[silencedetect @ 0x23aeac0] silence_start: 53.4429
+[silencedetect @ 0x23aeac0] silence_end: 54.5959 | silence_duration: 1.15306
+[silencedetect @ 0x23aeac0] silence_start: 55.8722
+[silencedetect @ 0x23aeac0] silence_end: 56.8686 | silence_duration: 0.996327
+[silencedetect @ 0x23aeac0] silence_start: 59.9212
+[silencedetect @ 0x23aeac0] silence_end: 61.3355 | silence_duration: 1.41429
+[silencedetect @ 0x23aeac0] silence_start: 64.0224
+[silencedetect @ 0x23aeac0] silence_end: 64.8882 | silence_duration: 0.865714
+[silencedetect @ 0x23aeac0] silence_start: 66.5302
+[silencedetect @ 0x23aeac0] silence_end: 67.2914 | silence_duration: 0.761224
+[silencedetect @ 0x23aeac0] silence_start: 68.6722
+[silencedetect @ 0x23aeac0] silence_end: 70.1127 | silence_duration: 1.44041
+[silencedetect @ 0x23aeac0] silence_start: 72.9302
+[silencedetect @ 0x23aeac0] silence_end: 73.8482 | silence_duration: 0.917959
+[silencedetect @ 0x23aeac0] silence_start: 75.2029
+[silencedetect @ 0x23aeac0] silence_end: 76.1469 | silence_duration: 0.944082
+[silencedetect @ 0x23aeac0] silence_start: 77.3188
+[silencedetect @ 0x23aeac0] silence_end: 78.9943 | silence_duration: 1.67551
+[silencedetect @ 0x23aeac0] silence_start: 81.9947
+[silencedetect @ 0x23aeac0] silence_end: 83.0955 | silence_duration: 1.10082
+[silencedetect @ 0x23aeac0] silence_start: 84.9204
+[silencedetect @ 0x23aeac0] silence_end: 85.8906 | silence_duration: 0.970204
+[silencedetect @ 0x23aeac0] silence_start: 87.1931
+[silencedetect @ 0x23aeac0] silence_end: 88.9731 | silence_duration: 1.78
+[silencedetect @ 0x23aeac0] silence_start: 91.9735
+[silencedetect @ 0x23aeac0] silence_end: 92.8914 | silence_duration: 0.917959
+[silencedetect @ 0x23aeac0] silence_start: 95.7873
+[silencedetect @ 0x23aeac0] silence_end: 96.7576 | silence_duration: 0.970204
+[silencedetect @ 0x23aeac0] silence_start: 98.478
+[silencedetect @ 0x23aeac0] silence_end: 99.1608 | silence_duration: 0.682857
+[silencedetect @ 0x23aeac0] silence_start: 100.254
+[silencedetect @ 0x23aeac0] silence_end: 101.224 | silence_duration: 0.970204
+[silencedetect @ 0x23aeac0] silence_start: 104.695
+[silencedetect @ 0x23aeac0] silence_end: 106.162 | silence_duration: 1.46653
+[silencedetect @ 0x23aeac0] silence_start: 109.528
+[silencedetect @ 0x23aeac0] silence_end: 110.393 | silence_duration: 0.865714
+[silencedetect @ 0x23aeac0] silence_start: 113.707
+[silencedetect @ 0x23aeac0] silence_end: 115.331 | silence_duration: 1.62327
+[silencedetect @ 0x23aeac0] silence_start: 118.697
+[silencedetect @ 0x23aeac0] silence_end: 119.667 | silence_duration: 0.970204
+[silencedetect @ 0x23aeac0] silence_start: 121.048
+[silencedetect @ 0x23aeac0] silence_end: 122.07 | silence_duration: 1.02245
+[silencedetect @ 0x23aeac0] silence_start: 123.712
+[silencedetect @ 0x23aeac0] silence_end: 125.336 | silence_duration: 1.62327
+[silencedetect @ 0x23aeac0] silence_start: 126.925
+[silencedetect @ 0x23aeac0] silence_end: 127.817 | silence_duration: 0.891837
+[silencedetect @ 0x23aeac0] silence_start: 129.146
+[silencedetect @ 0x23aeac0] silence_end: 130.325 | silence_duration: 1.17918
+[silencedetect @ 0x23aeac0] silence_start: 133.09
+[silencedetect @ 0x23aeac0] silence_end: 134.139 | silence_duration: 1.04857
+[silencedetect @ 0x23aeac0] silence_start: 135.938
+[silencedetect @ 0x23aeac0] silence_end: 136.699 | silence_duration: 0.761224
+[silencedetect @ 0x23aeac0] silence_start: 137.897
+[silencedetect @ 0x23aeac0] silence_end: 138.815 | silence_duration: 0.917959
+[silencedetect @ 0x23aeac0] silence_start: 140.64
+[silencedetect @ 0x23aeac0] silence_end: 141.27 | silence_duration: 0.630612
+[silencedetect @ 0x23aeac0] silence_start: 142.729
+size=N/A time=00:02:25.16 bitrate=N/A    
+video:0kB audio:12503kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown

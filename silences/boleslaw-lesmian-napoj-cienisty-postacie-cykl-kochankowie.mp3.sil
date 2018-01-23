@@ -1,0 +1,86 @@
+ffmpeg version 2.8.11-0ubuntu0.16.04.1 Copyright (c) 2000-2017 the FFmpeg developers
+  built with gcc 5.4.0 (Ubuntu 5.4.0-6ubuntu1~16.04.4) 20160609
+  configuration: --prefix=/usr --extra-version=0ubuntu0.16.04.1 --build-suffix=-ffmpeg --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --cc=cc --cxx=g++ --enable-gpl --enable-shared --disable-stripping --disable-decoder=libopenjpeg --disable-decoder=libschroedinger --enable-avresample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libmodplug --enable-libmp3lame --enable-libopenjpeg --enable-libopus --enable-libpulse --enable-librtmp --enable-libschroedinger --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxvid --enable-libzvbi --enable-openal --enable-opengl --enable-x11grab --enable-libdc1394 --enable-libiec61883 --enable-libzmq --enable-frei0r --enable-libx264 --enable-libopencv
+  libavutil      54. 31.100 / 54. 31.100
+  libavcodec     56. 60.100 / 56. 60.100
+  libavformat    56. 40.101 / 56. 40.101
+  libavdevice    56.  4.100 / 56.  4.100
+  libavfilter     5. 40.101 /  5. 40.101
+  libavresample   2.  1.  0 /  2.  1.  0
+  libswscale      3.  1.101 /  3.  1.101
+  libswresample   1.  2.101 /  1.  2.101
+  libpostproc    53.  3.100 / 53.  3.100
+[mp3 @ 0x24f68c0] Unknown attached picture mimetype: ('image/png', None), skipping.
+[mp3 @ 0x24f68c0] Skipping 0 bytes of junk at 17418.
+[mp3 @ 0x24f68c0] Estimating duration from bitrate, this may be inaccurate
+Input #0, mp3, from 'boleslaw-lesmian-napoj-cienisty-postacie-cykl-kochankowie.mp3':
+  Metadata:
+    title           : Bolesław Leśmian, Napój cienisty, Postacie (cykl), Kochankowie
+    artist          : Wiktor Korzeniewski
+    album           : Wolne Lektury
+    date            : 2010
+    genre           : Speech
+    copyright       : 2010 Fundacja Nowoczesna Polska. Licensed to the public under http://creativecommons.org/licenses/by-sa/3.0/deed.pl verify at http://www.wolnelektury.pl/katalog/lektura/napoj-cienisty-kochankowie/
+    publisher       : Fundacja Nowoczesna Polska
+    performer       : Marcin Cisło
+    album_artist    : Fundacja Nowoczesna Polska
+    encoder         : Lavf52.87.1
+  Duration: 00:01:03.61, start: 0.000000, bitrate: 66 kb/s
+    Stream #0:0: Audio: mp3, 44100 Hz, mono, s16p, 64 kb/s
+Output #0, null, to 'pipe:':
+  Metadata:
+    title           : Bolesław Leśmian, Napój cienisty, Postacie (cykl), Kochankowie
+    artist          : Wiktor Korzeniewski
+    album           : Wolne Lektury
+    date            : 2010
+    genre           : Speech
+    copyright       : 2010 Fundacja Nowoczesna Polska. Licensed to the public under http://creativecommons.org/licenses/by-sa/3.0/deed.pl verify at http://www.wolnelektury.pl/katalog/lektura/napoj-cienisty-kochankowie/
+    publisher       : Fundacja Nowoczesna Polska
+    performer       : Marcin Cisło
+    album_artist    : Fundacja Nowoczesna Polska
+    encoder         : Lavf56.40.101
+    Stream #0:0: Audio: pcm_s16le, 44100 Hz, mono, s16, 705 kb/s
+    Metadata:
+      encoder         : Lavc56.60.100 pcm_s16le
+Stream mapping:
+  Stream #0:0 -> #0:0 (mp3 (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+[silencedetect @ 0x25099a0] silence_start: 1.30245
+[silencedetect @ 0x25099a0] silence_end: 2.19429 | silence_duration: 0.891837
+[silencedetect @ 0x25099a0] silence_start: 2.84367
+[silencedetect @ 0x25099a0] silence_end: 5.09388 | silence_duration: 2.2502
+[silencedetect @ 0x25099a0] silence_start: 6.81429
+[silencedetect @ 0x25099a0] silence_end: 7.39265 | silence_duration: 0.578367
+[silencedetect @ 0x25099a0] silence_start: 9.16531
+[silencedetect @ 0x25099a0] silence_end: 10.2661 | silence_duration: 1.10082
+[silencedetect @ 0x25099a0] silence_start: 12.0127
+[silencedetect @ 0x25099a0] silence_end: 12.8 | silence_duration: 0.787347
+[silencedetect @ 0x25099a0] silence_start: 14.5727
+[silencedetect @ 0x25099a0] silence_end: 16.3004 | silence_duration: 1.72776
+[silencedetect @ 0x25099a0] silence_start: 17.3678
+[silencedetect @ 0x25099a0] silence_end: 17.8678 | silence_duration: 0.5
+[silencedetect @ 0x25099a0] silence_start: 18.8567
+[silencedetect @ 0x25099a0] silence_end: 19.6702 | silence_duration: 0.813469
+[silencedetect @ 0x25099a0] silence_start: 21.1294
+[silencedetect @ 0x25099a0] silence_end: 22.2041 | silence_duration: 1.07469
+[silencedetect @ 0x25099a0] silence_start: 25.0739
+[silencedetect @ 0x25099a0] silence_end: 25.7306 | silence_duration: 0.656735
+[silencedetect @ 0x25099a0] silence_start: 27.1114
+[silencedetect @ 0x25099a0] silence_end: 29.0482 | silence_duration: 1.93673
+[silencedetect @ 0x25099a0] silence_start: 32.9629
+[silencedetect @ 0x25099a0] silence_end: 33.8547 | silence_duration: 0.891837
+[silencedetect @ 0x25099a0] silence_start: 36.0976
+[silencedetect @ 0x25099a0] silence_end: 36.8327 | silence_duration: 0.735102
+[silencedetect @ 0x25099a0] silence_start: 38.318
+[silencedetect @ 0x25099a0] silence_end: 40.0718 | silence_duration: 1.75388
+[silencedetect @ 0x25099a0] silence_start: 44.1955
+[silencedetect @ 0x25099a0] silence_end: 45.218 | silence_duration: 1.02245
+[silencedetect @ 0x25099a0] silence_start: 48.7931
+[silencedetect @ 0x25099a0] silence_end: 50.1812 | silence_duration: 1.38816
+[silencedetect @ 0x25099a0] silence_start: 50.1776
+[silencedetect @ 0x25099a0] silence_end: 50.9649 | silence_duration: 0.787347
+[silencedetect @ 0x25099a0] silence_start: 55.2453
+[silencedetect @ 0x25099a0] silence_end: 55.8759 | silence_duration: 0.630612
+[silencedetect @ 0x25099a0] silence_start: 60.4176
+size=N/A time=00:01:03.60 bitrate=N/A    
+video:0kB audio:5479kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown

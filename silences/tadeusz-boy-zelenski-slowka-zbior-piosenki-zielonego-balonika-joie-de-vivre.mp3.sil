@@ -1,0 +1,120 @@
+ffmpeg version 2.8.11-0ubuntu0.16.04.1 Copyright (c) 2000-2017 the FFmpeg developers
+  built with gcc 5.4.0 (Ubuntu 5.4.0-6ubuntu1~16.04.4) 20160609
+  configuration: --prefix=/usr --extra-version=0ubuntu0.16.04.1 --build-suffix=-ffmpeg --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --cc=cc --cxx=g++ --enable-gpl --enable-shared --disable-stripping --disable-decoder=libopenjpeg --disable-decoder=libschroedinger --enable-avresample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libmodplug --enable-libmp3lame --enable-libopenjpeg --enable-libopus --enable-libpulse --enable-librtmp --enable-libschroedinger --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxvid --enable-libzvbi --enable-openal --enable-opengl --enable-x11grab --enable-libdc1394 --enable-libiec61883 --enable-libzmq --enable-frei0r --enable-libx264 --enable-libopencv
+  libavutil      54. 31.100 / 54. 31.100
+  libavcodec     56. 60.100 / 56. 60.100
+  libavformat    56. 40.101 / 56. 40.101
+  libavdevice    56.  4.100 / 56.  4.100
+  libavfilter     5. 40.101 /  5. 40.101
+  libavresample   2.  1.  0 /  2.  1.  0
+  libswscale      3.  1.101 /  3.  1.101
+  libswresample   1.  2.101 /  1.  2.101
+  libpostproc    53.  3.100 / 53.  3.100
+[mp3 @ 0x165b8c0] Unknown attached picture mimetype: ('image/png', None), skipping.
+[mp3 @ 0x165b8c0] Skipping 0 bytes of junk at 17522.
+Input #0, mp3, from 'tadeusz-boy-zelenski-slowka-zbior-piosenki-zielonego-balonika-joie-de-vivre.mp3':
+  Metadata:
+    title           : Tadeusz Boy-Żeleński, "Słówka" (zbiór), Joie de vivre.
+    artist          : Wiktor Korzeniewski
+    album           : Wolne Lektury
+    genre           : 0
+    encoder         : Lavf53.21.1
+    URL             : http://wolnelektury.pl/katalog/lektura/slowka-zbior
+    date            : 2013
+    CONDUCTOR       : Adam Bień
+    PROJECT         : Słuchamy Polski finansowanego przez Ministerstwo Kultury i Dziedzictwa Narodowego
+    TCD             : 75617262132
+    performer       : Adam Bień
+    album_artist    : Fundacja Nowoczesna Polska
+    copyright       : 2013 Fundacja Nowoczesna Polska. Licensed to the public under http://creativecommons.org/licenses/by-sa/3.0/deed.pl verify at http://wolnelektury.pl/katalog/lektura/slowka-zbior-piosenki-zb-joie-de-vivre
+    encoded_by      : Adam Bień
+    publisher       : Fundacja Nowoczesna Polska
+  Duration: 00:03:05.31, start: 0.000000, bitrate: 64 kb/s
+    Stream #0:0: Audio: mp3, 44100 Hz, mono, s16p, 64 kb/s
+Output #0, null, to 'pipe:':
+  Metadata:
+    title           : Tadeusz Boy-Żeleński, "Słówka" (zbiór), Joie de vivre.
+    artist          : Wiktor Korzeniewski
+    album           : Wolne Lektury
+    genre           : 0
+    URL             : http://wolnelektury.pl/katalog/lektura/slowka-zbior
+    date            : 2013
+    CONDUCTOR       : Adam Bień
+    PROJECT         : Słuchamy Polski finansowanego przez Ministerstwo Kultury i Dziedzictwa Narodowego
+    TCD             : 75617262132
+    performer       : Adam Bień
+    album_artist    : Fundacja Nowoczesna Polska
+    copyright       : 2013 Fundacja Nowoczesna Polska. Licensed to the public under http://creativecommons.org/licenses/by-sa/3.0/deed.pl verify at http://wolnelektury.pl/katalog/lektura/slowka-zbior-piosenki-zb-joie-de-vivre
+    encoded_by      : Adam Bień
+    publisher       : Fundacja Nowoczesna Polska
+    encoder         : Lavf56.40.101
+    Stream #0:0: Audio: pcm_s16le, 44100 Hz, mono, s16, 705 kb/s
+    Metadata:
+      encoder         : Lavc56.60.100 pcm_s16le
+Stream mapping:
+  Stream #0:0 -> #0:0 (mp3 (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+[silencedetect @ 0x165ccc0] silence_start: -0.00367347
+[silencedetect @ 0x165ccc0] silence_end: 0.679184 | silence_duration: 0.682857
+[silencedetect @ 0x165ccc0] silence_start: 1.77265
+[silencedetect @ 0x165ccc0] silence_end: 2.50776 | silence_duration: 0.735102
+[silencedetect @ 0x165ccc0] silence_start: 4.64612
+[silencedetect @ 0x165ccc0] silence_end: 5.3551 | silence_duration: 0.70898
+[silencedetect @ 0x165ccc0] silence_start: 18.5171
+[silencedetect @ 0x165ccc0] silence_end: 19.1478 | silence_duration: 0.630612
+[silencedetect @ 0x165ccc0] silence_start: 24.7343
+[silencedetect @ 0x165ccc0] silence_end: 25.2604 | silence_duration: 0.526122
+[silencedetect @ 0x165ccc0] silence_start: 33.9555
+[silencedetect @ 0x165ccc0] silence_end: 34.4816 | silence_duration: 0.526122
+[silencedetect @ 0x165ccc0] silence_start: 36.6722
+[silencedetect @ 0x165ccc0] silence_end: 37.2245 | silence_duration: 0.552245
+[silencedetect @ 0x165ccc0] silence_start: 39.9376
+[silencedetect @ 0x165ccc0] silence_end: 40.5159 | silence_duration: 0.578367
+[silencedetect @ 0x165ccc0] silence_start: 43.1245
+[silencedetect @ 0x165ccc0] silence_end: 43.729 | silence_duration: 0.60449
+[silencedetect @ 0x165ccc0] silence_start: 46.4943
+[silencedetect @ 0x165ccc0] silence_end: 47.0204 | silence_duration: 0.526122
+[silencedetect @ 0x165ccc0] silence_start: 65.4069
+[silencedetect @ 0x165ccc0] silence_end: 65.9069 | silence_duration: 0.5
+[silencedetect @ 0x165ccc0] silence_start: 66.8176
+[silencedetect @ 0x165ccc0] silence_end: 67.3698 | silence_duration: 0.552245
+[silencedetect @ 0x165ccc0] silence_start: 68.6984
+[silencedetect @ 0x165ccc0] silence_end: 69.3029 | silence_duration: 0.60449
+[silencedetect @ 0x165ccc0] silence_start: 74.2102
+[silencedetect @ 0x165ccc0] silence_end: 74.7624 | silence_duration: 0.552245
+[silencedetect @ 0x165ccc0] silence_start: 80.9237
+[silencedetect @ 0x165ccc0] silence_end: 81.4759 | silence_duration: 0.552245
+[silencedetect @ 0x165ccc0] silence_start: 86.3833
+[silencedetect @ 0x165ccc0] silence_end: 86.9355 | silence_duration: 0.552245
+[silencedetect @ 0x165ccc0] silence_start: 89.5963
+[silencedetect @ 0x165ccc0] silence_end: 90.1486 | silence_duration: 0.552245
+[silencedetect @ 0x165ccc0] silence_start: 92.8878
+[silencedetect @ 0x165ccc0] silence_end: 93.649 | silence_duration: 0.761224
+[silencedetect @ 0x165ccc0] silence_start: 103.128
+[silencedetect @ 0x165ccc0] silence_end: 103.68 | silence_duration: 0.552245
+[silencedetect @ 0x165ccc0] silence_start: 104.721
+[silencedetect @ 0x165ccc0] silence_end: 105.273 | silence_duration: 0.552245
+[silencedetect @ 0x165ccc0] silence_start: 110.364
+[silencedetect @ 0x165ccc0] silence_end: 110.994 | silence_duration: 0.630612
+[silencedetect @ 0x165ccc0] silence_start: 129.12
+[silencedetect @ 0x165ccc0] silence_end: 129.776 | silence_duration: 0.656735
+[silencedetect @ 0x165ccc0] silence_start: 141.711
+[silencedetect @ 0x165ccc0] silence_end: 142.602 | silence_duration: 0.891837
+[silencedetect @ 0x165ccc0] silence_start: 143.8
+[silencedetect @ 0x165ccc0] silence_end: 144.509 | silence_duration: 0.70898
+[silencedetect @ 0x165ccc0] silence_start: 145.995
+[silencedetect @ 0x165ccc0] silence_end: 147.017 | silence_duration: 1.02245
+[silencedetect @ 0x165ccc0] silence_start: 149.286
+[silencedetect @ 0x165ccc0] silence_end: 149.812 | silence_duration: 0.526122
+[silencedetect @ 0x165ccc0] silence_start: 150.436
+[silencedetect @ 0x165ccc0] silence_end: 151.04 | silence_duration: 0.60449
+[silencedetect @ 0x165ccc0] silence_start: 156.261
+[silencedetect @ 0x165ccc0] silence_end: 156.944 | silence_duration: 0.682857
+[silencedetect @ 0x165ccc0] silence_start: 162.504
+[silencedetect @ 0x165ccc0] silence_end: 163.03 | silence_duration: 0.526122
+[silencedetect @ 0x165ccc0] silence_start: 169.609
+[silencedetect @ 0x165ccc0] silence_end: 170.344 | silence_duration: 0.735102
+[silencedetect @ 0x165ccc0] silence_start: 176.453
+[silencedetect @ 0x165ccc0] silence_end: 177.032 | silence_duration: 0.578367
+size=N/A time=00:03:05.31 bitrate=N/A    
+video:0kB audio:15962kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown

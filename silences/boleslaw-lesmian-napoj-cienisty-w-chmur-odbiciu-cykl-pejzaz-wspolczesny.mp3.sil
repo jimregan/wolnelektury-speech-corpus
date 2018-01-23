@@ -1,0 +1,124 @@
+ffmpeg version 2.8.11-0ubuntu0.16.04.1 Copyright (c) 2000-2017 the FFmpeg developers
+  built with gcc 5.4.0 (Ubuntu 5.4.0-6ubuntu1~16.04.4) 20160609
+  configuration: --prefix=/usr --extra-version=0ubuntu0.16.04.1 --build-suffix=-ffmpeg --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --cc=cc --cxx=g++ --enable-gpl --enable-shared --disable-stripping --disable-decoder=libopenjpeg --disable-decoder=libschroedinger --enable-avresample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libmodplug --enable-libmp3lame --enable-libopenjpeg --enable-libopus --enable-libpulse --enable-librtmp --enable-libschroedinger --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxvid --enable-libzvbi --enable-openal --enable-opengl --enable-x11grab --enable-libdc1394 --enable-libiec61883 --enable-libzmq --enable-frei0r --enable-libx264 --enable-libopencv
+  libavutil      54. 31.100 / 54. 31.100
+  libavcodec     56. 60.100 / 56. 60.100
+  libavformat    56. 40.101 / 56. 40.101
+  libavdevice    56.  4.100 / 56.  4.100
+  libavfilter     5. 40.101 /  5. 40.101
+  libavresample   2.  1.  0 /  2.  1.  0
+  libswscale      3.  1.101 /  3.  1.101
+  libswresample   1.  2.101 /  1.  2.101
+  libpostproc    53.  3.100 / 53.  3.100
+[mp3 @ 0xad28c0] Unknown attached picture mimetype: ('image/png', None), skipping.
+[mp3 @ 0xad28c0] Skipping 0 bytes of junk at 17418.
+[mp3 @ 0xad28c0] Estimating duration from bitrate, this may be inaccurate
+Input #0, mp3, from 'boleslaw-lesmian-napoj-cienisty-w-chmur-odbiciu-cykl-pejzaz-wspolczesny.mp3':
+  Metadata:
+    title           : Bolesław Leśmian, Napój cienisty, W chmur odbiciu (cykl), Pejzaż współczesny
+    artist          : Wiktor Korzeniewski
+    album           : Wolne Lektury
+    date            : 2010
+    genre           : Speech
+    copyright       : 2010 Fundacja Nowoczesna Polska. Licensed to the public under http://creativecommons.org/licenses/by-sa/3.0/deed.pl verify at http://www.wolnelektury.pl/katalog/lektura/napoj-cienisty-pejzaz-wspolczesny/
+    publisher       : Fundacja Nowoczesna Polska
+    performer       : Marcin Cisło
+    album_artist    : Fundacja Nowoczesna Polska
+    encoder         : Lavf52.87.1
+  Duration: 00:02:48.18, start: 0.000000, bitrate: 64 kb/s
+    Stream #0:0: Audio: mp3, 44100 Hz, mono, s16p, 64 kb/s
+Output #0, null, to 'pipe:':
+  Metadata:
+    title           : Bolesław Leśmian, Napój cienisty, W chmur odbiciu (cykl), Pejzaż współczesny
+    artist          : Wiktor Korzeniewski
+    album           : Wolne Lektury
+    date            : 2010
+    genre           : Speech
+    copyright       : 2010 Fundacja Nowoczesna Polska. Licensed to the public under http://creativecommons.org/licenses/by-sa/3.0/deed.pl verify at http://www.wolnelektury.pl/katalog/lektura/napoj-cienisty-pejzaz-wspolczesny/
+    publisher       : Fundacja Nowoczesna Polska
+    performer       : Marcin Cisło
+    album_artist    : Fundacja Nowoczesna Polska
+    encoder         : Lavf56.40.101
+    Stream #0:0: Audio: pcm_s16le, 44100 Hz, mono, s16, 705 kb/s
+    Metadata:
+      encoder         : Lavc56.60.100 pcm_s16le
+Stream mapping:
+  Stream #0:0 -> #0:0 (mp3 (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+[silencedetect @ 0xae5b20] silence_start: 1.17184
+[silencedetect @ 0xae5b20] silence_end: 2.06367 | silence_duration: 0.891837
+[silencedetect @ 0xae5b20] silence_start: 3.60122
+[silencedetect @ 0xae5b20] silence_end: 5.69469 | silence_duration: 2.09347
+[silencedetect @ 0xae5b20] silence_start: 8.72122
+[silencedetect @ 0xae5b20] silence_end: 10.1878 | silence_duration: 1.46653
+[silencedetect @ 0xae5b20] silence_start: 11.7253
+[silencedetect @ 0xae5b20] silence_end: 12.4343 | silence_duration: 0.70898
+[silencedetect @ 0xae5b20] silence_start: 13.5539
+[silencedetect @ 0xae5b20] silence_end: 14.7069 | silence_duration: 1.15306
+[silencedetect @ 0xae5b20] silence_start: 15.2518
+[silencedetect @ 0xae5b20] silence_end: 16.1959 | silence_duration: 0.944082
+[silencedetect @ 0xae5b20] silence_start: 18.6478
+[silencedetect @ 0xae5b20] silence_end: 19.5396 | silence_duration: 0.891837
+[silencedetect @ 0xae5b20] silence_start: 20.9465
+[silencedetect @ 0xae5b20] silence_end: 22.0996 | silence_duration: 1.15306
+[silencedetect @ 0xae5b20] silence_start: 23.2976
+[silencedetect @ 0xae5b20] silence_end: 24.7641 | silence_duration: 1.46653
+[silencedetect @ 0xae5b20] silence_start: 27.5555
+[silencedetect @ 0xae5b20] silence_end: 28.1078 | silence_duration: 0.552245
+[silencedetect @ 0xae5b20] silence_start: 30.7424
+[silencedetect @ 0xae5b20] silence_end: 31.8433 | silence_duration: 1.10082
+[silencedetect @ 0xae5b20] silence_start: 34.6869
+[silencedetect @ 0xae5b20] silence_end: 35.631 | silence_duration: 0.944082
+[silencedetect @ 0xae5b20] silence_start: 38.7359
+[silencedetect @ 0xae5b20] silence_end: 41.0384 | silence_duration: 2.30245
+[silencedetect @ 0xae5b20] silence_start: 44.3261
+[silencedetect @ 0xae5b20] silence_end: 45.4792 | silence_duration: 1.15306
+[silencedetect @ 0xae5b20] silence_start: 48.8192
+[silencedetect @ 0xae5b20] silence_end: 49.7894 | silence_duration: 0.970204
+[silencedetect @ 0xae5b20] silence_start: 56.7343
+[silencedetect @ 0xae5b20] silence_end: 57.8612 | silence_duration: 1.12694
+[silencedetect @ 0xae5b20] silence_start: 65.5376
+[silencedetect @ 0xae5b20] silence_end: 66.4816 | silence_duration: 0.944082
+[silencedetect @ 0xae5b20] silence_start: 69.9
+[silencedetect @ 0xae5b20] silence_end: 70.818 | silence_duration: 0.917959
+[silencedetect @ 0xae5b20] silence_start: 73.8445
+[silencedetect @ 0xae5b20] silence_end: 75.102 | silence_duration: 1.25755
+[silencedetect @ 0xae5b20] silence_start: 77.6322
+[silencedetect @ 0xae5b20] silence_end: 78.4196 | silence_duration: 0.787347
+[silencedetect @ 0xae5b20] silence_start: 81.1849
+[silencedetect @ 0xae5b20] silence_end: 82.0506 | silence_duration: 0.865714
+[silencedetect @ 0xae5b20] silence_start: 88.4731
+[silencedetect @ 0xae5b20] silence_end: 89.7306 | silence_duration: 1.25755
+[silencedetect @ 0xae5b20] silence_start: 92.2086
+[silencedetect @ 0xae5b20] silence_end: 92.7869 | silence_duration: 0.578367
+[silencedetect @ 0xae5b20] silence_start: 102.631
+[silencedetect @ 0xae5b20] silence_end: 103.889 | silence_duration: 1.25755
+[silencedetect @ 0xae5b20] silence_start: 106.68
+[silencedetect @ 0xae5b20] silence_end: 107.285 | silence_duration: 0.60449
+[silencedetect @ 0xae5b20] silence_start: 110.494
+[silencedetect @ 0xae5b20] silence_end: 111.203 | silence_duration: 0.70898
+[silencedetect @ 0xae5b20] silence_start: 113.681
+[silencedetect @ 0xae5b20] silence_end: 114.286 | silence_duration: 0.60449
+[silencedetect @ 0xae5b20] silence_start: 116.92
+[silencedetect @ 0xae5b20] silence_end: 118.727 | silence_duration: 1.80612
+[silencedetect @ 0xae5b20] silence_start: 122.119
+[silencedetect @ 0xae5b20] silence_end: 123.063 | silence_duration: 0.944082
+[silencedetect @ 0xae5b20] silence_start: 125.332
+[silencedetect @ 0xae5b20] silence_end: 126.433 | silence_duration: 1.10082
+[silencedetect @ 0xae5b20] silence_start: 133.247
+[silencedetect @ 0xae5b20] silence_end: 134.713 | silence_duration: 1.46653
+[silencedetect @ 0xae5b20] silence_start: 140.979
+[silencedetect @ 0xae5b20] silence_end: 141.897 | silence_duration: 0.917959
+[silencedetect @ 0xae5b20] silence_start: 144.558
+[silencedetect @ 0xae5b20] silence_end: 145.11 | silence_duration: 0.552245
+[silencedetect @ 0xae5b20] silence_start: 148.215
+[silencedetect @ 0xae5b20] silence_end: 149.525 | silence_duration: 1.3098
+[silencedetect @ 0xae5b20] silence_start: 152.212
+[silencedetect @ 0xae5b20] silence_end: 152.816 | silence_duration: 0.60449
+[silencedetect @ 0xae5b20] silence_start: 155.869
+[silencedetect @ 0xae5b20] silence_end: 156.604 | silence_duration: 0.735102
+[silencedetect @ 0xae5b20] silence_start: 161.773
+[silencedetect @ 0xae5b20] silence_end: 162.795 | silence_duration: 1.02245
+[silencedetect @ 0xae5b20] silence_start: 164.96
+size=N/A time=00:02:48.17 bitrate=N/A    
+video:0kB audio:14486kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown

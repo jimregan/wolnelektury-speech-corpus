@@ -1,0 +1,121 @@
+ffmpeg version 2.8.11-0ubuntu0.16.04.1 Copyright (c) 2000-2017 the FFmpeg developers
+  built with gcc 5.4.0 (Ubuntu 5.4.0-6ubuntu1~16.04.4) 20160609
+  configuration: --prefix=/usr --extra-version=0ubuntu0.16.04.1 --build-suffix=-ffmpeg --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --cc=cc --cxx=g++ --enable-gpl --enable-shared --disable-stripping --disable-decoder=libopenjpeg --disable-decoder=libschroedinger --enable-avresample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libmodplug --enable-libmp3lame --enable-libopenjpeg --enable-libopus --enable-libpulse --enable-librtmp --enable-libschroedinger --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxvid --enable-libzvbi --enable-openal --enable-opengl --enable-x11grab --enable-libdc1394 --enable-libiec61883 --enable-libzmq --enable-frei0r --enable-libx264 --enable-libopencv
+  libavutil      54. 31.100 / 54. 31.100
+  libavcodec     56. 60.100 / 56. 60.100
+  libavformat    56. 40.101 / 56. 40.101
+  libavdevice    56.  4.100 / 56.  4.100
+  libavfilter     5. 40.101 /  5. 40.101
+  libavresample   2.  1.  0 /  2.  1.  0
+  libswscale      3.  1.101 /  3.  1.101
+  libswresample   1.  2.101 /  1.  2.101
+  libpostproc    53.  3.100 / 53.  3.100
+[mp3 @ 0x1c778c0] Unknown attached picture mimetype: ('image/png', None), skipping.
+[mp3 @ 0x1c778c0] Skipping 0 bytes of junk at 17522.
+Input #0, mp3, from '21-honore-de-balzac-male-niedole-pozycia-malzenskiego-czesc-2-przedmowa.mp3':
+  Metadata:
+    title           : 21. Honore Balzac, "Małe niedole pożycia małżeńskiego", część 2 przedmowa.
+    artist          : Wiktor Korzeniewski
+    album           : Wolne Lektury
+    genre           : 0
+    encoder         : Lavf53.21.1
+    URL             : http://wolnelektury.pl/katalog/lektura/balzac-komedia-luǳka-male-niedole-pozycia-malzenskiego
+    date            : 2014
+    CONDUCTOR       : Adam Bień
+    PROJECT         : Słuchamy Polski finansowanego przez Ministerstwo Kultury i Dziedzictwa Narodowego
+    TCD             : 75617262132
+    performer       : Adam Bień
+    album_artist    : Fundacja Nowoczesna Polska
+    copyright       : 2014 Fundacja Nowoczesna Polska. Licensed to the public under http://creativecommons.org/licenses/by-sa/3.0/deed.pl verify at http://wolnelektury.pl/katalog/lektura/balzac-komedia-ludzka-male-niedole-pozycia-malzenskiego
+    encoded_by      : Adam Bień
+    publisher       : Fundacja Nowoczesna Polska
+  Duration: 00:04:00.80, start: 0.000000, bitrate: 64 kb/s
+    Stream #0:0: Audio: mp3, 44100 Hz, mono, s16p, 64 kb/s
+Output #0, null, to 'pipe:':
+  Metadata:
+    title           : 21. Honore Balzac, "Małe niedole pożycia małżeńskiego", część 2 przedmowa.
+    artist          : Wiktor Korzeniewski
+    album           : Wolne Lektury
+    genre           : 0
+    URL             : http://wolnelektury.pl/katalog/lektura/balzac-komedia-luǳka-male-niedole-pozycia-malzenskiego
+    date            : 2014
+    CONDUCTOR       : Adam Bień
+    PROJECT         : Słuchamy Polski finansowanego przez Ministerstwo Kultury i Dziedzictwa Narodowego
+    TCD             : 75617262132
+    performer       : Adam Bień
+    album_artist    : Fundacja Nowoczesna Polska
+    copyright       : 2014 Fundacja Nowoczesna Polska. Licensed to the public under http://creativecommons.org/licenses/by-sa/3.0/deed.pl verify at http://wolnelektury.pl/katalog/lektura/balzac-komedia-ludzka-male-niedole-pozycia-malzenskiego
+    encoded_by      : Adam Bień
+    publisher       : Fundacja Nowoczesna Polska
+    encoder         : Lavf56.40.101
+    Stream #0:0: Audio: pcm_s16le, 44100 Hz, mono, s16, 705 kb/s
+    Metadata:
+      encoder         : Lavc56.60.100 pcm_s16le
+Stream mapping:
+  Stream #0:0 -> #0:0 (mp3 (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+[silencedetect @ 0x1c8a9c0] silence_start: -0.00367347
+[silencedetect @ 0x1c8a9c0] silence_end: 0.679184 | silence_duration: 0.682857
+[silencedetect @ 0x1c8a9c0] silence_start: 1.92939
+[silencedetect @ 0x1c8a9c0] silence_end: 2.53388 | silence_duration: 0.60449
+[silencedetect @ 0x1c8a9c0] silence_start: 3.54898
+[silencedetect @ 0x1c8a9c0] silence_end: 4.12735 | silence_duration: 0.578367
+[silencedetect @ 0x1c8a9c0] silence_start: 7.80694
+[silencedetect @ 0x1c8a9c0] silence_end: 8.35918 | silence_duration: 0.552245
+[silencedetect @ 0x1c8a9c0] silence_start: 34.6869
+[silencedetect @ 0x1c8a9c0] silence_end: 35.6571 | silence_duration: 0.970204
+[silencedetect @ 0x1c8a9c0] silence_start: 36.5155
+[silencedetect @ 0x1c8a9c0] silence_end: 37.12 | silence_duration: 0.60449
+[silencedetect @ 0x1c8a9c0] silence_start: 39.4412
+[silencedetect @ 0x1c8a9c0] silence_end: 39.9935 | silence_duration: 0.552245
+[silencedetect @ 0x1c8a9c0] silence_start: 44.7441
+[silencedetect @ 0x1c8a9c0] silence_end: 45.7665 | silence_duration: 1.02245
+[silencedetect @ 0x1c8a9c0] silence_start: 46.442
+[silencedetect @ 0x1c8a9c0] silence_end: 46.9943 | silence_duration: 0.552245
+[silencedetect @ 0x1c8a9c0] silence_start: 49.5506
+[silencedetect @ 0x1c8a9c0] silence_end: 50.0767 | silence_duration: 0.526122
+[silencedetect @ 0x1c8a9c0] silence_start: 59.3727
+[silencedetect @ 0x1c8a9c0] silence_end: 60.0294 | silence_duration: 0.656735
+[silencedetect @ 0x1c8a9c0] silence_start: 67.5229
+[silencedetect @ 0x1c8a9c0] silence_end: 68.1273 | silence_duration: 0.60449
+[silencedetect @ 0x1c8a9c0] silence_start: 70.9188
+[silencedetect @ 0x1c8a9c0] silence_end: 71.5233 | silence_duration: 0.60449
+[silencedetect @ 0x1c8a9c0] silence_start: 83.2224
+[silencedetect @ 0x1c8a9c0] silence_end: 83.7224 | silence_duration: 0.5
+[silencedetect @ 0x1c8a9c0] silence_start: 90.8763
+[silencedetect @ 0x1c8a9c0] silence_end: 91.5853 | silence_duration: 0.70898
+[silencedetect @ 0x1c8a9c0] silence_start: 99.3139
+[silencedetect @ 0x1c8a9c0] silence_end: 100.023 | silence_duration: 0.70898
+[silencedetect @ 0x1c8a9c0] silence_start: 104.251
+[silencedetect @ 0x1c8a9c0] silence_end: 104.908 | silence_duration: 0.656735
+[silencedetect @ 0x1c8a9c0] silence_start: 110.207
+[silencedetect @ 0x1c8a9c0] silence_end: 110.733 | silence_duration: 0.526122
+[silencedetect @ 0x1c8a9c0] silence_start: 116.398
+[silencedetect @ 0x1c8a9c0] silence_end: 117.185 | silence_duration: 0.787347
+[silencedetect @ 0x1c8a9c0] silence_start: 120.969
+[silencedetect @ 0x1c8a9c0] silence_end: 121.522 | silence_duration: 0.552245
+[silencedetect @ 0x1c8a9c0] silence_start: 126.69
+[silencedetect @ 0x1c8a9c0] silence_end: 127.269 | silence_duration: 0.578367
+[silencedetect @ 0x1c8a9c0] silence_start: 128.258
+[silencedetect @ 0x1c8a9c0] silence_end: 129.097 | silence_duration: 0.839592
+[silencedetect @ 0x1c8a9c0] silence_start: 139.124
+[silencedetect @ 0x1c8a9c0] silence_end: 139.807 | silence_duration: 0.682857
+[silencedetect @ 0x1c8a9c0] silence_start: 166.631
+[silencedetect @ 0x1c8a9c0] silence_end: 167.367 | silence_duration: 0.735102
+[silencedetect @ 0x1c8a9c0] silence_start: 172.561
+[silencedetect @ 0x1c8a9c0] silence_end: 173.401 | silence_duration: 0.839592
+[silencedetect @ 0x1c8a9c0] silence_start: 180.555
+[silencedetect @ 0x1c8a9c0] silence_end: 181.159 | silence_duration: 0.60449
+[silencedetect @ 0x1c8a9c0] silence_start: 195.236
+[silencedetect @ 0x1c8a9c0] silence_end: 195.762 | silence_duration: 0.526122
+[silencedetect @ 0x1c8a9c0] silence_start: 198.84
+[silencedetect @ 0x1c8a9c0] silence_end: 199.471 | silence_duration: 0.630612
+[silencedetect @ 0x1c8a9c0] silence_start: 212.529
+[silencedetect @ 0x1c8a9c0] silence_end: 213.264 | silence_duration: 0.735102
+[silencedetect @ 0x1c8a9c0] silence_start: 224.832
+[silencedetect @ 0x1c8a9c0] silence_end: 225.802 | silence_duration: 0.970204
+[silencedetect @ 0x1c8a9c0] silence_start: 226.765
+[silencedetect @ 0x1c8a9c0] silence_end: 227.448 | silence_duration: 0.682857
+[silencedetect @ 0x1c8a9c0] silence_start: 239.409
+size=N/A time=00:04:00.79 bitrate=N/A    
+video:0kB audio:20740kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown

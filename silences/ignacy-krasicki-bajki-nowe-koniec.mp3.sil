@@ -1,0 +1,76 @@
+ffmpeg version 2.8.11-0ubuntu0.16.04.1 Copyright (c) 2000-2017 the FFmpeg developers
+  built with gcc 5.4.0 (Ubuntu 5.4.0-6ubuntu1~16.04.4) 20160609
+  configuration: --prefix=/usr --extra-version=0ubuntu0.16.04.1 --build-suffix=-ffmpeg --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --cc=cc --cxx=g++ --enable-gpl --enable-shared --disable-stripping --disable-decoder=libopenjpeg --disable-decoder=libschroedinger --enable-avresample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libmodplug --enable-libmp3lame --enable-libopenjpeg --enable-libopus --enable-libpulse --enable-librtmp --enable-libschroedinger --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxvid --enable-libzvbi --enable-openal --enable-opengl --enable-x11grab --enable-libdc1394 --enable-libiec61883 --enable-libzmq --enable-frei0r --enable-libx264 --enable-libopencv
+  libavutil      54. 31.100 / 54. 31.100
+  libavcodec     56. 60.100 / 56. 60.100
+  libavformat    56. 40.101 / 56. 40.101
+  libavdevice    56.  4.100 / 56.  4.100
+  libavfilter     5. 40.101 /  5. 40.101
+  libavresample   2.  1.  0 /  2.  1.  0
+  libswscale      3.  1.101 /  3.  1.101
+  libswresample   1.  2.101 /  1.  2.101
+  libpostproc    53.  3.100 / 53.  3.100
+[mp3 @ 0x1b8d8c0] Skipping 0 bytes of junk at 4096.
+[mp3 @ 0x1b8d8c0] Estimating duration from bitrate, this may be inaccurate
+Input #0, mp3, from 'ignacy-krasicki-bajki-nowe-koniec.mp3':
+  Metadata:
+    TSS             : Logic Pro 8.0.2
+    TKE             : C
+    genre           : Speech
+    TBP             : 120
+    title           : Ignacy Krasicki, "Koniec"
+    album           : Wolne Lektury
+    artist          : Bartosz Mazur
+    performer       : Marcin Cisło
+    TPB             : Fundacja Nowoczesna Polska
+    date            : 2010-10-28 23:34
+  Duration: 00:00:45.19, start: 0.000000, bitrate: 320 kb/s
+    Stream #0:0: Audio: mp3, 44100 Hz, stereo, s16p, 320 kb/s
+Output #0, null, to 'pipe:':
+  Metadata:
+    TSS             : Logic Pro 8.0.2
+    TKE             : C
+    genre           : Speech
+    TBP             : 120
+    title           : Ignacy Krasicki, "Koniec"
+    album           : Wolne Lektury
+    artist          : Bartosz Mazur
+    performer       : Marcin Cisło
+    TPB             : Fundacja Nowoczesna Polska
+    date            : 2010-10-28 23:34
+    encoder         : Lavf56.40.101
+    Stream #0:0: Audio: pcm_s16le, 44100 Hz, stereo, s16, 1411 kb/s
+    Metadata:
+      encoder         : Lavc56.60.100 pcm_s16le
+Stream mapping:
+  Stream #0:0 -> #0:0 (mp3 (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+[silencedetect @ 0x1bb1f20] silence_start: -0.00367347
+[silencedetect @ 0x1bb1f20] silence_end: 0.783673 | silence_duration: 0.787347
+[silencedetect @ 0x1bb1f20] silence_start: 1.90327
+[silencedetect @ 0x1bb1f20] silence_end: 2.74286 | silence_duration: 0.839592
+[silencedetect @ 0x1bb1f20] silence_start: 4.17592
+[silencedetect @ 0x1bb1f20] silence_end: 6.03429 | silence_duration: 1.85837
+[silencedetect @ 0x1bb1f20] silence_start: 6.47469
+[silencedetect @ 0x1bb1f20] silence_end: 9.09061 | silence_duration: 2.61592
+[silencedetect @ 0x1bb1f20] silence_start: 10.4714
+[silencedetect @ 0x1bb1f20] silence_end: 11.2849 | silence_duration: 0.813469
+[silencedetect @ 0x1bb1f20] silence_start: 13.1359
+[silencedetect @ 0x1bb1f20] silence_end: 14.08 | silence_duration: 0.944082
+[silencedetect @ 0x1bb1f20] silence_start: 18.282
+[silencedetect @ 0x1bb1f20] silence_end: 19.0433 | silence_duration: 0.761224
+[silencedetect @ 0x1bb1f20] silence_start: 22.4878
+[silencedetect @ 0x1bb1f20] silence_end: 23.0139 | silence_duration: 0.526122
+[silencedetect @ 0x1bb1f20] silence_start: 25.1261
+[silencedetect @ 0x1bb1f20] silence_end: 25.7567 | silence_duration: 0.630612
+[silencedetect @ 0x1bb1f20] silence_start: 34.1645
+[silencedetect @ 0x1bb1f20] silence_end: 34.7167 | silence_duration: 0.552245
+[silencedetect @ 0x1bb1f20] silence_start: 38.1873
+[silencedetect @ 0x1bb1f20] silence_end: 38.7657 | silence_duration: 0.578367
+[silencedetect @ 0x1bb1f20] silence_start: 39.7286
+[silencedetect @ 0x1bb1f20] silence_end: 40.8033 | silence_duration: 1.07469
+[silencedetect @ 0x1bb1f20] silence_start: 41.5571
+[silencedetect @ 0x1bb1f20] silence_end: 43.1804 | silence_duration: 1.62327
+[silencedetect @ 0x1bb1f20] silence_start: 44.5873
+size=N/A time=00:00:45.19 bitrate=N/A    
+video:0kB audio:7785kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown

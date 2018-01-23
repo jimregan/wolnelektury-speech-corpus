@@ -1,0 +1,112 @@
+ffmpeg version 2.8.11-0ubuntu0.16.04.1 Copyright (c) 2000-2017 the FFmpeg developers
+  built with gcc 5.4.0 (Ubuntu 5.4.0-6ubuntu1~16.04.4) 20160609
+  configuration: --prefix=/usr --extra-version=0ubuntu0.16.04.1 --build-suffix=-ffmpeg --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --cc=cc --cxx=g++ --enable-gpl --enable-shared --disable-stripping --disable-decoder=libopenjpeg --disable-decoder=libschroedinger --enable-avresample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libmodplug --enable-libmp3lame --enable-libopenjpeg --enable-libopus --enable-libpulse --enable-librtmp --enable-libschroedinger --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxvid --enable-libzvbi --enable-openal --enable-opengl --enable-x11grab --enable-libdc1394 --enable-libiec61883 --enable-libzmq --enable-frei0r --enable-libx264 --enable-libopencv
+  libavutil      54. 31.100 / 54. 31.100
+  libavcodec     56. 60.100 / 56. 60.100
+  libavformat    56. 40.101 / 56. 40.101
+  libavdevice    56.  4.100 / 56.  4.100
+  libavfilter     5. 40.101 /  5. 40.101
+  libavresample   2.  1.  0 /  2.  1.  0
+  libswscale      3.  1.101 /  3.  1.101
+  libswresample   1.  2.101 /  1.  2.101
+  libpostproc    53.  3.100 / 53.  3.100
+[mp3 @ 0x20fe8c0] Unknown attached picture mimetype: ('image/png', None), skipping.
+[mp3 @ 0x20fe8c0] Skipping 0 bytes of junk at 17418.
+[mp3 @ 0x20fe8c0] Estimating duration from bitrate, this may be inaccurate
+Input #0, mp3, from 'jozef-czechowicz-kamien-tomik-knajpa.mp3':
+  Metadata:
+    title           : Józef Czechowicz, Knajpa
+    artist          : Wiktor Korzeniewski
+    album           : Wolne Lektury
+    date            : 2010
+    genre           : Speech
+    copyright       : 2010 Fundacja Nowoczesna Polska. Licensed to the public under http://creativecommons.org/licenses/by-sa/3.0/deed.pl verify at http://www.wolnelektury.pl/katalog/lektura/kamien-knajpa/
+    publisher       : Fundacja Nowoczesna Polska
+    performer       : Marcin Cisło
+    album_artist    : Fundacja Nowoczesna Polska
+    encoder         : Lavf52.87.1
+  Duration: 00:01:45.77, start: 0.000000, bitrate: 65 kb/s
+    Stream #0:0: Audio: mp3, 44100 Hz, mono, s16p, 64 kb/s
+Output #0, null, to 'pipe:':
+  Metadata:
+    title           : Józef Czechowicz, Knajpa
+    artist          : Wiktor Korzeniewski
+    album           : Wolne Lektury
+    date            : 2010
+    genre           : Speech
+    copyright       : 2010 Fundacja Nowoczesna Polska. Licensed to the public under http://creativecommons.org/licenses/by-sa/3.0/deed.pl verify at http://www.wolnelektury.pl/katalog/lektura/kamien-knajpa/
+    publisher       : Fundacja Nowoczesna Polska
+    performer       : Marcin Cisło
+    album_artist    : Fundacja Nowoczesna Polska
+    encoder         : Lavf56.40.101
+    Stream #0:0: Audio: pcm_s16le, 44100 Hz, mono, s16, 705 kb/s
+    Metadata:
+      encoder         : Lavc56.60.100 pcm_s16le
+Stream mapping:
+  Stream #0:0 -> #0:0 (mp3 (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+[silencedetect @ 0x2111a20] silence_start: 1.19796
+[silencedetect @ 0x2111a20] silence_end: 2.01143 | silence_duration: 0.813469
+[silencedetect @ 0x2111a20] silence_start: 2.42571
+[silencedetect @ 0x2111a20] silence_end: 4.49306 | silence_duration: 2.06735
+[silencedetect @ 0x2111a20] silence_start: 7.75469
+[silencedetect @ 0x2111a20] silence_end: 8.28082 | silence_duration: 0.526122
+[silencedetect @ 0x2111a20] silence_start: 9.21755
+[silencedetect @ 0x2111a20] silence_end: 10.9192 | silence_duration: 1.70163
+[silencedetect @ 0x2111a20] silence_start: 15.8265
+[silencedetect @ 0x2111a20] silence_end: 17.1102 | silence_duration: 1.28367
+[silencedetect @ 0x2111a20] silence_start: 22.2265
+[silencedetect @ 0x2111a20] silence_end: 23.4841 | silence_duration: 1.25755
+[silencedetect @ 0x2111a20] silence_start: 24.3163
+[silencedetect @ 0x2111a20] silence_end: 25.5739 | silence_duration: 1.25755
+[silencedetect @ 0x2111a20] silence_start: 26.3539
+[silencedetect @ 0x2111a20] silence_end: 27.6898 | silence_duration: 1.33592
+[silencedetect @ 0x2111a20] silence_start: 29.7759
+[silencedetect @ 0x2111a20] silence_end: 30.8506 | silence_duration: 1.07469
+[silencedetect @ 0x2111a20] silence_start: 33.2502
+[silencedetect @ 0x2111a20] silence_end: 34.1943 | silence_duration: 0.944082
+[silencedetect @ 0x2111a20] silence_start: 34.9482
+[silencedetect @ 0x2111a20] silence_end: 36.3102 | silence_duration: 1.36204
+[silencedetect @ 0x2111a20] silence_start: 39.18
+[silencedetect @ 0x2111a20] silence_end: 39.8367 | silence_duration: 0.656735
+[silencedetect @ 0x2111a20] silence_start: 42.0535
+[silencedetect @ 0x2111a20] silence_end: 43.2849 | silence_duration: 1.23143
+[silencedetect @ 0x2111a20] silence_start: 44.1955
+[silencedetect @ 0x2111a20] silence_end: 45.2702 | silence_duration: 1.07469
+[silencedetect @ 0x2111a20] silence_start: 49.0543
+[silencedetect @ 0x2111a20] silence_end: 50.0245 | silence_duration: 0.970204
+[silencedetect @ 0x2111a20] silence_start: 51.9278
+[silencedetect @ 0x2111a20] silence_end: 53.8384 | silence_duration: 1.91061
+[silencedetect @ 0x2111a20] silence_start: 56.2641
+[silencedetect @ 0x2111a20] silence_end: 56.8424 | silence_duration: 0.578367
+[silencedetect @ 0x2111a20] silence_start: 58.5106
+[silencedetect @ 0x2111a20] silence_end: 59.8727 | silence_duration: 1.36204
+[silencedetect @ 0x2111a20] silence_start: 62.5857
+[silencedetect @ 0x2111a20] silence_end: 63.4514 | silence_duration: 0.865714
+[silencedetect @ 0x2111a20] silence_start: 66.06
+[silencedetect @ 0x2111a20] silence_end: 67.2131 | silence_duration: 1.15306
+[silencedetect @ 0x2111a20] silence_start: 68.0714
+[silencedetect @ 0x2111a20] silence_end: 69.329 | silence_duration: 1.25755
+[silencedetect @ 0x2111a20] silence_start: 71.2061
+[silencedetect @ 0x2111a20] silence_end: 71.9673 | silence_duration: 0.761224
+[silencedetect @ 0x2111a20] silence_start: 73.2176
+[silencedetect @ 0x2111a20] silence_end: 74.6318 | silence_duration: 1.41429
+[silencedetect @ 0x2111a20] silence_start: 76.7702
+[silencedetect @ 0x2111a20] silence_end: 78.0016 | silence_duration: 1.23143
+[silencedetect @ 0x2111a20] silence_start: 79.4347
+[silencedetect @ 0x2111a20] silence_end: 80.5094 | silence_duration: 1.07469
+[silencedetect @ 0x2111a20] silence_start: 82.9612
+[silencedetect @ 0x2111a20] silence_end: 83.7224 | silence_duration: 0.761224
+[silencedetect @ 0x2111a20] silence_start: 85.9653
+[silencedetect @ 0x2111a20] silence_end: 86.4653 | silence_duration: 0.5
+[silencedetect @ 0x2111a20] silence_start: 88.4208
+[silencedetect @ 0x2111a20] silence_end: 90.0441 | silence_duration: 1.62327
+[silencedetect @ 0x2111a20] silence_start: 92.4698
+[silencedetect @ 0x2111a20] silence_end: 93.4922 | silence_duration: 1.02245
+[silencedetect @ 0x2111a20] silence_start: 97.3808
+[silencedetect @ 0x2111a20] silence_end: 98.5861 | silence_duration: 1.20531
+[silencedetect @ 0x2111a20] silence_start: 99.7057
+[silencedetect @ 0x2111a20] silence_end: 100.571 | silence_duration: 0.865714
+[silencedetect @ 0x2111a20] silence_start: 102.527
+size=N/A time=00:01:45.76 bitrate=N/A    
+video:0kB audio:9110kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown

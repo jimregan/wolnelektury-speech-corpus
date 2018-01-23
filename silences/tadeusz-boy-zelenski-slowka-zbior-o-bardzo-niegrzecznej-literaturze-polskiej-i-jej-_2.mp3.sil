@@ -1,0 +1,125 @@
+ffmpeg version 2.8.11-0ubuntu0.16.04.1 Copyright (c) 2000-2017 the FFmpeg developers
+  built with gcc 5.4.0 (Ubuntu 5.4.0-6ubuntu1~16.04.4) 20160609
+  configuration: --prefix=/usr --extra-version=0ubuntu0.16.04.1 --build-suffix=-ffmpeg --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --cc=cc --cxx=g++ --enable-gpl --enable-shared --disable-stripping --disable-decoder=libopenjpeg --disable-decoder=libschroedinger --enable-avresample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libmodplug --enable-libmp3lame --enable-libopenjpeg --enable-libopus --enable-libpulse --enable-librtmp --enable-libschroedinger --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxvid --enable-libzvbi --enable-openal --enable-opengl --enable-x11grab --enable-libdc1394 --enable-libiec61883 --enable-libzmq --enable-frei0r --enable-libx264 --enable-libopencv
+  libavutil      54. 31.100 / 54. 31.100
+  libavcodec     56. 60.100 / 56. 60.100
+  libavformat    56. 40.101 / 56. 40.101
+  libavdevice    56.  4.100 / 56.  4.100
+  libavfilter     5. 40.101 /  5. 40.101
+  libavresample   2.  1.  0 /  2.  1.  0
+  libswscale      3.  1.101 /  3.  1.101
+  libswresample   1.  2.101 /  1.  2.101
+  libpostproc    53.  3.100 / 53.  3.100
+[mp3 @ 0x1d5c8c0] Unknown attached picture mimetype: ('image/png', None), skipping.
+[mp3 @ 0x1d5c8c0] Skipping 0 bytes of junk at 17522.
+Input #0, mp3, from 'tadeusz-boy-zelenski-slowka-zbior-o-bardzo-niegrzecznej-literaturze-polskiej-i-jej-_2.mp3':
+  Metadata:
+    title           : Tadeusz Boy-Żeleński, "Słówka" (zbiór), O bardzo niegrzecznej literaturze polskiej i jej strapionej ciotce.
+    artist          : Wiktor Korzeniewski
+    album           : Wolne Lektury
+    genre           : 0
+    encoder         : Lavf53.21.1
+    URL             : http://wolnelektury.pl/katalog/lektura/slowka-zbior
+    date            : 2013
+    CONDUCTOR       : Adam Bień
+    PROJECT         : Słuchamy Polski finansowanego przez Ministerstwo Kultury i Dziedzictwa Narodowego
+    TCD             : 75617262132
+    performer       : Adam Bień
+    album_artist    : Fundacja Nowoczesna Polska
+    copyright       : 2013 Fundacja Nowoczesna Polska. Licensed to the public under http://creativecommons.org/licenses/by-sa/3.0/deed.pl verify at http://wolnelektury.pl/katalog/lektura/slowka-zbior-o-bardzo-niegrzecznej-literaturze-polskiej-i-jej-strapionej-ciotce
+    encoded_by      : Adam Bień
+    publisher       : Fundacja Nowoczesna Polska
+  Duration: 00:04:48.94, start: 0.000000, bitrate: 64 kb/s
+    Stream #0:0: Audio: mp3, 44100 Hz, mono, s16p, 64 kb/s
+Output #0, null, to 'pipe:':
+  Metadata:
+    title           : Tadeusz Boy-Żeleński, "Słówka" (zbiór), O bardzo niegrzecznej literaturze polskiej i jej strapionej ciotce.
+    artist          : Wiktor Korzeniewski
+    album           : Wolne Lektury
+    genre           : 0
+    URL             : http://wolnelektury.pl/katalog/lektura/slowka-zbior
+    date            : 2013
+    CONDUCTOR       : Adam Bień
+    PROJECT         : Słuchamy Polski finansowanego przez Ministerstwo Kultury i Dziedzictwa Narodowego
+    TCD             : 75617262132
+    performer       : Adam Bień
+    album_artist    : Fundacja Nowoczesna Polska
+    copyright       : 2013 Fundacja Nowoczesna Polska. Licensed to the public under http://creativecommons.org/licenses/by-sa/3.0/deed.pl verify at http://wolnelektury.pl/katalog/lektura/slowka-zbior-o-bardzo-niegrzecznej-literaturze-polskiej-i-jej-strapionej-ciotce
+    encoded_by      : Adam Bień
+    publisher       : Fundacja Nowoczesna Polska
+    encoder         : Lavf56.40.101
+    Stream #0:0: Audio: pcm_s16le, 44100 Hz, mono, s16, 705 kb/s
+    Metadata:
+      encoder         : Lavc56.60.100 pcm_s16le
+Stream mapping:
+  Stream #0:0 -> #0:0 (mp3 (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+[silencedetect @ 0x1d6fc20] silence_start: 4.51551
+[silencedetect @ 0x1d6fc20] silence_end: 5.19837 | silence_duration: 0.682857
+[silencedetect @ 0x1d6fc20] silence_start: 5.58653
+[silencedetect @ 0x1d6fc20] silence_end: 6.1649 | silence_duration: 0.578367
+[silencedetect @ 0x1d6fc20] silence_start: 19.8494
+[silencedetect @ 0x1d6fc20] silence_end: 20.48 | silence_duration: 0.630612
+[silencedetect @ 0x1d6fc20] silence_start: 30.4812
+[silencedetect @ 0x1d6fc20] silence_end: 31.2686 | silence_duration: 0.787347
+[silencedetect @ 0x1d6fc20] silence_start: 34.5824
+[silencedetect @ 0x1d6fc20] silence_end: 35.1608 | silence_duration: 0.578367
+[silencedetect @ 0x1d6fc20] silence_start: 43.0461
+[silencedetect @ 0x1d6fc20] silence_end: 43.5461 | silence_duration: 0.5
+[silencedetect @ 0x1d6fc20] silence_start: 57.1
+[silencedetect @ 0x1d6fc20] silence_end: 57.6261 | silence_duration: 0.526122
+[silencedetect @ 0x1d6fc20] silence_start: 66.6086
+[silencedetect @ 0x1d6fc20] silence_end: 67.4743 | silence_duration: 0.865714
+[silencedetect @ 0x1d6fc20] silence_start: 67.7318
+[silencedetect @ 0x1d6fc20] silence_end: 68.4931 | silence_duration: 0.761224
+[silencedetect @ 0x1d6fc20] silence_start: 72.4339
+[silencedetect @ 0x1d6fc20] silence_end: 73.0906 | silence_duration: 0.656735
+[silencedetect @ 0x1d6fc20] silence_start: 77.1098
+[silencedetect @ 0x1d6fc20] silence_end: 77.662 | silence_duration: 0.552245
+[silencedetect @ 0x1d6fc20] silence_start: 94.2461
+[silencedetect @ 0x1d6fc20] silence_end: 94.8767 | silence_duration: 0.630612
+[silencedetect @ 0x1d6fc20] silence_start: 104.094
+[silencedetect @ 0x1d6fc20] silence_end: 104.934 | silence_duration: 0.839592
+[silencedetect @ 0x1d6fc20] silence_start: 106.106
+[silencedetect @ 0x1d6fc20] silence_end: 106.789 | silence_duration: 0.682857
+[silencedetect @ 0x1d6fc20] silence_start: 109.397
+[silencedetect @ 0x1d6fc20] silence_end: 109.976 | silence_duration: 0.578367
+[silencedetect @ 0x1d6fc20] silence_start: 114.569
+[silencedetect @ 0x1d6fc20] silence_end: 115.2 | silence_duration: 0.630612
+[silencedetect @ 0x1d6fc20] silence_start: 123.764
+[silencedetect @ 0x1d6fc20] silence_end: 124.5 | silence_duration: 0.735102
+[silencedetect @ 0x1d6fc20] silence_start: 124.809
+[silencedetect @ 0x1d6fc20] silence_end: 125.414 | silence_duration: 0.60449
+[silencedetect @ 0x1d6fc20] silence_start: 134.84
+[silencedetect @ 0x1d6fc20] silence_end: 135.758 | silence_duration: 0.917959
+[silencedetect @ 0x1d6fc20] silence_start: 140.666
+[silencedetect @ 0x1d6fc20] silence_end: 141.584 | silence_duration: 0.917959
+[silencedetect @ 0x1d6fc20] silence_start: 146.569
+[silencedetect @ 0x1d6fc20] silence_end: 147.174 | silence_duration: 0.60449
+[silencedetect @ 0x1d6fc20] silence_start: 149.103
+[silencedetect @ 0x1d6fc20] silence_end: 149.708 | silence_duration: 0.60449
+[silencedetect @ 0x1d6fc20] silence_start: 151.559
+[silencedetect @ 0x1d6fc20] silence_end: 152.189 | silence_duration: 0.630612
+[silencedetect @ 0x1d6fc20] silence_start: 160.858
+[silencedetect @ 0x1d6fc20] silence_end: 161.567 | silence_duration: 0.70898
+[silencedetect @ 0x1d6fc20] silence_start: 182.462
+[silencedetect @ 0x1d6fc20] silence_end: 183.118 | silence_duration: 0.656735
+[silencedetect @ 0x1d6fc20] silence_start: 191.657
+[silencedetect @ 0x1d6fc20] silence_end: 192.209 | silence_duration: 0.552245
+[silencedetect @ 0x1d6fc20] silence_start: 230.318
+[silencedetect @ 0x1d6fc20] silence_end: 230.922 | silence_duration: 0.60449
+[silencedetect @ 0x1d6fc20] silence_start: 235.934
+[silencedetect @ 0x1d6fc20] silence_end: 236.696 | silence_duration: 0.761224
+[silencedetect @ 0x1d6fc20] silence_start: 244.659
+[silencedetect @ 0x1d6fc20] silence_end: 245.211 | silence_duration: 0.552245
+[silencedetect @ 0x1d6fc20] silence_start: 249.492
+[silencedetect @ 0x1d6fc20] silence_end: 250.018 | silence_duration: 0.526122
+[silencedetect @ 0x1d6fc20] silence_start: 274.282
+[silencedetect @ 0x1d6fc20] silence_end: 275.148 | silence_duration: 0.865714
+[silencedetect @ 0x1d6fc20] silence_start: 284.104
+[silencedetect @ 0x1d6fc20] silence_end: 284.656 | silence_duration: 0.552245
+[silencedetect @ 0x1d6fc20] silence_start: 285.253
+[silencedetect @ 0x1d6fc20] silence_end: 285.858 | silence_duration: 0.60449
+[silencedetect @ 0x1d6fc20] silence_start: 288.336
+size=N/A time=00:04:48.94 bitrate=N/A    
+video:0kB audio:24887kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown

@@ -1,0 +1,86 @@
+ffmpeg version 2.8.11-0ubuntu0.16.04.1 Copyright (c) 2000-2017 the FFmpeg developers
+  built with gcc 5.4.0 (Ubuntu 5.4.0-6ubuntu1~16.04.4) 20160609
+  configuration: --prefix=/usr --extra-version=0ubuntu0.16.04.1 --build-suffix=-ffmpeg --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --cc=cc --cxx=g++ --enable-gpl --enable-shared --disable-stripping --disable-decoder=libopenjpeg --disable-decoder=libschroedinger --enable-avresample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libmodplug --enable-libmp3lame --enable-libopenjpeg --enable-libopus --enable-libpulse --enable-librtmp --enable-libschroedinger --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxvid --enable-libzvbi --enable-openal --enable-opengl --enable-x11grab --enable-libdc1394 --enable-libiec61883 --enable-libzmq --enable-frei0r --enable-libx264 --enable-libopencv
+  libavutil      54. 31.100 / 54. 31.100
+  libavcodec     56. 60.100 / 56. 60.100
+  libavformat    56. 40.101 / 56. 40.101
+  libavdevice    56.  4.100 / 56.  4.100
+  libavfilter     5. 40.101 /  5. 40.101
+  libavresample   2.  1.  0 /  2.  1.  0
+  libswscale      3.  1.101 /  3.  1.101
+  libswresample   1.  2.101 /  1.  2.101
+  libpostproc    53.  3.100 / 53.  3.100
+[mp3 @ 0x1c738c0] Unknown attached picture mimetype: ('image/png', None), skipping.
+[mp3 @ 0x1c738c0] Skipping 0 bytes of junk at 17418.
+[mp3 @ 0x1c738c0] Estimating duration from bitrate, this may be inaccurate
+Input #0, mp3, from 'ignacy-krasicki-bajki-i-przypowiesci-lew-i-zwierzeta.mp3':
+  Metadata:
+    title           : Ignacy Krasicki, Bajki i przypowieści, Lew i zwierzęta
+    artist          : Bartosz Mazur
+    album           : Wolne Lektury
+    date            : 2010
+    genre           : Speech
+    copyright       : 2010 Fundacja Nowoczesna Polska. Licensed to the public under http://creativecommons.org/licenses/by-sa/3.0/deed.pl verify at http://www.wolnelektury.pl/katalog/lektura/bajki-i-przypowiesci-lew-i-zwierzeta/
+    publisher       : Fundacja Nowoczesna Polska
+    performer       : Marcin Cisło
+    album_artist    : Fundacja Nowoczesna Polska
+    encoder         : Lavf52.87.1
+  Duration: 00:01:12.96, start: 0.000000, bitrate: 65 kb/s
+    Stream #0:0: Audio: mp3, 44100 Hz, mono, s16p, 64 kb/s
+Output #0, null, to 'pipe:':
+  Metadata:
+    title           : Ignacy Krasicki, Bajki i przypowieści, Lew i zwierzęta
+    artist          : Bartosz Mazur
+    album           : Wolne Lektury
+    date            : 2010
+    genre           : Speech
+    copyright       : 2010 Fundacja Nowoczesna Polska. Licensed to the public under http://creativecommons.org/licenses/by-sa/3.0/deed.pl verify at http://www.wolnelektury.pl/katalog/lektura/bajki-i-przypowiesci-lew-i-zwierzeta/
+    publisher       : Fundacja Nowoczesna Polska
+    performer       : Marcin Cisło
+    album_artist    : Fundacja Nowoczesna Polska
+    encoder         : Lavf56.40.101
+    Stream #0:0: Audio: pcm_s16le, 44100 Hz, mono, s16, 705 kb/s
+    Metadata:
+      encoder         : Lavc56.60.100 pcm_s16le
+Stream mapping:
+  Stream #0:0 -> #0:0 (mp3 (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+[silencedetect @ 0x1c912e0] silence_start: 1.53755
+[silencedetect @ 0x1c912e0] silence_end: 2.89959 | silence_duration: 1.36204
+[silencedetect @ 0x1c912e0] silence_start: 4.3849
+[silencedetect @ 0x1c912e0] silence_end: 6.26939 | silence_duration: 1.88449
+[silencedetect @ 0x1c912e0] silence_start: 7.54571
+[silencedetect @ 0x1c912e0] silence_end: 10.4229 | silence_duration: 2.87714
+[silencedetect @ 0x1c912e0] silence_start: 12.7441
+[silencedetect @ 0x1c912e0] silence_end: 13.2963 | silence_duration: 0.552245
+[silencedetect @ 0x1c912e0] silence_start: 14.9122
+[silencedetect @ 0x1c912e0] silence_end: 15.5429 | silence_duration: 0.630612
+[silencedetect @ 0x1c912e0] silence_start: 16.8976
+[silencedetect @ 0x1c912e0] silence_end: 17.711 | silence_duration: 0.813469
+[silencedetect @ 0x1c912e0] silence_start: 18.909
+[silencedetect @ 0x1c912e0] silence_end: 19.5918 | silence_duration: 0.682857
+[silencedetect @ 0x1c912e0] silence_start: 20.9988
+[silencedetect @ 0x1c912e0] silence_end: 22.2302 | silence_duration: 1.23143
+[silencedetect @ 0x1c912e0] silence_start: 22.8796
+[silencedetect @ 0x1c912e0] silence_end: 23.6408 | silence_duration: 0.761224
+[silencedetect @ 0x1c912e0] silence_start: 32.1792
+[silencedetect @ 0x1c912e0] silence_end: 32.9665 | silence_duration: 0.787347
+[silencedetect @ 0x1c912e0] silence_start: 37.2992
+[silencedetect @ 0x1c912e0] silence_end: 38.0082 | silence_duration: 0.70898
+[silencedetect @ 0x1c912e0] silence_start: 42.2624
+[silencedetect @ 0x1c912e0] silence_end: 43.1804 | silence_duration: 0.917959
+[silencedetect @ 0x1c912e0] silence_start: 50.6216
+[silencedetect @ 0x1c912e0] silence_end: 51.3829 | silence_duration: 0.761224
+[silencedetect @ 0x1c912e0] silence_start: 55.4543
+[silencedetect @ 0x1c912e0] silence_end: 56.2416 | silence_duration: 0.787347
+[silencedetect @ 0x1c912e0] silence_start: 58.3539
+[silencedetect @ 0x1c912e0] silence_end: 58.9061 | silence_duration: 0.552245
+[silencedetect @ 0x1c912e0] silence_start: 60.2347
+[silencedetect @ 0x1c912e0] silence_end: 62.4849 | silence_duration: 2.2502
+[silencedetect @ 0x1c912e0] silence_start: 66.1906
+[silencedetect @ 0x1c912e0] silence_end: 67.6833 | silence_duration: 1.49265
+[silencedetect @ 0x1c912e0] silence_start: 70.0306
+[silencedetect @ 0x1c912e0] silence_end: 70.8441 | silence_duration: 0.813469
+[silencedetect @ 0x1c912e0] silence_start: 72.3294
+size=N/A time=00:01:12.96 bitrate=N/A    
+video:0kB audio:6284kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown

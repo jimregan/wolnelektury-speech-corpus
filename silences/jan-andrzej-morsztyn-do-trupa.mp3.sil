@@ -1,0 +1,98 @@
+ffmpeg version 2.8.11-0ubuntu0.16.04.1 Copyright (c) 2000-2017 the FFmpeg developers
+  built with gcc 5.4.0 (Ubuntu 5.4.0-6ubuntu1~16.04.4) 20160609
+  configuration: --prefix=/usr --extra-version=0ubuntu0.16.04.1 --build-suffix=-ffmpeg --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --cc=cc --cxx=g++ --enable-gpl --enable-shared --disable-stripping --disable-decoder=libopenjpeg --disable-decoder=libschroedinger --enable-avresample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libmodplug --enable-libmp3lame --enable-libopenjpeg --enable-libopus --enable-libpulse --enable-librtmp --enable-libschroedinger --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxvid --enable-libzvbi --enable-openal --enable-opengl --enable-x11grab --enable-libdc1394 --enable-libiec61883 --enable-libzmq --enable-frei0r --enable-libx264 --enable-libopencv
+  libavutil      54. 31.100 / 54. 31.100
+  libavcodec     56. 60.100 / 56. 60.100
+  libavformat    56. 40.101 / 56. 40.101
+  libavdevice    56.  4.100 / 56.  4.100
+  libavfilter     5. 40.101 /  5. 40.101
+  libavresample   2.  1.  0 /  2.  1.  0
+  libswscale      3.  1.101 /  3.  1.101
+  libswresample   1.  2.101 /  1.  2.101
+  libpostproc    53.  3.100 / 53.  3.100
+[mp3 @ 0x9618c0] Unknown attached picture mimetype: ('image/png', None), skipping.
+[mp3 @ 0x9618c0] Skipping 0 bytes of junk at 17522.
+Input #0, mp3, from 'jan-andrzej-morsztyn-do-trupa.mp3':
+  Metadata:
+    title           : Jan Andrzej Morsztyn, "Do trupa"
+    artist          : Piotr Głowacki
+    album           : Wolne Lektury
+    encoder         : Lavf53.21.0
+    genre           : Speech
+    originator_reference: IcaxidaspLiaaaGk
+    date            : 2008-09-26
+    performer       : Jakub Kowalski
+    album_artist    : Fundacja Nowoczesna Polska
+    time_reference  : 46254435
+    copyright       : 2008 Fundacja Nowoczesna Polska. Licensed to the public under http://creativecommons.org/licenses/by-sa/3.0/deed.pl verify at http://wolnelektury.pl/katalog/lektura/do-trupa/
+    creation_time   : 0009-37-23
+    encoded_by      : Pro Tools
+    publisher       : Fundacja Nowoczesna Polska
+  Duration: 00:01:05.10, start: 0.000000, bitrate: 66 kb/s
+    Stream #0:0: Audio: mp3, 44100 Hz, mono, s16p, 64 kb/s
+Output #0, null, to 'pipe:':
+  Metadata:
+    title           : Jan Andrzej Morsztyn, "Do trupa"
+    artist          : Piotr Głowacki
+    album           : Wolne Lektury
+    publisher       : Fundacja Nowoczesna Polska
+    genre           : Speech
+    originator_reference: IcaxidaspLiaaaGk
+    date            : 2008-09-26
+    performer       : Jakub Kowalski
+    album_artist    : Fundacja Nowoczesna Polska
+    time_reference  : 46254435
+    copyright       : 2008 Fundacja Nowoczesna Polska. Licensed to the public under http://creativecommons.org/licenses/by-sa/3.0/deed.pl verify at http://wolnelektury.pl/katalog/lektura/do-trupa/
+    encoded_by      : Pro Tools
+    encoder         : Lavf56.40.101
+    Stream #0:0: Audio: pcm_s16le, 44100 Hz, mono, s16, 705 kb/s
+    Metadata:
+      encoder         : Lavc56.60.100 pcm_s16le
+Stream mapping:
+  Stream #0:0 -> #0:0 (mp3 (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+[silencedetect @ 0x974900] silence_start: -0.00367347
+[silencedetect @ 0x974900] silence_end: 0.574694 | silence_duration: 0.578367
+[silencedetect @ 0x974900] silence_start: 1.85102
+[silencedetect @ 0x974900] silence_end: 2.58612 | silence_duration: 0.735102
+[silencedetect @ 0x974900] silence_start: 3.31388
+[silencedetect @ 0x974900] silence_end: 5.32898 | silence_duration: 2.0151
+[silencedetect @ 0x974900] silence_start: 6.34408
+[silencedetect @ 0x974900] silence_end: 8.1502 | silence_duration: 1.80612
+[silencedetect @ 0x974900] silence_start: 9.32204
+[silencedetect @ 0x974900] silence_end: 11.9902 | silence_duration: 2.66816
+[silencedetect @ 0x974900] silence_start: 13.2927
+[silencedetect @ 0x974900] silence_end: 15.9347 | silence_duration: 2.64204
+[silencedetect @ 0x974900] silence_start: 17.3416
+[silencedetect @ 0x974900] silence_end: 18.6514 | silence_duration: 1.3098
+[silencedetect @ 0x974900] silence_start: 19.3792
+[silencedetect @ 0x974900] silence_end: 20.2449 | silence_duration: 0.865714
+[silencedetect @ 0x974900] silence_start: 21.8086
+[silencedetect @ 0x974900] silence_end: 23.249 | silence_duration: 1.44041
+[silencedetect @ 0x974900] silence_start: 24.3163
+[silencedetect @ 0x974900] silence_end: 24.8424 | silence_duration: 0.526122
+[silencedetect @ 0x974900] silence_start: 26.1188
+[silencedetect @ 0x974900] silence_end: 27.298 | silence_duration: 1.17918
+[silencedetect @ 0x974900] silence_start: 32.1531
+[silencedetect @ 0x974900] silence_end: 33.489 | silence_duration: 1.33592
+[silencedetect @ 0x974900] silence_start: 34.7653
+[silencedetect @ 0x974900] silence_end: 35.7094 | silence_duration: 0.944082
+[silencedetect @ 0x974900] silence_start: 39.0233
+[silencedetect @ 0x974900] silence_end: 40.8294 | silence_duration: 1.80612
+[silencedetect @ 0x974900] silence_start: 41.8445
+[silencedetect @ 0x974900] silence_end: 42.3967 | silence_duration: 0.552245
+[silencedetect @ 0x974900] silence_start: 43.8037
+[silencedetect @ 0x974900] silence_end: 44.8522 | silence_duration: 1.04857
+[silencedetect @ 0x974900] silence_start: 47.6959
+[silencedetect @ 0x974900] silence_end: 48.4049 | silence_duration: 0.70898
+[silencedetect @ 0x974900] silence_start: 51.2747
+[silencedetect @ 0x974900] silence_end: 52.7151 | silence_duration: 1.44041
+[silencedetect @ 0x974900] silence_start: 54.9057
+[silencedetect @ 0x974900] silence_end: 55.8759 | silence_duration: 0.970204
+[silencedetect @ 0x974900] silence_start: 56.6298
+[silencedetect @ 0x974900] silence_end: 57.5739 | silence_duration: 0.944082
+[silencedetect @ 0x974900] silence_start: 59.8951
+[silencedetect @ 0x974900] silence_end: 61.3878 | silence_duration: 1.49265
+[silencedetect @ 0x974900] silence_start: 62.5857
+size=N/A time=00:01:05.09 bitrate=N/A    
+video:0kB audio:5607kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown

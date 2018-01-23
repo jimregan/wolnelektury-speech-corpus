@@ -1,0 +1,132 @@
+ffmpeg version 2.8.11-0ubuntu0.16.04.1 Copyright (c) 2000-2017 the FFmpeg developers
+  built with gcc 5.4.0 (Ubuntu 5.4.0-6ubuntu1~16.04.4) 20160609
+  configuration: --prefix=/usr --extra-version=0ubuntu0.16.04.1 --build-suffix=-ffmpeg --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --cc=cc --cxx=g++ --enable-gpl --enable-shared --disable-stripping --disable-decoder=libopenjpeg --disable-decoder=libschroedinger --enable-avresample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libmodplug --enable-libmp3lame --enable-libopenjpeg --enable-libopus --enable-libpulse --enable-librtmp --enable-libschroedinger --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxvid --enable-libzvbi --enable-openal --enable-opengl --enable-x11grab --enable-libdc1394 --enable-libiec61883 --enable-libzmq --enable-frei0r --enable-libx264 --enable-libopencv
+  libavutil      54. 31.100 / 54. 31.100
+  libavcodec     56. 60.100 / 56. 60.100
+  libavformat    56. 40.101 / 56. 40.101
+  libavdevice    56.  4.100 / 56.  4.100
+  libavfilter     5. 40.101 /  5. 40.101
+  libavresample   2.  1.  0 /  2.  1.  0
+  libswscale      3.  1.101 /  3.  1.101
+  libswresample   1.  2.101 /  1.  2.101
+  libpostproc    53.  3.100 / 53.  3.100
+[mp3 @ 0x26c38c0] Unknown attached picture mimetype: ('image/png', None), skipping.
+[mp3 @ 0x26c38c0] Skipping 0 bytes of junk at 17522.
+Input #0, mp3, from 'juliusz-slowacki-testament-moj_1.mp3':
+  Metadata:
+    title           : Juliusz Słowacki, "Testament mój"
+    artist          : Agnieszka Podsiadlik
+    album           : Wolne Lektury
+    encoder         : Lavf53.21.0
+    genre           : Speech
+    originator_reference: f3hM1cWbSfnaaaGk
+    date            : 2008-10-09
+    performer       : Sebastian Buttny
+    album_artist    : Fundacja Nowoczesna Polska
+    time_reference  : 91045984
+    copyright       : 2008 Fundacja Nowoczesna Polska. Licensed to the public under http://creativecommons.org/licenses/by-sa/3.0/deed.pl verify at http://wolnelektury.pl/katalog/lektura/testament-moj/
+    creation_time   : 0006-40-47
+    encoded_by      : Pro Tools
+    publisher       : Fundacja Nowoczesna Polska
+  Duration: 00:02:27.70, start: 0.000000, bitrate: 64 kb/s
+    Stream #0:0: Audio: mp3, 44100 Hz, mono, s16p, 64 kb/s
+Output #0, null, to 'pipe:':
+  Metadata:
+    title           : Juliusz Słowacki, "Testament mój"
+    artist          : Agnieszka Podsiadlik
+    album           : Wolne Lektury
+    publisher       : Fundacja Nowoczesna Polska
+    genre           : Speech
+    originator_reference: f3hM1cWbSfnaaaGk
+    date            : 2008-10-09
+    performer       : Sebastian Buttny
+    album_artist    : Fundacja Nowoczesna Polska
+    time_reference  : 91045984
+    copyright       : 2008 Fundacja Nowoczesna Polska. Licensed to the public under http://creativecommons.org/licenses/by-sa/3.0/deed.pl verify at http://wolnelektury.pl/katalog/lektura/testament-moj/
+    encoded_by      : Pro Tools
+    encoder         : Lavf56.40.101
+    Stream #0:0: Audio: pcm_s16le, 44100 Hz, mono, s16, 705 kb/s
+    Metadata:
+      encoder         : Lavc56.60.100 pcm_s16le
+Stream mapping:
+  Stream #0:0 -> #0:0 (mp3 (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+[silencedetect @ 0x26d6ac0] silence_start: -0.00367347
+[silencedetect @ 0x26d6ac0] silence_end: 0.705306 | silence_duration: 0.70898
+[silencedetect @ 0x26d6ac0] silence_start: 1.87714
+[silencedetect @ 0x26d6ac0] silence_end: 2.84735 | silence_duration: 0.970204
+[silencedetect @ 0x26d6ac0] silence_start: 3.67959
+[silencedetect @ 0x26d6ac0] silence_end: 5.19837 | silence_duration: 1.51878
+[silencedetect @ 0x26d6ac0] silence_start: 6.03061
+[silencedetect @ 0x26d6ac0] silence_end: 6.71347 | silence_duration: 0.682857
+[silencedetect @ 0x26d6ac0] silence_start: 8.32939
+[silencedetect @ 0x26d6ac0] silence_end: 9.66531 | silence_duration: 1.33592
+[silencedetect @ 0x26d6ac0] silence_start: 11.8559
+[silencedetect @ 0x26d6ac0] silence_end: 13.0351 | silence_duration: 1.17918
+[silencedetect @ 0x26d6ac0] silence_start: 15.1996
+[silencedetect @ 0x26d6ac0] silence_end: 15.9086 | silence_duration: 0.70898
+[silencedetect @ 0x26d6ac0] silence_start: 16.4012
+[silencedetect @ 0x26d6ac0] silence_end: 17.502 | silence_duration: 1.10082
+[silencedetect @ 0x26d6ac0] silence_start: 20.3457
+[silencedetect @ 0x26d6ac0] silence_end: 21.8645 | silence_duration: 1.51878
+[silencedetect @ 0x26d6ac0] silence_start: 23.9245
+[silencedetect @ 0x26d6ac0] silence_end: 24.8163 | silence_duration: 0.891837
+[silencedetect @ 0x26d6ac0] silence_start: 27.1376
+[silencedetect @ 0x26d6ac0] silence_end: 28.5518 | silence_duration: 1.41429
+[silencedetect @ 0x26d6ac0] silence_start: 31.1604
+[silencedetect @ 0x26d6ac0] silence_end: 32.3657 | silence_duration: 1.20531
+[silencedetect @ 0x26d6ac0] silence_start: 35.131
+[silencedetect @ 0x26d6ac0] silence_end: 36.9371 | silence_duration: 1.80612
+[silencedetect @ 0x26d6ac0] silence_start: 39.8592
+[silencedetect @ 0x26d6ac0] silence_end: 40.542 | silence_duration: 0.682857
+[silencedetect @ 0x26d6ac0] silence_start: 42.8371
+[silencedetect @ 0x26d6ac0] silence_end: 43.9641 | silence_duration: 1.12694
+[silencedetect @ 0x26d6ac0] silence_start: 46.651
+[silencedetect @ 0x26d6ac0] silence_end: 47.4384 | silence_duration: 0.787347
+[silencedetect @ 0x26d6ac0] silence_start: 50.0469
+[silencedetect @ 0x26d6ac0] silence_end: 51.2 | silence_duration: 1.15306
+[silencedetect @ 0x26d6ac0] silence_start: 57.7792
+[silencedetect @ 0x26d6ac0] silence_end: 58.6188 | silence_duration: 0.839592
+[silencedetect @ 0x26d6ac0] silence_start: 64.0486
+[silencedetect @ 0x26d6ac0] silence_end: 65.4629 | silence_duration: 1.41429
+[silencedetect @ 0x26d6ac0] silence_start: 70.5008
+[silencedetect @ 0x26d6ac0] silence_end: 71.471 | silence_duration: 0.970204
+[silencedetect @ 0x26d6ac0] silence_start: 73.8184
+[silencedetect @ 0x26d6ac0] silence_end: 74.5535 | silence_duration: 0.735102
+[silencedetect @ 0x26d6ac0] silence_start: 76.9269
+[silencedetect @ 0x26d6ac0] silence_end: 78.0016 | silence_duration: 1.07469
+[silencedetect @ 0x26d6ac0] silence_start: 83.0396
+[silencedetect @ 0x26d6ac0] silence_end: 83.7224 | silence_duration: 0.682857
+[silencedetect @ 0x26d6ac0] silence_start: 85.8086
+[silencedetect @ 0x26d6ac0] silence_end: 86.6482 | silence_duration: 0.839592
+[silencedetect @ 0x26d6ac0] silence_start: 89.3612
+[silencedetect @ 0x26d6ac0] silence_end: 90.0702 | silence_duration: 0.70898
+[silencedetect @ 0x26d6ac0] silence_start: 90.9547
+[silencedetect @ 0x26d6ac0] silence_end: 91.4808 | silence_duration: 0.526122
+[silencedetect @ 0x26d6ac0] silence_start: 101.717
+[silencedetect @ 0x26d6ac0] silence_end: 102.766 | silence_duration: 1.04857
+[silencedetect @ 0x26d6ac0] silence_start: 103.363
+[silencedetect @ 0x26d6ac0] silence_end: 104.046 | silence_duration: 0.682857
+[silencedetect @ 0x26d6ac0] silence_start: 106.262
+[silencedetect @ 0x26d6ac0] silence_end: 107.259 | silence_duration: 0.996327
+[silencedetect @ 0x26d6ac0] silence_start: 109.449
+[silencedetect @ 0x26d6ac0] silence_end: 111.073 | silence_duration: 1.62327
+[silencedetect @ 0x26d6ac0] silence_start: 114.23
+[silencedetect @ 0x26d6ac0] silence_end: 114.756 | silence_duration: 0.526122
+[silencedetect @ 0x26d6ac0] silence_start: 116.842
+[silencedetect @ 0x26d6ac0] silence_end: 118.387 | silence_duration: 1.5449
+[silencedetect @ 0x26d6ac0] silence_start: 121.492
+[silencedetect @ 0x26d6ac0] silence_end: 122.07 | silence_duration: 0.578367
+[silencedetect @ 0x26d6ac0] silence_start: 124.47
+[silencedetect @ 0x26d6ac0] silence_end: 125.492 | silence_duration: 1.02245
+[silencedetect @ 0x26d6ac0] silence_start: 127.996
+[silencedetect @ 0x26d6ac0] silence_end: 128.705 | silence_duration: 0.70898
+[silencedetect @ 0x26d6ac0] silence_start: 131.236
+[silencedetect @ 0x26d6ac0] silence_end: 133.355 | silence_duration: 2.11959
+[silencedetect @ 0x26d6ac0] silence_start: 135.859
+[silencedetect @ 0x26d6ac0] silence_end: 136.385 | silence_duration: 0.526122
+[silencedetect @ 0x26d6ac0] silence_start: 138.628
+[silencedetect @ 0x26d6ac0] silence_end: 139.598 | silence_duration: 0.970204
+[silencedetect @ 0x26d6ac0] silence_start: 145.394
+size=N/A time=00:02:27.69 bitrate=N/A    
+video:0kB audio:12722kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown

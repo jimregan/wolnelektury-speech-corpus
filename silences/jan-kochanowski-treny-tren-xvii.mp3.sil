@@ -1,0 +1,148 @@
+ffmpeg version 2.8.11-0ubuntu0.16.04.1 Copyright (c) 2000-2017 the FFmpeg developers
+  built with gcc 5.4.0 (Ubuntu 5.4.0-6ubuntu1~16.04.4) 20160609
+  configuration: --prefix=/usr --extra-version=0ubuntu0.16.04.1 --build-suffix=-ffmpeg --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --cc=cc --cxx=g++ --enable-gpl --enable-shared --disable-stripping --disable-decoder=libopenjpeg --disable-decoder=libschroedinger --enable-avresample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libmodplug --enable-libmp3lame --enable-libopenjpeg --enable-libopus --enable-libpulse --enable-librtmp --enable-libschroedinger --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxvid --enable-libzvbi --enable-openal --enable-opengl --enable-x11grab --enable-libdc1394 --enable-libiec61883 --enable-libzmq --enable-frei0r --enable-libx264 --enable-libopencv
+  libavutil      54. 31.100 / 54. 31.100
+  libavcodec     56. 60.100 / 56. 60.100
+  libavformat    56. 40.101 / 56. 40.101
+  libavdevice    56.  4.100 / 56.  4.100
+  libavfilter     5. 40.101 /  5. 40.101
+  libavresample   2.  1.  0 /  2.  1.  0
+  libswscale      3.  1.101 /  3.  1.101
+  libswresample   1.  2.101 /  1.  2.101
+  libpostproc    53.  3.100 / 53.  3.100
+[mp3 @ 0x8af8c0] Unknown attached picture mimetype: ('image/png', None), skipping.
+[mp3 @ 0x8af8c0] Skipping 0 bytes of junk at 17522.
+Input #0, mp3, from 'jan-kochanowski-treny-tren-xvii.mp3':
+  Metadata:
+    title           : Jan Kochanowski, "Treny", Tren XVII
+    artist          : Paweł Paprocki
+    album           : Wolne Lektury
+    encoder         : Lavf53.21.0
+    genre           : Speech
+    originator_reference: M88RvcqpI#kaaaGk
+    date            : 2008-10-20
+    performer       : Gosia Kozera
+    album_artist    : Fundacja Nowoczesna Polska
+    time_reference  : 1124726107
+    copyright       : 2008 Fundacja Nowoczesna Polska. Licensed to the public under http://creativecommons.org/licenses/by-sa/3.0/deed.pl verify at http://wolnelektury.pl/katalog/lektura/treny-tren-xvii/
+    creation_time   : 0019-00-53
+    encoded_by      : Pro Tools
+    publisher       : Fundacja Nowoczesna Polska
+  Duration: 00:02:48.39, start: 0.000000, bitrate: 64 kb/s
+    Stream #0:0: Audio: mp3, 44100 Hz, mono, s16p, 64 kb/s
+Output #0, null, to 'pipe:':
+  Metadata:
+    title           : Jan Kochanowski, "Treny", Tren XVII
+    artist          : Paweł Paprocki
+    album           : Wolne Lektury
+    publisher       : Fundacja Nowoczesna Polska
+    genre           : Speech
+    originator_reference: M88RvcqpI#kaaaGk
+    date            : 2008-10-20
+    performer       : Gosia Kozera
+    album_artist    : Fundacja Nowoczesna Polska
+    time_reference  : 1124726107
+    copyright       : 2008 Fundacja Nowoczesna Polska. Licensed to the public under http://creativecommons.org/licenses/by-sa/3.0/deed.pl verify at http://wolnelektury.pl/katalog/lektura/treny-tren-xvii/
+    encoded_by      : Pro Tools
+    encoder         : Lavf56.40.101
+    Stream #0:0: Audio: pcm_s16le, 44100 Hz, mono, s16, 705 kb/s
+    Metadata:
+      encoder         : Lavc56.60.100 pcm_s16le
+Stream mapping:
+  Stream #0:0 -> #0:0 (mp3 (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+[silencedetect @ 0x8cd280] silence_start: -0.00367347
+[silencedetect @ 0x8cd280] silence_end: 0.731429 | silence_duration: 0.735102
+[silencedetect @ 0x8cd280] silence_start: 1.77265
+[silencedetect @ 0x8cd280] silence_end: 2.37714 | silence_duration: 0.60449
+[silencedetect @ 0x8cd280] silence_start: 2.73918
+[silencedetect @ 0x8cd280] silence_end: 4.23184 | silence_duration: 1.49265
+[silencedetect @ 0x8cd280] silence_start: 5.69102
+[silencedetect @ 0x8cd280] silence_end: 9.90041 | silence_duration: 4.20939
+[silencedetect @ 0x8cd280] silence_start: 11.6992
+[silencedetect @ 0x8cd280] silence_end: 12.8261 | silence_duration: 1.12694
+[silencedetect @ 0x8cd280] silence_start: 14.6771
+[silencedetect @ 0x8cd280] silence_end: 15.8302 | silence_duration: 1.15306
+[silencedetect @ 0x8cd280] silence_start: 17.4722
+[silencedetect @ 0x8cd280] silence_end: 18.4686 | silence_duration: 0.996327
+[silencedetect @ 0x8cd280] silence_start: 20.4763
+[silencedetect @ 0x8cd280] silence_end: 22.178 | silence_duration: 1.70163
+[silencedetect @ 0x8cd280] silence_start: 28.8094
+[silencedetect @ 0x8cd280] silence_end: 29.4139 | silence_duration: 0.60449
+[silencedetect @ 0x8cd280] silence_start: 30.8731
+[silencedetect @ 0x8cd280] silence_end: 32.1306 | silence_duration: 1.25755
+[silencedetect @ 0x8cd280] silence_start: 33.6682
+[silencedetect @ 0x8cd280] silence_end: 34.9257 | silence_duration: 1.25755
+[silencedetect @ 0x8cd280] silence_start: 36.8029
+[silencedetect @ 0x8cd280] silence_end: 37.4596 | silence_duration: 0.656735
+[silencedetect @ 0x8cd280] silence_start: 38.3441
+[silencedetect @ 0x8cd280] silence_end: 39.471 | silence_duration: 1.12694
+[silencedetect @ 0x8cd280] silence_start: 40.1727
+[silencedetect @ 0x8cd280] silence_end: 41.169 | silence_duration: 0.996327
+[silencedetect @ 0x8cd280] silence_start: 43.0722
+[silencedetect @ 0x8cd280] silence_end: 44.7739 | silence_duration: 1.70163
+[silencedetect @ 0x8cd280] silence_start: 48.3751
+[silencedetect @ 0x8cd280] silence_end: 49.1363 | silence_duration: 0.761224
+[silencedetect @ 0x8cd280] silence_start: 51.4576
+[silencedetect @ 0x8cd280] silence_end: 51.9837 | silence_duration: 0.526122
+[silencedetect @ 0x8cd280] silence_start: 53.4429
+[silencedetect @ 0x8cd280] silence_end: 55.458 | silence_duration: 2.0151
+[silencedetect @ 0x8cd280] silence_start: 59.0331
+[silencedetect @ 0x8cd280] silence_end: 59.6114 | silence_duration: 0.578367
+[silencedetect @ 0x8cd280] silence_start: 63.9963
+[silencedetect @ 0x8cd280] silence_end: 64.9665 | silence_duration: 0.970204
+[silencedetect @ 0x8cd280] silence_start: 65.7465
+[silencedetect @ 0x8cd280] silence_end: 66.4033 | silence_duration: 0.656735
+[silencedetect @ 0x8cd280] silence_start: 68.4371
+[silencedetect @ 0x8cd280] silence_end: 69.0939 | silence_duration: 0.656735
+[silencedetect @ 0x8cd280] silence_start: 74.0012
+[silencedetect @ 0x8cd280] silence_end: 74.5012 | silence_duration: 0.5
+[silencedetect @ 0x8cd280] silence_start: 76.3
+[silencedetect @ 0x8cd280] silence_end: 77.871 | silence_duration: 1.57102
+[silencedetect @ 0x8cd280] silence_start: 78.6771
+[silencedetect @ 0x8cd280] silence_end: 79.5167 | silence_duration: 0.839592
+[silencedetect @ 0x8cd280] silence_start: 85.3122
+[silencedetect @ 0x8cd280] silence_end: 86.1518 | silence_duration: 0.839592
+[silencedetect @ 0x8cd280] silence_start: 88.0812
+[silencedetect @ 0x8cd280] silence_end: 89.8873 | silence_duration: 1.80612
+[silencedetect @ 0x8cd280] silence_start: 95.0298
+[silencedetect @ 0x8cd280] silence_end: 95.582 | silence_duration: 0.552245
+[silencedetect @ 0x8cd280] silence_start: 96.8845
+[silencedetect @ 0x8cd280] silence_end: 97.6718 | silence_duration: 0.787347
+[silencedetect @ 0x8cd280] silence_start: 99.6796
+[silencedetect @ 0x8cd280] silence_end: 101.695 | silence_duration: 2.0151
+[silencedetect @ 0x8cd280] silence_start: 105.897
+[silencedetect @ 0x8cd280] silence_end: 106.684 | silence_duration: 0.787347
+[silencedetect @ 0x8cd280] silence_start: 108.535
+[silencedetect @ 0x8cd280] silence_end: 109.767 | silence_duration: 1.23143
+[silencedetect @ 0x8cd280] silence_start: 110.912
+[silencedetect @ 0x8cd280] silence_end: 111.882 | silence_duration: 0.970204
+[silencedetect @ 0x8cd280] silence_start: 112.662
+[silencedetect @ 0x8cd280] silence_end: 114.86 | silence_duration: 2.19796
+[silencedetect @ 0x8cd280] silence_start: 117.6
+[silencedetect @ 0x8cd280] silence_end: 118.465 | silence_duration: 0.865714
+[silencedetect @ 0x8cd280] silence_start: 122.798
+[silencedetect @ 0x8cd280] silence_end: 123.559 | silence_duration: 0.761224
+[silencedetect @ 0x8cd280] silence_start: 124.026
+[silencedetect @ 0x8cd280] silence_end: 124.944 | silence_duration: 0.917959
+[silencedetect @ 0x8cd280] silence_start: 126.429
+[silencedetect @ 0x8cd280] silence_end: 127.713 | silence_duration: 1.28367
+[silencedetect @ 0x8cd280] silence_start: 128.101
+[silencedetect @ 0x8cd280] silence_end: 128.94 | silence_duration: 0.839592
+[silencedetect @ 0x8cd280] silence_start: 130.687
+[silencedetect @ 0x8cd280] silence_end: 131.396 | silence_duration: 0.70898
+[silencedetect @ 0x8cd280] silence_start: 133.587
+[silencedetect @ 0x8cd280] silence_end: 134.766 | silence_duration: 1.17918
+[silencedetect @ 0x8cd280] silence_start: 139.725
+[silencedetect @ 0x8cd280] silence_end: 142.158 | silence_duration: 2.43306
+[silencedetect @ 0x8cd280] silence_start: 146.831
+[silencedetect @ 0x8cd280] silence_end: 148.01 | silence_duration: 1.17918
+[silencedetect @ 0x8cd280] silence_start: 152.447
+[silencedetect @ 0x8cd280] silence_end: 153.809 | silence_duration: 1.36204
+[silencedetect @ 0x8cd280] silence_start: 156.182
+[silencedetect @ 0x8cd280] silence_end: 157.283 | silence_duration: 1.10082
+[silencedetect @ 0x8cd280] silence_start: 160.832
+[silencedetect @ 0x8cd280] silence_end: 163.344 | silence_duration: 2.51143
+[silencedetect @ 0x8cd280] silence_start: 165.769
+size=N/A time=00:02:48.38 bitrate=N/A    
+video:0kB audio:14504kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown

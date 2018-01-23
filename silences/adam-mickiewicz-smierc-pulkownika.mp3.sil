@@ -1,0 +1,132 @@
+ffmpeg version 2.8.11-0ubuntu0.16.04.1 Copyright (c) 2000-2017 the FFmpeg developers
+  built with gcc 5.4.0 (Ubuntu 5.4.0-6ubuntu1~16.04.4) 20160609
+  configuration: --prefix=/usr --extra-version=0ubuntu0.16.04.1 --build-suffix=-ffmpeg --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --cc=cc --cxx=g++ --enable-gpl --enable-shared --disable-stripping --disable-decoder=libopenjpeg --disable-decoder=libschroedinger --enable-avresample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libmodplug --enable-libmp3lame --enable-libopenjpeg --enable-libopus --enable-libpulse --enable-librtmp --enable-libschroedinger --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxvid --enable-libzvbi --enable-openal --enable-opengl --enable-x11grab --enable-libdc1394 --enable-libiec61883 --enable-libzmq --enable-frei0r --enable-libx264 --enable-libopencv
+  libavutil      54. 31.100 / 54. 31.100
+  libavcodec     56. 60.100 / 56. 60.100
+  libavformat    56. 40.101 / 56. 40.101
+  libavdevice    56.  4.100 / 56.  4.100
+  libavfilter     5. 40.101 /  5. 40.101
+  libavresample   2.  1.  0 /  2.  1.  0
+  libswscale      3.  1.101 /  3.  1.101
+  libswresample   1.  2.101 /  1.  2.101
+  libpostproc    53.  3.100 / 53.  3.100
+[mp3 @ 0xd1a8c0] Unknown attached picture mimetype: ('image/png', None), skipping.
+[mp3 @ 0xd1a8c0] Skipping 0 bytes of junk at 17522.
+Input #0, mp3, from 'adam-mickiewicz-smierc-pulkownika.mp3':
+  Metadata:
+    title           : Adam Mickiewicz, "Śmierć Pułkownika"
+    artist          : Agnieszka Podsiadlik
+    album           : Wolne Lektury
+    encoder         : Lavf53.21.0
+    genre           : Speech
+    originator_reference: f3LMEcWbSjjaaaGk
+    date            : 2008-10-09
+    performer       : Sebastian Buttny
+    album_artist    : Fundacja Nowoczesna Polska
+    time_reference  : 48366033
+    copyright       : 2008 Fundacja Nowoczesna Polska. Licensed to the public under http://creativecommons.org/licenses/by-sa/3.0/deed.pl verify at http://wolnelektury.pl/katalog/lektura/smierc-pulkownika/
+    creation_time   : 0006-40-47
+    encoded_by      : Pro Tools
+    publisher       : Fundacja Nowoczesna Polska
+  Duration: 00:02:06.56, start: 0.000000, bitrate: 65 kb/s
+    Stream #0:0: Audio: mp3, 44100 Hz, mono, s16p, 64 kb/s
+Output #0, null, to 'pipe:':
+  Metadata:
+    title           : Adam Mickiewicz, "Śmierć Pułkownika"
+    artist          : Agnieszka Podsiadlik
+    album           : Wolne Lektury
+    publisher       : Fundacja Nowoczesna Polska
+    genre           : Speech
+    originator_reference: f3LMEcWbSjjaaaGk
+    date            : 2008-10-09
+    performer       : Sebastian Buttny
+    album_artist    : Fundacja Nowoczesna Polska
+    time_reference  : 48366033
+    copyright       : 2008 Fundacja Nowoczesna Polska. Licensed to the public under http://creativecommons.org/licenses/by-sa/3.0/deed.pl verify at http://wolnelektury.pl/katalog/lektura/smierc-pulkownika/
+    encoded_by      : Pro Tools
+    encoder         : Lavf56.40.101
+    Stream #0:0: Audio: pcm_s16le, 44100 Hz, mono, s16, 705 kb/s
+    Metadata:
+      encoder         : Lavc56.60.100 pcm_s16le
+Stream mapping:
+  Stream #0:0 -> #0:0 (mp3 (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+[silencedetect @ 0xd38320] silence_start: -0.00367347
+[silencedetect @ 0xd38320] silence_end: 0.705306 | silence_duration: 0.70898
+[silencedetect @ 0xd38320] silence_start: 1.92939
+[silencedetect @ 0xd38320] silence_end: 2.56 | silence_duration: 0.630612
+[silencedetect @ 0xd38320] silence_start: 3.75796
+[silencedetect @ 0xd38320] silence_end: 5.79918 | silence_duration: 2.04122
+[silencedetect @ 0xd38320] silence_start: 6.84041
+[silencedetect @ 0xd38320] silence_end: 7.41878 | silence_duration: 0.578367
+[silencedetect @ 0xd38320] silence_start: 8.66898
+[silencedetect @ 0xd38320] silence_end: 9.79592 | silence_duration: 1.12694
+[silencedetect @ 0xd38320] silence_start: 11.9865
+[silencedetect @ 0xd38320] silence_end: 13.2702 | silence_duration: 1.28367
+[silencedetect @ 0xd38320] silence_start: 16.0355
+[silencedetect @ 0xd38320] silence_end: 17.058 | silence_duration: 1.02245
+[silencedetect @ 0xd38320] silence_start: 19.5098
+[silencedetect @ 0xd38320] silence_end: 20.8457 | silence_duration: 1.33592
+[silencedetect @ 0xd38320] silence_start: 23.1408
+[silencedetect @ 0xd38320] silence_end: 23.902 | silence_duration: 0.761224
+[silencedetect @ 0xd38320] silence_start: 26.0665
+[silencedetect @ 0xd38320] silence_end: 27.298 | silence_duration: 1.23143
+[silencedetect @ 0xd38320] silence_start: 31.3433
+[silencedetect @ 0xd38320] silence_end: 33.6718 | silence_duration: 2.32857
+[silencedetect @ 0xd38320] silence_start: 35.8624
+[silencedetect @ 0xd38320] silence_end: 36.5453 | silence_duration: 0.682857
+[silencedetect @ 0xd38320] silence_start: 38.7882
+[silencedetect @ 0xd38320] silence_end: 40.1502 | silence_duration: 1.36204
+[silencedetect @ 0xd38320] silence_start: 42.3408
+[silencedetect @ 0xd38320] silence_end: 42.9192 | silence_duration: 0.578367
+[silencedetect @ 0xd38320] silence_start: 45.0837
+[silencedetect @ 0xd38320] silence_end: 45.8188 | silence_duration: 0.735102
+[silencedetect @ 0xd38320] silence_start: 51.6665
+[silencedetect @ 0xd38320] silence_end: 53.0547 | silence_duration: 1.38816
+[silencedetect @ 0xd38320] silence_start: 53.9392
+[silencedetect @ 0xd38320] silence_end: 54.7527 | silence_duration: 0.813469
+[silencedetect @ 0xd38320] silence_start: 56.3686
+[silencedetect @ 0xd38320] silence_end: 56.9469 | silence_duration: 0.578367
+[silencedetect @ 0xd38320] silence_start: 59.0853
+[silencedetect @ 0xd38320] silence_end: 61.4922 | silence_duration: 2.40694
+[silencedetect @ 0xd38320] silence_start: 63.4478
+[silencedetect @ 0xd38320] silence_end: 64.0522 | silence_duration: 0.60449
+[silencedetect @ 0xd38320] silence_start: 66.5563
+[silencedetect @ 0xd38320] silence_end: 67.7094 | silence_duration: 1.15306
+[silencedetect @ 0xd38320] silence_start: 69.3253
+[silencedetect @ 0xd38320] silence_end: 70.0865 | silence_duration: 0.761224
+[silencedetect @ 0xd38320] silence_start: 72.3816
+[silencedetect @ 0xd38320] silence_end: 73.1951 | silence_duration: 0.813469
+[silencedetect @ 0xd38320] silence_start: 79.3824
+[silencedetect @ 0xd38320] silence_end: 80.0392 | silence_duration: 0.656735
+[silencedetect @ 0xd38320] silence_start: 83.1702
+[silencedetect @ 0xd38320] silence_end: 85.2637 | silence_duration: 2.09347
+[silencedetect @ 0xd38320] silence_start: 87.5588
+[silencedetect @ 0xd38320] silence_end: 88.5812 | silence_duration: 1.02245
+[silencedetect @ 0xd38320] silence_start: 90.38
+[silencedetect @ 0xd38320] silence_end: 91.1151 | silence_duration: 0.735102
+[silencedetect @ 0xd38320] silence_start: 92.8094
+[silencedetect @ 0xd38320] silence_end: 94.0669 | silence_duration: 1.25755
+[silencedetect @ 0xd38320] silence_start: 96.3098
+[silencedetect @ 0xd38320] silence_end: 97.4629 | silence_duration: 1.15306
+[silencedetect @ 0xd38320] silence_start: 99.2094
+[silencedetect @ 0xd38320] silence_end: 99.8922 | silence_duration: 0.682857
+[silencedetect @ 0xd38320] silence_start: 102.475
+[silencedetect @ 0xd38320] silence_end: 103.053 | silence_duration: 0.578367
+[silencedetect @ 0xd38320] silence_start: 105.27
+[silencedetect @ 0xd38320] silence_end: 107.337 | silence_duration: 2.06735
+[silencedetect @ 0xd38320] silence_start: 110.181
+[silencedetect @ 0xd38320] silence_end: 111.256 | silence_duration: 1.07469
+[silencedetect @ 0xd38320] silence_start: 113.028
+[silencedetect @ 0xd38320] silence_end: 114.077 | silence_duration: 1.04857
+[silencedetect @ 0xd38320] silence_start: 114.935
+[silencedetect @ 0xd38320] silence_end: 115.644 | silence_duration: 0.70898
+[silencedetect @ 0xd38320] silence_start: 116.633
+[silencedetect @ 0xd38320] silence_end: 117.368 | silence_duration: 0.735102
+[silencedetect @ 0xd38320] silence_start: 120.839
+[silencedetect @ 0xd38320] silence_end: 121.417 | silence_duration: 0.578367
+[silencedetect @ 0xd38320] silence_start: 122.589
+[silencedetect @ 0xd38320] silence_end: 123.272 | silence_duration: 0.682857
+[silencedetect @ 0xd38320] silence_start: 124.418
+size=N/A time=00:02:06.56 bitrate=N/A    
+video:0kB audio:10901kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown

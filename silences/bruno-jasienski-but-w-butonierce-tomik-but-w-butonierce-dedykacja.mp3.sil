@@ -1,0 +1,70 @@
+ffmpeg version 2.8.11-0ubuntu0.16.04.1 Copyright (c) 2000-2017 the FFmpeg developers
+  built with gcc 5.4.0 (Ubuntu 5.4.0-6ubuntu1~16.04.4) 20160609
+  configuration: --prefix=/usr --extra-version=0ubuntu0.16.04.1 --build-suffix=-ffmpeg --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --cc=cc --cxx=g++ --enable-gpl --enable-shared --disable-stripping --disable-decoder=libopenjpeg --disable-decoder=libschroedinger --enable-avresample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libmodplug --enable-libmp3lame --enable-libopenjpeg --enable-libopus --enable-libpulse --enable-librtmp --enable-libschroedinger --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxvid --enable-libzvbi --enable-openal --enable-opengl --enable-x11grab --enable-libdc1394 --enable-libiec61883 --enable-libzmq --enable-frei0r --enable-libx264 --enable-libopencv
+  libavutil      54. 31.100 / 54. 31.100
+  libavcodec     56. 60.100 / 56. 60.100
+  libavformat    56. 40.101 / 56. 40.101
+  libavdevice    56.  4.100 / 56.  4.100
+  libavfilter     5. 40.101 /  5. 40.101
+  libavresample   2.  1.  0 /  2.  1.  0
+  libswscale      3.  1.101 /  3.  1.101
+  libswresample   1.  2.101 /  1.  2.101
+  libpostproc    53.  3.100 / 53.  3.100
+[mp3 @ 0x14c48c0] Skipping 0 bytes of junk at 11695.
+[mp3 @ 0x14c48c0] Estimating duration from bitrate, this may be inaccurate
+Input #0, mp3, from 'bruno-jasienski-but-w-butonierce-tomik-but-w-butonierce-dedykacja.mp3':
+  Metadata:
+    title           : <Autor, "Tytuł">
+    artist          : Andrzej Girdwoyń
+    performer       : Marcin Cisło
+    encoded_by      : Marcin Cisło
+    copyright       : 2010 Fundacja Nowoczesna Polska. Licensed to the public under http://creativecommons.org/licenses/by-sa/3.0/ verify at http://wolnelektury.pl/
+    publisher       : Fundacja Nowoczesna Polska
+    album_artist    : Fundacja Nowoczesna Polska
+    album           : Wolne Lektury
+    genre           : Speech
+    date            : 2010
+    TDTG            : 2010-07-15T16:06:26
+  Duration: 00:00:16.07, start: 0.000000, bitrate: 325 kb/s
+    Stream #0:0: Audio: mp3, 44100 Hz, stereo, s16p, 320 kb/s
+    Stream #0:1: Video: png, rgba(pc), 187x187 [SAR 787:787 DAR 1:1], 90k tbr, 90k tbn, 90k tbc
+    Metadata:
+      comment         : Publisher/Studio logotype
+Output #0, null, to 'pipe:':
+  Metadata:
+    title           : <Autor, "Tytuł">
+    artist          : Andrzej Girdwoyń
+    performer       : Marcin Cisło
+    encoded_by      : Marcin Cisło
+    copyright       : 2010 Fundacja Nowoczesna Polska. Licensed to the public under http://creativecommons.org/licenses/by-sa/3.0/ verify at http://wolnelektury.pl/
+    publisher       : Fundacja Nowoczesna Polska
+    album_artist    : Fundacja Nowoczesna Polska
+    album           : Wolne Lektury
+    genre           : Speech
+    date            : 2010
+    TDTG            : 2010-07-15T16:06:26
+    encoder         : Lavf56.40.101
+    Stream #0:0: Video: rawvideo (RGBA / 0x41424752), rgba, 187x187 [SAR 787:787 DAR 1:1], q=2-31, 200 kb/s, 90k fps, 90k tbn, 90k tbc
+    Metadata:
+      comment         : Publisher/Studio logotype
+      encoder         : Lavc56.60.100 rawvideo
+    Stream #0:1: Audio: pcm_s16le, 44100 Hz, stereo, s16, 1411 kb/s
+    Metadata:
+      encoder         : Lavc56.60.100 pcm_s16le
+Stream mapping:
+  Stream #0:1 -> #0:0 (png (native) -> rawvideo (native))
+  Stream #0:0 -> #0:1 (mp3 (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+[silencedetect @ 0x14e2160] silence_start: 1.17184
+[silencedetect @ 0x14e2160] silence_end: 1.7502 | silence_duration: 0.578367
+[silencedetect @ 0x14e2160] silence_start: 2.16449
+[silencedetect @ 0x14e2160] silence_end: 2.7951 | silence_duration: 0.630612
+[silencedetect @ 0x14e2160] silence_start: 3.5751
+[silencedetect @ 0x14e2160] silence_end: 4.3102 | silence_duration: 0.735102
+[silencedetect @ 0x14e2160] silence_start: 4.3849
+[silencedetect @ 0x14e2160] silence_end: 4.91102 | silence_duration: 0.526122
+[silencedetect @ 0x14e2160] silence_start: 5.56041
+[silencedetect @ 0x14e2160] silence_end: 7.23592 | silence_duration: 1.67551
+[null @ 0x14ca040] Encoder did not produce proper pts, making some up.
+frame=    1 fps=0.0 q=-0.0 Lsize=N/A time=00:00:16.06 bitrate=N/A    
+video:0kB audio:2768kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown

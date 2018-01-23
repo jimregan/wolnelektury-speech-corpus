@@ -1,0 +1,112 @@
+ffmpeg version 2.8.11-0ubuntu0.16.04.1 Copyright (c) 2000-2017 the FFmpeg developers
+  built with gcc 5.4.0 (Ubuntu 5.4.0-6ubuntu1~16.04.4) 20160609
+  configuration: --prefix=/usr --extra-version=0ubuntu0.16.04.1 --build-suffix=-ffmpeg --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --cc=cc --cxx=g++ --enable-gpl --enable-shared --disable-stripping --disable-decoder=libopenjpeg --disable-decoder=libschroedinger --enable-avresample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libmodplug --enable-libmp3lame --enable-libopenjpeg --enable-libopus --enable-libpulse --enable-librtmp --enable-libschroedinger --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxvid --enable-libzvbi --enable-openal --enable-opengl --enable-x11grab --enable-libdc1394 --enable-libiec61883 --enable-libzmq --enable-frei0r --enable-libx264 --enable-libopencv
+  libavutil      54. 31.100 / 54. 31.100
+  libavcodec     56. 60.100 / 56. 60.100
+  libavformat    56. 40.101 / 56. 40.101
+  libavdevice    56.  4.100 / 56.  4.100
+  libavfilter     5. 40.101 /  5. 40.101
+  libavresample   2.  1.  0 /  2.  1.  0
+  libswscale      3.  1.101 /  3.  1.101
+  libswresample   1.  2.101 /  1.  2.101
+  libpostproc    53.  3.100 / 53.  3.100
+[mp3 @ 0x85d8c0] Unknown attached picture mimetype: ('image/png', None), skipping.
+[mp3 @ 0x85d8c0] Skipping 0 bytes of junk at 17418.
+[mp3 @ 0x85d8c0] Estimating duration from bitrate, this may be inaccurate
+Input #0, mp3, from '25-mark-twain-przygody-tomka-sawyera.mp3':
+  Metadata:
+    title           : Mark Twain, "Przygody Tomka Sawyera", r. 25 (tłum. Jan Biliński)
+    artist          : Wiktor Korzeniewski
+    album           : Wolne Lektury
+    URL             : http://wolnelektury.pl/katalog/lektura/przygody-tomka-sawyera
+    genre           : Speech
+    encoder         : Lavf52.87.1
+    date            : 2011
+    CONDUCTOR       : Katarzyna Sawko
+    PROJECT         : Kultura Remiksu
+    performer       : Adam Bień
+    album_artist    : Fundacja Nowoczesna Polska
+    copyright       : 2011 Fundacja Nowoczesna Polska. Licensed to the public under http://creativecommons.org/licenses/by-sa/3.0/deed.pl verify at http://wolnelektury.pl/katalog/lektura/przygody-tomka-sawyera
+    TRANSLATOR      : Jan Biliński
+    encoded_by      : Adam Bień
+    publisher       : Fundacja Nowoczesna Polska
+  Duration: 00:02:41.66, start: 0.000000, bitrate: 64 kb/s
+    Stream #0:0: Audio: mp3, 44100 Hz, mono, s16p, 64 kb/s
+Output #0, null, to 'pipe:':
+  Metadata:
+    title           : Mark Twain, "Przygody Tomka Sawyera", r. 25 (tłum. Jan Biliński)
+    artist          : Wiktor Korzeniewski
+    album           : Wolne Lektury
+    URL             : http://wolnelektury.pl/katalog/lektura/przygody-tomka-sawyera
+    genre           : Speech
+    date            : 2011
+    CONDUCTOR       : Katarzyna Sawko
+    PROJECT         : Kultura Remiksu
+    performer       : Adam Bień
+    album_artist    : Fundacja Nowoczesna Polska
+    copyright       : 2011 Fundacja Nowoczesna Polska. Licensed to the public under http://creativecommons.org/licenses/by-sa/3.0/deed.pl verify at http://wolnelektury.pl/katalog/lektura/przygody-tomka-sawyera
+    TRANSLATOR      : Jan Biliński
+    encoded_by      : Adam Bień
+    publisher       : Fundacja Nowoczesna Polska
+    encoder         : Lavf56.40.101
+    Stream #0:0: Audio: pcm_s16le, 44100 Hz, mono, s16, 705 kb/s
+    Metadata:
+      encoder         : Lavc56.60.100 pcm_s16le
+Stream mapping:
+  Stream #0:0 -> #0:0 (mp3 (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+[silencedetect @ 0x870a60] silence_start: -0.00367347
+[silencedetect @ 0x870a60] silence_end: 0.626939 | silence_duration: 0.630612
+[silencedetect @ 0x870a60] silence_start: 1.85102
+[silencedetect @ 0x870a60] silence_end: 2.76898 | silence_duration: 0.917959
+[silencedetect @ 0x870a60] silence_start: 5.29918
+[silencedetect @ 0x870a60] silence_end: 5.87755 | silence_duration: 0.578367
+[silencedetect @ 0x870a60] silence_start: 9.66163
+[silencedetect @ 0x870a60] silence_end: 10.2661 | silence_duration: 0.60449
+[silencedetect @ 0x870a60] silence_start: 15.6698
+[silencedetect @ 0x870a60] silence_end: 16.3265 | silence_duration: 0.656735
+[silencedetect @ 0x870a60] silence_start: 22.8012
+[silencedetect @ 0x870a60] silence_end: 23.5363 | silence_duration: 0.735102
+[silencedetect @ 0x870a60] silence_start: 33.0151
+[silencedetect @ 0x870a60] silence_end: 33.8024 | silence_duration: 0.787347
+[silencedetect @ 0x870a60] silence_start: 35.7057
+[silencedetect @ 0x870a60] silence_end: 36.3886 | silence_duration: 0.682857
+[silencedetect @ 0x870a60] silence_start: 41.5571
+[silencedetect @ 0x870a60] silence_end: 42.3445 | silence_duration: 0.787347
+[silencedetect @ 0x870a60] silence_start: 44.9008
+[silencedetect @ 0x870a60] silence_end: 45.6882 | silence_duration: 0.787347
+[silencedetect @ 0x870a60] silence_start: 47.931
+[silencedetect @ 0x870a60] silence_end: 48.64 | silence_duration: 0.70898
+[silencedetect @ 0x870a60] silence_start: 52.0322
+[silencedetect @ 0x870a60] silence_end: 52.9502 | silence_duration: 0.917959
+[silencedetect @ 0x870a60] silence_start: 54.5922
+[silencedetect @ 0x870a60] silence_end: 55.4841 | silence_duration: 0.891837
+[silencedetect @ 0x870a60] silence_start: 71.5457
+[silencedetect @ 0x870a60] silence_end: 72.1502 | silence_duration: 0.60449
+[silencedetect @ 0x870a60] silence_start: 77.3188
+[silencedetect @ 0x870a60] silence_end: 78.1845 | silence_duration: 0.865714
+[silencedetect @ 0x870a60] silence_start: 92.0257
+[silencedetect @ 0x870a60] silence_end: 92.7608 | silence_duration: 0.735102
+[silencedetect @ 0x870a60] silence_start: 97.5114
+[silencedetect @ 0x870a60] silence_end: 98.142 | silence_duration: 0.630612
+[silencedetect @ 0x870a60] silence_start: 100.829
+[silencedetect @ 0x870a60] silence_end: 101.59 | silence_duration: 0.761224
+[silencedetect @ 0x870a60] silence_start: 104.512
+[silencedetect @ 0x870a60] silence_end: 105.117 | silence_duration: 0.60449
+[silencedetect @ 0x870a60] silence_start: 107.96
+[silencedetect @ 0x870a60] silence_end: 108.957 | silence_duration: 0.996327
+[silencedetect @ 0x870a60] silence_start: 109.867
+[silencedetect @ 0x870a60] silence_end: 110.602 | silence_duration: 0.735102
+[silencedetect @ 0x870a60] silence_start: 117.312
+[silencedetect @ 0x870a60] silence_end: 118.282 | silence_duration: 0.970204
+[silencedetect @ 0x870a60] silence_start: 120.186
+[silencedetect @ 0x870a60] silence_end: 121.025 | silence_duration: 0.839592
+[silencedetect @ 0x870a60] silence_start: 124.992
+[silencedetect @ 0x870a60] silence_end: 125.623 | silence_duration: 0.630612
+[silencedetect @ 0x870a60] silence_start: 142.912
+[silencedetect @ 0x870a60] silence_end: 143.412 | silence_duration: 0.5
+[silencedetect @ 0x870a60] silence_start: 151.977
+[silencedetect @ 0x870a60] silence_end: 152.686 | silence_duration: 0.70898
+[silencedetect @ 0x870a60] silence_start: 159.578
+size=N/A time=00:02:41.64 bitrate=N/A    
+video:0kB audio:13923kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown

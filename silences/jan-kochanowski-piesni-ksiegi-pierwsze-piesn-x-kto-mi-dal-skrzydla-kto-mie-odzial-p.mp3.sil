@@ -1,0 +1,148 @@
+ffmpeg version 2.8.11-0ubuntu0.16.04.1 Copyright (c) 2000-2017 the FFmpeg developers
+  built with gcc 5.4.0 (Ubuntu 5.4.0-6ubuntu1~16.04.4) 20160609
+  configuration: --prefix=/usr --extra-version=0ubuntu0.16.04.1 --build-suffix=-ffmpeg --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --cc=cc --cxx=g++ --enable-gpl --enable-shared --disable-stripping --disable-decoder=libopenjpeg --disable-decoder=libschroedinger --enable-avresample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libmodplug --enable-libmp3lame --enable-libopenjpeg --enable-libopus --enable-libpulse --enable-librtmp --enable-libschroedinger --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxvid --enable-libzvbi --enable-openal --enable-opengl --enable-x11grab --enable-libdc1394 --enable-libiec61883 --enable-libzmq --enable-frei0r --enable-libx264 --enable-libopencv
+  libavutil      54. 31.100 / 54. 31.100
+  libavcodec     56. 60.100 / 56. 60.100
+  libavformat    56. 40.101 / 56. 40.101
+  libavdevice    56.  4.100 / 56.  4.100
+  libavfilter     5. 40.101 /  5. 40.101
+  libavresample   2.  1.  0 /  2.  1.  0
+  libswscale      3.  1.101 /  3.  1.101
+  libswresample   1.  2.101 /  1.  2.101
+  libpostproc    53.  3.100 / 53.  3.100
+[mp3 @ 0x1cd48c0] Unknown attached picture mimetype: ('image/png', None), skipping.
+[mp3 @ 0x1cd48c0] Skipping 0 bytes of junk at 17522.
+Input #0, mp3, from 'jan-kochanowski-piesni-ksiegi-pierwsze-piesn-x-kto-mi-dal-skrzydla-kto-mie-odzial-p.mp3':
+  Metadata:
+    title           : Jan Kochanowski, Pieśni, Księgi pierwsze, Pieśń X (Kto mi dał skrzydła, kto mię odział pióry...)
+    artist          : Krzysztof Skonieczny
+    album           : Wolne Lektury
+    encoder         : Lavf53.21.0
+    genre           : Speech
+    originator_reference: L2!OgaG3DobaaaGk
+    date            : 2008-10-30
+    performer       : Iwo Vedral
+    album_artist    : Fundacja Nowoczesna Polska
+    time_reference  : 380852707
+    copyright       : 2008 Fundacja Nowoczesna Polska. Licensed to the public under http://creativecommons.org/licenses/by-sa/3.0/deed.pl verify at http://wolnelektury.pl/katalog/lektura/piesni-ksiegi-pierwsze-piesn-x/
+    creation_time   : 0014-59-37
+    encoded_by      : Pro Tools
+    publisher       : Fundacja Nowoczesna Polska
+  Duration: 00:03:19.24, start: 0.000000, bitrate: 64 kb/s
+    Stream #0:0: Audio: mp3, 44100 Hz, mono, s16p, 64 kb/s
+Output #0, null, to 'pipe:':
+  Metadata:
+    title           : Jan Kochanowski, Pieśni, Księgi pierwsze, Pieśń X (Kto mi dał skrzydła, kto mię odział pióry...)
+    artist          : Krzysztof Skonieczny
+    album           : Wolne Lektury
+    publisher       : Fundacja Nowoczesna Polska
+    genre           : Speech
+    originator_reference: L2!OgaG3DobaaaGk
+    date            : 2008-10-30
+    performer       : Iwo Vedral
+    album_artist    : Fundacja Nowoczesna Polska
+    time_reference  : 380852707
+    copyright       : 2008 Fundacja Nowoczesna Polska. Licensed to the public under http://creativecommons.org/licenses/by-sa/3.0/deed.pl verify at http://wolnelektury.pl/katalog/lektura/piesni-ksiegi-pierwsze-piesn-x/
+    encoded_by      : Pro Tools
+    encoder         : Lavf56.40.101
+    Stream #0:0: Audio: pcm_s16le, 44100 Hz, mono, s16, 705 kb/s
+    Metadata:
+      encoder         : Lavc56.60.100 pcm_s16le
+Stream mapping:
+  Stream #0:0 -> #0:0 (mp3 (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+[silencedetect @ 0x1ce7820] silence_start: -0.00367347
+[silencedetect @ 0x1ce7820] silence_end: 0.679184 | silence_duration: 0.682857
+[silencedetect @ 0x1ce7820] silence_start: 1.8249
+[silencedetect @ 0x1ce7820] silence_end: 2.50776 | silence_duration: 0.682857
+[silencedetect @ 0x1ce7820] silence_start: 4.46327
+[silencedetect @ 0x1ce7820] silence_end: 5.06776 | silence_duration: 0.60449
+[silencedetect @ 0x1ce7820] silence_start: 6.1351
+[silencedetect @ 0x1ce7820] silence_end: 8.1502 | silence_duration: 2.0151
+[silencedetect @ 0x1ce7820] silence_start: 9.45265
+[silencedetect @ 0x1ce7820] silence_end: 10.449 | silence_duration: 0.996327
+[silencedetect @ 0x1ce7820] silence_start: 15.1473
+[silencedetect @ 0x1ce7820] silence_end: 15.6735 | silence_duration: 0.526122
+[silencedetect @ 0x1ce7820] silence_start: 18.8829
+[silencedetect @ 0x1ce7820] silence_end: 19.4351 | silence_duration: 0.552245
+[silencedetect @ 0x1ce7820] silence_start: 20.3196
+[silencedetect @ 0x1ce7820] silence_end: 21.969 | silence_duration: 1.64939
+[silencedetect @ 0x1ce7820] silence_start: 26.9808
+[silencedetect @ 0x1ce7820] silence_end: 27.5069 | silence_duration: 0.526122
+[silencedetect @ 0x1ce7820] silence_start: 30.22
+[silencedetect @ 0x1ce7820] silence_end: 30.8506 | silence_duration: 0.630612
+[silencedetect @ 0x1ce7820] silence_start: 31.7873
+[silencedetect @ 0x1ce7820] silence_end: 33.1233 | silence_duration: 1.33592
+[silencedetect @ 0x1ce7820] silence_start: 34.4518
+[silencedetect @ 0x1ce7820] silence_end: 35.0041 | silence_duration: 0.552245
+[silencedetect @ 0x1ce7820] silence_start: 40.5122
+[silencedetect @ 0x1ce7820] silence_end: 41.4824 | silence_duration: 0.970204
+[silencedetect @ 0x1ce7820] silence_start: 44.5873
+[silencedetect @ 0x1ce7820] silence_end: 45.4008 | silence_duration: 0.813469
+[silencedetect @ 0x1ce7820] silence_start: 46.4682
+[silencedetect @ 0x1ce7820] silence_end: 48.1437 | silence_duration: 1.67551
+[silencedetect @ 0x1ce7820] silence_start: 50.9612
+[silencedetect @ 0x1ce7820] silence_end: 51.4873 | silence_duration: 0.526122
+[silencedetect @ 0x1ce7820] silence_start: 54.4094
+[silencedetect @ 0x1ce7820] silence_end: 55.1967 | silence_duration: 0.787347
+[silencedetect @ 0x1ce7820] silence_start: 58.4322
+[silencedetect @ 0x1ce7820] silence_end: 59.1151 | silence_duration: 0.682857
+[silencedetect @ 0x1ce7820] silence_start: 60.3392
+[silencedetect @ 0x1ce7820] silence_end: 61.6751 | silence_duration: 1.33592
+[silencedetect @ 0x1ce7820] silence_start: 64.2837
+[silencedetect @ 0x1ce7820] silence_end: 64.7837 | silence_duration: 0.5
+[silencedetect @ 0x1ce7820] silence_start: 69.4559
+[silencedetect @ 0x1ce7820] silence_end: 70.0082 | silence_duration: 0.552245
+[silencedetect @ 0x1ce7820] silence_start: 73.5833
+[silencedetect @ 0x1ce7820] silence_end: 74.1094 | silence_duration: 0.526122
+[silencedetect @ 0x1ce7820] silence_start: 79.5131
+[silencedetect @ 0x1ce7820] silence_end: 80.0131 | silence_duration: 0.5
+[silencedetect @ 0x1ce7820] silence_start: 81.1327
+[silencedetect @ 0x1ce7820] silence_end: 82.3902 | silence_duration: 1.25755
+[silencedetect @ 0x1ce7820] silence_start: 85.4429
+[silencedetect @ 0x1ce7820] silence_end: 85.9951 | silence_duration: 0.552245
+[silencedetect @ 0x1ce7820] silence_start: 88.3686
+[silencedetect @ 0x1ce7820] silence_end: 88.9208 | silence_duration: 0.552245
+[silencedetect @ 0x1ce7820] silence_start: 93.5669
+[silencedetect @ 0x1ce7820] silence_end: 94.72 | silence_duration: 1.15306
+[silencedetect @ 0x1ce7820] silence_start: 104.826
+[silencedetect @ 0x1ce7820] silence_end: 105.848 | silence_duration: 1.02245
+[silencedetect @ 0x1ce7820] silence_start: 107.36
+[silencedetect @ 0x1ce7820] silence_end: 108.278 | silence_duration: 0.917959
+[silencedetect @ 0x1ce7820] silence_start: 114.282
+[silencedetect @ 0x1ce7820] silence_end: 114.991 | silence_duration: 0.70898
+[silencedetect @ 0x1ce7820] silence_start: 117.73
+[silencedetect @ 0x1ce7820] silence_end: 118.387 | silence_duration: 0.656735
+[silencedetect @ 0x1ce7820] silence_start: 127.578
+[silencedetect @ 0x1ce7820] silence_end: 128.157 | silence_duration: 0.578367
+[silencedetect @ 0x1ce7820] silence_start: 130.243
+[silencedetect @ 0x1ce7820] silence_end: 130.926 | silence_duration: 0.682857
+[silencedetect @ 0x1ce7820] silence_start: 137.818
+[silencedetect @ 0x1ce7820] silence_end: 139.05 | silence_duration: 1.23143
+[silencedetect @ 0x1ce7820] silence_start: 144.297
+[silencedetect @ 0x1ce7820] silence_end: 144.875 | silence_duration: 0.578367
+[silencedetect @ 0x1ce7820] silence_start: 146.517
+[silencedetect @ 0x1ce7820] silence_end: 147.069 | silence_duration: 0.552245
+[silencedetect @ 0x1ce7820] silence_start: 150.514
+[silencedetect @ 0x1ce7820] silence_end: 151.458 | silence_duration: 0.944082
+[silencedetect @ 0x1ce7820] silence_start: 159.709
+[silencedetect @ 0x1ce7820] silence_end: 160.366 | silence_duration: 0.656735
+[silencedetect @ 0x1ce7820] silence_start: 161.564
+[silencedetect @ 0x1ce7820] silence_end: 162.743 | silence_duration: 1.17918
+[silencedetect @ 0x1ce7820] silence_start: 164.202
+[silencedetect @ 0x1ce7820] silence_end: 165.146 | silence_duration: 0.944082
+[silencedetect @ 0x1ce7820] silence_start: 166.631
+[silencedetect @ 0x1ce7820] silence_end: 167.184 | silence_duration: 0.552245
+[silencedetect @ 0x1ce7820] silence_start: 174.782
+[silencedetect @ 0x1ce7820] silence_end: 176.013 | silence_duration: 1.23143
+[silencedetect @ 0x1ce7820] silence_start: 185.57
+[silencedetect @ 0x1ce7820] silence_end: 186.749 | silence_duration: 1.17918
+[silencedetect @ 0x1ce7820] silence_start: 189.515
+[silencedetect @ 0x1ce7820] silence_end: 190.093 | silence_duration: 0.578367
+[silencedetect @ 0x1ce7820] silence_start: 192.519
+[silencedetect @ 0x1ce7820] silence_end: 193.28 | silence_duration: 0.761224
+[silencedetect @ 0x1ce7820] silence_start: 195.131
+[silencedetect @ 0x1ce7820] silence_end: 195.788 | silence_duration: 0.656735
+[silencedetect @ 0x1ce7820] silence_start: 196.672
+size=N/A time=00:03:19.23 bitrate=N/A    
+video:0kB audio:17161kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown

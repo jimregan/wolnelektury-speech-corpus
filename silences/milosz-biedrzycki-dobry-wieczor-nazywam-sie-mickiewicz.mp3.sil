@@ -1,0 +1,116 @@
+ffmpeg version 2.8.11-0ubuntu0.16.04.1 Copyright (c) 2000-2017 the FFmpeg developers
+  built with gcc 5.4.0 (Ubuntu 5.4.0-6ubuntu1~16.04.4) 20160609
+  configuration: --prefix=/usr --extra-version=0ubuntu0.16.04.1 --build-suffix=-ffmpeg --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --cc=cc --cxx=g++ --enable-gpl --enable-shared --disable-stripping --disable-decoder=libopenjpeg --disable-decoder=libschroedinger --enable-avresample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libmodplug --enable-libmp3lame --enable-libopenjpeg --enable-libopus --enable-libpulse --enable-librtmp --enable-libschroedinger --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxvid --enable-libzvbi --enable-openal --enable-opengl --enable-x11grab --enable-libdc1394 --enable-libiec61883 --enable-libzmq --enable-frei0r --enable-libx264 --enable-libopencv
+  libavutil      54. 31.100 / 54. 31.100
+  libavcodec     56. 60.100 / 56. 60.100
+  libavformat    56. 40.101 / 56. 40.101
+  libavdevice    56.  4.100 / 56.  4.100
+  libavfilter     5. 40.101 /  5. 40.101
+  libavresample   2.  1.  0 /  2.  1.  0
+  libswscale      3.  1.101 /  3.  1.101
+  libswresample   1.  2.101 /  1.  2.101
+  libpostproc    53.  3.100 / 53.  3.100
+[mp3 @ 0x25678c0] Unknown attached picture mimetype: ('image/png', None), skipping.
+[mp3 @ 0x25678c0] Skipping 0 bytes of junk at 17418.
+[mp3 @ 0x25678c0] Estimating duration from bitrate, this may be inaccurate
+Input #0, mp3, from 'milosz-biedrzycki-dobry-wieczor-nazywam-sie-mickiewicz.mp3':
+  Metadata:
+    title           : Miłosz Biedrzycki, *** (Dobry wieczór, nazywam się Mickiewicz...)
+    artist          : Wiktor Korzeniewski
+    album           : Wolne Lektury
+    date            : 2010
+    genre           : Speech
+    copyright       : 2010 Fundacja Nowoczesna Polska. Licensed to the public under http://creativecommons.org/licenses/by-sa/3.0/deed.pl verify at http://www.wolnelektury.pl/katalog/lektura/dobry-wieczor-nazywam-sie-mickiewicz/
+    publisher       : Fundacja Nowoczesna Polska
+    performer       : Marcin Cisło
+    album_artist    : Fundacja Nowoczesna Polska
+    encoder         : Lavf52.87.1
+  Duration: 00:01:57.08, start: 0.000000, bitrate: 65 kb/s
+    Stream #0:0: Audio: mp3, 44100 Hz, mono, s16p, 64 kb/s
+Output #0, null, to 'pipe:':
+  Metadata:
+    title           : Miłosz Biedrzycki, *** (Dobry wieczór, nazywam się Mickiewicz...)
+    artist          : Wiktor Korzeniewski
+    album           : Wolne Lektury
+    date            : 2010
+    genre           : Speech
+    copyright       : 2010 Fundacja Nowoczesna Polska. Licensed to the public under http://creativecommons.org/licenses/by-sa/3.0/deed.pl verify at http://www.wolnelektury.pl/katalog/lektura/dobry-wieczor-nazywam-sie-mickiewicz/
+    publisher       : Fundacja Nowoczesna Polska
+    performer       : Marcin Cisło
+    album_artist    : Fundacja Nowoczesna Polska
+    encoder         : Lavf56.40.101
+    Stream #0:0: Audio: pcm_s16le, 44100 Hz, mono, s16, 705 kb/s
+    Metadata:
+      encoder         : Lavc56.60.100 pcm_s16le
+Stream mapping:
+  Stream #0:0 -> #0:0 (mp3 (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+[silencedetect @ 0x2585380] silence_start: 1.19796
+[silencedetect @ 0x2585380] silence_end: 3.08245 | silence_duration: 1.88449
+[silencedetect @ 0x2585380] silence_start: 3.73184
+[silencedetect @ 0x2585380] silence_end: 4.6498 | silence_duration: 0.917959
+[silencedetect @ 0x2585380] silence_start: 5.87388
+[silencedetect @ 0x2585380] silence_end: 6.45224 | silence_duration: 0.578367
+[silencedetect @ 0x2585380] silence_start: 6.99714
+[silencedetect @ 0x2585380] silence_end: 7.57551 | silence_duration: 0.578367
+[silencedetect @ 0x2585380] silence_start: 8.40776
+[silencedetect @ 0x2585380] silence_end: 9.45633 | silence_duration: 1.04857
+[silencedetect @ 0x2585380] silence_start: 11.4641
+[silencedetect @ 0x2585380] silence_end: 12.6433 | silence_duration: 1.17918
+[silencedetect @ 0x2585380] silence_start: 15.1735
+[silencedetect @ 0x2585380] silence_end: 15.6735 | silence_duration: 0.5
+[silencedetect @ 0x2585380] silence_start: 17.2894
+[silencedetect @ 0x2585380] silence_end: 18.5992 | silence_duration: 1.3098
+[silencedetect @ 0x2585380] silence_start: 19.1702
+[silencedetect @ 0x2585380] silence_end: 19.9576 | silence_duration: 0.787347
+[silencedetect @ 0x2585380] silence_start: 26.798
+[silencedetect @ 0x2585380] silence_end: 27.7943 | silence_duration: 0.996327
+[silencedetect @ 0x2585380] silence_start: 29.6192
+[silencedetect @ 0x2585380] silence_end: 31.0073 | silence_duration: 1.38816
+[silencedetect @ 0x2585380] silence_start: 33.0151
+[silencedetect @ 0x2585380] silence_end: 33.6457 | silence_duration: 0.630612
+[silencedetect @ 0x2585380] silence_start: 36.5416
+[silencedetect @ 0x2585380] silence_end: 37.2767 | silence_duration: 0.735102
+[silencedetect @ 0x2585380] silence_start: 38.8927
+[silencedetect @ 0x2585380] silence_end: 40.0718 | silence_duration: 1.17918
+[silencedetect @ 0x2585380] silence_start: 47.4347
+[silencedetect @ 0x2585380] silence_end: 48.0392 | silence_duration: 0.60449
+[silencedetect @ 0x2585380] silence_start: 50.7784
+[silencedetect @ 0x2585380] silence_end: 52.48 | silence_duration: 1.70163
+[silencedetect @ 0x2585380] silence_start: 53.7563
+[silencedetect @ 0x2585380] silence_end: 54.8833 | silence_duration: 1.12694
+[silencedetect @ 0x2585380] silence_start: 56.1073
+[silencedetect @ 0x2585380] silence_end: 56.6596 | silence_duration: 0.552245
+[silencedetect @ 0x2585380] silence_start: 57.309
+[silencedetect @ 0x2585380] silence_end: 57.9657 | silence_duration: 0.656735
+[silencedetect @ 0x2585380] silence_start: 58.9808
+[silencedetect @ 0x2585380] silence_end: 59.9249 | silence_duration: 0.944082
+[silencedetect @ 0x2585380] silence_start: 60.9139
+[silencedetect @ 0x2585380] silence_end: 61.649 | silence_duration: 0.735102
+[silencedetect @ 0x2585380] silence_start: 62.9253
+[silencedetect @ 0x2585380] silence_end: 64.209 | silence_duration: 1.28367
+[silencedetect @ 0x2585380] silence_start: 68.0453
+[silencedetect @ 0x2585380] silence_end: 69.0939 | silence_duration: 1.04857
+[silencedetect @ 0x2585380] silence_start: 73.7139
+[silencedetect @ 0x2585380] silence_end: 74.5796 | silence_duration: 0.865714
+[silencedetect @ 0x2585380] silence_start: 78.2853
+[silencedetect @ 0x2585380] silence_end: 79.8302 | silence_duration: 1.5449
+[silencedetect @ 0x2585380] silence_start: 83.1702
+[silencedetect @ 0x2585380] silence_end: 84.2188 | silence_duration: 1.04857
+[silencedetect @ 0x2585380] silence_start: 90.0665
+[silencedetect @ 0x2585380] silence_end: 90.8278 | silence_duration: 0.761224
+[silencedetect @ 0x2585380] silence_start: 93.2796
+[silencedetect @ 0x2585380] silence_end: 93.9102 | silence_duration: 0.630612
+[silencedetect @ 0x2585380] silence_start: 95.2127
+[silencedetect @ 0x2585380] silence_end: 97.3845 | silence_duration: 2.17184
+[silencedetect @ 0x2585380] silence_start: 101.378
+[silencedetect @ 0x2585380] silence_end: 102.06 | silence_duration: 0.682857
+[silencedetect @ 0x2585380] silence_start: 105.348
+[silencedetect @ 0x2585380] silence_end: 106.109 | silence_duration: 0.761224
+[silencedetect @ 0x2585380] silence_start: 108.091
+[silencedetect @ 0x2585380] silence_end: 108.878 | silence_duration: 0.787347
+[silencedetect @ 0x2585380] silence_start: 110.677
+[silencedetect @ 0x2585380] silence_end: 112.353 | silence_duration: 1.67551
+[silencedetect @ 0x2585380] silence_start: 113.812
+size=N/A time=00:01:57.08 bitrate=N/A    
+video:0kB audio:10084kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown

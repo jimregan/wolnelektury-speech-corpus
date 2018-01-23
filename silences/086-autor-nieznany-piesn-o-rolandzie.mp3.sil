@@ -1,0 +1,77 @@
+ffmpeg version 2.8.11-0ubuntu0.16.04.1 Copyright (c) 2000-2017 the FFmpeg developers
+  built with gcc 5.4.0 (Ubuntu 5.4.0-6ubuntu1~16.04.4) 20160609
+  configuration: --prefix=/usr --extra-version=0ubuntu0.16.04.1 --build-suffix=-ffmpeg --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --cc=cc --cxx=g++ --enable-gpl --enable-shared --disable-stripping --disable-decoder=libopenjpeg --disable-decoder=libschroedinger --enable-avresample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libmodplug --enable-libmp3lame --enable-libopenjpeg --enable-libopus --enable-libpulse --enable-librtmp --enable-libschroedinger --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxvid --enable-libzvbi --enable-openal --enable-opengl --enable-x11grab --enable-libdc1394 --enable-libiec61883 --enable-libzmq --enable-frei0r --enable-libx264 --enable-libopencv
+  libavutil      54. 31.100 / 54. 31.100
+  libavcodec     56. 60.100 / 56. 60.100
+  libavformat    56. 40.101 / 56. 40.101
+  libavdevice    56.  4.100 / 56.  4.100
+  libavfilter     5. 40.101 /  5. 40.101
+  libavresample   2.  1.  0 /  2.  1.  0
+  libswscale      3.  1.101 /  3.  1.101
+  libswresample   1.  2.101 /  1.  2.101
+  libpostproc    53.  3.100 / 53.  3.100
+[mp3 @ 0x24048c0] Unknown attached picture mimetype: ('image/png', None), skipping.
+[mp3 @ 0x24048c0] Skipping 0 bytes of junk at 17522.
+Input #0, mp3, from '086-autor-nieznany-piesn-o-rolandzie.mp3':
+  Metadata:
+    title           : Autor nieznany, "Pieśń o Rolandzie", 086 (tłum. Tadeusz Boy-Żeleński)
+    artist          : Wiktor Korzeniewski
+    album           : Wolne Lektury
+    genre           : 0
+    URL             : http://www.wolnelektury.pl/katalog/lektura/piesn-o-rolandzie
+    encoder         : Lavf53.21.0
+    date            : 2012
+    CONDUCTOR       : Adam Bień
+    PROJECT         : Słuchamy Polski
+    TCD             : 42854242630
+    performer       : Adam Bień
+    album_artist    : Fundacja Nowoczesna Polska
+    copyright       : 2012 Fundacja Nowoczesna Polska. Licensed to the public under http://creativecommons.org/licenses/by-sa/3.0/deed.pl verify at http://www.wolnelektury.pl/katalog/lektura/piesn-o-rolandzie
+    TRANSLATOR      : Tadeusz Boy-Żeleński
+    encoded_by      : Adam Bień
+    publisher       : Fundacja Nowoczesna Polska
+  Duration: 00:00:42.68, start: 0.000000, bitrate: 67 kb/s
+    Stream #0:0: Audio: mp3, 44100 Hz, mono, s16p, 64 kb/s
+Output #0, null, to 'pipe:':
+  Metadata:
+    title           : Autor nieznany, "Pieśń o Rolandzie", 086 (tłum. Tadeusz Boy-Żeleński)
+    artist          : Wiktor Korzeniewski
+    album           : Wolne Lektury
+    genre           : 0
+    URL             : http://www.wolnelektury.pl/katalog/lektura/piesn-o-rolandzie
+    date            : 2012
+    CONDUCTOR       : Adam Bień
+    PROJECT         : Słuchamy Polski
+    TCD             : 42854242630
+    performer       : Adam Bień
+    album_artist    : Fundacja Nowoczesna Polska
+    copyright       : 2012 Fundacja Nowoczesna Polska. Licensed to the public under http://creativecommons.org/licenses/by-sa/3.0/deed.pl verify at http://www.wolnelektury.pl/katalog/lektura/piesn-o-rolandzie
+    TRANSLATOR      : Tadeusz Boy-Żeleński
+    encoded_by      : Adam Bień
+    publisher       : Fundacja Nowoczesna Polska
+    encoder         : Lavf56.40.101
+    Stream #0:0: Audio: pcm_s16le, 44100 Hz, mono, s16, 705 kb/s
+    Metadata:
+      encoder         : Lavc56.60.100 pcm_s16le
+Stream mapping:
+  Stream #0:0 -> #0:0 (mp3 (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+[silencedetect @ 0x2417a60] silence_start: 1.48531
+[silencedetect @ 0x2417a60] silence_end: 2.58612 | silence_duration: 1.10082
+[silencedetect @ 0x2417a60] silence_start: 3.47061
+[silencedetect @ 0x2417a60] silence_end: 4.36245 | silence_duration: 0.891837
+[silencedetect @ 0x2417a60] silence_start: 9.06082
+[silencedetect @ 0x2417a60] silence_end: 9.95265 | silence_duration: 0.891837
+[silencedetect @ 0x2417a60] silence_start: 14.9122
+[silencedetect @ 0x2417a60] silence_end: 15.9086 | silence_duration: 0.996327
+[silencedetect @ 0x2417a60] silence_start: 20.398
+[silencedetect @ 0x2417a60] silence_end: 21.3943 | silence_duration: 0.996327
+[silencedetect @ 0x2417a60] silence_start: 22.4878
+[silencedetect @ 0x2417a60] silence_end: 23.1445 | silence_duration: 0.656735
+[silencedetect @ 0x2417a60] silence_start: 31.1604
+[silencedetect @ 0x2417a60] silence_end: 32 | silence_duration: 0.839592
+[silencedetect @ 0x2417a60] silence_start: 35.2616
+[silencedetect @ 0x2417a60] silence_end: 35.9184 | silence_duration: 0.656735
+[silencedetect @ 0x2417a60] silence_start: 40.3816
+size=N/A time=00:00:42.68 bitrate=N/A    
+video:0kB audio:3676kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown

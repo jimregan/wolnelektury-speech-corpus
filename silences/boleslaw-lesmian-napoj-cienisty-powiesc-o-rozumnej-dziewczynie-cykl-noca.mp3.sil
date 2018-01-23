@@ -1,0 +1,94 @@
+ffmpeg version 2.8.11-0ubuntu0.16.04.1 Copyright (c) 2000-2017 the FFmpeg developers
+  built with gcc 5.4.0 (Ubuntu 5.4.0-6ubuntu1~16.04.4) 20160609
+  configuration: --prefix=/usr --extra-version=0ubuntu0.16.04.1 --build-suffix=-ffmpeg --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --cc=cc --cxx=g++ --enable-gpl --enable-shared --disable-stripping --disable-decoder=libopenjpeg --disable-decoder=libschroedinger --enable-avresample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libmodplug --enable-libmp3lame --enable-libopenjpeg --enable-libopus --enable-libpulse --enable-librtmp --enable-libschroedinger --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxvid --enable-libzvbi --enable-openal --enable-opengl --enable-x11grab --enable-libdc1394 --enable-libiec61883 --enable-libzmq --enable-frei0r --enable-libx264 --enable-libopencv
+  libavutil      54. 31.100 / 54. 31.100
+  libavcodec     56. 60.100 / 56. 60.100
+  libavformat    56. 40.101 / 56. 40.101
+  libavdevice    56.  4.100 / 56.  4.100
+  libavfilter     5. 40.101 /  5. 40.101
+  libavresample   2.  1.  0 /  2.  1.  0
+  libswscale      3.  1.101 /  3.  1.101
+  libswresample   1.  2.101 /  1.  2.101
+  libpostproc    53.  3.100 / 53.  3.100
+[mp3 @ 0x1aed8c0] Unknown attached picture mimetype: ('image/png', None), skipping.
+[mp3 @ 0x1aed8c0] Skipping 0 bytes of junk at 17418.
+[mp3 @ 0x1aed8c0] Estimating duration from bitrate, this may be inaccurate
+Input #0, mp3, from 'boleslaw-lesmian-napoj-cienisty-powiesc-o-rozumnej-dziewczynie-cykl-noca.mp3':
+  Metadata:
+    title           : Bolesław Leśmian, Napój cienisty, Powieść o rozumnej dziewczynie (cykl), Nocą
+    artist          : Wiktor Korzeniewski
+    album           : Wolne Lektury
+    date            : 2010
+    genre           : Speech
+    copyright       : 2010 Fundacja Nowoczesna Polska. Licensed to the public under http://creativecommons.org/licenses/by-sa/3.0/deed.pl verify at http://www.wolnelektury.pl/katalog/lektura/napoj-cienisty-noca/
+    publisher       : Fundacja Nowoczesna Polska
+    performer       : Marcin Cisło
+    album_artist    : Fundacja Nowoczesna Polska
+    encoder         : Lavf52.87.1
+  Duration: 00:01:22.34, start: 0.000000, bitrate: 65 kb/s
+    Stream #0:0: Audio: mp3, 44100 Hz, mono, s16p, 64 kb/s
+Output #0, null, to 'pipe:':
+  Metadata:
+    title           : Bolesław Leśmian, Napój cienisty, Powieść o rozumnej dziewczynie (cykl), Nocą
+    artist          : Wiktor Korzeniewski
+    album           : Wolne Lektury
+    date            : 2010
+    genre           : Speech
+    copyright       : 2010 Fundacja Nowoczesna Polska. Licensed to the public under http://creativecommons.org/licenses/by-sa/3.0/deed.pl verify at http://www.wolnelektury.pl/katalog/lektura/napoj-cienisty-noca/
+    publisher       : Fundacja Nowoczesna Polska
+    performer       : Marcin Cisło
+    album_artist    : Fundacja Nowoczesna Polska
+    encoder         : Lavf56.40.101
+    Stream #0:0: Audio: pcm_s16le, 44100 Hz, mono, s16, 705 kb/s
+    Metadata:
+      encoder         : Lavc56.60.100 pcm_s16le
+Stream mapping:
+  Stream #0:0 -> #0:0 (mp3 (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+[silencedetect @ 0x1b007c0] silence_start: 1.27633
+[silencedetect @ 0x1b007c0] silence_end: 2.48163 | silence_duration: 1.20531
+[silencedetect @ 0x1b007c0] silence_start: 2.94816
+[silencedetect @ 0x1b007c0] silence_end: 5.25061 | silence_duration: 2.30245
+[silencedetect @ 0x1b007c0] silence_start: 8.9302
+[silencedetect @ 0x1b007c0] silence_end: 10.1616 | silence_duration: 1.23143
+[silencedetect @ 0x1b007c0] silence_start: 13.5016
+[silencedetect @ 0x1b007c0] silence_end: 15.1249 | silence_duration: 1.62327
+[silencedetect @ 0x1b007c0] silence_start: 17.8118
+[silencedetect @ 0x1b007c0] silence_end: 19.3829 | silence_duration: 1.57102
+[silencedetect @ 0x1b007c0] silence_start: 20.8159
+[silencedetect @ 0x1b007c0] silence_end: 21.3682 | silence_duration: 0.552245
+[silencedetect @ 0x1b007c0] silence_start: 22.6706
+[silencedetect @ 0x1b007c0] silence_end: 24.4245 | silence_duration: 1.75388
+[silencedetect @ 0x1b007c0] silence_start: 27.66
+[silencedetect @ 0x1b007c0] silence_end: 29.1004 | silence_duration: 1.44041
+[silencedetect @ 0x1b007c0] silence_start: 32.1008
+[silencedetect @ 0x1b007c0] silence_end: 33.3845 | silence_duration: 1.28367
+[silencedetect @ 0x1b007c0] silence_start: 35.8886
+[silencedetect @ 0x1b007c0] silence_end: 37.5641 | silence_duration: 1.67551
+[silencedetect @ 0x1b007c0] silence_start: 40.251
+[silencedetect @ 0x1b007c0] silence_end: 42.4751 | silence_duration: 2.22408
+[silencedetect @ 0x1b007c0] silence_start: 43.7776
+[silencedetect @ 0x1b007c0] silence_end: 44.9306 | silence_duration: 1.15306
+[silencedetect @ 0x1b007c0] silence_start: 46.4159
+[silencedetect @ 0x1b007c0] silence_end: 47.4384 | silence_duration: 1.02245
+[silencedetect @ 0x1b007c0] silence_start: 50.3865
+[silencedetect @ 0x1b007c0] silence_end: 51.7747 | silence_duration: 1.38816
+[silencedetect @ 0x1b007c0] silence_start: 54.1482
+[silencedetect @ 0x1b007c0] silence_end: 54.9878 | silence_duration: 0.839592
+[silencedetect @ 0x1b007c0] silence_start: 57.0216
+[silencedetect @ 0x1b007c0] silence_end: 57.5478 | silence_duration: 0.526122
+[silencedetect @ 0x1b007c0] silence_start: 58.5106
+[silencedetect @ 0x1b007c0] silence_end: 60.6041 | silence_duration: 2.09347
+[silencedetect @ 0x1b007c0] silence_start: 64.2053
+[silencedetect @ 0x1b007c0] silence_end: 64.9404 | silence_duration: 0.735102
+[silencedetect @ 0x1b007c0] silence_start: 68.2804
+[silencedetect @ 0x1b007c0] silence_end: 69.9037 | silence_duration: 1.62327
+[silencedetect @ 0x1b007c0] silence_start: 71.6502
+[silencedetect @ 0x1b007c0] silence_end: 72.2286 | silence_duration: 0.578367
+[silencedetect @ 0x1b007c0] silence_start: 73.4265
+[silencedetect @ 0x1b007c0] silence_end: 74.5012 | silence_duration: 1.07469
+[silencedetect @ 0x1b007c0] silence_start: 76.6657
+[silencedetect @ 0x1b007c0] silence_end: 77.7143 | silence_duration: 1.04857
+[silencedetect @ 0x1b007c0] silence_start: 79.1212
+size=N/A time=00:01:22.33 bitrate=N/A    
+video:0kB audio:7092kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown

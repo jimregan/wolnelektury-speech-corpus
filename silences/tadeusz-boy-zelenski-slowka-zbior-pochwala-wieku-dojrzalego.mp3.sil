@@ -1,0 +1,131 @@
+ffmpeg version 2.8.11-0ubuntu0.16.04.1 Copyright (c) 2000-2017 the FFmpeg developers
+  built with gcc 5.4.0 (Ubuntu 5.4.0-6ubuntu1~16.04.4) 20160609
+  configuration: --prefix=/usr --extra-version=0ubuntu0.16.04.1 --build-suffix=-ffmpeg --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --cc=cc --cxx=g++ --enable-gpl --enable-shared --disable-stripping --disable-decoder=libopenjpeg --disable-decoder=libschroedinger --enable-avresample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libmodplug --enable-libmp3lame --enable-libopenjpeg --enable-libopus --enable-libpulse --enable-librtmp --enable-libschroedinger --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxvid --enable-libzvbi --enable-openal --enable-opengl --enable-x11grab --enable-libdc1394 --enable-libiec61883 --enable-libzmq --enable-frei0r --enable-libx264 --enable-libopencv
+  libavutil      54. 31.100 / 54. 31.100
+  libavcodec     56. 60.100 / 56. 60.100
+  libavformat    56. 40.101 / 56. 40.101
+  libavdevice    56.  4.100 / 56.  4.100
+  libavfilter     5. 40.101 /  5. 40.101
+  libavresample   2.  1.  0 /  2.  1.  0
+  libswscale      3.  1.101 /  3.  1.101
+  libswresample   1.  2.101 /  1.  2.101
+  libpostproc    53.  3.100 / 53.  3.100
+[mp3 @ 0xc548c0] Unknown attached picture mimetype: ('image/png', None), skipping.
+[mp3 @ 0xc548c0] Skipping 0 bytes of junk at 17522.
+Input #0, mp3, from 'tadeusz-boy-zelenski-slowka-zbior-pochwala-wieku-dojrzalego.mp3':
+  Metadata:
+    title           : Tadeusz Boy-Żeleński, "Słówka" (zbiór), Pochwała wieku dojrzałego.
+    artist          : Wiktor Korzeniewski
+    album           : Wolne Lektury
+    genre           : 0
+    encoder         : Lavf53.21.1
+    URL             : http://wolnelektury.pl/katalog/lektura/slowka-zbior
+    date            : 2013
+    CONDUCTOR       : Adam Bień
+    PROJECT         : Słuchamy Polski finansowanego przez Ministerstwo Kultury i Dziedzictwa Narodowego
+    TCD             : 75617262132
+    performer       : Adam Bień
+    album_artist    : Fundacja Nowoczesna Polska
+    copyright       : 2013 Fundacja Nowoczesna Polska. Licensed to the public under http://creativecommons.org/licenses/by-sa/3.0/deed.pl verify at http://wolnelektury.pl/katalog/lektura/slowka-zbior-pochwala-wieku-dojrzalego
+    encoded_by      : Adam Bień
+    publisher       : Fundacja Nowoczesna Polska
+  Duration: 00:04:39.85, start: 0.000000, bitrate: 64 kb/s
+    Stream #0:0: Audio: mp3, 44100 Hz, mono, s16p, 64 kb/s
+Output #0, null, to 'pipe:':
+  Metadata:
+    title           : Tadeusz Boy-Żeleński, "Słówka" (zbiór), Pochwała wieku dojrzałego.
+    artist          : Wiktor Korzeniewski
+    album           : Wolne Lektury
+    genre           : 0
+    URL             : http://wolnelektury.pl/katalog/lektura/slowka-zbior
+    date            : 2013
+    CONDUCTOR       : Adam Bień
+    PROJECT         : Słuchamy Polski finansowanego przez Ministerstwo Kultury i Dziedzictwa Narodowego
+    TCD             : 75617262132
+    performer       : Adam Bień
+    album_artist    : Fundacja Nowoczesna Polska
+    copyright       : 2013 Fundacja Nowoczesna Polska. Licensed to the public under http://creativecommons.org/licenses/by-sa/3.0/deed.pl verify at http://wolnelektury.pl/katalog/lektura/slowka-zbior-pochwala-wieku-dojrzalego
+    encoded_by      : Adam Bień
+    publisher       : Fundacja Nowoczesna Polska
+    encoder         : Lavf56.40.101
+    Stream #0:0: Audio: pcm_s16le, 44100 Hz, mono, s16, 705 kb/s
+    Metadata:
+      encoder         : Lavc56.60.100 pcm_s16le
+Stream mapping:
+  Stream #0:0 -> #0:0 (mp3 (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+[silencedetect @ 0xc67b60] silence_start: 1.92939
+[silencedetect @ 0xc67b60] silence_end: 2.66449 | silence_duration: 0.735102
+[silencedetect @ 0xc67b60] silence_start: 11.7253
+[silencedetect @ 0xc67b60] silence_end: 12.4082 | silence_duration: 0.682857
+[silencedetect @ 0xc67b60] silence_start: 13.5016
+[silencedetect @ 0xc67b60] silence_end: 14.3151 | silence_duration: 0.813469
+[silencedetect @ 0xc67b60] silence_start: 25.7531
+[silencedetect @ 0xc67b60] silence_end: 26.3053 | silence_duration: 0.552245
+[silencedetect @ 0xc67b60] silence_start: 38.6053
+[silencedetect @ 0xc67b60] silence_end: 39.3665 | silence_duration: 0.761224
+[silencedetect @ 0xc67b60] silence_start: 41.322
+[silencedetect @ 0xc67b60] silence_end: 41.8482 | silence_duration: 0.526122
+[silencedetect @ 0xc67b60] silence_start: 48.0878
+[silencedetect @ 0xc67b60] silence_end: 48.64 | silence_duration: 0.552245
+[silencedetect @ 0xc67b60] silence_start: 52.842
+[silencedetect @ 0xc67b60] silence_end: 53.4465 | silence_duration: 0.60449
+[silencedetect @ 0xc67b60] silence_start: 88.1073
+[silencedetect @ 0xc67b60] silence_end: 88.6335 | silence_duration: 0.526122
+[silencedetect @ 0xc67b60] silence_start: 92.2347
+[silencedetect @ 0xc67b60] silence_end: 92.7869 | silence_duration: 0.552245
+[silencedetect @ 0xc67b60] silence_start: 109.789
+[silencedetect @ 0xc67b60] silence_end: 110.42 | silence_duration: 0.630612
+[silencedetect @ 0xc67b60] silence_start: 114.596
+[silencedetect @ 0xc67b60] silence_end: 115.122 | silence_duration: 0.526122
+[silencedetect @ 0xc67b60] silence_start: 128.519
+[silencedetect @ 0xc67b60] silence_end: 129.045 | silence_duration: 0.526122
+[silencedetect @ 0xc67b60] silence_start: 133.717
+[silencedetect @ 0xc67b60] silence_end: 134.243 | silence_duration: 0.526122
+[silencedetect @ 0xc67b60] silence_start: 143.931
+[silencedetect @ 0xc67b60] silence_end: 144.457 | silence_duration: 0.526122
+[silencedetect @ 0xc67b60] silence_start: 146.021
+[silencedetect @ 0xc67b60] silence_end: 146.547 | silence_duration: 0.526122
+[silencedetect @ 0xc67b60] silence_start: 148.267
+[silencedetect @ 0xc67b60] silence_end: 148.82 | silence_duration: 0.552245
+[silencedetect @ 0xc67b60] silence_start: 152.865
+[silencedetect @ 0xc67b60] silence_end: 153.574 | silence_duration: 0.70898
+[silencedetect @ 0xc67b60] silence_start: 167.546
+[silencedetect @ 0xc67b60] silence_end: 168.281 | silence_duration: 0.735102
+[silencedetect @ 0xc67b60] silence_start: 169.975
+[silencedetect @ 0xc67b60] silence_end: 170.632 | silence_duration: 0.656735
+[silencedetect @ 0xc67b60] silence_start: 172.483
+[silencedetect @ 0xc67b60] silence_end: 173.166 | silence_duration: 0.682857
+[silencedetect @ 0xc67b60] silence_start: 182.984
+[silencedetect @ 0xc67b60] silence_end: 183.536 | silence_duration: 0.552245
+[silencedetect @ 0xc67b60] silence_start: 194.217
+[silencedetect @ 0xc67b60] silence_end: 195.03 | silence_duration: 0.813469
+[silencedetect @ 0xc67b60] silence_start: 200.303
+[silencedetect @ 0xc67b60] silence_end: 200.829 | silence_duration: 0.526122
+[silencedetect @ 0xc67b60] silence_start: 205.449
+[silencedetect @ 0xc67b60] silence_end: 206.002 | silence_duration: 0.552245
+[silencedetect @ 0xc67b60] silence_start: 209.368
+[silencedetect @ 0xc67b60] silence_end: 209.972 | silence_duration: 0.60449
+[silencedetect @ 0xc67b60] silence_start: 213.913
+[silencedetect @ 0xc67b60] silence_end: 214.491 | silence_duration: 0.578367
+[silencedetect @ 0xc67b60] silence_start: 224.153
+[silencedetect @ 0xc67b60] silence_end: 224.731 | silence_duration: 0.578367
+[silencedetect @ 0xc67b60] silence_start: 228.594
+[silencedetect @ 0xc67b60] silence_end: 229.172 | silence_duration: 0.578367
+[silencedetect @ 0xc67b60] silence_start: 231.284
+[silencedetect @ 0xc67b60] silence_end: 232.098 | silence_duration: 0.813469
+[silencedetect @ 0xc67b60] silence_start: 234.132
+[silencedetect @ 0xc67b60] silence_end: 234.893 | silence_duration: 0.761224
+[silencedetect @ 0xc67b60] silence_start: 235.699
+[silencedetect @ 0xc67b60] silence_end: 236.513 | silence_duration: 0.813469
+[silencedetect @ 0xc67b60] silence_start: 249.936
+[silencedetect @ 0xc67b60] silence_end: 250.645 | silence_duration: 0.70898
+[silencedetect @ 0xc67b60] silence_start: 254.925
+[silencedetect @ 0xc67b60] silence_end: 255.687 | silence_duration: 0.761224
+[silencedetect @ 0xc67b60] silence_start: 273.316
+[silencedetect @ 0xc67b60] silence_end: 274.312 | silence_duration: 0.996327
+[silencedetect @ 0xc67b60] silence_start: 276.032
+[silencedetect @ 0xc67b60] silence_end: 276.663 | silence_duration: 0.630612
+[silencedetect @ 0xc67b60] silence_start: 279.01
+size=N/A time=00:04:39.84 bitrate=N/A    
+video:0kB audio:24104kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
