@@ -6,6 +6,7 @@ use utf8;
 
 use Algorithm::Diff qw/sdiff/;
 use Data::Dumper;
+use NumberNorm qw/num2text/;
 
 my %equals = (
   'j' => 'i',
@@ -21,4 +22,6 @@ my @b = split(/ /,$test_text);
 
 my @sdiffs = sdiff(\@a, \@b);
 
-print Dumper @sdiffs;
+for my $diff (@sdiffs) {
+  print Dumper $diff->[0];
+}
