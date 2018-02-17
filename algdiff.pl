@@ -23,5 +23,5 @@ my @b = split(/ /,$test_text);
 my @sdiffs = sdiff(\@a, \@b);
 
 for my $diff (@sdiffs) {
-  print Dumper $diff->[0];
+  next if($diff->[0] eq 'u');
 }

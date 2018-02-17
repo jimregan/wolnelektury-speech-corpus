@@ -14,6 +14,7 @@ my $splitter = Lingua::Sentence->new("pl");
 while(<>) {
 	chomp;
 	s/\r//;
+	s/„//g;
 	next if(/^$/);
 	my $firstpass = $splitter->split($_);
 	$firstpass =~ s/— ([A-ZĄĆĘÓŁŚŻŹ])/\n— $1/g;
