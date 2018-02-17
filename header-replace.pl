@@ -19,6 +19,7 @@ my %skip_until = (
     'przygody-tomka-sawyera.txt' => 'Wstęp',
     'ballada-z-tamtej-strony-imieniny.txt' => 'imieniny',
     'przedwiosnie.txt' => 'Panu Konradowi Czarnockiemu',
+    'piesn-o-rolandzie.txt' => '^I$',
 );
 my %head_replace = (
     'balzac-komedia-ludzka-bank-nucingena.txt' => "Bank Nucingena\nHonoré Balzac\ntłumaczenie Tadeusz Boy-Żeleński",
@@ -30,6 +31,7 @@ my %head_replace = (
     'przygody-tomka-sawyera.txt' => "Mark Twain\nPrzygody Tomka Sawyera",
     'ballada-z-tamtej-strony-imieniny.txt' => "Józef Czechowicz\nimieniny",
     'przedwiosnie.txt' => "Stefan Żeromski\nPrzedwiośnie\nDedykacja",
+    'piesn-o-rolandzie.txt' => "Pieśń o Rolandzie\nAutor nieznany\ntłumaczenie Tadeusz Boy-Żeleński",
 );
 
 if (!exists $skip_until{$ARGV[0]}) {
