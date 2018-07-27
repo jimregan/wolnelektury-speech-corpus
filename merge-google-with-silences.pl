@@ -5,7 +5,7 @@ use strict;
 use utf8;
 
 use Data::Dumper;
-use Algorithm::Diff;
+use Algorithm::Diff qw(diff);
 use NumberNorm qw/num2text inflect_ordinal expand_year/;
 
 open(SILENCES, '<', $ARGV[0]);
@@ -43,6 +43,7 @@ while(<SENTENCES>) {
   chomp;
   push @sentences, $_;
 }
+my $whole = join(' ', @sentences);
 
 my @googasr = ();
 while(<GOOGASR>) {
@@ -60,3 +61,9 @@ for (my $i = 1; $i <= $#googasr; $i++) {
   $googtxt .= " " . $googasr[$i]->{'word'};
 }
 print $googtxt . "\n";
+
+my @wordsa = split/ /, $whole;
+my @wordsb = split/ /, $googtxt;
+
+my @diff = diff(\@wordsa, \@wordsb);
+print Dumper @diff;
