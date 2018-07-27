@@ -56,14 +56,8 @@ while(<GOOGASR>) {
   }
 }
 
-my $googtxt = $googasr[0]->{'word'};
-for (my $i = 1; $i <= $#googasr; $i++) {
-  $googtxt .= " " . $googasr[$i]->{'word'};
-}
-print $googtxt . "\n";
-
 my @wordsa = split/ /, $whole;
-my @wordsb = split/ /, $googtxt;
+my @wordsb = map { $_->{'word'} } @googasr;
 
 my @diff = diff(\@wordsa, \@wordsb);
 print Dumper @diff;
