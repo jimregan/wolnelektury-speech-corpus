@@ -19,7 +19,11 @@ broad_norm() {
 }
 
 header_replace() {
-    pushd text
+    if [ x$1 != x"" ]
+    then
+        pushd $1
+    fi
+
     for i in balzac-komedia-ludzka-bank-nucingena.txt fortepian-chopina.txt \
         boy-swietoszek.txt wspomnienia-niebieskiego-mundurka.txt \
         powiesci-fantastyczne-wybor-narzeczonej.txt \
@@ -30,11 +34,19 @@ header_replace() {
         perl ../header-replace.pl $i > tmp
         mv tmp $i
     done
-    popd
+
+    if [ x$1 != x"" ]
+    then
+        popd
+    fi
 }
 
 split_chapters() {
-    pushd text
+    if [ x$1 != x"" ]
+    then
+        pushd $1
+    fi
+
     for i in balzac-komedia-ludzka-corka-ewy.txt \
         boy-swietoszek.txt \
         golem.txt \
@@ -51,15 +63,30 @@ split_chapters() {
         perl ../splitter.pl $i > tmp
         mv tmp $i
     done
-    popd
+
+    if [ x$1 != x"" ]
+    then
+        popd
+    fi
 }
 
 additions() {
-    pushd text
+    if [ x$1 != x"" ]
+    then
+        pushd $1
+    fi
 
     echo 'Tobie, leniu' >> but-w-butonierce-deszcz.txt
     echo 'Czytał Wiktor Korzeniewski' >> zajac-i-jez.txt
     echo 'Czytał Jacek Rozenek' >> przedwiosnie.txt
 
-    popd
+    if [ x$1 != x"" ]
+    then
+        popd
+    fi
 }
+
+broad_norm text
+header_replace text
+additions text
+split_chapters text
