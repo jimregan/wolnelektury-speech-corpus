@@ -35,7 +35,18 @@ header_replace() {
 
 split_chapters() {
     pushd text
-    for i in balzac-komedia-ludzka-corka-ewy.txt
+    for i in balzac-komedia-ludzka-corka-ewy.txt \
+        boy-swietoszek.txt \
+        golem.txt \
+        kim.txt \
+        piesn-o-rolandzie.txt \
+        powiesci-fantastyczne-wybor-narzeczonej.txt \
+        przedwiosnie.txt \
+        przygody-tomka-sawyera.txt \
+        robinson-crusoe.txt \
+        sztuka-kochania.txt \
+        wspomnienia-niebieskiego-mundurka.txt \
+        wyspa-skarbow.txt
     do
         perl ../splitter.pl $i > tmp
         mv tmp $i
