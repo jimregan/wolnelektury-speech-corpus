@@ -5,6 +5,8 @@ use strict;
 use utf8;
 use Data::Dumper;
 
+my $DEBUG=0;
+
 my %patterns = (
     'wyspa-skarbow.txt' => '^Część ',
     'sztuka-kochania.txt' => '^Księga ',
@@ -407,11 +409,19 @@ if($filename =~ /.*\/([^\/]*)$/) {
     $fn = $filename;
 }
 
+if($DEBUG) {
+    print STDERR "Filename: $fn\n";
+}
+
 my $pattern = '';
 my @patterns = ();
 my $firstpattern = '';
 if(exists $firstpatterns{$fn}) {
     $firstpattern = $firstpatterns{$fn};
+}
+
+if($DEBUG) {
+    print STDERR "First pattern: $firstpattern\n";
 }
 
 if(exists $patterns{$fn}) {
@@ -423,6 +433,11 @@ if(exists $patterns{$fn}) {
     $firstpattern = $pattern;
 } else {
     die "No pattern for filename $fn";
+}
+
+if($DEBUG) {
+    print STDERR "Pattern: $pattern\n";
+    print STDERR "First pattern: $firstpattern\n";
 }
 
 if(exists $split_inner{$fn}) {
@@ -442,6 +457,7 @@ if($filename eq 'wspomnienia-niebieskiego-mundurka.txt' || $filename eq 'kim.txt
 my $outfile = $filename . "-" . sprintf("%02d.txt", $count);
 open(OUTPUT, '>', $outfile);
 binmode(OUTPUT, ":utf8");
+binmode(STDERR, ":utf8");
 
 while(<INPUT>) {
     s/\r//;
@@ -457,7 +473,7 @@ while(<INPUT>) {
             open(OUTPUT, '>', $outfile);
             binmode(OUTPUT, ":utf8");
             print OUTPUT substr $_, $point . "\n";
-        } elsif($pattern ne $firstpattern || $_ !~ /$firstpattern/) {
+        } elsif($pattern ne $firstpattern && $_ !~ /$firstpattern/) {
             $count++;
             $outfile = $filename . "-" . sprintf("%02d.txt", $count);
             close OUTPUT;
