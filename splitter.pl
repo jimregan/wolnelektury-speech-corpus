@@ -444,6 +444,7 @@ open(OUTPUT, '>', $outfile);
 binmode(OUTPUT, ":utf8");
 
 while(<INPUT>) {
+    s/\r//;
     chomp;
     if(/$pattern/) {
         my $point = $-[0];
