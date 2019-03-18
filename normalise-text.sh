@@ -1,14 +1,16 @@
 #!/bin/bash
 
 broad_norm() {
+    echo "Stage 1: Broad normalisations"
     for i in *.txt
     do
-        perl ../norm-text.pl $i > tmp
-        mv tmp $i
+        cat $i | perl ../norm-text.pl > $i.tmp
+        mv $i.tmp $i
     done
 }
 
 header_replace() {
+    echo "Stage 2: Replace headers"
     for i in balzac-komedia-ludzka-bank-nucingena.txt fortepian-chopina.txt \
         boy-swietoszek.txt wspomnienia-niebieskiego-mundurka.txt \
         powiesci-fantastyczne-wybor-narzeczonej.txt \
@@ -16,12 +18,14 @@ header_replace() {
         ballada-z-tamtej-strony-imieniny.txt przedwiosnie.txt \
         piesn-o-rolandzie.txt
     do
-        perl ../header-replace.pl $i > tmp
-        mv tmp $i
+        echo "Replacing header in $i"
+        perl ../header-replace.pl $i > $i.tmp
+        mv $i.tmp $i
     done
 }
 
 split_chapters() {
+    echo "Stage 5: Split texts to match audio"
     for i in balzac-komedia-ludzka-corka-ewy.txt \
         boy-swietoszek.txt \
         golem.txt \
@@ -35,20 +39,23 @@ split_chapters() {
         wspomnienia-niebieskiego-mundurka.txt \
         wyspa-skarbow.txt
     do
-        perl ../splitter.pl $i > tmp
-        mv tmp $i
+        echo "Splitting $i"
+        perl ../splitter.pl $i > $i.tmp
+        mv $i.tmp $i
     done
 }
 
 norm_chapters() {
+    echo "Stage 4: Add missing chapter word"
     for i in wyspa-skarbow.txt wspomnienia-niebieskiego-mundurka.txt
     do
-        perl ../norm-roman-by-text.pl $i > tmp
-        mv tmp $i
+        perl ../norm-roman-by-text.pl $i > $i.tmp
+        mv $i.tmp $i
     done
 }
 
 additions() {
+    echo "Stage 3: Final additions"
     echo 'Tobie, leniu' >> but-w-butonierce-deszcz.txt
     echo 'Czytał Wiktor Korzeniewski' >> zajac-i-jez.txt
     echo 'Czytał Jacek Rozenek' >> przedwiosnie.txt
@@ -57,6 +64,7 @@ additions() {
 run_all() {
     if [ x$1 != x"" ]
     then
+    echo "changing to $1"
         pushd $1
     fi
 
