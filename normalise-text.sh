@@ -1,29 +1,14 @@
 #!/bin/bash
 
 broad_norm() {
-    if [ x$1 != x"" ]
-    then
-        pushd $1
-    fi
-
     for i in *.txt
     do
         perl ../norm-text.pl $i > tmp
         mv tmp $i
     done
-
-    if [ x$1 != x"" ]
-    then
-        popd
-    fi
 }
 
 header_replace() {
-    if [ x$1 != x"" ]
-    then
-        pushd $1
-    fi
-
     for i in balzac-komedia-ludzka-bank-nucingena.txt fortepian-chopina.txt \
         boy-swietoszek.txt wspomnienia-niebieskiego-mundurka.txt \
         powiesci-fantastyczne-wybor-narzeczonej.txt \
@@ -34,19 +19,9 @@ header_replace() {
         perl ../header-replace.pl $i > tmp
         mv tmp $i
     done
-
-    if [ x$1 != x"" ]
-    then
-        popd
-    fi
 }
 
 split_chapters() {
-    if [ x$1 != x"" ]
-    then
-        pushd $1
-    fi
-
     for i in balzac-komedia-ludzka-corka-ewy.txt \
         boy-swietoszek.txt \
         golem.txt \
@@ -63,40 +38,33 @@ split_chapters() {
         perl ../splitter.pl $i > tmp
         mv tmp $i
     done
-
-    if [ x$1 != x"" ]
-    then
-        popd
-    fi
 }
 
 norm_chapters() {
-    if [ x$1 != x"" ]
-    then
-        pushd $1
-    fi
-
     for i in wyspa-skarbow.txt wspomnienia-niebieskiego-mundurka.txt
     do
         perl ../norm-roman-by-text.pl $i > tmp
         mv tmp $i
     done
-
-    if [ x$1 != x"" ]
-    then
-        popd
-    fi
 }
 
 additions() {
+    echo 'Tobie, leniu' >> but-w-butonierce-deszcz.txt
+    echo 'Czytał Wiktor Korzeniewski' >> zajac-i-jez.txt
+    echo 'Czytał Jacek Rozenek' >> przedwiosnie.txt
+}
+
+run_all() {
     if [ x$1 != x"" ]
     then
         pushd $1
     fi
 
-    echo 'Tobie, leniu' >> but-w-butonierce-deszcz.txt
-    echo 'Czytał Wiktor Korzeniewski' >> zajac-i-jez.txt
-    echo 'Czytał Jacek Rozenek' >> przedwiosnie.txt
+    broad_norm
+    header_replace
+    additions
+    norm_chapters
+    split_chapters
 
     if [ x$1 != x"" ]
     then
@@ -104,8 +72,9 @@ additions() {
     fi
 }
 
-broad_norm text
-header_replace text
-additions text
-norm_chapters text
-split_chapters text
+if [ x$1 != x"" ]
+then
+    run_all $1
+else
+    run_all
+fi
