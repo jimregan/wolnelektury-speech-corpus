@@ -70,6 +70,24 @@ split_chapters() {
     fi
 }
 
+norm_chapters() {
+    if [ x$1 != x"" ]
+    then
+        pushd $1
+    fi
+
+    for i in wyspa-skarbow.txt wspomnienia-niebieskiego-mundurka.txt
+    do
+        perl ../norm-roman-by-text.pl $i > tmp
+        mv tmp $i
+    done
+
+    if [ x$1 != x"" ]
+    then
+        popd
+    fi
+}
+
 additions() {
     if [ x$1 != x"" ]
     then
@@ -89,4 +107,5 @@ additions() {
 broad_norm text
 header_replace text
 additions text
+norm_chapters text
 split_chapters text
