@@ -32,3 +32,13 @@ header_replace() {
     done
     popd
 }
+
+additions() {
+    pushd text
+
+    echo 'Tobie, leniu' >> but-w-butonierce-deszcz.txt
+    echo 'Czytał Wiktor Korzeniewski' >> zajac-i-jez.txt
+    echo 'Czytał Jacek Rozenek' >> przedwiosnie.txt
+
+    popd
+}
