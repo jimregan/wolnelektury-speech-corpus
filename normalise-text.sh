@@ -33,6 +33,16 @@ header_replace() {
     popd
 }
 
+split_chapters() {
+    pushd text
+    for i in balzac-komedia-ludzka-corka-ewy.txt
+    do
+        perl ../splitter.pl $i > tmp
+        mv tmp $i
+    done
+    popd
+}
+
 additions() {
     pushd text
 
