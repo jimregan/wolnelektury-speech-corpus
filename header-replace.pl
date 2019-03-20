@@ -29,7 +29,7 @@ my %head_replace = (
     'powiesci-fantastyczne-wybor-narzeczonej.txt' => "Ernst Teodor Amadeusz Hoffmann\nPowieści fantastyczne\ntłumaczenie Antoni Lange\nWybór narzeczonej\nhistoria, w której zachodzą rozmaite\nnieprawdopodobne przygody",
     'gloria-victis-gloria-victis.txt' => "Eliza Orzeszkowa\nGloria victis",
     'przygody-tomka-sawyera.txt' => "Mark Twain\nPrzygody Tomka Sawyera",
-    'ballada-z-tamtej-strony-imieniny.txt' => "Józef Czechowicz\nimieniny",
+    'ballada-z-tamtej-strony-imieniny.txt' => "Józef Czechowicz",
     'przedwiosnie.txt' => "Stefan Żeromski\nPrzedwiośnie\nDedykacja",
     'piesn-o-rolandzie.txt' => "Pieśń o Rolandzie\nAutor nieznany\ntłumaczenie Tadeusz Boy-Żeleński",
 );
@@ -50,7 +50,7 @@ while(<INPUT>) {
     } else {
         if($reading) {
             print "$_\n";
-       }
+        }
     }
 }
 
