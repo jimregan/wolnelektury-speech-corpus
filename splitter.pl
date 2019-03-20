@@ -1,4 +1,5 @@
 #!/usr/bin/perl
+# Split longer texts to match audio
 
 use warnings;
 use strict;
