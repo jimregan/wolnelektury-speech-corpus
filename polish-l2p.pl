@@ -3,6 +3,7 @@
 use warnings;
 use strict;
 use utf8;
+use Data::Dumper;
 
 my %g2p = (
     'a' => ['a'],
@@ -248,4 +249,4 @@ sub simple_g2p {
     @rawphones;
 }
 
-print simple_g2p("chrzan");
+print Dumper(simple_g2p("chrzan"));
