@@ -10,11 +10,13 @@ binmode(STDIN, ":utf8");
 binmode(STDOUT, ":utf8");
 binmode(STDERR, ":utf8");
 
-my $enwikt = '';
+my $enwikt = 0;
 
-BEGIN{
-    GetOptions("enwiktionary" => \$enwikt);
-}
+GetOptions(
+    'enwiktionary|enwikt|w' => \$enwikt,
+);
+
+print STDERR "$enwikt\n";
 
 my %g2p = (
     'a' => ['a'],
