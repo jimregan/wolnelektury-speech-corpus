@@ -4,10 +4,17 @@ use warnings;
 use strict;
 use utf8;
 use Data::Dumper;
+use Getopt::Long;
 
 binmode(STDIN, ":utf8");
 binmode(STDOUT, ":utf8");
 binmode(STDERR, ":utf8");
+
+my $enwikt = '';
+
+BEGIN{
+    GetOptions("enwiktionary" => \$enwikt);
+}
 
 my %g2p = (
     'a' => ['a'],
@@ -272,30 +279,32 @@ sub denasalise {
     }
 }
 
+my %postnasals = (
+    'p' => 'm',
+    'pʲ' => 'm',
+    'b' => 'm',
+    'bʲ' => 'm',
+    'k' => 'ŋ',
+    'kʲ' => 'ŋ',
+    'ɡ' => 'ŋ',
+    'ɡʲ' => 'ŋ',
+    'x' => 'ŋ',
+    'xʲ' => 'ŋ',
+    't' => 'n',
+    'd' => 'n',
+    't͡ʂ' => 'n',
+    'd͡ʐ' => 'n',
+    't͡s' => 'n',
+    'd͡z' => 'n',
+    't͡ɕ' => 'ɲ',
+    'd͡ʑ' => 'ɲ',
+    'ɕ' => 'ɲ',
+    'ʑ' => 'ɲ',
+    'ʂ' => 'n',
+    'ʐ' => 'n',
+);
 sub renasalise {
     my @in = @_;
-    my %postnasals = (
-        'p' => 'm',
-        'pʲ' => 'm',
-        'b' => 'm',
-        'bʲ' => 'm',
-        'k' => 'ŋ',
-        'kʲ' => 'ŋ',
-        'ɡ' => 'ŋ',
-        'ɡʲ' => 'ŋ',
-        'x' => 'ŋ',
-        'xʲ' => 'ŋ',
-        't' => 'n',
-        'd' => 'n',
-        't͡ʂ' => 'n',
-        'd͡ʐ' => 'n',
-        't͡s' => 'n',
-        'd͡z' => 'n',
-        't͡ɕ' => 'ɲ',
-        'd͡ʑ' => 'ɲ',
-        'ɕ' => 'ɲ',
-        'ʑ' => 'ɲ',
-    );
     my @out = ();
     for(my $i = 0; $i <= $#in; $i++) {
         my $c = $in[$i];
@@ -338,9 +347,19 @@ sub devoice_forward {
     @in;
 }
 
+sub wiktionary_compat {
+    if($enwikt) {
+        $postnasals{ʂ} = 'ŋ';
+        $postnasals{ʐ} = 'ŋ';
+        $g2p{ng} = ['n', 'ɡ'];
+        $g2p{nk} = ['n', 'k'];
+    }
+}
+
 sub simple_g2p {
     my $in = shift;
     $in = lc($in);
+    wiktionary_compat;
     my @sortkeys = sort { length $b <=> length $a } keys %g2p;
     my $regex = '(' . join('|', @sortkeys) . ')';
     my @rawphones = ();
