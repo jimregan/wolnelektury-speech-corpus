@@ -206,7 +206,7 @@ my %g2p = (
     'zio' => ('ʑ', 'ɔ'),
     'zió' => ('ʑ', 'u'),
     'ziu' => ('ʑ', 'u'),
-    '-' => ()
+    '-' => (),
 );
 
 my %variants = (
@@ -245,6 +245,7 @@ sub simple_g2p {
         push @rawphones, $g2p{$match};
         
     }
+    @rawphones;
 }
 
 print simple_g2p("chrzan");
