@@ -296,11 +296,13 @@ sub renasalise {
     );
     my @out = ();
     for(my $i = 0; $i <= $#in; $i++) {
-         if($i < $#in && ($in[$i] eq 'ɛ̃' || $in[$i] eq 'ɔ̃') && exists $postnasals{$in[$i+1]}) {
+        my $c = $in[$i];
+        my $n = ($i < $#in && exists $postnasals{$in[$i+1]}) ? $postnasals{$in[$i+1]} : '';
+        if(($c eq 'ɛ̃' || $c eq 'ɔ̃') && $n ne '') {
             push @out, denasalise($in[$i]);
-            push @out, $postnasals{$in[$i+1]};
+            push @out, $n;
         } else {
-            push @out, $in[$i];
+            push @out, $c;
         }
     }
     @out;
