@@ -5,6 +5,8 @@ use strict;
 use utf8;
 use Data::Dumper;
 
+binmode(STDOUT, ":utf8");
+
 my %g2p = (
     'a' => ['a'],
     'au' => ['a', 'w'],
@@ -236,6 +238,28 @@ my %devoice = (
     'ʐ' => 'ʂ',
 );
 
+sub is_voiced {
+    my $in = shift;
+    my %voice = map { $_ => 1 } keys %devoice;
+    if(exists $voice{$in} && $voice{$in}) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
+sub devoice_final {
+    my @in = @_;
+    for(my $i = $#in; $i >= 0; $i++) {
+        if(is_voiced($in[$i])) {
+            $in[$i] = $devoice{$in[$i]};
+        } else {
+            last;
+        }
+    }
+    @in;
+}
+
 sub simple_g2p {
     my $in = shift;
     my @sortkeys = sort { length $b <=> length $a } keys %g2p;
@@ -246,7 +270,12 @@ sub simple_g2p {
         push @rawphones, @{$g2p{$match}};
         $in = substr($in, length($match));
     }
+    # denasalise final 'ę'
+    if($rawphones[$#rawphones] eq 'ɛ̃') {
+        $rawphones[$#rawphones] = 'ɛ';
+    }
+    @rawphones = devoice_final(@rawphones);
     return join(" ", @rawphones);
 }
 
-print simple_g2p("chrzan");
+print simple_g2p("ślizg");
