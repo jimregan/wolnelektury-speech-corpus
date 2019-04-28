@@ -16,8 +16,6 @@ GetOptions(
     'enwiktionary|enwikt|w' => \$enwikt,
 );
 
-print STDERR "$enwikt\n";
-
 my %g2p = (
     'a' => ['a'],
     'au' => ['a', 'w'],
