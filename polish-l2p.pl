@@ -11,9 +11,15 @@ binmode(STDOUT, ":utf8");
 binmode(STDERR, ":utf8");
 
 my $enwikt = 0;
+my $simple_mode = 1;
+my $pronounce_as = 0;
+my $pronounce_both = 0;
+
 
 GetOptions(
     'enwiktionary|enwikt|w' => \$enwikt,
+    'pronounce-both' => sub { $pronounce_both = 1; $simple_mode = 0;},
+    'pronounce-as' => sub { $pronounce_as = 1; $simple_mode = 0;},
 );
 
 my %g2p = (
@@ -132,7 +138,6 @@ my %g2p = (
     'mió' => ['mʲ', 'u'],
     'miu' => ['mʲ', 'u'],
     'n' => ['n'],
-    # not always
     'ng' => ['ŋ', 'ɡ'],
     'nk' => ['ŋ', 'k'],
     'ni' => ['ɲ', 'i'],
@@ -349,10 +354,14 @@ sub devoice_forward {
 
 sub wiktionary_compat {
     if($enwikt) {
-        $postnasals{ʂ} = 'ŋ';
-        $postnasals{ʐ} = 'ŋ';
+        # These are not always velarised, so en.wiktionary uses a safe default
+        # for our purposes, it's better to separate with a hyphen and put in
+        # 'pronounce-as.tsv'
         $g2p{ng} = ['n', 'ɡ'];
         $g2p{nk} = ['n', 'k'];
+        # I don't see how these can in any way be correct.
+        $postnasals{ʂ} = 'ŋ';
+        $postnasals{ʐ} = 'ŋ';
     }
 }
 
@@ -375,10 +384,23 @@ sub simple_g2p {
     @rawphones = renasalise(@rawphones);
     @rawphones = devoice_final(@rawphones);
     @rawphones = devoice_forward(@rawphones);
-    return join(" ", @rawphones);
+    my $out = join(" ", @rawphones);
+    $out =~ s/  +/ /g;
+    $out;
 }
 
 while(<>) {
     chomp;
-    print "$_ " . simple_g2p($_) . "\n";
+    s/\r//;
+    if($simple_mode) {
+        print "$_ " . simple_g2p($_) . "\n";
+    } elsif($pronounce_as || $pronounce_both) {
+        my @words = split/\t/;
+        my $baseword = $words[0];
+        my $pronas = $words[1];
+        if($pronounce_both) {
+            print "$baseword " . simple_g2p($baseword) . "\n";
+        }
+        print "$baseword " . simple_g2p($pronas) . "\n";
+    }
 }
