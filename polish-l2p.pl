@@ -296,9 +296,9 @@ sub renasalise {
     );
     my @out = ();
     for(my $i = 0; $i <= $#in; $i++) {
-        if($i < $#in && ($in[$i] eq 'ɛ̃' || $in[$i] eq 'ɔ̃') && exists $postnasals{$i+1}) {
-            push @out, denasalise($i);
-            push @out, $postnasals{$i+1};
+         if($i < $#in && ($in[$i] eq 'ɛ̃' || $in[$i] eq 'ɔ̃') && exists $postnasals{$in[$i+1]}) {
+            push @out, denasalise($in[$i]);
+            push @out, $postnasals{$in[$i+1]};
         } else {
             push @out, $in[$i];
         }
