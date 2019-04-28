@@ -243,10 +243,10 @@ sub simple_g2p {
     my @rawphones = ();
     while($in =~ /$regex/) {
         my $match = $1;
-        push @rawphones, $g2p{$match};
+        push @rawphones, @{$g2p{$match}};
         $in = substr($in, length($match));
     }
-    @rawphones;
+    return join(" ", @rawphones);
 }
 
-print Dumper(simple_g2p("chrzan"));
+print simple_g2p("chrzan");
