@@ -241,7 +241,7 @@ my %devoice = (
 sub is_voiced {
     my $in = shift;
     my %voice = map { $_ => 1 } keys %devoice;
-    if(exists $voice{$in} && $voice{$in}) {
+    if($in && exists $voice{$in} && $voice{$in}) {
         return 1;
     } else {
         return 0;
@@ -250,7 +250,7 @@ sub is_voiced {
 
 sub devoice_final {
     my @in = @_;
-    for(my $i = $#in; $i >= 0; $i++) {
+    for(my $i = $#in; $i >= 0; $i--) {
         if(is_voiced($in[$i])) {
             $in[$i] = $devoice{$in[$i]};
         } else {
@@ -278,4 +278,4 @@ sub simple_g2p {
     return join(" ", @rawphones);
 }
 
-print simple_g2p("ślizg");
+print simple_g2p("zgbg");
