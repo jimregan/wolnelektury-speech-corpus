@@ -262,6 +262,7 @@ sub devoice_final {
 
 sub simple_g2p {
     my $in = shift;
+    $in = lc($in);
     my @sortkeys = sort { length $b <=> length $a } keys %g2p;
     my $regex = '(' . join('|', @sortkeys) . ')';
     my @rawphones = ();
@@ -278,4 +279,4 @@ sub simple_g2p {
     return join(" ", @rawphones);
 }
 
-print simple_g2p("zgbg");
+print simple_g2p("zagbg");
