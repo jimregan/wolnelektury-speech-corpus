@@ -243,7 +243,7 @@ sub simple_g2p {
     while($in =~ /$regex/) {
         my $match = $1;
         push @rawphones, $g2p{$match};
-        
+        $in = substr($in, length($match));
     }
     @rawphones;
 }
