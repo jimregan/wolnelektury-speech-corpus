@@ -308,6 +308,15 @@ sub renasalise {
     @out;
 }
 
+sub is_vowel {
+    my $in = shift;
+    my %vowels = map { $_ => 1 } qw/a ɛ ɛ̃ i ɨ ɔ ɔ̃ u/;
+    if(exists $vowels{$in} && $vowels{$in}) {
+        return 1;
+    }
+    return 0;
+}
+
 sub simple_g2p {
     my $in = shift;
     $in = lc($in);
