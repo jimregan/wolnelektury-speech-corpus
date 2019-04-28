@@ -5,7 +5,9 @@ use strict;
 use utf8;
 use Data::Dumper;
 
+binmode(STDIN, ":utf8");
 binmode(STDOUT, ":utf8");
+binmode(STDERR, ":utf8");
 
 my %g2p = (
     'a' => ['a'],
@@ -317,6 +319,25 @@ sub is_vowel {
     return 0;
 }
 
+sub is_fvoiced {
+    my $in = shift;
+    my %fvoiced = map { $_ => 1 } qw/v vʲ ʐ/;
+    if(exists $fvoiced{$in} && $fvoiced{$in}) {
+        return 1;
+    }
+    return 0;
+}
+
+sub devoice_forward {
+    my @in = @_;
+    for(my $i = 1; $i <= $#in; $i++) {
+        if(is_fvoiced($in[$i]) && !is_vowel($in[$i-1]) && !is_voiced($in[$i-1])) {
+            $in[$i] = $devoice{$in[$i]};
+        }
+    }
+    @in;
+}
+
 sub simple_g2p {
     my $in = shift;
     $in = lc($in);
@@ -334,7 +355,11 @@ sub simple_g2p {
     }
     @rawphones = renasalise(@rawphones);
     @rawphones = devoice_final(@rawphones);
+    @rawphones = devoice_forward(@rawphones);
     return join(" ", @rawphones);
 }
 
-print simple_g2p("ząb");
+while(<>) {
+    chomp;
+    print "$_ " . simple_g2p($_) . "\n";
+}
