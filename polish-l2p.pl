@@ -238,7 +238,7 @@ my %devoice = (
 
 sub simple_g2p {
     my $in = shift;
-    my @sortkeys = sort { length $a <=> length $b } keys %g2p;
+    my @sortkeys = sort { length $b <=> length $a } keys %g2p;
     my $regex = '(' . join('|', @sortkeys) . ')';
     my @rawphones = ();
     while($in =~ /$regex/) {
