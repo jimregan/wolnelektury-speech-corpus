@@ -221,7 +221,6 @@ my %variants = (
 
 my %reall2p = (
     'ɔ̃' => ['ɔ', 'w̃'],
-    
 );
 
 my %devoice = (
@@ -260,6 +259,53 @@ sub devoice_final {
     @in;
 }
 
+sub denasalise {
+    my $in = shift;
+    if($in eq 'ɛ̃') {
+        return 'ɛ';
+    } elsif($in eq 'ɔ̃') {
+        return 'ɔ';
+    } else {
+        return $in;
+    }
+}
+
+sub renasalise {
+    my @in = @_;
+    my %postnasals = (
+        'p' => 'm',
+        'pʲ' => 'm',
+        'b' => 'm',
+        'bʲ' => 'm',
+        'k' => 'ŋ',
+        'kʲ' => 'ŋ',
+        'ɡ' => 'ŋ',
+        'ɡʲ' => 'ŋ',
+        'x' => 'ŋ',
+        'xʲ' => 'ŋ',
+        't' => 'n',
+        'd' => 'n',
+        't͡ʂ' => 'n',
+        'd͡ʐ' => 'n',
+        't͡s' => 'n',
+        'd͡z' => 'n',
+        't͡ɕ' => 'ɲ',
+        'd͡ʑ' => 'ɲ',
+        'ɕ' => 'ɲ',
+        'ʑ' => 'ɲ',
+    );
+    my @out = ();
+    for(my $i = 0; $i <= $#in; $i++) {
+        if($i < $#in && ($in[$i] eq 'ɛ̃' || $in[$i] eq 'ɔ̃') && exists $postnasals{$i+1}) {
+            push @out, denasalise($i);
+            push @out, $postnasals{$i+1};
+        } else {
+            push @out, $in[$i];
+        }
+    }
+    @out;
+}
+
 sub simple_g2p {
     my $in = shift;
     $in = lc($in);
@@ -275,8 +321,9 @@ sub simple_g2p {
     if($rawphones[$#rawphones] eq 'ɛ̃') {
         $rawphones[$#rawphones] = 'ɛ';
     }
+    @rawphones = renasalise(@rawphones);
     @rawphones = devoice_final(@rawphones);
     return join(" ", @rawphones);
 }
 
-print simple_g2p("zagbg");
+print simple_g2p("ząb");
