@@ -24,6 +24,7 @@ GetOptions(
 
 my %g2p = (
     'a' => ['a'],
+    'aa' => ['a', 'ʔ', 'a'],
     'au' => ['a', 'w'],
     'ą' => ['ɔ̃'],
     'b' => ['b'],
@@ -382,6 +383,7 @@ sub wiktionary_compat {
         # I don't see how these can in any way be correct.
         $postnasals{ʂ} = 'ŋ';
         $postnasals{ʐ} = 'ŋ';
+        delete $g2p{'aa'};
     }
 }
 
@@ -407,6 +409,10 @@ sub simple_g2p {
     my $out = join(" ", @rawphones);
     $out =~ s/  +/ /g;
     $out;
+}
+
+sub multiple_g2p {
+    my %g2pmult = map { $_ => [ $g2p{$_} ] } keys %g2p;
 }
 
 while(<>) {
