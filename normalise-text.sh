@@ -40,8 +40,7 @@ split_chapters() {
         wyspa-skarbow.txt
     do
         echo "Splitting $i"
-        perl ../splitter.pl $i > $i.tmp
-        mv $i.tmp $i
+        perl ../splitter.pl $i
     done
 }
 
