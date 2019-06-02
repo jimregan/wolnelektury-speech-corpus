@@ -14,16 +14,18 @@ my $enwikt = 0;
 my $simple_mode = 1;
 my $pronounce_as = 0;
 my $pronounce_both = 0;
-
+my $DEBUG = 0;
 
 GetOptions(
     'enwiktionary|enwikt|w' => \$enwikt,
+    'debug' => \$DEBUG,
     'pronounce-both' => sub { $pronounce_both = 1; $simple_mode = 0;},
     'pronounce-as' => sub { $pronounce_as = 1; $simple_mode = 0;},
 );
 
 my %g2p = (
     'a' => ['a'],
+    'aa' => ['a', 'ʔ', 'a'],
     'au' => ['a', 'w'],
     'ą' => ['ɔ̃'],
     'b' => ['b'],
@@ -164,6 +166,7 @@ my %g2p = (
     'pió' => ['pʲ', 'u'],
     'piu' => ['pʲ', 'u'],
     'qu' => ['k', 'v'],
+    'q' => ['k', 'u'],
     'r' => ['r'],
     'ri' => ['rʲ', 'i'],
     'ria' => ['rʲ', 'j', 'a'],
@@ -231,6 +234,26 @@ my %variants = (
     'strz' => [ ['s', 't', 'ʂ'], ['ʂ', 't͡ʂ'] ],
     # 'trz' as 'cz'
     'trz' => [ ['t', 'ʂ'], ['t͡ʂ'] ],
+    # eść -> ejść
+    'eść' => [ ['ɛ', 'ɕ', 't͡ɕ'], ['ɛ', 'j', 'ɕ', 't͡ɕ'] ],
+    # drz as dż (https://encenc.pl/blad-fonetyczny/)
+    # unlikely that ASR can tell the difference here
+    'drz' => [ ['d͡ʐ'], ['d', 'ʐ']],
+);
+
+my %reranie = (
+    # https://pl.wikipedia.org/wiki/Reranie
+    # skipping 'd', though, primarily because I've never heard it
+    'r' => [ ['r'],  ['l'],  ['w'],  ['v'],  ['j'] ],
+    'ri' => [ ['rʲ', 'i'],  ['lʲ', 'i'],  ['wʲ', 'i'],  ['vʲ', 'i'],  ['j', 'i'] ],
+    'ria' => [ ['rʲ', 'j', 'a'],  ['lʲ', 'j', 'a'],  ['wʲ', 'j', 'a'],  ['vʲ', 'j', 'a'], ['j', 'a'] ],
+    'rią' => [ ['rʲ', 'j', 'ɔ̃'],  ['lʲ', 'j', 'ɔ̃'],  ['wʲ', 'j', 'ɔ̃'],  ['vʲ', 'j', 'ɔ̃'], ['j', 'ɔ̃'] ],
+    'rie' => [ ['rʲ', 'j', 'ɛ'],  ['lʲ', 'j', 'ɛ'],  ['wʲ', 'j', 'ɛ'],  ['vʲ', 'j', 'ɛ'], ['j', 'ɛ'] ],
+    'rię' => [ ['rʲ', 'j', 'ɛ̃'],  ['lʲ', 'j', 'ɛ̃'],  ['wʲ', 'j', 'ɛ̃'],  ['vʲ', 'j', 'ɛ̃'], ['j', 'ɛ̃'] ],
+    'rii' => [ ['rʲ', 'j', 'i'],  ['lʲ', 'j', 'i'],  ['wʲ', 'j', 'i'],  ['vʲ', 'j', 'i'], ['j', 'i'] ],
+    'rio' => [ ['rʲ', 'j', 'ɔ'],  ['lʲ', 'j', 'ɔ'],  ['wʲ', 'j', 'ɔ'],  ['vʲ', 'j', 'ɔ'], ['j', 'ɔ'] ],
+    'rió' => [ ['rʲ', 'j', 'u'],  ['lʲ', 'j', 'u'],  ['wʲ', 'j', 'u'],  ['vʲ', 'j', 'u'], ['j', 'u'] ],
+    'riu' => [ ['rʲ', 'j', 'u'],  ['lʲ', 'j', 'u'],  ['wʲ', 'j', 'u'],  ['vʲ', 'j', 'u'], ['j', 'u'] ],
 );
 
 my %reall2p = (
@@ -242,23 +265,28 @@ my %devoice = (
     'd' => 't',
     'd͡z' => 't͡s',
     'd͡ʑ' => 't͡ɕ',
-	'd͡ʐ' => 't͡ʂ',
+    'd͡ʐ' => 't͡ʂ',
     'ɡ' => 'k',
     'v' => 'f',
     'vʲ' => 'fʲ',
-	'z' => 's',
+    'z' => 's',
     'ʑ' => 'ɕ',
     'ʐ' => 'ʂ',
 );
 
 sub is_voiced {
     my $in = shift;
+    my $ret = 0;
     my %voice = map { $_ => 1 } keys %devoice;
     if($in && exists $voice{$in} && $voice{$in}) {
-        return 1;
+        $ret = 1;
     } else {
-        return 0;
+        $ret = 0;
     }
+    if($DEBUG) {
+        print STDERR "is_voiced: $in: $ret\n";
+    }
+    return $ret;
 }
 
 sub devoice_final {
@@ -267,7 +295,11 @@ sub devoice_final {
         if(is_voiced($in[$i])) {
             $in[$i] = $devoice{$in[$i]};
         } else {
-            last;
+            if(is_vowel($in[$i]) || is_sylmark($in[$i])) {
+                last;
+            } else {
+                next;
+            }
         }
     }
     @in;
@@ -336,6 +368,9 @@ sub is_vowel {
 sub is_fvoiced {
     my $in = shift;
     my %fvoiced = map { $_ => 1 } qw/v vʲ ʐ/;
+    if(!$enwikt) {
+        delete $fvoiced{'ʐ'};
+    }
     if(exists $fvoiced{$in} && $fvoiced{$in}) {
         return 1;
     }
@@ -344,12 +379,34 @@ sub is_fvoiced {
 
 sub devoice_forward {
     my @in = @_;
+    if($DEBUG) {
+        print STDERR "devoice_forward: pre: " . join(" ", @in) . "\n";
+    }
     for(my $i = 1; $i <= $#in; $i++) {
         if(is_fvoiced($in[$i]) && !is_vowel($in[$i-1]) && !is_voiced($in[$i-1])) {
             $in[$i] = $devoice{$in[$i]};
         }
     }
+    if($DEBUG) {
+        print STDERR "devoice_forward: post: " . join(" ", @in) . "\n";
+    }
     @in;
+}
+
+my %sylmarks = (
+    '.' => '.',
+    "'" => "ˈ",
+    ',' => 'ˌ',
+);
+
+sub is_sylmark {
+    my $in = shift;
+    my %smarks = map { $_ => 1 } keys %sylmarks;
+    if (exists $smarks{$in}) {
+        return 1;
+    } else {
+        return 0;
+    }
 }
 
 sub wiktionary_compat {
@@ -357,11 +414,19 @@ sub wiktionary_compat {
         # These are not always velarised, so en.wiktionary uses a safe default
         # for our purposes, it's better to separate with a hyphen and put in
         # 'pronounce-as.tsv'
-        $g2p{ng} = ['n', 'ɡ'];
-        $g2p{nk} = ['n', 'k'];
+        $g2p{'ng'} = ['n', 'ɡ'];
+        $g2p{'nk'} = ['n', 'k'];
         # I don't see how these can in any way be correct.
-        $postnasals{ʂ} = 'ŋ';
-        $postnasals{ʐ} = 'ŋ';
+        $postnasals{'ʂ'} = 'ŋ';
+        $postnasals{'ʐ'} = 'ŋ';
+        delete $g2p{'aa'};
+    } else {
+        $g2p{'krz'} = ['k', 'ʂ'];
+        $g2p{'trz'} = ['t', 'ʂ'];
+        $g2p{'prz'} = ['p', 'ʂ'];
+        $g2p{'chrz'} = ['x', 'ʂ'];
+        $g2p{'frz'} = ['f', 'ʂ'];
+        $g2p{'kż'} = ['g', 'ʐ'];
     }
 }
 
@@ -384,16 +449,20 @@ sub simple_g2p {
     @rawphones = renasalise(@rawphones);
     @rawphones = devoice_final(@rawphones);
     @rawphones = devoice_forward(@rawphones);
-    my $out = join(" ", @rawphones);
+    my $out = join("", @rawphones);
     $out =~ s/  +/ /g;
     $out;
+}
+
+sub multiple_g2p {
+    my %g2pmult = map { $_ => [ $g2p{$_} ] } keys %g2p;
 }
 
 while(<>) {
     chomp;
     s/\r//;
     if($simple_mode) {
-        print "$_ " . simple_g2p($_) . "\n";
+        print "$_\t" . simple_g2p($_) . "\n";
     } elsif($pronounce_as || $pronounce_both) {
         my @words = split/\t/;
         my $baseword = $words[0];
