@@ -13,6 +13,11 @@ my %spec = (
     'wspomnienia-niebieskiego-mundurka.txt' => 'rozdział',
 );
 
+my %del = (
+    'z-wichrow-i-hal-z-tatr-krzak-dzikiej-rozy-w-ciemnych-smreczy.txt' => 1,
+    'fortepian-chopina.txt' => 1,
+);
+
 my %chapter_ord_masc = (
     'I' => 'pierwszy',
     'II' => 'drugi',
@@ -64,7 +69,11 @@ my %chapter_ord_fem = (
 my $units = "IX|IV|III|II|I|VIII|VII|VI|V";
 my $tens = "XXX|XX|X";
 
-die "Don't know how to handle text: $ARGV[0]" if(!exists $spec{$ARGV[0]});
+die "Don't know how to handle text: $ARGV[0]" if(!exists $spec{$ARGV[0]} && !exists $del{$ARGV[0]});
+my $del_mode = 0;
+if(exists $del{$ARGV[0]}) {
+    $del_mode = 1;
+}
 my $what = $spec{$ARGV[0]};
 open(INPUT, '<', $ARGV[0]);
 binmode(INPUT, ":utf8");
@@ -72,6 +81,7 @@ while(<INPUT>) {
     chomp;
     s/\r//;
     if(/^($tens)($units)\. ?(.*)$/) {
+        next if($del_mode);
         my $tn = $1;
         my $un = $2;
         my $rest = $3;
@@ -85,12 +95,14 @@ while(<INPUT>) {
             next;
         }
     } elsif(/^($tens)\. ?(.*)$/) {
+        next if($del_mode);
         my $tn = $1;
         my $rest = $2;
         print "$what " . $chapter_ord_masc{$tn} . "\n";
         print "$rest\n";
         next;
     } elsif(/^($units)\. ?(.*)$/) {
+        next if($del_mode);
         my $un = $1;
         my $rest = $2;
         print "$what " . $chapter_ord_masc{$un} . "\n";
