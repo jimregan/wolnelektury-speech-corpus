@@ -424,6 +424,8 @@ sub wiktionary_compat {
         $g2p{'krz'} = ['k', 'ʂ'];
         $g2p{'trz'} = ['t', 'ʂ'];
         $g2p{'prz'} = ['p', 'ʂ'];
+        $g2p{'chrz'} = ['x', 'ʂ'];
+        $g2p{'frz'} = ['f', 'ʂ'];
         $g2p{'kż'} = ['g', 'ʐ'];
     }
 }
