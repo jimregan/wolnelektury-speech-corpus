@@ -63,7 +63,11 @@ sub do_file {
             my $m = $1;
             my $in = quotemeta($m);
             my $out = $curnorms{$m};
-            s/$m/$out/;
+            if($out eq ' ') {
+                s/$m//;
+            } else {
+                s/$m/$out/;
+            }
         }
         print OUT "$_\n";
     }
