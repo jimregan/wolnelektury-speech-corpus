@@ -44,7 +44,9 @@ my %split_by_starts = (
         'Paryż jest jedynym miejscem na świecie,',
         'Fantazja Raula zespoliła niby',
         'Pani Feliksowa de Vandenesse była trzy razy w lasku',
-        'W październiku zapadł termin weksli;'
+        'W październiku zapadł termin weksli;',
+        'Ze swej strony hrabina, szczęśliwa',
+        'Na kilka chwil przed południem,'
     ],
     'boy-swietoszek.txt' => [
         'Wstęp',
