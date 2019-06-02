@@ -40,14 +40,15 @@ split_chapters() {
         wyspa-skarbow.txt
     do
         echo "Splitting $i"
-        perl ../splitter.pl $i > $i.tmp
-        mv $i.tmp $i
+        perl ../splitter.pl $i
     done
 }
 
 norm_chapters() {
     echo "Stage 4: Add missing chapter word"
-    for i in wyspa-skarbow.txt wspomnienia-niebieskiego-mundurka.txt
+    for i in wyspa-skarbow.txt wspomnienia-niebieskiego-mundurka.txt \
+        z-wichrow-i-hal-z-tatr-krzak-dzikiej-rozy-w-ciemnych-smreczy.txt \
+        fortepian-chopina.txt
     do
         perl ../norm-roman-by-text.pl $i > $i.tmp
         mv $i.tmp $i
