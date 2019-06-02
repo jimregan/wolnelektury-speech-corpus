@@ -80,8 +80,12 @@ binmode(INPUT, ":utf8");
 while(<INPUT>) {
     chomp;
     s/\r//;
+    if($del_mode) {
+        next if(/^($tens)($units)$/);
+        next if(/^($tens)$/);
+        next if(/^($units)$/);
+    }
     if(/^($tens)($units)\. ?(.*)$/) {
-        next if($del_mode);
         my $tn = $1;
         my $un = $2;
         my $rest = $3;
@@ -95,14 +99,12 @@ while(<INPUT>) {
             next;
         }
     } elsif(/^($tens)\. ?(.*)$/) {
-        next if($del_mode);
         my $tn = $1;
         my $rest = $2;
         print "$what " . $chapter_ord_masc{$tn} . "\n";
         print "$rest\n";
         next;
     } elsif(/^($units)\. ?(.*)$/) {
-        next if($del_mode);
         my $un = $1;
         my $rest = $2;
         print "$what " . $chapter_ord_masc{$un} . "\n";
