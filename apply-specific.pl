@@ -79,7 +79,8 @@ for my $file(keys %norms) {
     if(!$DUAL) {
         do_file($file, "both");
     } else {
-        do_file("$file.original", "corr");
-        do_file("$file.clean", "norm");
+        do_file($file, "corr");
+        #do_file("$file.original", "corr");
+        #do_file("$file.clean", "norm");
     }
 }
