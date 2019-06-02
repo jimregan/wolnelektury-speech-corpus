@@ -481,7 +481,7 @@ if($filename eq 'wspomnienia-niebieskiego-mundurka.txt' || $filename eq 'kim.txt
     $printing = 1;
 }
 
-my %skip_pattern = map { $_ => 1 } qw/piesn-o-rolandzie.txt wierna-rzeka.txt/;
+my %skip_pattern = map { $_ => 1 } qw/wierna-rzeka.txt/;
 
 my $outfile = $filename . "-" . sprintf("%02d.txt", $count);
 open(OUTPUT, '>', $outfile);
