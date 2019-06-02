@@ -14,10 +14,11 @@ my $enwikt = 0;
 my $simple_mode = 1;
 my $pronounce_as = 0;
 my $pronounce_both = 0;
-
+my $DEBUG = 0;
 
 GetOptions(
     'enwiktionary|enwikt|w' => \$enwikt,
+    'debug' => \$DEBUG,
     'pronounce-both' => sub { $pronounce_both = 1; $simple_mode = 0;},
     'pronounce-as' => sub { $pronounce_as = 1; $simple_mode = 0;},
 );
@@ -275,12 +276,17 @@ my %devoice = (
 
 sub is_voiced {
     my $in = shift;
+    my $ret = 0;
     my %voice = map { $_ => 1 } keys %devoice;
     if($in && exists $voice{$in} && $voice{$in}) {
-        return 1;
+        $ret = 1;
     } else {
-        return 0;
+        $ret = 0;
     }
+    if($DEBUG) {
+        print STDERR "is_voiced: $in: $ret\n";
+    }
+    return $ret;
 }
 
 sub devoice_final {
@@ -362,6 +368,9 @@ sub is_vowel {
 sub is_fvoiced {
     my $in = shift;
     my %fvoiced = map { $_ => 1 } qw/v vʲ ʐ/;
+    if(!$enwikt) {
+        delete $fvoiced{'ʐ'};
+    }
     if(exists $fvoiced{$in} && $fvoiced{$in}) {
         return 1;
     }
@@ -370,10 +379,16 @@ sub is_fvoiced {
 
 sub devoice_forward {
     my @in = @_;
+    if($DEBUG) {
+        print STDERR "devoice_forward: pre: " . join(" ", @in) . "\n";
+    }
     for(my $i = 1; $i <= $#in; $i++) {
         if(is_fvoiced($in[$i]) && !is_vowel($in[$i-1]) && !is_voiced($in[$i-1])) {
             $in[$i] = $devoice{$in[$i]};
         }
+    }
+    if($DEBUG) {
+        print STDERR "devoice_forward: post: " . join(" ", @in) . "\n";
     }
     @in;
 }
@@ -399,12 +414,17 @@ sub wiktionary_compat {
         # These are not always velarised, so en.wiktionary uses a safe default
         # for our purposes, it's better to separate with a hyphen and put in
         # 'pronounce-as.tsv'
-        $g2p{ng} = ['n', 'ɡ'];
-        $g2p{nk} = ['n', 'k'];
+        $g2p{'ng'} = ['n', 'ɡ'];
+        $g2p{'nk'} = ['n', 'k'];
         # I don't see how these can in any way be correct.
-        $postnasals{ʂ} = 'ŋ';
-        $postnasals{ʐ} = 'ŋ';
+        $postnasals{'ʂ'} = 'ŋ';
+        $postnasals{'ʐ'} = 'ŋ';
         delete $g2p{'aa'};
+    } else {
+        $g2p{'krz'} = ['k', 'ʂ'];
+        $g2p{'trz'} = ['t', 'ʂ'];
+        $g2p{'prz'} = ['p', 'ʂ'];
+        $g2p{'kż'} = ['g', 'ʐ'];
     }
 }
 
