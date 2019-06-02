@@ -164,7 +164,6 @@ my %g2p = (
     'pió' => ['pʲ', 'u'],
     'piu' => ['pʲ', 'u'],
     'qu' => ['k', 'v'],
-    'q' => ['k', 'u'],
     'r' => ['r'],
     'ri' => ['rʲ', 'i'],
     'ria' => ['rʲ', 'j', 'a'],
@@ -268,11 +267,7 @@ sub devoice_final {
         if(is_voiced($in[$i])) {
             $in[$i] = $devoice{$in[$i]};
         } else {
-            if(is_vowel($in[$i]) || is_sylmark($in[$i])) {
-                last;
-            } else {
-                next;
-            }
+            last;
         }
     }
     @in;
@@ -357,22 +352,6 @@ sub devoice_forward {
     @in;
 }
 
-my %sylmarks = (
-    '.' => '.',
-    "'" => "ˈ",
-    ',' => 'ˌ',
-);
-
-sub is_sylmark {
-    my $in = shift;
-    my %smarks = map { $_ => 1 } keys %sylmarks;
-    if (exists $smarks{$in}) {
-        return 1;
-    } else {
-        return 0;
-    }
-}
-
 sub wiktionary_compat {
     if($enwikt) {
         # These are not always velarised, so en.wiktionary uses a safe default
@@ -405,7 +384,7 @@ sub simple_g2p {
     @rawphones = renasalise(@rawphones);
     @rawphones = devoice_final(@rawphones);
     @rawphones = devoice_forward(@rawphones);
-    my $out = join("", @rawphones);
+    my $out = join(" ", @rawphones);
     $out =~ s/  +/ /g;
     $out;
 }
@@ -414,7 +393,7 @@ while(<>) {
     chomp;
     s/\r//;
     if($simple_mode) {
-        print "$_\t" . simple_g2p($_) . "\n";
+        print "$_ " . simple_g2p($_) . "\n";
     } elsif($pronounce_as || $pronounce_both) {
         my @words = split/\t/;
         my $baseword = $words[0];
