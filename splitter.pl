@@ -27,6 +27,7 @@ my %firstpatterns = (
     'kim.txt' => 'DUMMY_TO_SKIP',
     'przygody-tomka-sawyera.txt' => 'Rozdział pierwszy',
     'piesn-o-rolandzie.txt' => '^I',
+    'wierna-rzeka.txt' => '^I',
 );
 
 my %skipfirst = (
@@ -43,7 +44,9 @@ my %split_by_starts = (
         'Paryż jest jedynym miejscem na świecie,',
         'Fantazja Raula zespoliła niby',
         'Pani Feliksowa de Vandenesse była trzy razy w lasku',
-        'W październiku zapadł termin weksli;'
+        'W październiku zapadł termin weksli;',
+        'Ze swej strony hrabina, szczęśliwa',
+        'Na kilka chwil przed południem,'
     ],
     'boy-swietoszek.txt' => [
         'Wstęp',
@@ -58,13 +61,39 @@ my %split_by_starts = (
         'Pierwsze podanie',
         'Drugie podanie',
         'Trzecie podanie',
-        '',
-        '',
-        '',
-        '',
-        '',
-        '',
-        '',
+        'Świętoszek \(Tartufe\)',
+        'SCENA DRUGA',
+        'SCENA TRZECIA',
+        'SCENA CZWARTA',
+        'SCENA  PIĄTA',
+        'SCENA SZÓSTA',
+        'AKT II',
+        'SCENA DRUGA',
+        'SCENA TRZECIA',
+        'SCENA CZWARTA',
+        'AKT III',
+        'SCENA DRUGA',
+        'SCENA TRZECIA',
+        'SCENA CZWARTA',
+        'SCENA PIĄTA',
+        'SCENA SZÓSTA',
+        'SCENA SIÓDMA',
+        'AKT IV',
+        'SCENA DRUGA',
+        'SCENA TRZECIA',
+        'SCENA CZWARTA',
+        'SCENA PIĄTA',
+        'SCENA SZÓSTA',
+        'SCENA SIÓDMA',
+        'SCENA ÓSMA',
+        'AKT V',
+        'SCENA DRUGA',
+        'SCENA TRZECIA',
+        'SCENA CZWARTA',
+        'SCENA PIĄTA',
+        'SCENA SZÓSTA',
+        'SCENA SIÓDMA',
+        'SCENA ÓSMA',
     ],
     'przedwiosnie.txt' => [
         'Stefan Żeromski',
@@ -95,6 +124,8 @@ my %split_by_starts = (
         'Wolny',
         'Kres'
     ],
+);
+my %split_by_whole = (
     'piesn-o-rolandzie.txt' => [
         "I",
         "II",
@@ -388,6 +419,24 @@ my %split_by_starts = (
         "CCXC",
         "CCXCI",
     ],
+    'wierna-rzeka.txt' => [
+        "I",
+        "II",
+        "III",
+        "V",
+        "VI",
+        "VII",
+        "VIII",
+        "IX",
+        "X",
+        "XI",
+        "XII",
+        "XIII",
+        "XIV",
+        "XV",
+        "XVI",
+        "XVII"
+    ]
 );
 
 my %split_inner = (
@@ -432,6 +481,11 @@ if(exists $patterns{$fn}) {
     my $pat = shift @patterns;
     $pattern = '^'. $pat;
     $firstpattern = $pattern;
+} elsif(exists $split_by_whole{$fn}) {
+    @patterns = @{ $split_by_whole{$fn} };
+    my $pat = shift @patterns;
+    $pattern = '^'. $pat .'$';
+    $firstpattern = $pattern;
 } else {
     die "No pattern for filename $fn";
 }
@@ -454,6 +508,8 @@ if($filename eq 'wspomnienia-niebieskiego-mundurka.txt' || $filename eq 'kim.txt
     $count = 0;
     $printing = 1;
 }
+
+my %skip_pattern = map { $_ => 1 } qw/wierna-rzeka.txt/;
 
 my $outfile = $filename . "-" . sprintf("%02d.txt", $count);
 open(OUTPUT, '>', $outfile);
@@ -480,11 +536,13 @@ while(<INPUT>) {
             close OUTPUT;
             open(OUTPUT, '>', $outfile);
             binmode(OUTPUT, ":utf8");
-            print OUTPUT "$_\n";
+            if(!exists $skip_pattern{$filename}) {
+                print OUTPUT "$_\n";
+            }
         } else {
             print OUTPUT "$_\n";
         }
-        if(exists $split_by_starts{$fn} && @patterns) {
+        if((exists $split_by_starts{$fn} || exists $split_by_whole{$fn}) && @patterns) {
             my $pat = shift @patterns;
             if(exists $inner_split{$pat}) {
                 $is_inner = 1;
