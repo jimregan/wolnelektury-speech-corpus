@@ -178,6 +178,7 @@ sub expand_year {
 }
 
 sub inflect_ordinal {
+    shift if($_[0] eq 'inflect_ordinal');
     my $ordinal = $_[0];
     my $gender = 'm';
     if($#_ > 0) {
