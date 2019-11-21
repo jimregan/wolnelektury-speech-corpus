@@ -53,7 +53,8 @@ sub procpage {
     if(exists $infores->{'info'}->{'text'}) {
         $out .= $infores->{'info'}->{'text'} . "\t";
     } else {
-        die "No text found: $uri\n";
+        $out .= "\t";
+        print STDERR "WARNING: No text found: $uri\n";
     }
 
     if(exists $infores->{'info'}->{'mp3'}) {
