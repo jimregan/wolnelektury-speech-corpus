@@ -60,6 +60,7 @@ additions() {
     echo 'Tobie, leniu' >> but-w-butonierce-deszcz.txt
     echo 'Czytał Wiktor Korzeniewski' >> zajac-i-jez.txt
     echo 'Czytał Jacek Rozenek' >> przedwiosnie.txt
+    echo 'Czytała Joanna Domańska' >> balzac-komedia-ludzka-kobieta-porzucona.txt
 }
 
 run_all() {

@@ -11,6 +11,7 @@ binmode(INPUT, ":utf8");
 
 my %skip_until = (
     'balzac-komedia-ludzka-bank-nucingena.txt' => '^Wiadomo, jak cienkie',
+    'balzac-komedia-ludzka-kobieta-porzucona.txt' => '^W roku 1822, z początkiem wiosny,',
     'fortepian-chopina.txt' => 'Byłem u Ciebie w te dni przedostatnie',
     'boy-swietoszek.txt' => 'Wstęp',
     'wspomnienia-niebieskiego-mundurka.txt' => 'Ze starego kufra',
@@ -23,6 +24,7 @@ my %skip_until = (
 );
 my %head_replace = (
     'balzac-komedia-ludzka-bank-nucingena.txt' => "Bank Nucingena\nHonoré Balzac\ntłumaczenie Tadeusz Boy-Żeleński",
+    'balzac-komedia-ludzka-kobieta-porzucona.txt' => "Kobieta porzucona\ntłumaczenie Tadeusz Boy-Żeleński",
     'fortepian-chopina.txt' => "Cyprian Kamil Norwid\nFortepian Chopina",
     'boy-swietoszek.txt' => '',
     'wspomnienia-niebieskiego-mundurka.txt' => "Wiktor Gomulicki\nWspomnienia niebieskiego mundurka\nPamięci Bronisława Dembowskiego, towarzysza lat chłopięcych, urodzonego w Pułtusku, zmarłego w Zakopanem, te wspomnienia dni razem przeżytych poświęcam\nWiktor Gomulicki",
