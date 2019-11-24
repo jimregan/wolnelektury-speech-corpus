@@ -284,8 +284,6 @@ sub is_voiced {
     my %voice = map { $_ => 1 } keys %devoice;
     if($in && exists $voice{$in} && $voice{$in}) {
         $ret = 1;
-    } elsif($in && exists $nodevoice{$in} && $nodevoice{$in}) {
-        $ret = 1;
     } else {
         $ret = 0;
     }
@@ -371,13 +369,22 @@ sub is_vowel {
     return 0;
 }
 
+sub is_vln {
+    my $in = shift;
+    my %vln = map { $_ => 1 } qw/a ɛ ɛ̃ i ɨ ɔ ɔ̃ u m mʲ n ɲ ŋ l lʲ j r rʲ/;
+    if(exists $vln{$in} && $vln{$in}) {
+        return 1;
+    }
+    return 0;
+}
+
 sub is_fvoiced {
     my $in = shift;
     my %fvoiced = map { $_ => 1 } qw/v vʲ ʐ/;
     if(!$enwikt) {
         delete $fvoiced{'ʐ'};
     }
-    if(exists $fvoiced{$in} && $fvoiced{$in}) {
+    if($in && exists $fvoiced{$in} && $fvoiced{$in}) {
         return 1;
     }
     return 0;
@@ -389,7 +396,7 @@ sub devoice_forward {
         print STDERR "devoice_forward: pre: " . join(" ", @in) . "\n";
     }
     for(my $i = 1; $i <= $#in; $i++) {
-        if(is_fvoiced($in[$i]) && !is_vowel($in[$i-1]) && !is_voiced($in[$i-1])) {
+        if(is_fvoiced($in[$i]) && !is_vln($in[$i-1]) && !is_voiced($in[$i-1])) {
             $in[$i] = $devoice{$in[$i]};
         }
     }
