@@ -422,6 +422,20 @@ sub is_sylmark {
     }
 }
 
+sub is_valid {
+    my $phone = shift;
+    my %valid = map { $_ => 1 } qw(
+        a b bʲ d d͡z d͡ʑ d͡ʐ ɛ ɛ̃ f fʲ ɡ ɡʲ i ɨ j k kʲ l lʲ
+        m mʲ n ŋ ɲ ɔ ɔ̃ p pʲ r rʲ s ɕ ʂ t t͡s t͡ɕ t͡ʂ u v vʲ
+        w x xʲ z ʑ ʐ ʔ
+    );
+    if (exists $valid{$in}) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
 sub wiktionary_compat {
     if($enwikt) {
         # These are not always velarised, so en.wiktionary uses a safe default
@@ -445,6 +459,8 @@ sub wiktionary_compat {
 
 sub simple_g2p {
     my $in = shift;
+    my $sep = shift;
+    $sep = ($sep) ? $sep : "";
     $in = lc($in);
     wiktionary_compat;
     my @sortkeys = sort { length $b <=> length $a } keys %g2p;
@@ -462,7 +478,7 @@ sub simple_g2p {
     @rawphones = renasalise(@rawphones);
     @rawphones = devoice_final(@rawphones);
     @rawphones = devoice_forward(@rawphones);
-    my $out = join("", @rawphones);
+    my $out = join($sep, @rawphones);
     $out =~ s/  +/ /g;
     $out;
 }
