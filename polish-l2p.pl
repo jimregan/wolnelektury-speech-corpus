@@ -23,6 +23,10 @@ GetOptions(
     'pronounce-as' => sub { $pronounce_as = 1; $simple_mode = 0;},
 );
 
+my %nodevoice = map { $_ => $_ } qw(
+    bʲ ɡʲ m mʲ n ɲ ŋ w l lʲ j r rʲ
+);
+
 my %g2p = (
     'a' => ['a'],
     'aa' => ['a', 'ʔ', 'a'],
@@ -279,6 +283,8 @@ sub is_voiced {
     my $ret = 0;
     my %voice = map { $_ => 1 } keys %devoice;
     if($in && exists $voice{$in} && $voice{$in}) {
+        $ret = 1;
+    } elsif($in && exists $nodevoice{$in} && $nodevoice{$in}) {
         $ret = 1;
     } else {
         $ret = 0;
