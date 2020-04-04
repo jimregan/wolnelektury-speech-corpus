@@ -9,8 +9,21 @@ broad_norm() {
     done
 }
 
+slowka_headers() {
+    for i in slowka-zbior-*txt
+    do 
+        if [ $i != "slowka-zbior-slowka.txt" ]
+        then 
+            lines=$(wc -l $i|awk '{print $1}')
+	    tail -n $(($lines - 3)) $i > $i.tmp
+            mv $i.tmp $i
+        fi
+    done
+}
+
 header_replace() {
     echo "Stage 2: Replace headers"
+    slowka_headers
     for i in balzac-komedia-ludzka-bank-nucingena.txt fortepian-chopina.txt \
         boy-swietoszek.txt wspomnienia-niebieskiego-mundurka.txt \
         powiesci-fantastyczne-wybor-narzeczonej.txt \
