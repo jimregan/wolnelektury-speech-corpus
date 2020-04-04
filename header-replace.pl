@@ -21,6 +21,7 @@ my %skip_until = (
     'ballada-z-tamtej-strony-imieniny.txt' => 'imieniny',
     'przedwiosnie.txt' => 'Panu Konradowi Czarnockiemu',
     'piesn-o-rolandzie.txt' => '^I$',
+    'spowiedz-dzieciecia-wieku.txt' => 'Część pierwsza',
 );
 my %head_replace = (
     'balzac-komedia-ludzka-bank-nucingena.txt' => "Bank Nucingena\nHonoré Balzac\ntłumaczenie Tadeusz Boy-Żeleński",
@@ -34,6 +35,7 @@ my %head_replace = (
     'ballada-z-tamtej-strony-imieniny.txt' => "Józef Czechowicz",
     'przedwiosnie.txt' => "Stefan Żeromski\nPrzedwiośnie\nDedykacja",
     'piesn-o-rolandzie.txt' => "Pieśń o Rolandzie\nAutor nieznany\ntłumaczenie Tadeusz Boy-Żeleński",
+    'spowiedz-dzieciecia-wieku.txt' => "Alfred de Musset\nSpowiedź dziecięcia wieku\ntłumaczenie Tadeusz Boy-Żeleński",
 );
 
 if (!exists $skip_until{$ARGV[0]}) {
