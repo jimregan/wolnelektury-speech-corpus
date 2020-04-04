@@ -48,6 +48,7 @@ split_chapters() {
         przedwiosnie.txt \
         przygody-tomka-sawyera.txt \
         robinson-crusoe.txt \
+        spowiedz-dzieciecia-wieku.txt \
         sztuka-kochania.txt \
         wspomnienia-niebieskiego-mundurka.txt \
         wyspa-skarbow.txt
