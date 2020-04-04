@@ -50,6 +50,24 @@ my %split_by_starts = (
         'Ze swej strony hrabina, szczęśliwa',
         'Na kilka chwil przed południem,'
     ],
+    'balzac-komedia-ludzka-eugenia-grandet.txt' => [
+        'Warszawa, w marcu 1933',
+        'Eugenia Grandet',
+        'We framudze',
+        'W chwili, gdy Grandet',
+        'A teraz, jeśli chcecie',
+        'Kiedy rodzina znalazła',
+        'Stary Grandet, nie mając',
+        'Przed tym dniem nigdy Eugenia',
+        'W tej chwili miasto Saumur',
+        'Kiedy stary Grandet zamknął',
+        'Wszystkie trzy kobiety miały',
+        'Aby nie przerywać biegu',
+        '— Nie masz już',
+        'Grandet zaczynał wówczas',
+        'Eugenia Grandet znalazła się',
+        'W początkach sierpnia'
+    ],
     'boy-swietoszek.txt' => [
         'Wstęp',
         'II. Wystawienie Świętoszka',
@@ -445,6 +463,10 @@ my %split_inner = (
     'balzac-komedia-ludzka-corka-ewy.txt' => [
         'Paryż jest jedynym miejscem na świecie,',
         'Fantazja Raula zespoliła niby',
+    ],
+    'balzac-komedia-ludzka-eugenia-grandet.txt' => [
+        'Przed tym dniem nigdy Eugenia',
+        'Wszystkie trzy kobiety miały',
     ],
 );
 
