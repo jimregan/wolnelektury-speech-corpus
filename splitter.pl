@@ -50,6 +50,30 @@ my %split_by_starts = (
         'Ze swej strony hrabina, szczęśliwa',
         'Na kilka chwil przed południem,'
     ],
+    'balzac-komedia-ludzka-jaszczur.txt' => [
+        'Panu Savary Członkowi Akademii Nauk',
+        'Czyż nie był pijany życiem lub może',
+        'Oto dziwne zjawisko, które',
+        'Wypadając ze sklepu na ulicę,',
+        'Deser zjawił się jakby czarami.',
+        'II. Kobieta bez serca',
+        'Udzieliłem sobie tego czasu',
+        'Aż do ostatniej zimy pędziłem',
+        'Wróciłem pieszo z dzielnicy',
+        '— Ha! ha! — rzekł Rastignac',
+        'Kaprys mody lub owa',
+        'W dwa dni później',
+        'Kiedym opuszczał ulicę',
+        'Spekulant jakiś zaproponował mi',
+        'III. *Agonia*',
+        'Czy widzicie ten bogaty pojazd,',
+        'Byłoby nużącym wiernie notować',
+        'Planchette był to wysoki chudy człowiek,',
+        'W kilka dni po tej rozpaczliwej scenie,',
+        'W miesiąc później, po powrocie',
+        'Przybywszy tegoż samego wieczora',
+        'Po całonocnej podróży'
+    ],
     'balzac-komedia-ludzka-eugenia-grandet.txt' => [
         'Warszawa, w marcu 1933',
         'Eugenia Grandet',
@@ -467,6 +491,13 @@ my %split_inner = (
     'balzac-komedia-ludzka-eugenia-grandet.txt' => [
         'Przed tym dniem nigdy Eugenia',
         'Wszystkie trzy kobiety miały',
+    ],
+    'balzac-komedia-ludzka-jaszczur.txt' => [
+        'Czyż nie był pijany życiem lub może',
+        'Wypadając ze sklepu na ulicę,',
+        'Udzieliłem sobie tego czasu',
+        'Kiedym opuszczał ulicę',
+        'Spekulant jakiś zaproponował mi',
     ],
 );
 
