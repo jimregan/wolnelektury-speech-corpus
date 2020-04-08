@@ -23,11 +23,13 @@ my %skip_until = (
     'piesn-o-rolandzie.txt' => '^I$',
     'spowiedz-dzieciecia-wieku.txt' => 'Część pierwsza',
     'balzac-komedia-ludzka-jaszczur.txt' => 'Panu Savary Członkowi Akademii Nauk',
+    'balzac-komedia-ludzka-kobieta-trzydziestoletnia.txt' => 'I. Pierwsze błędy',
 );
 my %head_replace = (
     'balzac-komedia-ludzka-bank-nucingena.txt' => "Bank Nucingena\nHonoré Balzac\ntłumaczenie Tadeusz Boy-Żeleński",
     'balzac-komedia-ludzka-kobieta-porzucona.txt' => "Kobieta porzucona\nHonoré Balzac\ntłumaczenie Tadeusz Boy-Żeleński",
     'balzac-komedia-ludzka-jaszczur.txt' => '',
+    'balzac-komedia-ludzka-kobieta-trzydziestoletnia.txt' => "Kobieta trzydziestoletnia\nHonorè de Balzac\ntłumaczenie Tadeusz Boy-Żeleński",
     'fortepian-chopina.txt' => "Cyprian Kamil Norwid\nFortepian Chopina",
     'boy-swietoszek.txt' => '',
     'wspomnienia-niebieskiego-mundurka.txt' => "Wiktor Gomulicki\nWspomnienia niebieskiego mundurka\nPamięci Bronisława Dembowskiego, towarzysza lat chłopięcych, urodzonego w Pułtusku, zmarłego w Zakopanem, te wspomnienia dni razem przeżytych poświęcam\nWiktor Gomulicki",
