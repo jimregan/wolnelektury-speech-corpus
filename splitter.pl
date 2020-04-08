@@ -658,7 +658,12 @@ if($filename eq 'wspomnienia-niebieskiego-mundurka.txt' || $filename eq 'kim.txt
 
 my %skip_pattern = map { $_ => 1 } qw/wierna-rzeka.txt/;
 
-my $outfile = $filename . "-" . sprintf("%02d.txt", $count);
+my $count_spec = '%02d';
+if($filename eq 'don-kichot-z-la-manchy.txt') {
+    $count_spec = '%03d';
+}
+
+my $outfile = $filename . "-" . sprintf("$count_spec.txt", $count);
 open(OUTPUT, '>', $outfile);
 binmode(OUTPUT, ":utf8");
 binmode(STDERR, ":utf8");
