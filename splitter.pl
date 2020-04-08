@@ -147,6 +147,8 @@ my %split_by_starts = (
         'Ta pierwsza faza egzystencji',
         'Poezja i marzenia o sławie,',
         'Pani de La Baudraye popadła w manię',
+        '— Niedługo po osiemnastym brumaire',
+        'Tydzień temu, około jedenastej wieczór',
     ],
     'balzac-komedia-ludzka-eugenia-grandet.txt' => [
         'Warszawa, w marcu 1933',
@@ -576,6 +578,7 @@ my %split_inner = (
     'balzac-komedia-ludzka-muza-z-zascianka.txt' => [
         'Poezja i marzenia o sławie,',
         'Pani de La Baudraye popadła w manię',
+        'Tydzień temu, około jedenastej wieczór',
     ],
 );
 
