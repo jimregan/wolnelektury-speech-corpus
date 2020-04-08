@@ -30,7 +30,8 @@ header_replace() {
         gloria-victis-gloria-victis.txt przygody-tomka-sawyera.txt \
         ballada-z-tamtej-strony-imieniny.txt przedwiosnie.txt \
         piesn-o-rolandzie.txt spowiedz-dzieciecia-wieku.txt \
-        bajki-i-przypowiesci-dwa-zolwie.txt
+        bajki-i-przypowiesci-dwa-zolwie.txt \
+        don-kichot-z-la-manchy.txt
     do
         echo "Replacing header in $i"
         perl ../header-replace.pl $i > $i.tmp
@@ -44,12 +45,14 @@ additions() {
     echo 'Czytał Wiktor Korzeniewski' >> zajac-i-jez.txt
     echo 'Czytał Wiktor Korzeniewski' >> balzac-komedia-ludzka-eugenia-grandet.txt
     echo 'Czytał Wiktor Korzeniewski' >> balzac-komedia-ludzka-male-niedole-pozycia-malzenskiego.txt
+    echo 'Czytał Wiktor Korzeniewski' >> don-kichot-z-la-manchy.txt
     echo 'Czytał Jacek Rozenek' >> przedwiosnie.txt
     echo 'Czytał Jacek Rozenek' >> bartek-zwyciezca.txt
     echo 'Czytała Joanna Domańska' >> balzac-komedia-ludzka-kobieta-porzucona.txt
     echo 'Czytała Joanna Domańska' >> balzac-komedia-ludzka-kobieta-trzydziestoletnia.txt
     echo 'Czytała Joanna Domańska' >> chlopi-czesc-pierwsza-jesien.txt
     echo 'Czytał Jan Peszek' >> cierpienia-mlodego-wertera.txt
+    echo 'Czytała Danuta Stenka' >> gloria-victis-dziwna-historia.txt
 }
 
 norm_chapters() {
@@ -74,7 +77,9 @@ split_chapters() {
         boy-swietoszek.txt \
         chlopi-czesc-pierwsza-jesien.txt \
         cierpienia-mlodego-wertera.txt \
+        don-kichot-z-la-manchy.txt \
         golem.txt \
+        gloria-victis-dziwna-historia.txt \
         kim.txt \
         piesn-o-rolandzie.txt \
         powiesci-fantastyczne-wybor-narzeczonej.txt \

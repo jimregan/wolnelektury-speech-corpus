@@ -254,6 +254,10 @@ my %split_by_starts = (
         'Wolny',
         'Kres'
     ],
+    'gloria-victis-dziwna-historia.txt' => [
+        'Eliza Orzeszkowa',
+        '…Nie miałam litości i krzyknęłam:'
+    ],
 );
 my %split_by_whole = (
     'piesn-o-rolandzie.txt' => [
