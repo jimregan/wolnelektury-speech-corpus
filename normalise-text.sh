@@ -47,6 +47,8 @@ additions() {
     echo 'Czytał Jacek Rozenek' >> bartek-zwyciezca.txt
     echo 'Czytała Joanna Domańska' >> balzac-komedia-ludzka-kobieta-porzucona.txt
     echo 'Czytała Joanna Domańska' >> balzac-komedia-ludzka-kobieta-trzydziestoletnia.txt
+    echo 'Czytała Joanna Domańska' >> chlopi-czesc-pierwsza-jesien.txt
+    echo 'Czytał Jan Peszek' >> cierpienia-mlodego-wertera.txt
 }
 
 norm_chapters() {
@@ -69,6 +71,7 @@ split_chapters() {
         balzac-komedia-ludzka-male-niedole-pozycia-malzenskiego.txt \
         boy-swietoszek.txt \
         chlopi-czesc-pierwsza-jesien.txt \
+        cierpienia-mlodego-wertera.txt \
         golem.txt \
         kim.txt \
         piesn-o-rolandzie.txt \
@@ -87,10 +90,17 @@ split_chapters() {
 }
 
 remove_unread_lines() {
+    echo "Stage 6: add/remove lines to/from split texts"
     # Introductory sentences have no final punctuation, so sentence splitting is per line
     # This doesn't work with this header, so handle here and re-add in the specific norms
     cat balzac-komedia-ludzka-male-niedole-pozycia-malzenskiego.txt-40.txt | grep -v '^operowych$' > ltmp
     mv ltmp balzac-komedia-ludzka-male-niedole-pozycia-malzenskiego.txt-40.txt
+    cat cierpienia-mlodego-wertera.txt-01.txt | grep -v '^tłumaczenie Franciszek Mirandola$' > ltmp
+    mv ltmp cierpienia-mlodego-wertera.txt-01.txt
+    echo 'Johann Wolfgang von Goethe' > ltmp
+    echo 'Cierpienia młodego Wertera' >> ltmp
+    cat cierpienia-mlodego-wertera.txt-02.txt >> ltmp
+    mv ltmp cierpienia-mlodego-wertera.txt-02.txt
 }
 
 run_all() {
