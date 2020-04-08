@@ -75,9 +75,10 @@ additions() {
     echo "Stage 3: Final additions"
     echo 'Tobie, leniu' >> but-w-butonierce-deszcz.txt
     echo 'Czytał Wiktor Korzeniewski' >> zajac-i-jez.txt
-    echo 'Czytał Wiktor Korzeniewski' >> balzac-komedia-ludzka-eugenia-grandet.txt-16.txt
+    echo 'Czytał Wiktor Korzeniewski' >> balzac-komedia-ludzka-eugenia-grandet.txt
     echo 'Czytał Jacek Rozenek' >> przedwiosnie.txt
     echo 'Czytała Joanna Domańska' >> balzac-komedia-ludzka-kobieta-porzucona.txt
+    echo 'Czytała Joanna Domańska' >> balzac-komedia-ludzka-kobieta-trzydziestoletnia.txt
 }
 
 run_all() {
