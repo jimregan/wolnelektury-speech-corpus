@@ -116,6 +116,13 @@ my %split_by_starts = (
         'XXVIII. Dym bez ognia',
         'XXIX. Tyran domowy',
         'XXX. Wyznania',
+        'XXXI. Upokorzenia',
+        'XXXII. Ostatnia sprzeczka',
+        'XXXIII. Akta sprawy Chaumontel',
+        'XXXIV. „Klapa”',
+        'XXXV. Kasztany z ognia',
+        'XXXVI. Rozwiązanie',
+        'XXXVII. Komentarz, który objaśnia słowo „felichitta” finałów'
     ],
     'balzac-komedia-ludzka-eugenia-grandet.txt' => [
         'Warszawa, w marcu 1933',
