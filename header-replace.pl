@@ -25,6 +25,7 @@ my %skip_until = (
     'balzac-komedia-ludzka-jaszczur.txt' => 'Panu Savary Członkowi Akademii Nauk',
     'balzac-komedia-ludzka-kobieta-trzydziestoletnia.txt' => 'I. Pierwsze błędy',
     'bajki-i-przypowiesci-dwa-zolwie.txt' => 'Dwa żółwie',
+    'don-kichot-z-la-manchy.txt' => 'Księga pierwsza',
 );
 my %head_replace = (
     'bajki-i-przypowiesci-dwa-zolwie.txt' => "Ignacy Krasicki\nBajki i przypowieści\nCzęść pierwsza",
@@ -42,6 +43,7 @@ my %head_replace = (
     'przedwiosnie.txt' => "Stefan Żeromski\nPrzedwiośnie\nDedykacja",
     'piesn-o-rolandzie.txt' => "Pieśń o Rolandzie\nAutor nieznany\ntłumaczenie Tadeusz Boy-Żeleński",
     'spowiedz-dzieciecia-wieku.txt' => "Alfred de Musset\nSpowiedź dziecięcia wieku\ntłumaczenie Tadeusz Boy-Żeleński",
+    'don-kichot-z-la-manchy.txt' => "Miguel de Cervantes Saavedra\nDon Kichot z La Manchy\ntłumaczenie Walenty Zakrzewski",
 );
 
 if (!exists $skip_until{$ARGV[0]}) {
