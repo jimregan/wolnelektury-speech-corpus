@@ -10,6 +10,7 @@ use Encode;
 use FindBin qw($RealBin);
 
 binmode(STDOUT, ":utf8");
+binmode(STDERR, ":utf8");
 binmode(STDIN, ":utf8");
 
 open(NORMS, '<', "$RealBin/specific-norms.tsv");
@@ -66,7 +67,8 @@ sub do_file {
         while(/($regex)/) {
             my $m = $1;
             if($m eq $last_match) {
-                die "Loop? $_\n";
+                print STDERR "Loop matching $file: $_\n";
+                next;
             }
             my $in = quotemeta($m);
             my $out = $curnorms{$m};
