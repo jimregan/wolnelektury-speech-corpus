@@ -16,6 +16,7 @@ my %patterns = (
     'powiesci-fantastyczne-wybor-narzeczonej.txt' => 'Rozdział ',
     'kim.txt' => 'Rozdział ',
     'przygody-tomka-sawyera.txt' => 'Rozdział ',
+    'chlopi-czesc-pierwsza-jesien.txt' => 'Rozdział ',
     'spowiedz-dzieciecia-wieku.txt' => '^(Część|Rozdział (pią|[dtcs]))',
 );
 
@@ -29,6 +30,7 @@ my %firstpatterns = (
     'przygody-tomka-sawyera.txt' => 'Rozdział pierwszy',
     'piesn-o-rolandzie.txt' => '^I',
     'wierna-rzeka.txt' => '^I',
+    'chlopi-czesc-pierwsza-jesien.txt' => 'Rozdział pierwszy',
     'spowiedz-dzieciecia-wieku.txt' => '^Część pierwsza',
 );
 

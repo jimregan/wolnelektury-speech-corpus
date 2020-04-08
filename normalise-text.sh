@@ -53,7 +53,8 @@ norm_chapters() {
     echo "Stage 4: Add missing chapter word"
     for i in wyspa-skarbow.txt wspomnienia-niebieskiego-mundurka.txt \
         z-wichrow-i-hal-z-tatr-krzak-dzikiej-rozy-w-ciemnych-smreczy.txt \
-        fortepian-chopina.txt bartek-zwyciezca.txt
+        fortepian-chopina.txt bartek-zwyciezca.txt \
+        chlopi-czesc-pierwsza-jesien.txt
     do
         perl ../norm-roman-by-text.pl $i > $i.tmp
         mv $i.tmp $i
@@ -67,6 +68,7 @@ split_chapters() {
         balzac-komedia-ludzka-jaszczur.txt \
         balzac-komedia-ludzka-male-niedole-pozycia-malzenskiego.txt \
         boy-swietoszek.txt \
+        chlopi-czesc-pierwsza-jesien.txt \
         golem.txt \
         kim.txt \
         piesn-o-rolandzie.txt \
