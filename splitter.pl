@@ -65,7 +65,7 @@ my %split_by_starts = (
         'W dwa dni później',
         'Kiedym opuszczał ulicę',
         'Spekulant jakiś zaproponował mi',
-        'III. *Agonia*',
+        'III. \*Agonia\*',
         'Czy widzicie ten bogaty pojazd,',
         'Byłoby nużącym wiernie notować',
         'Planchette był to wysoki chudy człowiek,',
