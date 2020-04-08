@@ -149,6 +149,14 @@ my %split_by_starts = (
         'Pani de La Baudraye popadła w manię',
         '— Niedługo po osiemnastym brumaire',
         'Tydzień temu, około jedenastej wieczór',
+        'Pochwała ta upoiła panią',
+        'kobiety, które chcą kochać,',
+        'W tej chwili weszła pani de La Baudraye,',
+        '— Proszę pana — rzekł posłaniec',
+        'Lousteau chciał upiększyć swą',
+        'Nawiązała przez matkę rokowania',
+        'Po czterech latach współżycia',
+        'Pewnego pięknego dnia w maju'
     ],
     'balzac-komedia-ludzka-eugenia-grandet.txt' => [
         'Warszawa, w marcu 1933',
@@ -579,6 +587,9 @@ my %split_inner = (
         'Poezja i marzenia o sławie,',
         'Pani de La Baudraye popadła w manię',
         'Tydzień temu, około jedenastej wieczór',
+        'Pochwała ta upoiła panią',
+        'kobiety, które chcą kochać,',
+        'Nawiązała przez matkę rokowania',
     ],
 );
 
