@@ -18,6 +18,7 @@ my %patterns = (
     'przygody-tomka-sawyera.txt' => 'Rozdział ',
     'chlopi-czesc-pierwsza-jesien.txt' => 'Rozdział ',
     'spowiedz-dzieciecia-wieku.txt' => '^(Część|Rozdział (pią|[dtcs]))',
+    'cierpienia-mlodego-wertera.txt' => '^Część ',
 );
 
 my %firstpatterns = (
@@ -32,6 +33,7 @@ my %firstpatterns = (
     'wierna-rzeka.txt' => '^I',
     'chlopi-czesc-pierwsza-jesien.txt' => 'Rozdział pierwszy',
     'spowiedz-dzieciecia-wieku.txt' => '^Część pierwsza',
+    'cierpienia-mlodego-wertera.txt' => '^Część pierwsza',
 );
 
 my %skipfirst = (
