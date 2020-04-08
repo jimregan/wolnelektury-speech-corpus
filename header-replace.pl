@@ -24,8 +24,10 @@ my %skip_until = (
     'spowiedz-dzieciecia-wieku.txt' => 'Część pierwsza',
     'balzac-komedia-ludzka-jaszczur.txt' => 'Panu Savary Członkowi Akademii Nauk',
     'balzac-komedia-ludzka-kobieta-trzydziestoletnia.txt' => 'I. Pierwsze błędy',
+    'bajki-i-przypowiesci-dwa-zolwie.txt' => 'Dwa żółwie',
 );
 my %head_replace = (
+    'bajki-i-przypowiesci-dwa-zolwie.txt' => "Ignacy Krasicki\nBajki i przypowieści\nCzęść pierwsza",
     'balzac-komedia-ludzka-bank-nucingena.txt' => "Bank Nucingena\nHonoré Balzac\ntłumaczenie Tadeusz Boy-Żeleński",
     'balzac-komedia-ludzka-kobieta-porzucona.txt' => "Kobieta porzucona\nHonoré Balzac\ntłumaczenie Tadeusz Boy-Żeleński",
     'balzac-komedia-ludzka-jaszczur.txt' => '',

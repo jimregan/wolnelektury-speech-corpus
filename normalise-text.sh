@@ -29,7 +29,8 @@ header_replace() {
         powiesci-fantastyczne-wybor-narzeczonej.txt \
         gloria-victis-gloria-victis.txt przygody-tomka-sawyera.txt \
         ballada-z-tamtej-strony-imieniny.txt przedwiosnie.txt \
-        piesn-o-rolandzie.txt spowiedz-dzieciecia-wieku.txt
+        piesn-o-rolandzie.txt spowiedz-dzieciecia-wieku.txt \
+        bajki-i-przypowiesci-dwa-zolwie.txt
     do
         echo "Replacing header in $i"
         perl ../header-replace.pl $i > $i.tmp
