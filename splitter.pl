@@ -74,6 +74,14 @@ my %split_by_starts = (
         'Przybywszy tegoż samego wieczora',
         'Po całonocnej podróży'
     ],
+    'balzac-komedia-ludzka-kobieta-trzydziestoletnia.txt' => [
+        'Kobieta trzydziestoletnia',
+        'II. Nieznane cierpienia',
+        'III. Kobieta trzydziestoletnia',
+        'IV. Palec boży',
+        'V. Dwa spotkania',
+        'VI. Starość występnej matki'
+    ],
     'balzac-komedia-ludzka-eugenia-grandet.txt' => [
         'Warszawa, w marcu 1933',
         'Eugenia Grandet',
