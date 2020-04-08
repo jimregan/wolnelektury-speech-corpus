@@ -70,6 +70,7 @@ split_chapters() {
         balzac-komedia-ludzka-eugenia-grandet.txt \
         balzac-komedia-ludzka-jaszczur.txt \
         balzac-komedia-ludzka-male-niedole-pozycia-malzenskiego.txt \
+        balzac-komedia-ludzka-muza-z-zascianka.txt \
         boy-swietoszek.txt \
         chlopi-czesc-pierwsza-jesien.txt \
         cierpienia-mlodego-wertera.txt \
