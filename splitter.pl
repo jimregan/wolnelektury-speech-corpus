@@ -20,6 +20,7 @@ my %patterns = (
     'spowiedz-dzieciecia-wieku.txt' => '^(Część|Rozdział (pią|[dtcs]))',
     'cierpienia-mlodego-wertera.txt' => '^Część ',
     'don-kichot-z-la-manchy.txt' => '^(Księga|Rozdział (pi[ąę]|[dtcsjóo]))',
+    'w-pustyni-i-w-puszczy.txt' => '^(ROZDZIAŁ|ZAKOŃCZENIE)',
 );
 
 my %firstpatterns = (
@@ -36,6 +37,7 @@ my %firstpatterns = (
     'chlopi-czesc-pierwsza-jesien.txt' => 'Rozdział pierwszy',
     'spowiedz-dzieciecia-wieku.txt' => '^Część pierwsza',
     'cierpienia-mlodego-wertera.txt' => '^Część pierwsza',
+    'w-pustyni-i-w-puszczy.txt' => '^ROZDZIAŁ pierwszy',
 );
 
 my %skipfirst = (
