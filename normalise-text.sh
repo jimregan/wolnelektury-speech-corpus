@@ -37,6 +37,27 @@ header_replace() {
     done
 }
 
+additions() {
+    echo "Stage 3: Final additions"
+    echo 'Tobie, leniu' >> but-w-butonierce-deszcz.txt
+    echo 'Czytał Wiktor Korzeniewski' >> zajac-i-jez.txt
+    echo 'Czytał Wiktor Korzeniewski' >> balzac-komedia-ludzka-eugenia-grandet.txt
+    echo 'Czytał Jacek Rozenek' >> przedwiosnie.txt
+    echo 'Czytała Joanna Domańska' >> balzac-komedia-ludzka-kobieta-porzucona.txt
+    echo 'Czytała Joanna Domańska' >> balzac-komedia-ludzka-kobieta-trzydziestoletnia.txt
+}
+
+norm_chapters() {
+    echo "Stage 4: Add missing chapter word"
+    for i in wyspa-skarbow.txt wspomnienia-niebieskiego-mundurka.txt \
+        z-wichrow-i-hal-z-tatr-krzak-dzikiej-rozy-w-ciemnych-smreczy.txt \
+        fortepian-chopina.txt
+    do
+        perl ../norm-roman-by-text.pl $i > $i.tmp
+        mv $i.tmp $i
+    done
+}
+
 split_chapters() {
     echo "Stage 5: Split texts to match audio"
     for i in balzac-komedia-ludzka-corka-ewy.txt \
@@ -60,25 +81,11 @@ split_chapters() {
     done
 }
 
-norm_chapters() {
-    echo "Stage 4: Add missing chapter word"
-    for i in wyspa-skarbow.txt wspomnienia-niebieskiego-mundurka.txt \
-        z-wichrow-i-hal-z-tatr-krzak-dzikiej-rozy-w-ciemnych-smreczy.txt \
-        fortepian-chopina.txt
-    do
-        perl ../norm-roman-by-text.pl $i > $i.tmp
-        mv $i.tmp $i
-    done
-}
-
-additions() {
-    echo "Stage 3: Final additions"
-    echo 'Tobie, leniu' >> but-w-butonierce-deszcz.txt
-    echo 'Czytał Wiktor Korzeniewski' >> zajac-i-jez.txt
-    echo 'Czytał Wiktor Korzeniewski' >> balzac-komedia-ludzka-eugenia-grandet.txt
-    echo 'Czytał Jacek Rozenek' >> przedwiosnie.txt
-    echo 'Czytała Joanna Domańska' >> balzac-komedia-ludzka-kobieta-porzucona.txt
-    echo 'Czytała Joanna Domańska' >> balzac-komedia-ludzka-kobieta-trzydziestoletnia.txt
+remove_unread_lines() {
+    # Introductory sentences have no final punctuation, so sentence splitting is per line
+    # This doesn't work with this header, so handle here and re-add in the specific norms
+    cat balzac-komedia-ludzka-male-niedole-pozycia-malzenskiego.txt-40.txt | grep -v '^operowych$' > ltmp
+    mv ltmp balzac-komedia-ludzka-male-niedole-pozycia-malzenskiego.txt-40.txt
 }
 
 run_all() {
@@ -93,6 +100,7 @@ run_all() {
     additions
     norm_chapters
     split_chapters
+    remove_unread_lines
 
     if [ x$1 != x"" ]
     then
