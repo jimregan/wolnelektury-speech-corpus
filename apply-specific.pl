@@ -30,7 +30,7 @@ while(<NORMS>) {
     next if(/^#/);
     my @line = split/\t/;
     if ($#line < 2 || $#line > 3) {
-        print "Incorrect number of fields at line $lineno: $_\n";
+        die "Incorrect number of fields at line $lineno: $_\n";
     }
     if ($line[1] eq $line[2]) {
         die "Normalisation equals original on line $lineno: $_\n";
@@ -62,8 +62,12 @@ sub do_file {
     my $regex = join("|", map{quotemeta} @keys);
     while(<IN>) {
         chomp;
+        my $last_match = '';
         while(/($regex)/) {
             my $m = $1;
+            if($m eq $last_match) {
+                die "Loop? $_\n";
+            }
             my $in = quotemeta($m);
             my $out = $curnorms{$m};
             if($out eq ' ') {
@@ -71,6 +75,7 @@ sub do_file {
             } else {
                 s/$m/$out/;
             }
+            $last_match = $m;
         }
         print OUT "$_\n";
     }
