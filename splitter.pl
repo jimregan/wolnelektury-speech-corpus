@@ -124,6 +124,18 @@ my %split_by_starts = (
         'XXXVI. Rozwiązanie',
         'XXXVII. Komentarz, który objaśnia słowo „felichitta” finałów'
     ],
+    'bartek-zwyciezca.txt' => [
+        'Henryk Sienkiewicz',
+        'W jedną stronę wraca ku',
+        'Ranek! Rozpierzchłe',
+        'Bliższy udział w walnej',
+        'W jakiś czas potem',
+        'Znów upłynęło kilka',
+        'Bartek wrócił jednak tak',
+        'Sprawa stała się groźna.',
+        'Magda naprawdę była tyle warta',
+        'Wybory! Wybory! Pani Maria'
+    ],
     'balzac-komedia-ludzka-eugenia-grandet.txt' => [
         'Warszawa, w marcu 1933',
         'Eugenia Grandet',

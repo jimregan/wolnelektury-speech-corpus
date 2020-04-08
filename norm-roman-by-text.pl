@@ -16,6 +16,7 @@ my %spec = (
 my %del = (
     'z-wichrow-i-hal-z-tatr-krzak-dzikiej-rozy-w-ciemnych-smreczy.txt' => 1,
     'fortepian-chopina.txt' => 1,
+    'bartek-zwyciezca.txt' => 1,
 );
 
 my %chapter_ord_masc = (

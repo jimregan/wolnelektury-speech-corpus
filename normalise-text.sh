@@ -44,6 +44,7 @@ additions() {
     echo 'Czytał Wiktor Korzeniewski' >> balzac-komedia-ludzka-eugenia-grandet.txt
     echo 'Czytał Wiktor Korzeniewski' >> balzac-komedia-ludzka-male-niedole-pozycia-malzenskiego.txt
     echo 'Czytał Jacek Rozenek' >> przedwiosnie.txt
+    echo 'Czytał Jacek Rozenek' >> bartek-zwyciezca.txt
     echo 'Czytała Joanna Domańska' >> balzac-komedia-ludzka-kobieta-porzucona.txt
     echo 'Czytała Joanna Domańska' >> balzac-komedia-ludzka-kobieta-trzydziestoletnia.txt
 }
@@ -52,7 +53,7 @@ norm_chapters() {
     echo "Stage 4: Add missing chapter word"
     for i in wyspa-skarbow.txt wspomnienia-niebieskiego-mundurka.txt \
         z-wichrow-i-hal-z-tatr-krzak-dzikiej-rozy-w-ciemnych-smreczy.txt \
-        fortepian-chopina.txt
+        fortepian-chopina.txt bartek-zwyciezca.txt
     do
         perl ../norm-roman-by-text.pl $i > $i.tmp
         mv $i.tmp $i
