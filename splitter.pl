@@ -140,6 +140,14 @@ my %split_by_starts = (
         'Magda naprawdę była tyle warta',
         'Wybory! Wybory! Pani Maria'
     ],
+    'balzac-komedia-ludzka-muza-z-zascianka.txt' => [
+        'Od tłumacza',
+        'Muza z zaścianka',
+        'Ksiądz Duret, proboszcz Sancerre,',
+        'Ta pierwsza faza egzystencji',
+        'Poezja i marzenia o sławie,',
+        'Pani de La Baudraye popadła w manię',
+    ],
     'balzac-komedia-ludzka-eugenia-grandet.txt' => [
         'Warszawa, w marcu 1933',
         'Eugenia Grandet',
@@ -564,6 +572,10 @@ my %split_inner = (
         'Udzieliłem sobie tego czasu',
         'Kiedym opuszczał ulicę',
         'Spekulant jakiś zaproponował mi',
+    ],
+    'balzac-komedia-ludzka-muza-z-zascianka.txt' => [
+        'Poezja i marzenia o sławie,',
+        'Pani de La Baudraye popadła w manię',
     ],
 );
 
