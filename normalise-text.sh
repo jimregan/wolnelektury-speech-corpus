@@ -41,6 +41,7 @@ split_chapters() {
     echo "Stage 5: Split texts to match audio"
     for i in balzac-komedia-ludzka-corka-ewy.txt \
         balzac-komedia-ludzka-eugenia-grandet.txt \
+        balzac-komedia-ludzka-jaszczur.txt \
         boy-swietoszek.txt \
         golem.txt \
         kim.txt \
