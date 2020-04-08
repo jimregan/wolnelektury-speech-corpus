@@ -19,11 +19,13 @@ my %patterns = (
     'chlopi-czesc-pierwsza-jesien.txt' => 'Rozdział ',
     'spowiedz-dzieciecia-wieku.txt' => '^(Część|Rozdział (pią|[dtcs]))',
     'cierpienia-mlodego-wertera.txt' => '^Część ',
+    'don-kichot-z-la-manchy.txt' => '^(Księga|Rozdział (pi[ąę]|[dtcsjóo]))',
 );
 
 my %firstpatterns = (
     'wyspa-skarbow.txt' => '^Część pierwsza',
     'sztuka-kochania.txt' => '^Księga pierwsza',
+    'don-kichot-z-la-manchy.txt' => '^Księga pierwsza',
     'robinson-crusoe.txt' => 'Rozdział pierwszy',
     'wspomnienia-niebieskiego-mundurka.txt' => 'DUMMY_TO_SKIP',
     'powiesci-fantastyczne-wybor-narzeczonej.txt' => 'Rozdział pierwszy',
@@ -677,14 +679,14 @@ while(<INPUT>) {
         if($is_inner) {
             print OUTPUT substr $_, 0, $point - 1 . "\n";
             $count++;
-            $outfile = $filename . "-" . sprintf("%02d.txt", $count);
+            $outfile = $filename . "-" . sprintf("$count_spec.txt", $count);
             close OUTPUT;
             open(OUTPUT, '>', $outfile);
             binmode(OUTPUT, ":utf8");
             print OUTPUT substr $_, $point . "\n";
         } elsif($pattern ne $firstpattern && $_ !~ /$firstpattern/) {
             $count++;
-            $outfile = $filename . "-" . sprintf("%02d.txt", $count);
+            $outfile = $filename . "-" . sprintf("$count_spec.txt", $count);
             close OUTPUT;
             open(OUTPUT, '>', $outfile);
             binmode(OUTPUT, ":utf8");
