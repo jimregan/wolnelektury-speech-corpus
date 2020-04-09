@@ -30,6 +30,14 @@ prepend_text() {
     rm "$fname.bak"
 }
 
+remove_line() {
+    file="$1"
+    line="$2"
+    mv "$file" "$file.bak"
+    cat "$file.bak" | grep -v "$line" > "$file"
+    rm "$file.bak"
+}
+
 header_replace() {
     echo "Stage 2: Replace headers"
     slowka_headers
@@ -116,14 +124,6 @@ split_chapters() {
         echo "Splitting $i"
         perl ../splitter.pl $i
     done
-}
-
-remove_line() {
-    file="$1"
-    line="$2"
-    mv "$file" "$file.bak"
-    cat "$file.bak" | grep -v "$line" > "$file"
-    rm "$file.bak"
 }
 
 remove_unread_lines() {
