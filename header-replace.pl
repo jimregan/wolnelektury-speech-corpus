@@ -57,12 +57,15 @@ my $skipstop = $skip_until{$ARGV[0]};
 
 my $reading = 0;
 
+my $replaced = 0;
+
 while(<INPUT>) {
     chomp;
-    if(/$skipstop/) {
+    if(/$skipstop/ && !$replaced) {
         $reading = 1;
         print "$head_replace{$ARGV[0]}\n";
         print "$_\n";
+        $replaced = 1;
     } else {
         if($reading) {
             print "$_\n";
