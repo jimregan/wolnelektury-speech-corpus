@@ -289,6 +289,19 @@ my %split_by_starts = (
         'Sziwa i konik polny',
         'Tumai, przyjaciel słoni'
     ],
+    'ojciec-goriot.txt' => [
+        'Pani Vauquer, z domu',
+        'Goriot zeszedł wreszcie na dziewięćset franków;',
+        'Dosyć było tej jednej okoliczności',
+        'Była piąta po południu;',
+        '— Patrz pan! Ten młokos',
+        'Po takim wstępie, Eugeniusz plótł',
+        'Minęło znów dni kilka,',
+        'W jednej chwili obniesiono',
+        'Pani Vauquer nie miała odwagi',
+        '— Ja nie mam pieniędzy, Naściu.',
+        'Rastignac pozostał sam przy'
+    ],
 );
 my %split_by_whole = (
     'piesn-o-rolandzie.txt' => [
@@ -627,6 +640,12 @@ my %split_inner = (
         'Pochwała ta upoiła panią',
         'kobiety, które chcą kochać,',
         'Nawiązała przez matkę rokowania',
+    ],
+    'ojciec-goriot.txt' => [
+        'Goriot zeszedł wreszcie na dziewięćset franków;',
+        'Dosyć było tej jednej okoliczności',
+        '— Patrz pan! Ten młokos',
+        'Po takim wstępie, Eugeniusz plótł',
     ],
 );
 

@@ -100,6 +100,7 @@ split_chapters() {
         hoffmann-dziadek-do-orzechow.txt \
         kim.txt \
         lange-miranda.txt \
+        ojciec-goriot.txt \
         piesn-o-rolandzie.txt \
         powiesci-fantastyczne-wybor-narzeczonej.txt \
         przedwiosnie.txt \

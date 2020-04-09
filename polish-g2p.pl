@@ -15,10 +15,12 @@ my $simple_mode = 1;
 my $pronounce_as = 0;
 my $pronounce_both = 0;
 my $DEBUG = 0;
+my $CLARIN_OUT = 0;
 
 GetOptions(
     'enwiktionary|enwikt|w' => \$enwikt,
     'debug' => \$DEBUG,
+    'clarinpl' => \$CLARIN_OUT,
     'pronounce-both' => sub { $pronounce_both = 1; $simple_mode = 0;},
     'pronounce-as' => sub { $pronounce_as = 1; $simple_mode = 0;},
 );
