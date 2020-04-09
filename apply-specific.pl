@@ -10,6 +10,7 @@ use Encode;
 use FindBin qw($RealBin);
 
 binmode(STDOUT, ":utf8");
+binmode(STDERR, ":utf8");
 binmode(STDIN, ":utf8");
 
 open(NORMS, '<', "$RealBin/specific-norms.tsv");
@@ -30,7 +31,10 @@ while(<NORMS>) {
     next if(/^#/);
     my @line = split/\t/;
     if ($#line < 2 || $#line > 3) {
-        print "Incorrect number of fields at line $lineno: $_\n";
+        die "Incorrect number of fields at line $lineno: $_\n";
+    }
+    if ($line[1] eq $line[2]) {
+        die "Normalisation equals original on line $lineno: $_\n";
     }
     if($DUAL && $#line == 3 && $line[3] eq 'C') {
         $corrs{$line[0]}{$line[1]} = $line[2];
@@ -44,11 +48,11 @@ sub do_file {
     my $file = shift;
     my $normorcorr = shift;
 
-    rename($file, "$file.bak");
-    open(IN, '<', "$file.bak");
-    open(OUT, '>', "$file");
-    binmode(IN, ":utf8");
-    binmode(OUT, ":utf8");
+    rename($file, "$file.bak") or die "$file: $!";
+    open(IN, '<', "$file.bak") or die "$!";
+    open(OUT, '>', "$file") or die "$!";
+    binmode(IN, ":utf8") or die "$!";
+    binmode(OUT, ":utf8") or die "$!";
     my %curnorms = ();
     if($DUAL && $normorcorr && $normorcorr eq 'corr') {
         %curnorms = %{$corrs{$file}};
@@ -59,8 +63,13 @@ sub do_file {
     my $regex = join("|", map{quotemeta} @keys);
     while(<IN>) {
         chomp;
+        my $last_match = '';
         while(/($regex)/) {
             my $m = $1;
+            if($m eq $last_match) {
+                print STDERR "Loop matching $file: $_\n";
+                next;
+            }
             my $in = quotemeta($m);
             my $out = $curnorms{$m};
             if($out eq ' ') {
@@ -68,6 +77,7 @@ sub do_file {
             } else {
                 s/$m/$out/;
             }
+            $last_match = $m;
         }
         print OUT "$_\n";
     }

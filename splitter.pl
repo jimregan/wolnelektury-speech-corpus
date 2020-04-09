@@ -16,11 +16,19 @@ my %patterns = (
     'powiesci-fantastyczne-wybor-narzeczonej.txt' => 'Rozdział ',
     'kim.txt' => 'Rozdział ',
     'przygody-tomka-sawyera.txt' => 'Rozdział ',
+    'chlopi-czesc-pierwsza-jesien.txt' => 'Rozdział ',
+    'spowiedz-dzieciecia-wieku.txt' => '^(Część|Rozdział (pią|[dtcs]))',
+    'cierpienia-mlodego-wertera.txt' => '^Część ',
+    'don-kichot-z-la-manchy.txt' => '^(Księga|Rozdział (pi[ąę]|[dtcsjóo]))',
+    'w-pustyni-i-w-puszczy.txt' => '^(ROZDZIAŁ|ZAKOŃCZENIE)',
+    'hoffmann-dziadek-do-orzechow.txt' => '^(Rozdział|Zakończenie)',
+    'lange-miranda.txt' => '^Rozdział ',
 );
 
 my %firstpatterns = (
     'wyspa-skarbow.txt' => '^Część pierwsza',
     'sztuka-kochania.txt' => '^Księga pierwsza',
+    'don-kichot-z-la-manchy.txt' => '^Księga pierwsza',
     'robinson-crusoe.txt' => 'Rozdział pierwszy',
     'wspomnienia-niebieskiego-mundurka.txt' => 'DUMMY_TO_SKIP',
     'powiesci-fantastyczne-wybor-narzeczonej.txt' => 'Rozdział pierwszy',
@@ -28,6 +36,12 @@ my %firstpatterns = (
     'przygody-tomka-sawyera.txt' => 'Rozdział pierwszy',
     'piesn-o-rolandzie.txt' => '^I',
     'wierna-rzeka.txt' => '^I',
+    'chlopi-czesc-pierwsza-jesien.txt' => 'Rozdział pierwszy',
+    'spowiedz-dzieciecia-wieku.txt' => '^Część pierwsza',
+    'cierpienia-mlodego-wertera.txt' => '^Część pierwsza',
+    'w-pustyni-i-w-puszczy.txt' => '^ROZDZIAŁ pierwszy',
+    'hoffmann-dziadek-do-orzechow.txt' => '^Rozdział I:',
+    'lange-miranda.txt' => '^Rozdział pierwszy',
 );
 
 my %skipfirst = (
@@ -47,6 +61,128 @@ my %split_by_starts = (
         'W październiku zapadł termin weksli;',
         'Ze swej strony hrabina, szczęśliwa',
         'Na kilka chwil przed południem,'
+    ],
+    'balzac-komedia-ludzka-jaszczur.txt' => [
+        'Panu Savary Członkowi Akademii Nauk',
+        'Czyż nie był pijany życiem lub może',
+        'Oto dziwne zjawisko, które',
+        'Wypadając ze sklepu na ulicę,',
+        'Deser zjawił się jakby czarami.',
+        'II. Kobieta bez serca',
+        'Udzieliłem sobie tego czasu',
+        'Aż do ostatniej zimy pędziłem',
+        'Wróciłem pieszo z dzielnicy',
+        '— Ha! ha! — rzekł Rastignac',
+        'Kaprys mody lub owa',
+        'W dwa dni później',
+        'Kiedym opuszczał ulicę',
+        'Spekulant jakiś zaproponował mi',
+        'III. \*Agonia\*',
+        'Czy widzicie ten bogaty pojazd,',
+        'Byłoby nużącym wiernie notować',
+        'Planchette był to wysoki chudy człowiek,',
+        'W kilka dni po tej rozpaczliwej scenie,',
+        'W miesiąc później, po powrocie',
+        'Przybywszy tegoż samego wieczora',
+        'Po całonocnej podróży'
+    ],
+    'balzac-komedia-ludzka-kobieta-trzydziestoletnia.txt' => [
+        'Kobieta trzydziestoletnia',
+        'II. Nieznane cierpienia',
+        'III. Kobieta trzydziestoletnia',
+        'IV. Palec boży',
+        'V. Dwa spotkania',
+        'VI. Starość występnej matki'
+    ],
+    'balzac-komedia-ludzka-male-niedole-pozycia-malzenskiego.txt' => [
+        'Honoré Balzac',
+        'Część pierwsza',
+        'I. Zdradziecki sztych',
+        'II. Odkrycia',
+        'III. Gorliwość młodej żony',
+        'IV. Sprzeczki',
+        'V. Niezrozumiana…',
+        'VI. Logika kobiet',
+        'VII. Jezuityzm kobiet',
+        'VII. Wspominki i żale',
+        'IX. Spostrzeżenie',
+        'X. Bąk małżeński',
+        'XI. Ciężkie roboty',
+        'XII. Żółty śmiech',
+        'XIII. Historia kliniczna willi za miastem',
+        'XIV. Niedola w niedoli',
+        'XV. Osiemnasty brumaire małżeństwa',
+        'XVI. Sztuka stania się ofiarą',
+        'XVII. Krytyczne dni',
+        'XVIII. Marsz pogrzebowy',
+        'Część druga',
+        'XIX. Mężowie w drugim miesiącu',
+        'XX. Zawiedzione ambicje',
+        'XXI. Cierpienia naiwne',
+        'XXII. Adonis wieczny tułacz',
+        'XXIII. Bez zajęcia',
+        'XXIV. Poufałości i niedyskrecje',
+        'XXV. Brutalne przebudzenia',
+        'XXVI. Partia odroczona',
+        'XXVII. Stracone zachody miłości',
+        'XXVIII. Dym bez ognia',
+        'XXIX. Tyran domowy',
+        'XXX. Wyznania',
+        'XXXI. Upokorzenia',
+        'XXXII. Ostatnia sprzeczka',
+        'XXXIII. Akta sprawy Chaumontel',
+        'XXXIV. „Klapa”',
+        'XXXV. Kasztany z ognia',
+        'XXXVI. Rozwiązanie',
+        'XXXVII. Komentarz, który objaśnia słowo „felichitta” finałów'
+    ],
+    'bartek-zwyciezca.txt' => [
+        'Henryk Sienkiewicz',
+        'W jedną stronę wraca ku',
+        'Ranek! Rozpierzchłe',
+        'Bliższy udział w walnej',
+        'W jakiś czas potem',
+        'Znów upłynęło kilka',
+        'Bartek wrócił jednak tak',
+        'Sprawa stała się groźna.',
+        'Magda naprawdę była tyle warta',
+        'Wybory! Wybory! Pani Maria'
+    ],
+    'balzac-komedia-ludzka-muza-z-zascianka.txt' => [
+        'Od tłumacza',
+        'Muza z zaścianka',
+        'Ksiądz Duret, proboszcz Sancerre,',
+        'Ta pierwsza faza egzystencji',
+        'Poezja i marzenia o sławie,',
+        'Pani de La Baudraye popadła w manię',
+        '— Niedługo po osiemnastym brumaire',
+        'Tydzień temu, około jedenastej wieczór',
+        'Pochwała ta upoiła panią',
+        'kobiety, które chcą kochać,',
+        'W tej chwili weszła pani de La Baudraye,',
+        '— Proszę pana — rzekł posłaniec',
+        'Lousteau chciał upiększyć swą',
+        'Nawiązała przez matkę rokowania',
+        'Po czterech latach współżycia',
+        'Pewnego pięknego dnia w maju'
+    ],
+    'balzac-komedia-ludzka-eugenia-grandet.txt' => [
+        'Warszawa, w marcu 1933',
+        'Eugenia Grandet',
+        'We framudze',
+        'W chwili, gdy Grandet',
+        'A teraz, jeśli chcecie',
+        'Kiedy rodzina znalazła',
+        'Stary Grandet, nie mając',
+        'Przed tym dniem nigdy Eugenia',
+        'W tej chwili miasto Saumur',
+        'Kiedy stary Grandet zamknął',
+        'Wszystkie trzy kobiety miały',
+        'Aby nie przerywać biegu',
+        '— Nie masz już',
+        'Grandet zaczynał wówczas',
+        'Eugenia Grandet znalazła się',
+        'W początkach sierpnia'
     ],
     'boy-swietoszek.txt' => [
         'Wstęp',
@@ -123,6 +259,35 @@ my %split_by_starts = (
         'Księżyc',
         'Wolny',
         'Kres'
+    ],
+    'gloria-victis-dziwna-historia.txt' => [
+        'Eliza Orzeszkowa',
+        '…Nie miałam litości i krzyknęłam:'
+    ],
+    'grabinski-namietnosc.txt' => [
+        'Stefan Grabiński',
+        'Zatrzymałem się przy jednym z grobowców,',
+        'Wyjęła z torebki klucz'
+    ],
+    'historia-zoltej-cizemki.txt' => [
+        'Antonina Domańska',
+        'Dziwny pielgrzym',
+        'U wiłów',
+        'Konik zwirzyniecki',
+        'U Jana Długosza',
+        'Uczeń mistrza Wita',
+        'Jasiek',
+        'Święty Kazimierz',
+        'Tajemnica dworku pod cmentarzem',
+        'Poręba',
+        'Zakończenie'
+    ],
+    'ksiega-dzungli.txt' => [
+        'Bracia małego Mauli',
+        'Biała foka',
+        'Riki-Tiki-Tavi',
+        'Sziwa i konik polny',
+        'Tumai, przyjaciel słoni'
     ],
 );
 my %split_by_whole = (
@@ -444,6 +609,25 @@ my %split_inner = (
         'Paryż jest jedynym miejscem na świecie,',
         'Fantazja Raula zespoliła niby',
     ],
+    'balzac-komedia-ludzka-eugenia-grandet.txt' => [
+        'Przed tym dniem nigdy Eugenia',
+        'Wszystkie trzy kobiety miały',
+    ],
+    'balzac-komedia-ludzka-jaszczur.txt' => [
+        'Czyż nie był pijany życiem lub może',
+        'Wypadając ze sklepu na ulicę,',
+        'Udzieliłem sobie tego czasu',
+        'Kiedym opuszczał ulicę',
+        'Spekulant jakiś zaproponował mi',
+    ],
+    'balzac-komedia-ludzka-muza-z-zascianka.txt' => [
+        'Poezja i marzenia o sławie,',
+        'Pani de La Baudraye popadła w manię',
+        'Tydzień temu, około jedenastej wieczór',
+        'Pochwała ta upoiła panią',
+        'kobiety, które chcą kochać,',
+        'Nawiązała przez matkę rokowania',
+    ],
 );
 
 my %inner_split = ();
@@ -511,7 +695,12 @@ if($filename eq 'wspomnienia-niebieskiego-mundurka.txt' || $filename eq 'kim.txt
 
 my %skip_pattern = map { $_ => 1 } qw/wierna-rzeka.txt/;
 
-my $outfile = $filename . "-" . sprintf("%02d.txt", $count);
+my $count_spec = '%02d';
+if($filename eq 'don-kichot-z-la-manchy.txt') {
+    $count_spec = '%03d';
+}
+
+my $outfile = $filename . "-" . sprintf("$count_spec.txt", $count);
 open(OUTPUT, '>', $outfile);
 binmode(OUTPUT, ":utf8");
 binmode(STDERR, ":utf8");
@@ -525,14 +714,14 @@ while(<INPUT>) {
         if($is_inner) {
             print OUTPUT substr $_, 0, $point - 1 . "\n";
             $count++;
-            $outfile = $filename . "-" . sprintf("%02d.txt", $count);
+            $outfile = $filename . "-" . sprintf("$count_spec.txt", $count);
             close OUTPUT;
             open(OUTPUT, '>', $outfile);
             binmode(OUTPUT, ":utf8");
             print OUTPUT substr $_, $point . "\n";
         } elsif($pattern ne $firstpattern && $_ !~ /$firstpattern/) {
             $count++;
-            $outfile = $filename . "-" . sprintf("%02d.txt", $count);
+            $outfile = $filename . "-" . sprintf("$count_spec.txt", $count);
             close OUTPUT;
             open(OUTPUT, '>', $outfile);
             binmode(OUTPUT, ":utf8");

@@ -32,6 +32,7 @@ my %chapter_ord_masc = (
     'XIX' => 'dziewiętnasty',
     'XX' => 'dwudziesty',
     'XXX' => 'trzydziesty',
+    'XL' => 'czterdziesty',
 );
 
 my %chapter_ord_fem = (
@@ -56,10 +57,11 @@ my %chapter_ord_fem = (
     'XIX' => 'dziewiętnasta',
     'XX' => 'dwudziesta',
     'XXX' => 'trzydziesta',
+    'XL' => 'czterdziesta',
 );
 
 my $units = "IX|IV|III|II|I|VIII|VII|VI|V";
-my $tens = "XXX|XX|X";
+my $tens = "XXX|XX|XL?";
 
 while(<STDIN>) {
     chomp;

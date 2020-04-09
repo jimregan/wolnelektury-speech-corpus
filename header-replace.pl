@@ -11,6 +11,7 @@ binmode(INPUT, ":utf8");
 
 my %skip_until = (
     'balzac-komedia-ludzka-bank-nucingena.txt' => '^Wiadomo, jak cienkie',
+    'balzac-komedia-ludzka-kobieta-porzucona.txt' => '^W roku 1822, z początkiem wiosny,',
     'fortepian-chopina.txt' => 'Byłem u Ciebie w te dni przedostatnie',
     'boy-swietoszek.txt' => 'Wstęp',
     'wspomnienia-niebieskiego-mundurka.txt' => 'Ze starego kufra',
@@ -20,9 +21,20 @@ my %skip_until = (
     'ballada-z-tamtej-strony-imieniny.txt' => 'imieniny',
     'przedwiosnie.txt' => 'Panu Konradowi Czarnockiemu',
     'piesn-o-rolandzie.txt' => '^I$',
+    'spowiedz-dzieciecia-wieku.txt' => 'Część pierwsza',
+    'balzac-komedia-ludzka-jaszczur.txt' => 'Panu Savary Członkowi Akademii Nauk',
+    'balzac-komedia-ludzka-kobieta-trzydziestoletnia.txt' => 'I. Pierwsze błędy',
+    'bajki-i-przypowiesci-dwa-zolwie.txt' => 'Dwa żółwie',
+    'don-kichot-z-la-manchy.txt' => 'Księga pierwsza',
+    'ksiega-dzungli.txt' => 'Bracia małego Mauli',
+    'ojciec-goriot.txt' => 'Pani Vauquer',
 );
 my %head_replace = (
+    'bajki-i-przypowiesci-dwa-zolwie.txt' => "Ignacy Krasicki\nBajki i przypowieści\nCzęść pierwsza",
     'balzac-komedia-ludzka-bank-nucingena.txt' => "Bank Nucingena\nHonoré Balzac\ntłumaczenie Tadeusz Boy-Żeleński",
+    'balzac-komedia-ludzka-kobieta-porzucona.txt' => "Kobieta porzucona\nHonoré Balzac\ntłumaczenie Tadeusz Boy-Żeleński",
+    'balzac-komedia-ludzka-jaszczur.txt' => '',
+    'balzac-komedia-ludzka-kobieta-trzydziestoletnia.txt' => "Kobieta trzydziestoletnia\nHonorè de Balzac\ntłumaczenie Tadeusz Boy-Żeleński",
     'fortepian-chopina.txt' => "Cyprian Kamil Norwid\nFortepian Chopina",
     'boy-swietoszek.txt' => '',
     'wspomnienia-niebieskiego-mundurka.txt' => "Wiktor Gomulicki\nWspomnienia niebieskiego mundurka\nPamięci Bronisława Dembowskiego, towarzysza lat chłopięcych, urodzonego w Pułtusku, zmarłego w Zakopanem, te wspomnienia dni razem przeżytych poświęcam\nWiktor Gomulicki",
@@ -32,6 +44,10 @@ my %head_replace = (
     'ballada-z-tamtej-strony-imieniny.txt' => "Józef Czechowicz",
     'przedwiosnie.txt' => "Stefan Żeromski\nPrzedwiośnie\nDedykacja",
     'piesn-o-rolandzie.txt' => "Pieśń o Rolandzie\nAutor nieznany\ntłumaczenie Tadeusz Boy-Żeleński",
+    'spowiedz-dzieciecia-wieku.txt' => "Alfred de Musset\nSpowiedź dziecięcia wieku\ntłumaczenie Tadeusz Boy-Żeleński",
+    'don-kichot-z-la-manchy.txt' => "Miguel de Cervantes Saavedra\nDon Kichot z La Manchy\ntłumaczenie Walenty Zakrzewski",
+    'ksiega-dzungli.txt' => "Rudyard Kipling\nKsięga dżungli",
+    'ojciec-goriot.txt' => "Honoriusz Balzac\nOjciec Goriot",
 );
 
 if (!exists $skip_until{$ARGV[0]}) {
