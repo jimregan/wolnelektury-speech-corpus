@@ -436,6 +436,31 @@ sub is_valid {
     }
 }
 
+sub syllabify {
+    my $in = shift;
+    my @arr = split/\./, $in;
+    my @syllables = ();
+    my $cursyll = "";
+    my $last_vowel = 0;
+    for(my $i = 0; $i <= $#arr; $i++) {
+        if(is_valid($arr[$i]) {
+            if(is_vowel($arr[$i])) {
+                if($last_vowel) {
+                    push @syllables, $cursyll;
+                    $cursyll = $arr[$i];
+                    $last_vowel = 1;
+                    next;
+                } else {
+                    $last_vowel = 1;
+                }
+            } else {
+                if($last_vowel) {
+                }
+            }
+        }
+    }
+}
+
 sub wiktionary_compat {
     if($enwikt) {
         # These are not always velarised, so en.wiktionary uses a safe default
@@ -492,6 +517,7 @@ while(<>) {
     s/\r//;
     if($simple_mode) {
         print "$_\t" . simple_g2p($_) . "\n";
+        syllabify(simple_g2p($_), ".");
     } elsif($pronounce_as || $pronounce_both) {
         my @words = split/\t/;
         my $baseword = $words[0];
