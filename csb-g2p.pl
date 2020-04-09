@@ -18,7 +18,6 @@ my $pronounce_both = 0;
 my $DEBUG = 0;
 
 GetOptions(
-    'enwiktionary|enwikt|w' => \$enwikt,
     'debug' => \$DEBUG,
     'pronounce-both' => sub { $pronounce_both = 1; $simple_mode = 0;},
     'pronounce-as' => sub { $pronounce_as = 1; $simple_mode = 0;},
@@ -251,21 +250,6 @@ my %variants = (
     'drz' => [ ['d͡ʐ'], ['d', 'ʐ']],
 );
 
-my %reranie = (
-    # https://pl.wikipedia.org/wiki/Reranie
-    # skipping 'd', though, primarily because I've never heard it
-    'r' => [ ['r'],  ['l'],  ['w'],  ['v'],  ['j'] ],
-    'ri' => [ ['rʲ', 'i'],  ['lʲ', 'i'],  ['wʲ', 'i'],  ['vʲ', 'i'],  ['j', 'i'] ],
-    'ria' => [ ['rʲ', 'j', 'a'],  ['lʲ', 'j', 'a'],  ['wʲ', 'j', 'a'],  ['vʲ', 'j', 'a'], ['j', 'a'] ],
-    'rią' => [ ['rʲ', 'j', 'ɔ̃'],  ['lʲ', 'j', 'ɔ̃'],  ['wʲ', 'j', 'ɔ̃'],  ['vʲ', 'j', 'ɔ̃'], ['j', 'ɔ̃'] ],
-    'rie' => [ ['rʲ', 'j', 'ɛ'],  ['lʲ', 'j', 'ɛ'],  ['wʲ', 'j', 'ɛ'],  ['vʲ', 'j', 'ɛ'], ['j', 'ɛ'] ],
-    'rię' => [ ['rʲ', 'j', 'ɛ̃'],  ['lʲ', 'j', 'ɛ̃'],  ['wʲ', 'j', 'ɛ̃'],  ['vʲ', 'j', 'ɛ̃'], ['j', 'ɛ̃'] ],
-    'rii' => [ ['rʲ', 'j', 'i'],  ['lʲ', 'j', 'i'],  ['wʲ', 'j', 'i'],  ['vʲ', 'j', 'i'], ['j', 'i'] ],
-    'rio' => [ ['rʲ', 'j', 'ɔ'],  ['lʲ', 'j', 'ɔ'],  ['wʲ', 'j', 'ɔ'],  ['vʲ', 'j', 'ɔ'], ['j', 'ɔ'] ],
-    'rió' => [ ['rʲ', 'j', 'u'],  ['lʲ', 'j', 'u'],  ['wʲ', 'j', 'u'],  ['vʲ', 'j', 'u'], ['j', 'u'] ],
-    'riu' => [ ['rʲ', 'j', 'u'],  ['lʲ', 'j', 'u'],  ['wʲ', 'j', 'u'],  ['vʲ', 'j', 'u'], ['j', 'u'] ],
-);
-
 my %reall2p = (
     'ɔ̃' => ['ɔ', 'w̃'],
 );
@@ -378,9 +362,6 @@ sub is_vowel {
 sub is_fvoiced {
     my $in = shift;
     my %fvoiced = map { $_ => 1 } qw/v vʲ ʐ/;
-    if(!$enwikt) {
-        delete $fvoiced{'ʐ'};
-    }
     if(exists $fvoiced{$in} && $fvoiced{$in}) {
         return 1;
     }
