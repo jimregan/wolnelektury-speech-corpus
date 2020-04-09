@@ -11,7 +11,7 @@ binmode(STDOUT, ":utf8");
 binmode(STDERR, ":utf8");
 binmode(STDIN, ":utf8");
 
-open(NORMS, '<', "$RealBin/normalisations.tsv");
+open(NORMS, '<', "$RealBin/broad-normalisations.tsv");
 binmode(NORMS, ":utf8");
 
 my %norms = ();
