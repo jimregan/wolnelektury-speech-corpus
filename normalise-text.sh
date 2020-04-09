@@ -112,6 +112,7 @@ split_chapters() {
         pan-tadeusz.txt \
         pierscien-i-roza.txt \
         piesn-o-rolandzie.txt \
+        powiesci-fantastyczne-don-juan.txt \
         powiesci-fantastyczne-wybor-narzeczonej.txt \
         przedwiosnie.txt \
         przygody-tomka-sawyera.txt \
