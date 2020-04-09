@@ -290,8 +290,8 @@ my %split_by_starts = (
         'Bracia małego Mauli',
         'Biała foka',
         'Riki-Tiki-Tavi',
-        'Sziwa i konik polny',
-        'Tumai, przyjaciel słoni'
+        'Tumai, przyjaciel słoni',
+        'Sziwa i konik polny'
     ],
     'ojciec-goriot.txt' => [
         'Pani Vauquer, z domu',
