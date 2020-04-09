@@ -71,10 +71,13 @@ while(<STDIN>) {
     s/^tłum\./tłumaczenie/;
     s/^E\. T\. A\. Hoffmann$/Ernst Teodor Amadeusz Hoffmann/;
     next if(/^ISBN/);
-    if(/^(Rozdział|ROZDZIAŁ) ($tens)($units) *$/) {
+    if(/^(Rozdzia[lł]|ROZDZIAŁ) ($tens)($units) *$/) {
         my $what = $1;
         my $tn = $2;
         my $un = $3;
+	if($what eq 'Rozdzial') {
+            $what = 'Rozdział';
+        }
         if($tn eq 'X') {
             print "$what " . $chapter_ord_masc{$tn . $un} . "\n";
             next;
