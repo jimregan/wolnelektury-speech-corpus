@@ -38,6 +38,7 @@ header_replace() {
         powiesci-fantastyczne-wybor-narzeczonej.txt \
         gloria-victis-gloria-victis.txt przygody-tomka-sawyera.txt \
         ballada-z-tamtej-strony-imieniny.txt przedwiosnie.txt \
+        ojciec-goriot.txt \
         piesn-o-rolandzie.txt spowiedz-dzieciecia-wieku.txt \
         bajki-i-przypowiesci-dwa-zolwie.txt \
         don-kichot-z-la-manchy.txt \
