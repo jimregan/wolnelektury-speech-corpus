@@ -260,6 +260,15 @@ my %split_by_starts = (
         'Eliza Orzeszkowa',
         '…Nie miałam litości i krzyknęłam:'
     ],
+    'grabinski-namietnosc.txt' => [
+        'Stefan Grabiński',
+        'Zatrzymałem się przy jednym z grobowców,',
+        'Wyjęła z torebki klucz'
+    ],
+    'historia-zoltej-cizemki.txt' => [
+        'Antonina Domańska',
+        'Dziwny pielgrzym',
+    ],
 );
 my %split_by_whole = (
     'piesn-o-rolandzie.txt' => [

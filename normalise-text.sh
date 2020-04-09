@@ -82,6 +82,8 @@ split_chapters() {
         don-kichot-z-la-manchy.txt \
         gloria-victis-dziwna-historia.txt \
         golem.txt \
+        grabinski-namietnosc.txt \
+        historia-zoltej-cizemki.txt \
         kim.txt \
         piesn-o-rolandzie.txt \
         powiesci-fantastyczne-wybor-narzeczonej.txt \
