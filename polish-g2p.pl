@@ -429,7 +429,7 @@ sub is_valid {
         m mʲ n ŋ ɲ ɔ ɔ̃ p pʲ r rʲ s ɕ ʂ t t͡s t͡ɕ t͡ʂ u v vʲ
         w x xʲ z ʑ ʐ ʔ
     );
-    if (exists $valid{$in}) {
+    if (exists $valid{$phone}) {
         return 1;
     } else {
         return 0;
