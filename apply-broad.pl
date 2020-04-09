@@ -37,11 +37,11 @@ sub do_word {
     my $pre = '';
     my $post = '';
     my $out = '';
-    if($word =~ /^(\PL*)(.*)/) {
+    if($word =~ /^(\PL+)(.*)/) {
         $pre = $1;
         $word = $2;
     }
-    if($word =~ /(.*)(\PL*)$/) {
+    if($word =~ /(.*)(\PL+)$/) {
         $word = $1;
         $post = $2;
     }
@@ -73,6 +73,9 @@ sub check_do_word {
     die "1" unless (do_word($l) eq $lexp);
     die "2" unless (do_word(".$l") eq ".$lexp");
     die "3" unless (do_word(".$l\"") eq ".$lexp\"");
+    die "4" unless (do_word("$l\"") eq "$lexp\"");
+    die "5" unless (do_word(uc("$l\"")) eq uc("$lexp\""));
+    die "6" unless (do_word(ucfirst($l). "\"") eq ucfirst("$lexp\""));
 }
 
 check_do_word
