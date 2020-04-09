@@ -51,6 +51,7 @@ additions() {
     echo 'Czytała Joanna Domańska' >> balzac-komedia-ludzka-kobieta-porzucona.txt
     echo 'Czytała Joanna Domańska' >> balzac-komedia-ludzka-kobieta-trzydziestoletnia.txt
     echo 'Czytała Joanna Domańska' >> chlopi-czesc-pierwsza-jesien.txt
+    echo 'Czytała Joanna Domańska' >> balzac-komedia-ludzka-muza-z-zascianka.txt
     echo 'Czytał Jan Peszek' >> cierpienia-mlodego-wertera.txt
     echo 'Czytała Danuta Stenka' >> gloria-victis-dziwna-historia.txt
 }
