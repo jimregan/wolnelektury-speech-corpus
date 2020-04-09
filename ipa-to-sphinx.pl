@@ -44,6 +44,7 @@ my %ipa_to_cmu = (
     'ʑ' => 'ZI',
     "ˈ" => '',
     '.' => '',
+    'ʔ' => '',
 );
 
 my $re = '(' . join("|", sort { length($b) <=> length($a) } keys %ipa_to_cmu) . ')';
