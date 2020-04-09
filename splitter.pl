@@ -17,12 +17,14 @@ my %patterns = (
     'kim.txt' => 'Rozdział ',
     'przygody-tomka-sawyera.txt' => 'Rozdział ',
     'chlopi-czesc-pierwsza-jesien.txt' => 'Rozdział ',
-    'spowiedz-dzieciecia-wieku.txt' => '^(Część|Rozdział (pią|[dtcs]))',
+    'spowiedz-dzieciecia-wieku.txt' => '^(Część|Rozdzia[łl] (pi[ąę]|[dtcsjóoV]))',
     'cierpienia-mlodego-wertera.txt' => '^Część ',
     'don-kichot-z-la-manchy.txt' => '^(Księga|Rozdział (pi[ąę]|[dtcsjóo]))',
     'w-pustyni-i-w-puszczy.txt' => '^(ROZDZIAŁ|ZAKOŃCZENIE)',
     'hoffmann-dziadek-do-orzechow.txt' => '^(Rozdział|Zakończenie)',
     'lange-miranda.txt' => '^Rozdział ',
+    'pan-tadeusz.txt' => '^Księga ',
+    'pierscien-i-roza.txt' => '^Rozdział ',
 );
 
 my %firstpatterns = (
@@ -42,6 +44,8 @@ my %firstpatterns = (
     'w-pustyni-i-w-puszczy.txt' => '^ROZDZIAŁ pierwszy',
     'hoffmann-dziadek-do-orzechow.txt' => '^Rozdział I:',
     'lange-miranda.txt' => '^Rozdział pierwszy',
+    'pan-tadeusz.txt' => '^Księga pierwsza',
+    'pierscien-i-roza.txt' => '^Rozdział pierwszy',
 );
 
 my %skipfirst = (
@@ -288,6 +292,35 @@ my %split_by_starts = (
         'Riki-Tiki-Tavi',
         'Sziwa i konik polny',
         'Tumai, przyjaciel słoni'
+    ],
+    'ojciec-goriot.txt' => [
+        'Pani Vauquer, z domu',
+        'Goriot zeszedł wreszcie na dziewięćset franków;',
+        'Dosyć było tej jednej okoliczności',
+        'Była piąta po południu;',
+        '— Patrz pan! Ten młokos',
+        'Po takim wstępie, Eugeniusz plótł',
+        'Minęło znów dni kilka,',
+        'W jednej chwili obniesiono',
+        'Pani Vauquer nie miała odwagi',
+        '— Ja nie mam pieniędzy, Naściu.',
+        'Rastignac pozostał sam przy'
+    ],
+    'powiesci-fantastyczne-don-juan.txt' => [
+        'Ernst Teodor Amadeusz Hoffmann',
+        'W loży cudzoziemców Nr. 23',
+        'Nazajutrz rozmowa przy stole'
+    ],
+    'powiesci-fantastyczne-piaskun.txt' => [
+        'I\.',
+        'II\.',
+        'III\.',
+        'IV\.',
+        'V\.',
+        'VI\.',
+        'VII\.',
+        'VIII\.',
+        'IX\.'
     ],
 );
 my %split_by_whole = (
@@ -601,6 +634,13 @@ my %split_by_whole = (
         "XV",
         "XVI",
         "XVII"
+    ],
+    'powiesci-fantastyczne-skrzypce-z-cremony.txt' => [
+        "I",
+        "II",
+        "III",
+        "IV",
+        "V",
     ]
 );
 
@@ -627,6 +667,12 @@ my %split_inner = (
         'Pochwała ta upoiła panią',
         'kobiety, które chcą kochać,',
         'Nawiązała przez matkę rokowania',
+    ],
+    'ojciec-goriot.txt' => [
+        'Goriot zeszedł wreszcie na dziewięćset franków;',
+        'Dosyć było tej jednej okoliczności',
+        '— Patrz pan! Ten młokos',
+        'Po takim wstępie, Eugeniusz plótł',
     ],
 );
 

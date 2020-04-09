@@ -71,10 +71,13 @@ while(<STDIN>) {
     s/^tłum\./tłumaczenie/;
     s/^E\. T\. A\. Hoffmann$/Ernst Teodor Amadeusz Hoffmann/;
     next if(/^ISBN/);
-    if(/^(Rozdział|ROZDZIAŁ) ($tens)($units) *$/) {
+    if(/^(Rozdzia[lł]|ROZDZIAŁ) ($tens)($units) *$/) {
         my $what = $1;
         my $tn = $2;
         my $un = $3;
+	if($what eq 'Rozdzial') {
+            $what = 'Rozdział';
+        }
         if($tn eq 'X') {
             print "$what " . $chapter_ord_masc{$tn . $un} . "\n";
             next;
@@ -82,14 +85,20 @@ while(<STDIN>) {
             print "$what " . $chapter_ord_masc{$tn} . " " . $chapter_ord_masc{$un} . "\n";
             next;
         }
-    } elsif(/^(Rozdział|ROZDZIAŁ) ($tens) *$/) {
+    } elsif(/^(Rozdzia[łl]|ROZDZIAŁ) ($tens) *$/) {
         my $what = $1;
         my $tn = $2;
+	if($what eq 'Rozdzial') {
+            $what = 'Rozdział';
+        }
         print "$what " . $chapter_ord_masc{$tn} . "\n";
         next;
-    } elsif(/^(Rozdział|ROZDZIAŁ) ($units) *$/) {
+    } elsif(/^(Rozdzia[lł]|ROZDZIAŁ) ($units) *$/) {
         my $what = $1;
         my $un = $2;
+	if($what eq 'Rozdzial') {
+            $what = 'Rozdział';
+        }
         print "$what " . $chapter_ord_masc{$un} . "\n";
         next;
     }

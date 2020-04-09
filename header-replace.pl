@@ -47,7 +47,7 @@ my %head_replace = (
     'spowiedz-dzieciecia-wieku.txt' => "Alfred de Musset\nSpowiedź dziecięcia wieku\ntłumaczenie Tadeusz Boy-Żeleński",
     'don-kichot-z-la-manchy.txt' => "Miguel de Cervantes Saavedra\nDon Kichot z La Manchy\ntłumaczenie Walenty Zakrzewski",
     'ksiega-dzungli.txt' => "Rudyard Kipling\nKsięga dżungli",
-    'ojciec-goriot.txt' => "Honoriusz Balzac\nOjciec Goriot",
+    'ojciec-goriot.txt' => "Honoriusz Balzac\nOjciec Goriot\nTom trzeci Komedii ludzkiej",
 );
 
 if (!exists $skip_until{$ARGV[0]}) {
