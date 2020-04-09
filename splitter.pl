@@ -45,7 +45,7 @@ my %firstpatterns = (
     'hoffmann-dziadek-do-orzechow.txt' => '^Rozdział I:',
     'lange-miranda.txt' => '^Rozdział pierwszy',
     'pan-tadeusz.txt' => '^Księga pierwsza',
-    'pierscien-i-roza.txt' => '^Rozdział pierwszy33',
+    'pierscien-i-roza.txt' => '^Rozdział pierwszy',
 );
 
 my %skipfirst = (
@@ -307,8 +307,9 @@ my %split_by_starts = (
         'Rastignac pozostał sam przy'
     ],
     'powiesci-fantastyczne-don-juan.txt' => [
-        '',
+        'Ernst Teodor Amadeusz Hoffmann',
         'W loży cudzoziemców Nr. 23',
+        'Nazajutrz rozmowa przy stole'
     ],
 );
 my %split_by_whole = (
