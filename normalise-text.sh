@@ -25,7 +25,7 @@ prepend_text() {
     fname="$1"
     text="$2"
     mv "$fname" "$fname.bak"
-    printf "%s\n" "$text" > "$fname"
+    printf "%b\n" "$text" > "$fname"
     cat "$fname.bak" >> "$fname"
     rm "$fname.bak"
 }
@@ -123,6 +123,9 @@ remove_unread_lines() {
     mv ltmp cierpienia-mlodego-wertera.txt-01.txt
     prepend_text cierpienia-mlodego-wertera.txt-02.txt 'Johann Wolfgang von Goethe\nCierpienia młodego Wertera'
     prepend_text ksiega-dzungli.txt-02.txt 'Rudyard Kipling\nKsięga dżungli'
+    prepend_text ksiega-dzungli.txt-03.txt 'Rudyard Kipling\nKsięga dżungli'
+    prepend_text ksiega-dzungli.txt-04.txt 'Rudyard Kipling\nKsięga dżungli'
+    prepend_text ksiega-dzungli.txt-05.txt 'Rudyard Kipling\nKsięga dżungli'
 }
 
 run_all() {

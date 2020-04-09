@@ -280,6 +280,13 @@ my %split_by_starts = (
         'Poręba',
         'Zakończenie'
     ],
+    'ksiega-dzungli.txt' => [
+        'Bracia małego Mauli',
+        'Biała foka',
+        'Riki-Tiki-Tavi',
+        'Sziwa i konik polny',
+        'Tumai, przyjaciel słoni'
+    ],
 );
 my %split_by_whole = (
     'piesn-o-rolandzie.txt' => [
