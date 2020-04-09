@@ -84,6 +84,7 @@ split_chapters() {
         golem.txt \
         grabinski-namietnosc.txt \
         historia-zoltej-cizemki.txt \
+        hoffmann-dziadek-do-orzechow.txt \
         kim.txt \
         piesn-o-rolandzie.txt \
         powiesci-fantastyczne-wybor-narzeczonej.txt \
