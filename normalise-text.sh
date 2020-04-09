@@ -114,6 +114,7 @@ split_chapters() {
         piesn-o-rolandzie.txt \
         powiesci-fantastyczne-don-juan.txt \
         powiesci-fantastyczne-piaskun.txt \
+        powiesci-fantastyczne-skrzypce-z-cremony.txt \
         powiesci-fantastyczne-wybor-narzeczonej.txt \
         przedwiosnie.txt \
         przygody-tomka-sawyera.txt \
