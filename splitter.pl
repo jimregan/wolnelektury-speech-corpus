@@ -24,6 +24,7 @@ my %patterns = (
     'hoffmann-dziadek-do-orzechow.txt' => '^(Rozdział|Zakończenie)',
     'lange-miranda.txt' => '^Rozdział ',
     'pan-tadeusz.txt' => '^Księga ',
+    'pierscien-i-roza.txt' => '^Rozdział ',
 );
 
 my %firstpatterns = (
@@ -44,6 +45,7 @@ my %firstpatterns = (
     'hoffmann-dziadek-do-orzechow.txt' => '^Rozdział I:',
     'lange-miranda.txt' => '^Rozdział pierwszy',
     'pan-tadeusz.txt' => '^Księga pierwsza',
+    'pierscien-i-roza.txt' => '^Rozdział pierwszy',
 );
 
 my %skipfirst = (
