@@ -146,6 +146,33 @@ remove_unread_lines() {
     remove_line wierna-rzeka.txt-03.txt '^IV$'
 }
 
+text_norm() {
+    echo "Stage 7: broad & narrow normalisations"
+    for i in *.txt
+    do
+        cat $i | perl ../apply-broad.pl > $i.bak
+        mv $i.bak $i
+    done
+    ../apply-specific.pl
+}
+
+split_sentences() {
+    echo "Stage 8: split sentences"
+    for i in *.txt
+    do
+        cat $i | perl ../split-sentence.pl > $i.sent
+    done
+}
+
+clean_punct() {
+    echo "Stage 9: stripping punctuation"
+    for i in *.sent
+    do
+        cat $i | perl ../clean-punctuation.pl > $i.bak
+        mv $i.bak $i
+    done
+}
+
 run_all() {
     if [ x$1 != x"" ]
     then
@@ -159,6 +186,9 @@ run_all() {
     norm_chapters
     split_chapters
     remove_unread_lines
+    text_norm
+    split_sentences
+    clean_punct
 
     if [ x$1 != x"" ]
     then
