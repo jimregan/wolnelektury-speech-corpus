@@ -311,6 +311,17 @@ my %split_by_starts = (
         'W loży cudzoziemców Nr. 23',
         'Nazajutrz rozmowa przy stole'
     ],
+    'powiesci-fantastyczne-piaskun.txt' => [
+        'I\.',
+        'II\.',
+        'III\.',
+        'IV\.',
+        'V\.',
+        'VI\.',
+        'VII\.',
+        'VIII\.',
+        'IX\.'
+    ],
 );
 my %split_by_whole = (
     'piesn-o-rolandzie.txt' => [
