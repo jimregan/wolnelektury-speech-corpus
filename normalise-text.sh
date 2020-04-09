@@ -72,6 +72,7 @@ split_chapters() {
     for i in balzac-komedia-ludzka-corka-ewy.txt \
         balzac-komedia-ludzka-eugenia-grandet.txt \
         balzac-komedia-ludzka-jaszczur.txt \
+        balzac-komedia-ludzka-kobieta-trzydziestoletnia.txt \
         balzac-komedia-ludzka-male-niedole-pozycia-malzenskiego.txt \
         balzac-komedia-ludzka-muza-z-zascianka.txt \
         bartek-zwyciezca.txt \
@@ -79,8 +80,8 @@ split_chapters() {
         chlopi-czesc-pierwsza-jesien.txt \
         cierpienia-mlodego-wertera.txt \
         don-kichot-z-la-manchy.txt \
-        golem.txt \
         gloria-victis-dziwna-historia.txt \
+        golem.txt \
         kim.txt \
         piesn-o-rolandzie.txt \
         powiesci-fantastyczne-wybor-narzeczonej.txt \
