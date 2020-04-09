@@ -107,6 +107,7 @@ split_chapters() {
         historia-zoltej-cizemki.txt \
         hoffmann-dziadek-do-orzechow.txt \
         kim.txt \
+        ksiega-dzungli.txt \
         lange-miranda.txt \
         ojciec-goriot.txt \
         pan-tadeusz.txt \
