@@ -71,7 +71,8 @@ norm_chapters() {
     for i in wyspa-skarbow.txt wspomnienia-niebieskiego-mundurka.txt \
         z-wichrow-i-hal-z-tatr-krzak-dzikiej-rozy-w-ciemnych-smreczy.txt \
         fortepian-chopina.txt bartek-zwyciezca.txt \
-        chlopi-czesc-pierwsza-jesien.txt
+        chlopi-czesc-pierwsza-jesien.txt \
+        lange-miranda.txt
     do
         perl ../norm-roman-by-text.pl $i > $i.tmp
         mv $i.tmp $i
@@ -97,6 +98,7 @@ split_chapters() {
         historia-zoltej-cizemki.txt \
         hoffmann-dziadek-do-orzechow.txt \
         kim.txt \
+        lange-miranda.txt \
         piesn-o-rolandzie.txt \
         powiesci-fantastyczne-wybor-narzeczonej.txt \
         przedwiosnie.txt \

@@ -12,6 +12,7 @@ my %spec = (
     'wyspa-skarbow.txt' => 'Rozdział',
     'wspomnienia-niebieskiego-mundurka.txt' => 'Rozdział',
     'chlopi-czesc-pierwsza-jesien.txt' => 'Rozdział',
+    'lange-miranda.txt' => 'Rozdział',
 );
 
 my %del = (
@@ -22,6 +23,7 @@ my %del = (
 
 my %single = (
     'chlopi-czesc-pierwsza-jesien.txt' => 1,
+    'lange-miranda.txt' => 1,
 );
 
 my %chapter_ord_masc = (
