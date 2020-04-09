@@ -443,7 +443,7 @@ sub syllabify {
     my $cursyll = "";
     my $last_vowel = 0;
     for(my $i = 0; $i <= $#arr; $i++) {
-        if(is_valid($arr[$i]) {
+        if(is_valid($arr[$i])) {
             if(is_vowel($arr[$i])) {
                 if($last_vowel) {
                     push @syllables, $cursyll;
