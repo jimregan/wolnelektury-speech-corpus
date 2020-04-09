@@ -268,6 +268,15 @@ my %split_by_starts = (
     'historia-zoltej-cizemki.txt' => [
         'Antonina Domańska',
         'Dziwny pielgrzym',
+        'U wiłów',
+        'Konik zwirzyniecki',
+        'U Jana Długosza',
+        'Uczeń mistrza Wita',
+        'Jasiek',
+        'Święty Kazimierz',
+        'Tajemnica dworku pod cmentarzem',
+        'Poręba',
+        'Zakończenie'
     ],
 );
 my %split_by_whole = (
