@@ -27,6 +27,7 @@ my %skip_until = (
     'bajki-i-przypowiesci-dwa-zolwie.txt' => 'Dwa żółwie',
     'don-kichot-z-la-manchy.txt' => 'Księga pierwsza',
     'ksiega-dzungli.txt' => 'Bracia małego Mauli',
+    'ojciec-goriot.txt' => 'Pani Vauquer',
 );
 my %head_replace = (
     'bajki-i-przypowiesci-dwa-zolwie.txt' => "Ignacy Krasicki\nBajki i przypowieści\nCzęść pierwsza",
@@ -46,6 +47,7 @@ my %head_replace = (
     'spowiedz-dzieciecia-wieku.txt' => "Alfred de Musset\nSpowiedź dziecięcia wieku\ntłumaczenie Tadeusz Boy-Żeleński",
     'don-kichot-z-la-manchy.txt' => "Miguel de Cervantes Saavedra\nDon Kichot z La Manchy\ntłumaczenie Walenty Zakrzewski",
     'ksiega-dzungli.txt' => "Rudyard Kipling\nKsięga dżungli",
+    'ojciec-goriot.txt' => "Honoriusz Balzac\nOjciec Goriot",
 );
 
 if (!exists $skip_until{$ARGV[0]}) {
