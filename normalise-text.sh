@@ -109,6 +109,7 @@ split_chapters() {
         kim.txt \
         lange-miranda.txt \
         ojciec-goriot.txt \
+        pan-tadeusz.txt \
         piesn-o-rolandzie.txt \
         powiesci-fantastyczne-wybor-narzeczonej.txt \
         przedwiosnie.txt \
