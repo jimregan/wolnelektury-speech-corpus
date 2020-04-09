@@ -21,6 +21,15 @@ slowka_headers() {
     done
 }
 
+prepend_text() {
+    fname="$1"
+    text="$2"
+    mv "$fname" "$fname.bak"
+    printf "%s\n" "$text" > "$fname"
+    cat "$fname.bak" >> "$fname"
+    rm "$fname.bak"
+}
+
 header_replace() {
     echo "Stage 2: Replace headers"
     slowka_headers
@@ -31,7 +40,8 @@ header_replace() {
         ballada-z-tamtej-strony-imieniny.txt przedwiosnie.txt \
         piesn-o-rolandzie.txt spowiedz-dzieciecia-wieku.txt \
         bajki-i-przypowiesci-dwa-zolwie.txt \
-        don-kichot-z-la-manchy.txt
+        don-kichot-z-la-manchy.txt \
+        ksiega-dzungli.txt
     do
         echo "Replacing header in $i"
         perl ../header-replace.pl $i > $i.tmp
@@ -111,10 +121,8 @@ remove_unread_lines() {
     mv ltmp balzac-komedia-ludzka-male-niedole-pozycia-malzenskiego.txt-40.txt
     cat cierpienia-mlodego-wertera.txt-01.txt | grep -v '^tłumaczenie Franciszek Mirandola$' > ltmp
     mv ltmp cierpienia-mlodego-wertera.txt-01.txt
-    echo 'Johann Wolfgang von Goethe' > ltmp
-    echo 'Cierpienia młodego Wertera' >> ltmp
-    cat cierpienia-mlodego-wertera.txt-02.txt >> ltmp
-    mv ltmp cierpienia-mlodego-wertera.txt-02.txt
+    prepend_text cierpienia-mlodego-wertera.txt-02.txt 'Johann Wolfgang von Goethe\nCierpienia młodego Wertera'
+    prepend_text ksiega-dzungli.txt-02.txt 'Rudyard Kipling\nKsięga dżungli'
 }
 
 run_all() {
