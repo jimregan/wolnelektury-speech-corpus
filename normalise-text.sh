@@ -88,6 +88,7 @@ split_chapters() {
         robinson-crusoe.txt \
         spowiedz-dzieciecia-wieku.txt \
         sztuka-kochania.txt \
+        w-pustyni-i-w-puszczy.txt \
         wspomnienia-niebieskiego-mundurka.txt \
         wyspa-skarbow.txt
     do
