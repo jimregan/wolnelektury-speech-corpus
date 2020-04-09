@@ -109,6 +109,7 @@ split_chapters() {
         spowiedz-dzieciecia-wieku.txt \
         sztuka-kochania.txt \
         w-pustyni-i-w-puszczy.txt \
+        wierna-rzeka.txt \
         wspomnienia-niebieskiego-mundurka.txt \
         wyspa-skarbow.txt
     do
@@ -117,19 +118,26 @@ split_chapters() {
     done
 }
 
+remove_line() {
+    file="$1"
+    line="$2"
+    mv "$file" "$file.bak"
+    cat "$file.bak" | grep -v "$line" > "$file"
+    rm "$file.bak"
+}
+
 remove_unread_lines() {
     echo "Stage 6: add/remove lines to/from split texts"
     # Introductory sentences have no final punctuation, so sentence splitting is per line
     # This doesn't work with this header, so handle here and re-add in the specific norms
-    cat balzac-komedia-ludzka-male-niedole-pozycia-malzenskiego.txt-40.txt | grep -v '^operowych$' > ltmp
-    mv ltmp balzac-komedia-ludzka-male-niedole-pozycia-malzenskiego.txt-40.txt
-    cat cierpienia-mlodego-wertera.txt-01.txt | grep -v '^tłumaczenie Franciszek Mirandola$' > ltmp
-    mv ltmp cierpienia-mlodego-wertera.txt-01.txt
+    remove_line balzac-komedia-ludzka-male-niedole-pozycia-malzenskiego.txt-40.txt '^operowych$'
+    remove_line cierpienia-mlodego-wertera.txt-01.txt '^tłumaczenie Franciszek Mirandola$'
     prepend_text cierpienia-mlodego-wertera.txt-02.txt 'Johann Wolfgang von Goethe\nCierpienia młodego Wertera'
     prepend_text ksiega-dzungli.txt-02.txt 'Rudyard Kipling\nKsięga dżungli'
     prepend_text ksiega-dzungli.txt-03.txt 'Rudyard Kipling\nKsięga dżungli'
     prepend_text ksiega-dzungli.txt-04.txt 'Rudyard Kipling\nKsięga dżungli'
     prepend_text ksiega-dzungli.txt-05.txt 'Rudyard Kipling\nKsięga dżungli'
+    remove_line wierna-rzeka.txt-03.txt '^IV$'
 }
 
 run_all() {
