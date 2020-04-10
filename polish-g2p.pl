@@ -398,7 +398,8 @@ sub devoice_forward {
         print STDERR "devoice_forward: pre: " . join(" ", @in) . "\n";
     }
     for(my $i = 1; $i <= $#in; $i++) {
-        if(is_fvoiced($in[$i]) && !is_vln($in[$i-1]) && !is_voiced($in[$i-1])) {
+        if((is_voiced($in[$i]) && ($i < $#in && !is_voiced($in[$i+1]) && !is_vln($in[$i+1])))
+        || (is_fvoiced($in[$i]) && !is_vln($in[$i-1]) && !is_voiced($in[$i-1]))) {
             $in[$i] = $devoice{$in[$i]};
         }
     }
