@@ -148,12 +148,12 @@ remove_unread_lines() {
 
 text_norm() {
     echo "Stage 7: broad & narrow normalisations"
+    ../apply-specific.pl
     for i in *.txt
     do
         cat $i | perl ../apply-broad.pl > $i.bak
         mv $i.bak $i
     done
-    ../apply-specific.pl
 }
 
 split_sentences() {
@@ -180,12 +180,12 @@ run_all() {
         pushd $1
     fi
 
-    broad_norm
-    header_replace
-    additions
-    norm_chapters
-    split_chapters
-    remove_unread_lines
+    #broad_norm
+    #header_replace
+    #additions
+    #norm_chapters
+    #split_chapters
+    #remove_unread_lines
     text_norm
     split_sentences
     clean_punct
