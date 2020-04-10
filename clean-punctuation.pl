@@ -20,6 +20,6 @@ while(<>) {
     s/ *$//;
     s/  +/ /g;
     next if(/^$/);
-    # print lc($_) . "\n";
-    print $_ . "\n";
+    print lc($_) . "\n";
+    # print $_ . "\n";
 }
