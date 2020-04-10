@@ -3,6 +3,10 @@
 use warnings;
 use strict;
 use utf8;
+use Getopt::Std;
+
+our($opt_c);
+getopts('c');
 
 binmode(STDIN, ":utf8");
 binmode(STDOUT, ":utf8");
@@ -20,6 +24,9 @@ while(<>) {
     s/ *$//;
     s/  +/ /g;
     next if(/^$/);
-    print lc($_) . "\n";
-    # print $_ . "\n";
+    if($opt_c) {
+        print $_ . "\n";
+    } else {
+        print lc($_) . "\n";
+    }
 }
