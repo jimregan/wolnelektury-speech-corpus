@@ -486,8 +486,6 @@ sub wiktionary_compat {
 
 sub simple_g2p {
     my $in = shift;
-    my $sep = shift;
-    $sep = ($sep) ? $sep : "";
     $in = lc($in);
     wiktionary_compat;
     my @sortkeys = sort { length $b <=> length $a } keys %g2p;
@@ -505,6 +503,14 @@ sub simple_g2p {
     @rawphones = renasalise(@rawphones);
     @rawphones = devoice_final(@rawphones);
     @rawphones = devoice_forward(@rawphones);
+    return @rawphones;
+}
+
+sub simple_g2p_text {
+    my $in = shift;
+    my $sep = shift;
+    $sep = ($sep) ? $sep : "";
+    my @rawphones = simple_g2p($in);
     my $out = join($sep, @rawphones);
     $out =~ s/  +/ /g;
     $out;
@@ -518,7 +524,7 @@ while(<>) {
     chomp;
     s/\r//;
     if($simple_mode) {
-        print "$_\t" . simple_g2p($_) . "\n";
+        print "$_\t" . simple_g2p_text($_) . "\n";
         syllabify(simple_g2p($_), ".");
     } elsif($pronounce_as || $pronounce_both) {
         my @words = split/\t/;
