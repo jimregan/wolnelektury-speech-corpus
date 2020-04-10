@@ -439,8 +439,7 @@ sub is_valid {
 }
 
 sub syllabify {
-    my $in = shift;
-    my @arr = split/\./, $in;
+    my @arr = @_;
     my @syllables = ();
     my $cursyll = "";
     my $last_vowel = 0;
@@ -450,17 +449,26 @@ sub syllabify {
                 if($last_vowel) {
                     push @syllables, $cursyll;
                     $cursyll = $arr[$i];
-                    $last_vowel = 1;
-                    next;
                 } else {
-                    $last_vowel = 1;
+                    $cursyll .= $arr[$i];
                 }
+                $last_vowel = 1;
             } else {
                 if($last_vowel) {
+                    push @syllables, $cursyll;
+                    $cursyll = $arr[$i];
+                } else {
+                    $cursyll .= $arr[$i];
                 }
+                $last_vowel = 0;
             }
+        } else {
+            print STDERR "Invalid: $arr[$i]\n";
         }
     }
+    push @syllables, $cursyll;
+    print STDERR join(".", @syllables) . "\n";
+    return @syllables;
 }
 
 sub wiktionary_compat {
@@ -525,7 +533,7 @@ while(<>) {
     s/\r//;
     if($simple_mode) {
         print "$_\t" . simple_g2p_text($_) . "\n";
-        syllabify(simple_g2p($_), ".");
+        syllabify(simple_g2p($_));
     } elsif($pronounce_as || $pronounce_both) {
         my @words = split/\t/;
         my $baseword = $words[0];
