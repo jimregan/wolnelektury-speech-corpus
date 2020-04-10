@@ -66,11 +66,11 @@ sub do_file {
     while(<IN>) {
         chomp;
         my $last_match = '';
-        while(/($regex)/) {
+        while(/($regex)/g) {
             my $m = $1;
             if($m eq $last_match) {
                 print STDERR "Loop matching $file: $_\n";
-                next;
+            #    next;
             }
             my $in = quotemeta($m);
             my $out = $curnorms{$m};
