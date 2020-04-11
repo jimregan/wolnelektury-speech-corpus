@@ -48,6 +48,7 @@ sub do_file {
     my $file = shift;
     my $normorcorr = shift;
 
+    print STDERR "Current file: $file\n";
     rename($file, "$file.bak") or die "$file: $!";
     open(IN, '<', "$file.bak") or die "$!";
     open(OUT, '>', "$file") or die "$!";
@@ -61,26 +62,31 @@ sub do_file {
     }
     my @keys = keys(%curnorms);
     my $regex = join("|", map{quotemeta} @keys);
+    my $replaced = 0;
     while(<IN>) {
         chomp;
         my $last_match = '';
-        while(/($regex)/) {
+        while(/($regex)/g) {
             my $m = $1;
             if($m eq $last_match) {
                 print STDERR "Loop matching $file: $_\n";
-                next;
+            #    next;
             }
             my $in = quotemeta($m);
             my $out = $curnorms{$m};
             if($out eq ' ') {
                 s/$m//;
+                $replaced++;
             } else {
                 s/$m/$out/;
+                $replaced++;
             }
             $last_match = $m;
         }
         print OUT "$_\n";
     }
+    my $size = keys(%curnorms);
+    print STDERR "Performed replacements: $replaced; available: $size\n";
     close(IN);
     close(OUT);
 }
