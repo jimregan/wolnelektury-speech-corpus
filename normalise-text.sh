@@ -144,6 +144,7 @@ remove_unread_lines() {
     prepend_text ksiega-dzungli.txt-04.txt 'Rudyard Kipling\nKsięga dżungli'
     prepend_text ksiega-dzungli.txt-05.txt 'Rudyard Kipling\nKsięga dżungli'
     remove_line wierna-rzeka.txt-03.txt '^IV$'
+    prepend_text balzac-komedia-ludzka-muza-z-zascianka.txt-02.txt 'Honoré Balzac'
 }
 
 text_norm() {
