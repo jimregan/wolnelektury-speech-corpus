@@ -261,7 +261,8 @@ my %numparts = (
 );
 
 sub num2text {
-    my $num = ($#_ == 1 && $_[0] eq 'num2text') ? $_[1] : $_[0];
+    shift if($_[0] eq 'num2text');
+    my $num = $_[0];
     my @parts = ();
     
     my $num_work = $num;
