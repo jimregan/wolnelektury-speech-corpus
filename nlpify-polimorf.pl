@@ -36,6 +36,9 @@ while(<STDIN>) {
                 $epen = 'e';
             }
             for(my $i = 0; $i <= 2; $i++) {
+                if($epen ne '' && $enc[$i] eq '') {
+                    $epen = '';
+                }
                 print "$parts[0]" . $epen . $enc[$i] . "\t$parts[1]\t";
                 print $base . $persnum . $pers[$i] . $aspect . "\t";
                 print "$parts[2]\n";
