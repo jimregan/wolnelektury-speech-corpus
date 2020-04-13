@@ -50,6 +50,7 @@ header_replace() {
         piesn-o-rolandzie.txt spowiedz-dzieciecia-wieku.txt \
         bajki-i-przypowiesci-dwa-zolwie.txt \
         don-kichot-z-la-manchy.txt \
+        balzac-komedia-ludzka-kobieta-porzucona.txt \
         ksiega-dzungli.txt
     do
         echo "Replacing header in $i"
