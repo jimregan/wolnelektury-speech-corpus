@@ -10,8 +10,8 @@ while(<STDIN>) {
     if(/^([^:]+):(.*)/) {
         my $fn = $1;
         my $t = $2;
-        if($t =~ /św\. (\p{Lu}\p{L}+)/) {
-            print "$fn\tśw. $1\tświętego $1\n";
+        if($t =~ /Św\. (\p{Lu}\p{L}+)/) {
+            print "$fn\tŚw. $1\tŚwiętego $1\n";
         }
     }
 }
