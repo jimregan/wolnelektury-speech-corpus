@@ -28,6 +28,7 @@ my %skip_until = (
     'don-kichot-z-la-manchy.txt' => 'Księga pierwsza',
     'ksiega-dzungli.txt' => 'Bracia małego Mauli',
     'ojciec-goriot.txt' => 'Pani Vauquer',
+    'but-w-butonierce-marsz.txt' => 'Siostrom od św.',
 );
 my %head_replace = (
     'bajki-i-przypowiesci-dwa-zolwie.txt' => "Ignacy Krasicki\nBajki i przypowieści\nCzęść pierwsza",
@@ -48,6 +49,7 @@ my %head_replace = (
     'don-kichot-z-la-manchy.txt' => "Miguel de Cervantes Saavedra\nDon Kichot z La Manchy\ntłumaczenie Walenty Zakrzewski",
     'ksiega-dzungli.txt' => "Rudyard Kipling\nKsięga dżungli",
     'ojciec-goriot.txt' => "Honoriusz Balzac\nOjciec Goriot\nTom trzeci Komedii ludzkiej",
+    'but-w-butonierce-marsz.txt' => "Bruno Jasieński\nBut w butonierce\nMarsz\nDedykacja",
 );
 
 if (!exists $skip_until{$ARGV[0]}) {
