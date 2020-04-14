@@ -742,7 +742,7 @@ if($filename eq 'wspomnienia-niebieskiego-mundurka.txt' || $filename eq 'kim.txt
 my %skip_pattern = map { $_ => 1 } qw/wierna-rzeka.txt/;
 
 my $count_spec = '%02d';
-if($filename eq 'don-kichot-z-la-manchy.txt') {
+if($filename eq 'don-kichot-z-la-manchy.txt' || $filename eq 'piesn-o-rolandzie.txt') {
     $count_spec = '%03d';
 }
 
