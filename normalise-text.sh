@@ -151,8 +151,6 @@ remove_unread_lines() {
     remove_line wierna-rzeka.txt-03.txt '^IV$'
     prepend_text balzac-komedia-ludzka-muza-z-zascianka.txt-02.txt 'Honoré Balzac'
     #remove_line pasewicz-dolina-wilda-w-starym-stylu.txt 'Dolna Wilda'
-    #echo 'Koniec wstępu' >> brazownicy.txt-00.txt
-    #echo 'Czytał Piotr Nader' >> brazownicy.txt-00.txt
 }
 
 text_norm() {
