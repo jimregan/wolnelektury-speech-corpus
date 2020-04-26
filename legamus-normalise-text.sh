@@ -68,7 +68,11 @@ remove_unread_lines() {
     remove_line brazownicy.txt-02.txt "W odlewarni brązu" 
     remove_line brazownicy.txt-02.txt "(Dzieje jednego dokumentu)" 
     prepend_text brazownicy.txt-02.txt "Tadeusz Boy-Żeleński\nBrązownicy\nRozdział drugi\nW odlewarni brązu\nDzieje jednego dokumentu\nTo nagranie Legamus może być kopiowane i rozpowszechniane bez ograniczeń"
+    echo 'Koniec rozdziału drugiego' >> brazownicy.txt-02.txt
+    echo 'Czytał Piotr Nader' >> brazownicy.txt-02.txt
     prepend_text brazownicy.txt-03.txt "Tadeusz Boy-Żeleński\nBrązownicy\nRozdział trzeci"
+    echo 'Koniec rozdziału trzeciego' >> brazownicy.txt-03.txt
+    echo 'Czytał Piotr Nader' >> brazownicy.txt-03.txt
     remove_line brazownicy.txt-04.txt "Ksawera Deybel"
     prepend_text brazownicy.txt-04.txt "Tadeusz Boy-Żeleński\nBrązownicy\nRozdział czwarty\nKsawera Deybel\nTo nagranie Legamus może być kopiowane i rozpowszechniane bez ograniczeń"
     echo 'Koniec rozdziału czwartego' >> brazownicy.txt-04.txt
@@ -77,6 +81,37 @@ remove_unread_lines() {
     prepend_text brazownicy.txt-05.txt "Tadeusz Boy-Żeleński\nBrązownicy\nRozdział piąty\nLiteracki list gończy\nTo nagranie Legamus może być kopiowane i rozpowszechniane bez ograniczeń"
     echo 'Koniec rozdziału piątego' >> brazownicy.txt-05.txt
     echo 'Czytał Piotr Nader' >> brazownicy.txt-05.txt
+    remove_line brazownicy.txt-06.txt "Sfinks towianizmu"
+    prepend_text brazownicy.txt-06.txt "Tadeusz Boy-Żeleński\nBrązownicy\nRozdział szósty\nSfinks towianizmu\nTo nagranie Legamus może być kopiowane i rozpowszechniane bez ograniczeń"
+    echo 'Koniec rozdziału szóstego' >> brazownicy.txt-06.txt
+    echo 'Czytał Piotr Nader' >> brazownicy.txt-06.txt
+    remove_line brazownicy.txt-07.txt "Mrok się przeciera"
+    prepend_text brazownicy.txt-07.txt "Tadeusz Boy-Żeleński\nBrązownicy\nRozdział siódmy\nMrok się przeciera\nTo nagranie Legamus może być kopiowane i rozpowszechniane bez ograniczeń"
+    echo 'Koniec rozdziału siódmego' >> brazownicy.txt-07.txt
+    echo 'Czytał Piotr Nader' >> brazownicy.txt-07.txt
+    remove_line brazownicy.txt-08.txt "Sprawa Karoliny — Sprawa Boża"
+    prepend_text brazownicy.txt-08.txt "Tadeusz Boy-Żeleński\nBrązownicy\nRozdział ósmy\nSprawa Karoliny — Sprawa Boża\nTo nagranie Legamus może być kopiowane i rozpowszechniane bez ograniczeń"
+    echo 'Koniec rozdziału ósmego' >> brazownicy.txt-08.txt
+    echo 'Czytał Piotr Nader' >> brazownicy.txt-08.txt
+    remove_line brazownicy.txt-09.txt "Zaręczyny Adama Mickiewicza"
+    prepend_text brazownicy.txt-09.txt "Tadeusz Boy-Żeleński\nBrązownicy\nRozdział dziewiąty\nZaręczyny Adama Mickiewicza\nTo nagranie Legamus może być kopiowane i rozpowszechniane bez ograniczeń"
+    echo 'Koniec rozdziału dziewiątego' >> brazownicy.txt-09.txt
+    echo 'Czytał Piotr Nader' >> brazownicy.txt-09.txt
+    remove_line brazownicy.txt-10.txt "Drogi geniuszu"
+    prepend_text brazownicy.txt-10.txt "Tadeusz Boy-Żeleński\nBrązownicy\nRozdział dziesiąty\nDrogi geniuszu\nTo nagranie Legamus może być kopiowane i rozpowszechniane bez ograniczeń"
+    echo 'Koniec rozdziału dziesiątego' >> brazownicy.txt-10.txt
+    echo 'Czytał Piotr Nader' >> brazownicy.txt-10.txt
+    remove_line brazownicy.txt-11.txt "Advocatus diaboli"
+    prepend_text brazownicy.txt-11.txt "Tadeusz Boy-Żeleński\nBrązownicy\nRozdział jedenasty\nAdvocatus diaboli\nTo nagranie Legamus może być kopiowane i rozpowszechniane bez ograniczeń"
+    echo 'Koniec rozdziału jedenastego' >> brazownicy.txt-11.txt
+    echo 'Czytał Piotr Nader' >> brazownicy.txt-11.txt
+    remove_line brazownicy.txt-12.txt "Przypisy"
+    prepend_text brazownicy.txt-12.txt "Tadeusz Boy-Żeleński\nBrązownicy\nRozdział dwunasty\nPrzypisy, część pierwsza\nTo nagranie Legamus może być kopiowane i rozpowszechniane bez ograniczeń"
+    echo 'Koniec rozdziału dwunastego' >> brazownicy.txt-12.txt
+    echo 'Czytał Piotr Nader' >> brazownicy.txt-12.txt
+    prepend_text brazownicy.txt-13.txt "Tadeusz Boy-Żeleński\nBrązownicy\nRozdział trzynasty\nPrzypisy, część druga\nTo nagranie Legamus może być kopiowane i rozpowszechniane bez ograniczeń"
+    echo 'Koniec rozdziału trzynastego' >> brazownicy.txt-13.txt
+    echo 'Czytał Piotr Nader' >> brazownicy.txt-13.txt
 }
 
 text_norm() {
