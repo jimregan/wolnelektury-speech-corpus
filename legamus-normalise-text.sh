@@ -112,6 +112,22 @@ remove_unread_lines() {
     prepend_text brazownicy.txt-13.txt "Tadeusz Boy-Żeleński\nBrązownicy\nRozdział trzynasty\nPrzypisy, część druga\nTo nagranie Legamus może być kopiowane i rozpowszechniane bez ograniczeń"
     echo 'Koniec rozdziału trzynastego' >> brazownicy.txt-13.txt
     echo 'Czytał Piotr Nader' >> brazownicy.txt-13.txt
+    remove_line brazownicy.txt-14.txt "Pamiętnik Zofii Szymanowskiej"
+    prepend_text brazownicy.txt-14.txt "Tadeusz Boy-Żeleński\nBrązownicy\nRozdział czternasty\nPamiętnik Zofii Szymanowskiej, część pierwsza\nTo nagranie Legamus może być kopiowane i rozpowszechniane bez ograniczeń"
+    echo 'Koniec rozdziału czternastego' >> brazownicy.txt-14.txt
+    echo 'Czytał Piotr Nader' >> brazownicy.txt-14.txt
+    prepend_text brazownicy.txt-15.txt "Tadeusz Boy-Żeleński\nBrązownicy\nRozdział piętnasty\nPamiętnik Zofii Szymanowskiej, część druga\nTo nagranie Legamus może być kopiowane i rozpowszechniane bez ograniczeń"
+    echo 'Koniec rozdziału piętnastego' >> brazownicy.txt-15.txt
+    echo 'Czytał Piotr Nader' >> brazownicy.txt-15.txt
+    prepend_text brazownicy.txt-16.txt "Tadeusz Boy-Żeleński\nBrązownicy\nRozdział szesnasty\nPamiętnik Zofii Szymanowskiej, część trzecia\nTo nagranie Legamus może być kopiowane i rozpowszechniane bez ograniczeń"
+    echo 'Koniec rozdziału szesnastego' >> brazownicy.txt-16.txt
+    echo 'Czytał Piotr Nader' >> brazownicy.txt-16.txt
+    prepend_text brazownicy.txt-17.txt "Tadeusz Boy-Żeleński\nBrązownicy\nRozdział siedemnasty\nPamiętnik Zofii Szymanowskiej, część czwarta\nTo nagranie Legamus może być kopiowane i rozpowszechniane bez ograniczeń"
+    echo 'Koniec rozdziału siedemnastego' >> brazownicy.txt-17.txt
+    echo 'Czytał Piotr Nader' >> brazownicy.txt-17.txt
+    prepend_text brazownicy.txt-18.txt "Tadeusz Boy-Żeleński\nBrązownicy\nRozdział osiemnasty\nPamiętnik Zofii Szymanowskiej, część piąta\nTo nagranie Legamus może być kopiowane i rozpowszechniane bez ograniczeń"
+    echo 'Koniec brązowników, Tadeusza Boya-Żeleńskiego' >> brazownicy.txt-18.txt
+    echo 'Więcej informacji o nagraniach lub wolontariacie na stronie legamus kropka e u' >> brazownicy.txt-18.txt
 }
 
 text_norm() {
