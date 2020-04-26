@@ -61,7 +61,7 @@ my $result = $matcher->align(\@speech, \@wordsref,
           $seen{$word} = 1;
       }
     },
-    shift_a => sub {print STDERR $speech[shift]->{'text'} . "\n";},
+    shift_a => sub {},
     shift_b => sub {
         my $b = shift;
         my $word = $wordsref[$b]->{'text'};
