@@ -64,6 +64,19 @@ remove_unread_lines() {
     # This doesn't work with this header, so handle here and re-add in the specific norms
     echo 'Koniec wstępu' >> brazownicy.txt-00.txt
     echo 'Czytał Piotr Nader' >> brazownicy.txt-00.txt
+    prepend_text brazownicy.txt-01.txt "Tadeusz Boy-Żeleński\nBrązownicy\nRozdział pierwszy\nBrązownicy\nTo nagranie Legamus może być kopiowane i rozpowszechniane bez ograniczeń"
+    remove_line brazownicy.txt-02.txt "W odlewarni brązu" 
+    remove_line brazownicy.txt-02.txt "(Dzieje jednego dokumentu)" 
+    prepend_text brazownicy.txt-02.txt "Tadeusz Boy-Żeleński\nBrązownicy\nRozdział drugi\nW odlewarni brązu\nDzieje jednego dokumentu\nTo nagranie Legamus może być kopiowane i rozpowszechniane bez ograniczeń"
+    prepend_text brazownicy.txt-03.txt "Tadeusz Boy-Żeleński\nBrązownicy\nRozdział trzeci"
+    remove_line brazownicy.txt-04.txt "Ksawera Deybel"
+    prepend_text brazownicy.txt-04.txt "Tadeusz Boy-Żeleński\nBrązownicy\nRozdział czwarty\nKsawera Deybel\nTo nagranie Legamus może być kopiowane i rozpowszechniane bez ograniczeń"
+    echo 'Koniec rozdziału czwartego' >> brazownicy.txt-04.txt
+    echo 'Czytał Piotr Nader' >> brazownicy.txt-04.txt
+    remove_line brazownicy.txt-05.txt "Literacki list gończy"
+    prepend_text brazownicy.txt-05.txt "Tadeusz Boy-Żeleński\nBrązownicy\nRozdział piąty\nLiteracki list gończy\nTo nagranie Legamus może być kopiowane i rozpowszechniane bez ograniczeń"
+    echo 'Koniec rozdziału piątego' >> brazownicy.txt-05.txt
+    echo 'Czytał Piotr Nader' >> brazownicy.txt-05.txt
 }
 
 text_norm() {
