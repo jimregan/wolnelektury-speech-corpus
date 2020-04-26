@@ -29,6 +29,7 @@ my %skip_until = (
     'ksiega-dzungli.txt' => 'Bracia małego Mauli',
     'ojciec-goriot.txt' => 'Pani Vauquer',
     'but-w-butonierce-marsz.txt' => 'Siostrom od św.',
+    'brazownicy.txt' => 'Znana jest historia',
 );
 my %head_replace = (
     'bajki-i-przypowiesci-dwa-zolwie.txt' => "Ignacy Krasicki\nBajki i przypowieści\nCzęść pierwsza",
@@ -50,6 +51,7 @@ my %head_replace = (
     'ksiega-dzungli.txt' => "Rudyard Kipling\nKsięga dżungli",
     'ojciec-goriot.txt' => "Honoriusz Balzac\nOjciec Goriot\nTom trzeci Komedii ludzkiej",
     'but-w-butonierce-marsz.txt' => "Bruno Jasieński\nBut w butonierce\nMarsz\nDedykacja",
+    'brazownicy.txt' => "Tadeusz Boy-Żeleński\nBrązownicy\nWstęp\nTo nagranie Legamus może być kopiowane i rozpowszechniane bez ograniczeń",
 );
 
 if (!exists $skip_until{$ARGV[0]}) {
