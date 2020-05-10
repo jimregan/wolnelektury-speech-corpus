@@ -34,6 +34,17 @@ while(<WL>) {
 }
 close WL;
 
+my @ctm_tmp = map { local $_ = $_->{'text'} } @speech;
+my %in_ctm = map { $_ => 1 } @ctm_tmp;
+undef @ctm_tmp;
+for my $word (keys %wl) {
+    if(!exists $in_ctm{$word}) {
+        print INVALID "$word\n";
+        delete $in_ctm{$word}
+    }
+}
+undef %in_ctm;
+
 my @wordsref = ();
 while(<REF>) {
     chomp;
