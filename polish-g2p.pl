@@ -540,8 +540,8 @@ while(<>) {
         my $baseword = $words[0];
         my $pronas = $words[1];
         if($pronounce_both) {
-            print "$baseword " . simple_g2p($baseword) . "\n";
+            print "$baseword " . simple_g2p_text($baseword) . "\n";
         }
-        print "$baseword " . simple_g2p($pronas) . "\n";
+        print "$baseword " . simple_g2p_text($pronas) . "\n";
     }
 }

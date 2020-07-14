@@ -50,6 +50,8 @@ header_replace() {
         piesn-o-rolandzie.txt spowiedz-dzieciecia-wieku.txt \
         bajki-i-przypowiesci-dwa-zolwie.txt \
         don-kichot-z-la-manchy.txt \
+        balzac-komedia-ludzka-kobieta-porzucona.txt \
+        powiesci-fantastyczne-kawaler-gluck.txt \
         ksiega-dzungli.txt
     do
         echo "Replacing header in $i"
@@ -72,7 +74,11 @@ additions() {
     echo 'Czytała Joanna Domańska' >> chlopi-czesc-pierwsza-jesien.txt
     echo 'Czytała Joanna Domańska' >> balzac-komedia-ludzka-muza-z-zascianka.txt
     echo 'Czytał Jan Peszek' >> cierpienia-mlodego-wertera.txt
+    echo 'Czytał Jan Peszek' >> antek.txt
     echo 'Czytała Danuta Stenka' >> gloria-victis-dziwna-historia.txt
+    #echo 'Czytał Adam Fidusiewicz' >> pasewicz-dolina-wilda-w-starym-stylu.txt
+    #echo 'Wolne Lektury p l' >> pasewicz-dolina-wilda-w-starym-stylu.txt
+    #echo 'Zostań naszym Przyjacielem' >> pasewicz-dolina-wilda-w-starym-stylu.txt
 }
 
 norm_chapters() {
@@ -145,6 +151,8 @@ remove_unread_lines() {
     prepend_text ksiega-dzungli.txt-05.txt 'Rudyard Kipling\nKsięga dżungli'
     remove_line wierna-rzeka.txt-03.txt '^IV$'
     prepend_text balzac-komedia-ludzka-muza-z-zascianka.txt-02.txt 'Honoré Balzac'
+    remove_line zaglada-domu-usherow.txt '^\(III\|II\|I\|IV\|VI\|V\)$'
+    #remove_line pasewicz-dolina-wilda-w-starym-stylu.txt 'Dolna Wilda'
 }
 
 text_norm() {

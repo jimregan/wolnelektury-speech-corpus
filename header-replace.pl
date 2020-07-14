@@ -28,11 +28,14 @@ my %skip_until = (
     'don-kichot-z-la-manchy.txt' => 'Księga pierwsza',
     'ksiega-dzungli.txt' => 'Bracia małego Mauli',
     'ojciec-goriot.txt' => 'Pani Vauquer',
+    'but-w-butonierce-marsz.txt' => 'Siostrom od św.',
+    'brazownicy.txt' => 'Znana jest historia',
+    'powiesci-fantastyczne-kawaler-gluck.txt' => 'Schyłek jesieni',
 );
 my %head_replace = (
     'bajki-i-przypowiesci-dwa-zolwie.txt' => "Ignacy Krasicki\nBajki i przypowieści\nCzęść pierwsza",
     'balzac-komedia-ludzka-bank-nucingena.txt' => "Bank Nucingena\nHonoré Balzac\ntłumaczenie Tadeusz Boy-Żeleński",
-    'balzac-komedia-ludzka-kobieta-porzucona.txt' => "Kobieta porzucona\nHonoré Balzac\ntłumaczenie Tadeusz Boy-Żeleński",
+    'balzac-komedia-ludzka-kobieta-porzucona.txt' => "Kobieta porzucona\nHonoré de Balzac\ntłumaczenie Tadeusz Boy-Żeleński",
     'balzac-komedia-ludzka-jaszczur.txt' => '',
     'balzac-komedia-ludzka-kobieta-trzydziestoletnia.txt' => "Kobieta trzydziestoletnia\nHonorè de Balzac\ntłumaczenie Tadeusz Boy-Żeleński",
     'fortepian-chopina.txt' => "Cyprian Kamil Norwid\nFortepian Chopina",
@@ -48,6 +51,9 @@ my %head_replace = (
     'don-kichot-z-la-manchy.txt' => "Miguel de Cervantes Saavedra\nDon Kichot z La Manchy\ntłumaczenie Walenty Zakrzewski",
     'ksiega-dzungli.txt' => "Rudyard Kipling\nKsięga dżungli",
     'ojciec-goriot.txt' => "Honoriusz Balzac\nOjciec Goriot\nTom trzeci Komedii ludzkiej",
+    'but-w-butonierce-marsz.txt' => "Bruno Jasieński\nBut w butonierce\nMarsz\nDedykacja",
+    'brazownicy.txt' => "Tadeusz Boy-Żeleński\nBrązownicy\nWstęp\nTo nagranie Legamus może być kopiowane i rozpowszechniane bez ograniczeń",
+    'powiesci-fantastyczne-kawaler-gluck.txt' => "Ernst Teodor Amadeusz Hoffmann\nPowieści fantastyczne\ntłumaczenie Antoni Lange\nKawaler Gluck\nWspomnienie z roku tysiąc osiemset dziewiątego",
 );
 
 if (!exists $skip_until{$ARGV[0]}) {

@@ -322,6 +322,27 @@ my %split_by_starts = (
         'VIII\.',
         'IX\.'
     ],
+    'brazownicy.txt' => [
+        'Tadeusz Boy-Żeleński',
+        'Brązownicy',
+        'W odlewarni brązu',
+        'Tajemnice pamiętnika Zofii Szymanowskiej',
+        'Ksawera Deybel',
+        'Literacki list gończy',
+        'Sfinks towianizmu',
+        'Mrok się przeciera',
+        'Sprawa Karoliny — Sprawa Boża',
+        'Zaręczyny Adama Mickiewicza',
+        'Drogi geniuszu',
+        'Advocatus diaboli',
+        'Przypisy',
+        'Co opuścił „Bluszcz”',
+        'Pamiętnik Zofii Szymanowskiej',
+        'Pierwsza podróż jest, zdaje mi się,',
+        'Dzień zaślubin kuzynki był dniem',
+        'A byłam wtedy w pełni młodości i życia;',
+        'Chcąc zachować należne względy',
+    ],
 );
 my %split_by_whole = (
     'piesn-o-rolandzie.txt' => [
@@ -734,7 +755,7 @@ my $is_inner = 0;
 
 my $count = 1;
 my $printing = (exists $skipfirst{$fn}) ? 0 : 1;
-if($filename eq 'wspomnienia-niebieskiego-mundurka.txt' || $filename eq 'kim.txt' || $filename eq 'przedwiosnie.txt') {
+if($filename eq 'wspomnienia-niebieskiego-mundurka.txt' || $filename eq 'kim.txt' || $filename eq 'przedwiosnie.txt' || $filename eq 'brazownicy.txt') {
     $count = 0;
     $printing = 1;
 }
@@ -742,7 +763,7 @@ if($filename eq 'wspomnienia-niebieskiego-mundurka.txt' || $filename eq 'kim.txt
 my %skip_pattern = map { $_ => 1 } qw/wierna-rzeka.txt/;
 
 my $count_spec = '%02d';
-if($filename eq 'don-kichot-z-la-manchy.txt') {
+if($filename eq 'don-kichot-z-la-manchy.txt' || $filename eq 'piesn-o-rolandzie.txt') {
     $count_spec = '%03d';
 }
 
