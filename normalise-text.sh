@@ -152,6 +152,7 @@ remove_unread_lines() {
     remove_line wierna-rzeka.txt-03.txt '^IV$'
     prepend_text balzac-komedia-ludzka-muza-z-zascianka.txt-02.txt 'Honoré Balzac'
     remove_line zaglada-domu-usherow.txt '^\(III\|II\|I\|IV\|VI\|V\)$'
+    remove_line ballada-z-tamtej-strony-erotyk.txt '^ballada z tamtej strony$'
     #remove_line pasewicz-dolina-wilda-w-starym-stylu.txt 'Dolna Wilda'
 }
 
