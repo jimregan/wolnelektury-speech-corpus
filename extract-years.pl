@@ -18,18 +18,18 @@ my @tmp = split/\//, $filename;
 my $outfile = $tmp[$#tmp];
 
 while(<INPUT>) {
-	if(/(([Ww]) ([0-9]+) r(?:oku|.))/) {
+	if(/(([Ww]|[Pp]o) ([0-9]+) r(?:oku|.))/) {
 		my $m = $1;
 		my $prep = $2;
 		my $year = $3;
 		my $outyear = expand_year($year, 'loc');
-		print "$outfile\t$m\t$prep $outyear roku";
-	} elsif(/(([Ww]) r(?:oku|.) ([0-9]+))/) {
+		print "$outfile\t$m\t$prep $outyear roku\n";
+	} elsif(/(([Ww]|[Pp]o) r(?:oku|.) ([0-9]+))/) {
                 my $m = $1;
                 my $prep = $2;
                 my $year = $3;
                 my $outyear = expand_year($year, 'loc');
-                print "$outfile\t$m\t$prep roku $outyear";
+                print "$outfile\t$m\t$prep roku $outyear\n";
         }
 
 }

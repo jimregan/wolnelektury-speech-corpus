@@ -88,6 +88,7 @@ additions() {
     echo 'Czytał Jan Peszek' >> cierpienia-mlodego-wertera.txt
     echo 'Czytał Jan Peszek' >> antek.txt
     echo 'Czytała Danuta Stenka' >> gloria-victis-dziwna-historia.txt
+    echo 'Pochwała ta upoiła panią de La Baudraye; panu de Clagny, generalnemu poborcy i młodemu Boirouge wydało się, iż jest serdeczniejsza ze Stefanem niż w wilię.' >> balzac-komedia-ludzka-muza-z-zascianka.txt-08.txt
     #echo 'Czytał Adam Fidusiewicz' >> pasewicz-dolina-wilda-w-starym-stylu.txt
     #echo 'Wolne Lektury p l' >> pasewicz-dolina-wilda-w-starym-stylu.txt
     #echo 'Zostań naszym Przyjacielem' >> pasewicz-dolina-wilda-w-starym-stylu.txt

@@ -48,10 +48,14 @@ sub read_ctm {
 			}
 		}
 	}
+	if($line ne '') {
+		push @lines, $line;
+	}
 	return @lines;
 }
 
 my @text = read_ctm($filename, $silence);
+
 
 for my $l (@text) {
 	if($print_lines == 1) {
