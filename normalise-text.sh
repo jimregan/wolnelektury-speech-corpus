@@ -41,19 +41,27 @@ remove_line() {
 header_replace() {
     echo "Stage 2: Replace headers"
     slowka_headers
-    for i in balzac-komedia-ludzka-bank-nucingena.txt fortepian-chopina.txt \
-        boy-swietoszek.txt wspomnienia-niebieskiego-mundurka.txt \
-        powiesci-fantastyczne-wybor-narzeczonej.txt \
-        gloria-victis-gloria-victis.txt przygody-tomka-sawyera.txt \
-        ballada-z-tamtej-strony-imieniny.txt przedwiosnie.txt \
-        ojciec-goriot.txt \
-        piesn-o-rolandzie.txt spowiedz-dzieciecia-wieku.txt \
-        bajki-i-przypowiesci-dwa-zolwie.txt \
-        don-kichot-z-la-manchy.txt \
-	balzac-komedia-ludzka-jaszczur.txt \
-        balzac-komedia-ludzka-kobieta-porzucona.txt \
-        powiesci-fantastyczne-kawaler-gluck.txt \
-        ksiega-dzungli.txt
+    for i in bajki-i-przypowiesci-dwa-zolwie.txt \
+ballada-z-tamtej-strony-imieniny.txt \
+balzac-komedia-ludzka-bank-nucingena.txt \
+balzac-komedia-ludzka-jaszczur.txt \
+balzac-komedia-ludzka-kobieta-porzucona.txt \
+balzac-komedia-ludzka-kobieta-trzydziestoletnia.txt \
+boy-swietoszek.txt \
+brazownicy.txt \
+but-w-butonierce-marsz.txt \
+don-kichot-z-la-manchy.txt \
+fortepian-chopina.txt \
+gloria-victis-gloria-victis.txt \
+ksiega-dzungli.txt \
+ojciec-goriot.txt \
+piesn-o-rolandzie.txt \
+powiesci-fantastyczne-kawaler-gluck.txt \
+powiesci-fantastyczne-wybor-narzeczonej.txt \
+przedwiosnie.txt \
+przygody-tomka-sawyera.txt \
+spowiedz-dzieciecia-wieku.txt \
+wspomnienia-niebieskiego-mundurka.txt
     do
         echo "Replacing header in $i"
         perl ../header-replace.pl $i > $i.tmp
