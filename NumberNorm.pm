@@ -168,6 +168,13 @@ my %numbers_regexes = (
     'dziesięć' => 'dziesięć|dziesięc(?:iu|ioma)|dziesięcior(?:o|ga|gu|giem)|dziesiąci|dziesiąt(?:ego|emu|ymi?|ych|ej|[eaąy])',
     'jedenaście' => 'jedenaście|jedenast(?:u|oma)|jedenaścior(?:o|ga|gu|giem)|jedenaści|jedenast(?:ego|emu|ymi?|ych|ej|[eaąy])',
     'dwanaście' => 'dwanaście|dwunast(?:u|oma)|dwanaścior(?:o|ga|gu|giem)|dwunaści|dwunast(?:ego|emu|ymi?|ych|ej|[eaąy])',
+    'trzynaście' => 'trzynaście|trzynast(?:u|oma)|trzynaścior(?:o|ga|gu|giem)|trzynaści|trzynast(?:ego|emu|ymi?|ych|ej|[eaąy])',
+    'czternaście' => 'czternaście|czternast(?:u|oma)|czternaścior(?:o|ga|gu|giem)|czternaści|czternast(?:ego|emu|ymi?|ych|ej|[eaąy])',
+    'piętnaście' => 'piętnaście|piętnast(?:u|oma)|piętnaścior(?:o|ga|gu|giem)|piętnaści|piętnast(?:ego|emu|ymi?|ych|ej|[eaąy])',
+    'szesnaście' => 'szesnaście|szesnast(?:u|oma)|szesnaścior(?:o|ga|gu|giem)|szesnaści|szesnast(?:ego|emu|ymi?|ych|ej|[eaąy])',
+    'siedemnaście' => 'siedemnaście|siedemnast(?:u|oma)|siedemnaścior(?:o|ga|gu|giem)|siedemnaści|siedemnast(?:ego|emu|ymi?|ych|ej|[eaąy])',
+    'osiemnaście' => 'osiemnaście|osiemnast(?:u|oma)|osiemnaścior(?:o|ga|gu|giem)|osiemnaści|osiemnast(?:ego|emu|ymi?|ych|ej|[eaąy])',
+    'dziewiętnaście' => 'dziewiętnaście|dziewiętnast(?:u|oma)|dziewiętnaścior(?:o|ga|gu|giem)|dziewiętnaści|dziewiętnast(?:ego|emu|ymi?|ych|ej|[eaąy])',
 );
 
 sub year_card_to_ord {
