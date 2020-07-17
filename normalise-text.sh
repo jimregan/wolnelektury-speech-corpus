@@ -101,6 +101,7 @@ norm_chapters() {
         z-wichrow-i-hal-z-tatr-krzak-dzikiej-rozy-w-ciemnych-smreczy.txt \
         fortepian-chopina.txt bartek-zwyciezca.txt \
         chlopi-czesc-pierwsza-jesien.txt \
+	sztuka-kochania.txt \
         lange-miranda.txt
     do
         perl ../norm-roman-by-text.pl $i > $i.tmp

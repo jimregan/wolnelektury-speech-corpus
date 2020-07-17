@@ -13,6 +13,7 @@ my %spec = (
     'wspomnienia-niebieskiego-mundurka.txt' => 'Rozdział',
     'chlopi-czesc-pierwsza-jesien.txt' => 'Rozdział',
     'lange-miranda.txt' => 'Rozdział',
+    'sztuka-kochania.txt' => 'Pieśń',
 );
 
 my %del = (
@@ -24,6 +25,7 @@ my %del = (
 my %single = (
     'chlopi-czesc-pierwsza-jesien.txt' => 1,
     'lange-miranda.txt' => 1,
+    'sztuka-kochania.txt' => 1,
 );
 
 my %chapter_ord_masc = (
@@ -79,6 +81,35 @@ my %chapter_ord_fem = (
 my $units = "IX|IV|III|II|I|VIII|VII|VI|V";
 my $tens = "XXX|XX|XL?";
 
+sub gendered_ordinal {
+    my $gen = shift;
+    my $ord = shift;
+    if($gen eq 'f') {
+        return $chapter_ord_fem{$ord};
+    } else {
+        return $chapter_ord_masc{$ord};
+    }
+}
+
+sub get_norm {
+    my $what = shift;
+    my $tn = shift;
+    my $un = shift;
+    my $gen = 'm';
+    if($what eq 'Pieśń') {
+        $gen = 'f';
+    }
+    if($un eq '') {
+        return "$what " . gendered_ordinal($gen, $tn) . "\n";
+    } elsif($tn eq '') {
+        return "$what " . gendered_ordinal($gen, $un) . "\n";
+    } elsif($tn eq 'X') {
+        return "$what " . gendered_ordinal($gen, $tn . $un) . "\n";
+    } else {
+        return "$what " . gendered_ordinal($gen, $tn) . ' ' . gendered_ordinal($gen, $un) . "\n";
+    }
+}
+
 die "Don't know how to handle text: $ARGV[0]" if(!exists $spec{$ARGV[0]} && !exists $del{$ARGV[0]});
 my $del_mode = 0;
 my $single_mode = 0;
@@ -103,20 +134,15 @@ while(<INPUT>) {
         if(/^($tens)($units)$/) {
             my $tn = $1;
             my $un = $2;
-            if($tn eq 'X') {
-                print "$what " . $chapter_ord_masc{$tn . $un} . "\n";
-                next;
-            } else {
-                print "$what " . $chapter_ord_masc{$tn} . " " . $chapter_ord_masc{$un} . "\n";
-                next;
-            }
+            print get_norm($what, $tn, $un);
+            next;
         } elsif(/^($tens)$/) {
             my $tn = $1;
-            print "$what " . $chapter_ord_masc{$tn} . "\n";
+            print get_norm($what, $tn, '');
             next;
         } elsif(/^($units)$/) {
             my $un = $1;
-            print "$what " . $chapter_ord_masc{$un} . "\n";
+            print get_norm($what, '', $un);
             next;
         } else {
             print "$_\n";
@@ -127,26 +153,17 @@ while(<INPUT>) {
         my $tn = $1;
         my $un = $2;
         my $rest = $3;
-        if($tn eq 'X') {
-            print "$what " . $chapter_ord_masc{$tn . $un} . "\n";
-            print "$rest\n";
-            next;
-        } else {
-            print "$what " . $chapter_ord_masc{$tn} . " " . $chapter_ord_masc{$un} . "\n";
-            print "$rest\n";
-            next;
-        }
+        print get_norm($what, $tn, $un);
+        next;
     } elsif(/^($tens)\. ?(.*)$/) {
         my $tn = $1;
         my $rest = $2;
-        print "$what " . $chapter_ord_masc{$tn} . "\n";
-        print "$rest\n";
+        print get_norm($what, $tn, '');
         next;
     } elsif(/^($units)\. ?(.*)$/) {
         my $un = $1;
         my $rest = $2;
-        print "$what " . $chapter_ord_masc{$un} . "\n";
-        print "$rest\n";
+        print get_norm($what, '', $un);
         next;
     } else {
         print "$_\n";
