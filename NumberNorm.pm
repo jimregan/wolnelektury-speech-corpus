@@ -189,6 +189,14 @@ my %numbers_regexes = (
     'miliard' => '(?:miliard(?:owi|em|ami|om|ach|zie|ów|a|y)?|miliardow(?:ego|emu|ymi?|ych|ej|[eaąy]))',
     'biliard' => '(?:biliard(?:owi|em|ami|om|ach|zie|ów|a|y)?|biliardow(?:ego|emu|ymi?|ych|ej|[eaąy]))',
     'zero' => '(?:zer(?:em|ami|om|ach|ze|[auo])?|zerow(?:ego|emu|ymi?|ych|ej|[eaąy]))',
+    'dwieście' => '(?:dwieście|dwust(?:u|oma)|dw(?:u|óch)setn(?:ego|emu|ymi?|ych|ej|[eaąy]))',
+    'trzysta' => '(?:trzysta|trzyst(?:u|oma)|trzechsetn(?:ego|emu|ymi?|ych|ej|[eaąy]))',
+    'czterysta' => '(?:czterysta|czteryst(?:u|oma)|czterechsetn(?:ego|emu|ymi?|ych|ej|[eaąy]))',
+    'pięćset' => '(?:pięćset|pięciuset|pięćsetn(?:ego|emu|ymi?|ych|ej|[eaąy]))',
+    'sześćset' => '(?:sześćset|sześciuset|sześćsetn(?:ego|emu|ymi?|ych|ej|[eaąy]))',
+    'siedemset' => '(?:siedemset|siedmiuset|siedemsetn(?:ego|emu|ymi?|ych|ej|[eaąy]))',
+    'osiemset' => '(?:osiemset|ośmset|ośmiuset|osiemsetn(?:ego|emu|ymi?|ych|ej|[eaąy]))',
+    'dziewięćset' => '(?:dziewięćset|dziewięciuset|dziewięćsetn(?:ego|emu|ymi?|ych|ej|[eaąy]))',
 );
 
 sub get_num_regex {
