@@ -156,6 +156,19 @@ my %card_to_ord_years = (
     'dziewięćdziesiąt' => 'dziewięćdziesiąty'
 );
 
+my %numbers_regexes = (
+    'jeden' => 'jed(?:en|nego|nemu|nej|nych|nymi?|n[oaieą])|pierwsi|pierwsz(?:ego|emu|ymi?|ych|ej|[eaąy])',
+    'dwa' => 'dw(?:aj?|óch|óm|ie|oma|iema|u)|dwoj(?:e|ga|gu|giem)|drudzy|drug[aą]|drugi(?:ego|emu|ej|ch|mi?)?',
+    'trzy' => 'trz(?:y|ech|ej|ema?)|troj(?:e|ga|gu|giem)|trzeci(?:ego|emu|ej|ch|mi|[aemą])?',
+    'cztery' => 'czter(?:y|ech|ej|ema?)|czwor(?:o|ga|gu|giem)|czwarci|czwart(?:ego|emu|ymi?|ych|ej|[eaąy])',
+    'pięć' => 'pię(?:ć|ciu|cioma)|pięcior(?:o|ga|gu|giem)|piąci|piąt(?:ego|emu|ymi?|ych|ej|[eaąy])',
+    'sześć' => 'sześ(?:ć|ciu|cioma)|sześcior(?:o|ga|gu|giem)|szóści|szóst(?:ego|emu|ymi?|ych|ej|[eaąy])',
+    'siedem' => 'siedem|siedm(?:iu|ioma)|siedmior(?:o|ga|gu|giem)|siódmi|siódm(?:ego|emu|ymi?|ych|ej|[eaąy])',
+    'dziewięć' => 'dziewięć|dziewięc(?:iu|ioma)|dziewięcior(?:o|ga|gu|giem)|dziewiąci|dziewiąt(?:ego|emu|ymi?|ych|ej|[eaąy])',
+    'dziesięć' => 'dziesięć|dziesięc(?:iu|ioma)|dziesięcior(?:o|ga|gu|giem)|dziesiąci|dziesiąt(?:ego|emu|ymi?|ych|ej|[eaąy])',
+    'jedenaście' => 'jedenaście|jedenast(?:u|oma)|jedenaścior(?:o|ga|gu|giem)|jedenaści|jedenast(?:ego|emu|ymi?|ych|ej|[eaąy])',
+);
+
 sub year_card_to_ord {
     my $num = $_[0];
     my $gen = 'm';
