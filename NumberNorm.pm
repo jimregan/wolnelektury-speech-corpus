@@ -183,6 +183,12 @@ my %numbers_regexes = (
     'siedemdziesiąt' => 'siedemdziesiąt|siedemdziesięci(?:u|oma)|siedemdziesięcior(?:o|ga|gu|giem)|siedemdziesiąci|siedemdziesiąt(?:ego|emu|ymi?|ych|ej|[eaąy])',
     'osiemdziesiąt' => 'osiemdziesiąt|osiemdziesięci(?:u|oma)|osiemdziesięcior(?:o|ga|gu|giem)|osiemdziesiąci|osiemdziesiąt(?:ego|emu|ymi?|ych|ej|[eaąy])',
     'dziewięćdziesiąt' => 'dziewięćdziesiąt|dziewięćdziesięci(?:u|oma)|dziewięćdziesięcior(?:o|ga|gu|giem)|dziewięćdziesiąci|dziewięćdziesiąt(?:ego|emu|ymi?|ych|ej|[eaąy])',
+    'sto' => 'sto|st(?:u|oma)|set|st(ami|a|y)|setni|setn(?:ego|emu|ymi?|ych|ej|[eaąy])',
+    'tysiąc' => 'tysięcy|tysiąc(?:owi|em|ami|om|ach|a|e|u)?|tysi[ęą]czn(?:ego|emu|ymi?|ych|ej|[eaąy])',
+    'milion' => 'milion(?:owi|em|ami|om|ach|ie|ów|a|y)?|milionow(?:ego|emu|ymi?|ych|ej|[eaąy])',
+    'miliard' => 'miliard(?:owi|em|ami|om|ach|zie|ów|a|y)?|miliardow(?:ego|emu|ymi?|ych|ej|[eaąy])',
+    'biliard' => 'biliard(?:owi|em|ami|om|ach|zie|ów|a|y)?|biliardow(?:ego|emu|ymi?|ych|ej|[eaąy])',
+    'zero' => 'zer(?:em|ami|om|ach|ze|[auo])?|zerow(?:ego|emu|ymi?|ych|ej|[eaąy])',
 );
 
 sub year_card_to_ord {
