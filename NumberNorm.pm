@@ -179,6 +179,10 @@ my %numbers_regexes = (
     'trzydzieści' => 'trzydzieści|trzydziest(?:u|oma)|trzydzieścior(?:o|ga|gu|giem)|trzydzieści|trzydziest(?:ego|emu|ymi?|ych|ej|[eaąy])',
     'czterdzieści' => 'czterdzieści|czterdziest(?:u|oma)|czterdzieścior(?:o|ga|gu|giem)|czterdzieści|czterdziest(?:ego|emu|ymi?|ych|ej|[eaąy])',
     'pięćdziesiąt' => 'pięćdziesiąt|pięćdziesięci(?:u|oma)|pięćdziesięcior(?:o|ga|gu|giem)|pięćdziesiąci|pięćdziesiąt(?:ego|emu|ymi?|ych|ej|[eaąy])',
+    'sześćdziesiąt' => 'sześćdziesiąt|sześćdziesięci(?:u|oma)|sześćdziesięcior(?:o|ga|gu|giem)|sześćdziesiąci|sześćdziesiąt(?:ego|emu|ymi?|ych|ej|[eaąy])',
+    'siedemdziesiąt' => 'siedemdziesiąt|siedemdziesięci(?:u|oma)|siedemdziesięcior(?:o|ga|gu|giem)|siedemdziesiąci|siedemdziesiąt(?:ego|emu|ymi?|ych|ej|[eaąy])',
+    'osiemdziesiąt' => 'osiemdziesiąt|osiemdziesięci(?:u|oma)|osiemdziesięcior(?:o|ga|gu|giem)|osiemdziesiąci|osiemdziesiąt(?:ego|emu|ymi?|ych|ej|[eaąy])',
+    'dziewięćdziesiąt' => 'dziewięćdziesiąt|dziewięćdziesięci(?:u|oma)|dziewięćdziesięcior(?:o|ga|gu|giem)|dziewięćdziesiąci|dziewięćdziesiąt(?:ego|emu|ymi?|ych|ej|[eaąy])',
 );
 
 sub year_card_to_ord {
