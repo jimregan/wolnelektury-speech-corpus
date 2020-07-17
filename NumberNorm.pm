@@ -167,6 +167,7 @@ my %numbers_regexes = (
     'dziewięć' => 'dziewięć|dziewięc(?:iu|ioma)|dziewięcior(?:o|ga|gu|giem)|dziewiąci|dziewiąt(?:ego|emu|ymi?|ych|ej|[eaąy])',
     'dziesięć' => 'dziesięć|dziesięc(?:iu|ioma)|dziesięcior(?:o|ga|gu|giem)|dziesiąci|dziesiąt(?:ego|emu|ymi?|ych|ej|[eaąy])',
     'jedenaście' => 'jedenaście|jedenast(?:u|oma)|jedenaścior(?:o|ga|gu|giem)|jedenaści|jedenast(?:ego|emu|ymi?|ych|ej|[eaąy])',
+    'dwanaście' => 'dwanaście|dwunast(?:u|oma)|dwanaścior(?:o|ga|gu|giem)|dwunaści|dwunast(?:ego|emu|ymi?|ych|ej|[eaąy])',
 );
 
 sub year_card_to_ord {
