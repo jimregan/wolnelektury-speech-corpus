@@ -43,7 +43,7 @@ my %plurals = (
     'milion' => ['milion', 'miliony', 'milionów'],
     'tysiąc' => ['tysiąc', 'tysiące', 'tysięcy'],
     'miliard' => ['miliard', 'miliardy', 'miliardów'],
-    
+
     'frank' => ['frank', 'franki', 'franków'],
     'centym' => ['centym', 'centymy', 'centymów'],
 );
@@ -178,6 +178,7 @@ my %numbers_regexes = (
     'dwadzieścia' => 'dwadzieścia|dwadziest(?:u|oma)|dwadzieścior(?:o|ga|gu|giem)|dwudzieści|dwudziest(?:ego|emu|ymi?|ych|ej|[eaąy])',
     'trzydzieści' => 'trzydzieści|trzydziest(?:u|oma)|trzydzieścior(?:o|ga|gu|giem)|trzydzieści|trzydziest(?:ego|emu|ymi?|ych|ej|[eaąy])',
     'czterdzieści' => 'czterdzieści|czterdziest(?:u|oma)|czterdzieścior(?:o|ga|gu|giem)|czterdzieści|czterdziest(?:ego|emu|ymi?|ych|ej|[eaąy])',
+    'pięćdziesiąt' => 'pięćdziesiąt|pięćdziesięci(?:u|oma)|pięćdziesięcior(?:o|ga|gu|giem)|pięćdziesiąci|pięćdziesiąt(?:ego|emu|ymi?|ych|ej|[eaąy])',
 );
 
 sub year_card_to_ord {
