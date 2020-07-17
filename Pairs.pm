@@ -14,6 +14,12 @@ my %text = ();
 my %audio = ();
 my $data_loaded = 0;
 
+sub fix_filename {
+    my $fn = shift;
+    my @tmp = split/\//, $fn;
+    return $tmp[$#tmp];
+}
+
 sub load_data {
 	open(PAIRS, '<', "$RealBin/pairs.tsv");
 	while(<PAIRS>) {
@@ -26,17 +32,27 @@ sub load_data {
 }
 
 sub get_audio_pair {
-	my $name = shift;
+	my $input = shift;
+    my $name = fix_filename($input);
 	if($data_loaded != 1) {
 		load_data();
 	}
+    if(!exists $text{$name}) {
+        print STDERR "$name not in pairs.tsv\n";
+        return '';
+    }
 	return $text{$name};
 }
 sub get_text_pair {
-	my $name = shift;
+	my $input = shift;
+    my $name = fix_filename($input);
 	if($data_loaded != 1) {
 		load_data();
 	}
+    if(!exists $audio{$name}) {
+        print STDERR "$name not in pairs.tsv\n";
+        return '';
+    }
 	return $audio{$name};
 }
 1;
