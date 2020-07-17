@@ -180,6 +180,9 @@ sub expand_year {
 sub inflect_ordinal {
     shift if($_[0] eq 'inflect_ordinal');
     my $ordinal = $_[0];
+    if($ordinal =~ /^[0-9]+$/) {
+      $ordinal = expand_year($ordinal)
+    }
     my $gender = 'm';
     if($#_ > 0) {
         $gender = $_[1];
