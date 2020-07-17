@@ -89,6 +89,7 @@ additions() {
     echo 'Czytał Jan Peszek' >> antek.txt
     echo 'Czytała Danuta Stenka' >> gloria-victis-dziwna-historia.txt
     echo 'Pochwała ta upoiła panią de La Baudraye; panu de Clagny, generalnemu poborcy i młodemu Boirouge wydało się, iż jest serdeczniejsza ze Stefanem niż w wilię.' >> balzac-komedia-ludzka-muza-z-zascianka.txt-08.txt
+    echo 'Koniec wstępu. Czytał Piotr Nater.' >> brazownicy.txt-00.txt
     #echo 'Czytał Adam Fidusiewicz' >> pasewicz-dolina-wilda-w-starym-stylu.txt
     #echo 'Wolne Lektury p l' >> pasewicz-dolina-wilda-w-starym-stylu.txt
     #echo 'Zostań naszym Przyjacielem' >> pasewicz-dolina-wilda-w-starym-stylu.txt
@@ -117,6 +118,7 @@ split_chapters() {
         balzac-komedia-ludzka-muza-z-zascianka.txt \
         bartek-zwyciezca.txt \
         boy-swietoszek.txt \
+        brazownicy.txt \
         chlopi-czesc-pierwsza-jesien.txt \
         cierpienia-mlodego-wertera.txt \
         don-kichot-z-la-manchy.txt \
@@ -169,6 +171,8 @@ remove_unread_lines() {
     remove_line ballada-z-tamtej-strony-melancholia.txt '^ballada z tamtej strony$'
     remove_line ballada-z-tamtej-strony-zdrada.txt '^ballada z tamtej strony$'
     #remove_line pasewicz-dolina-wilda-w-starym-stylu.txt 'Dolna Wilda'
+    brazownicy_lines=$(wc -l brazownicy.txt-00.txt|awk '{print $1}')
+    head -n $(($brazownicy_lines - 2)) > tmp && mv tmp brazownicy.txt-00.txt
 }
 
 text_norm() {

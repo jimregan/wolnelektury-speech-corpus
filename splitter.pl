@@ -324,7 +324,7 @@ my %split_by_starts = (
     ],
     'brazownicy.txt' => [
         'Tadeusz Boy-Żeleński',
-        'Brązownicy',
+        'Dałem tym wstępnym',
         'W odlewarni brązu',
         'Tajemnice pamiętnika Zofii Szymanowskiej',
         'Ksawera Deybel',
