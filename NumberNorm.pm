@@ -175,6 +175,9 @@ my %numbers_regexes = (
     'siedemnaście' => 'siedemnaście|siedemnast(?:u|oma)|siedemnaścior(?:o|ga|gu|giem)|siedemnaści|siedemnast(?:ego|emu|ymi?|ych|ej|[eaąy])',
     'osiemnaście' => 'osiemnaście|osiemnast(?:u|oma)|osiemnaścior(?:o|ga|gu|giem)|osiemnaści|osiemnast(?:ego|emu|ymi?|ych|ej|[eaąy])',
     'dziewiętnaście' => 'dziewiętnaście|dziewiętnast(?:u|oma)|dziewiętnaścior(?:o|ga|gu|giem)|dziewiętnaści|dziewiętnast(?:ego|emu|ymi?|ych|ej|[eaąy])',
+    'dwadzieścia' => 'dwadzieścia|dwadziest(?:u|oma)|dwadzieścior(?:o|ga|gu|giem)|dwudzieści|dwudziest(?:ego|emu|ymi?|ych|ej|[eaąy])',
+    'trzydzieści' => 'trzydzieści|trzydziest(?:u|oma)|trzydzieścior(?:o|ga|gu|giem)|trzydzieści|trzydziest(?:ego|emu|ymi?|ych|ej|[eaąy])',
+    'czterdzieści' => 'czterdzieści|czterdziest(?:u|oma)|czterdzieścior(?:o|ga|gu|giem)|czterdzieści|czterdziest(?:ego|emu|ymi?|ych|ej|[eaąy])',
 );
 
 sub year_card_to_ord {
