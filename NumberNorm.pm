@@ -7,7 +7,7 @@ use utf8;
 use Exporter;
 
 our @ISA = qw/Exporter/;
-our @EXPORT = qw/num2text inflect_ordinal expand_year/;
+our @EXPORT = qw/num2text inflect_ordinal expand_year get_num_regex/;
 
 my %roman_ord_masc = (
     'I' => 'pierwszy',
@@ -43,7 +43,7 @@ my %plurals = (
     'milion' => ['milion', 'miliony', 'milionów'],
     'tysiąc' => ['tysiąc', 'tysiące', 'tysięcy'],
     'miliard' => ['miliard', 'miliardy', 'miliardów'],
-    
+
     'frank' => ['frank', 'franki', 'franków'],
     'centym' => ['centym', 'centymy', 'centymów'],
 );
@@ -156,6 +156,72 @@ my %card_to_ord_years = (
     'dziewięćdziesiąt' => 'dziewięćdziesiąty'
 );
 
+my %numbers_regexes = (
+    'jeden' => '(?:jed(?:en|nego|nemu|nej|nych|nymi?|n[oaieą])|pierwsi|pierwsz(?:ego|emu|ymi?|ych|ej|[eaąy]))',
+    'dwa' => '(?:dw(?:aj?|óch|óm|ie|oma|iema|u)|dwoj(?:e|ga|gu|giem)|drudzy|drug[aą]|drugi(?:ego|emu|ej|ch|mi?)?)',
+    'trzy' => '(?:trz(?:y|ech|ej|ema?)|troj(?:e|ga|gu|giem)|trzeci(?:ego|emu|ej|ch|mi|[aemą])?)',
+    'cztery' => '(?:czter(?:y|ech|ej|ema?)|czwor(?:o|ga|gu|giem)|czwarci|czwart(?:ego|emu|ymi?|ych|ej|[eaąy]))',
+    'pięć' => '(?:pię(?:ć|ciu|cioma)|pięcior(?:o|ga|gu|giem)|piąci|piąt(?:ego|emu|ymi?|ych|ej|[eaąy]))',
+    'sześć' => '(?:sześ(?:ć|ciu|cioma)|sześcior(?:o|ga|gu|giem)|szóści|szóst(?:ego|emu|ymi?|ych|ej|[eaąy]))',
+    'siedem' => '(?:siedem|siedm(?:iu|ioma)|siedmior(?:o|ga|gu|giem)|siódmi|siódm(?:ego|emu|ymi?|ych|ej|[eaąy]))',
+    'osiem' => '(?:osiem|ośm(?:iu|ioma)|ośmior(?:o|ga|gu|giem)|óśmi|ósm(?:ego|emu|ymi?|ych|ej|[eaąy]))',
+    'dziewięć' => '(?:dziewięć|dziewięc(?:iu|ioma)|dziewięcior(?:o|ga|gu|giem)|dziewiąci|dziewiąt(?:ego|emu|ymi?|ych|ej|[eaąy]))',
+    'dziesięć' => '(?:dziesięć|dziesięc(?:iu|ioma)|dziesięcior(?:o|ga|gu|giem)|dziesiąci|dziesiąt(?:ego|emu|ymi?|ych|ej|[eaąy]))',
+    'jedenaście' => '(?:jedenaście|jedenast(?:u|oma)|jedenaścior(?:o|ga|gu|giem)|jedenaści|jedenast(?:ego|emu|ymi?|ych|ej|[eaąy]))',
+    'dwanaście' => '(?:dwanaście|dwunast(?:u|oma)|dwanaścior(?:o|ga|gu|giem)|dwunaści|dwunast(?:ego|emu|ymi?|ych|ej|[eaąy]))',
+    'trzynaście' => '(?:trzynaście|trzynast(?:u|oma)|trzynaścior(?:o|ga|gu|giem)|trzynaści|trzynast(?:ego|emu|ymi?|ych|ej|[eaąy]))',
+    'czternaście' => '(?:czternaście|czternast(?:u|oma)|czternaścior(?:o|ga|gu|giem)|czternaści|czternast(?:ego|emu|ymi?|ych|ej|[eaąy]))',
+    'piętnaście' => '(?:piętnaście|piętnast(?:u|oma)|piętnaścior(?:o|ga|gu|giem)|piętnaści|piętnast(?:ego|emu|ymi?|ych|ej|[eaąy]))',
+    'szesnaście' => '(?:szesnaście|szesnast(?:u|oma)|szesnaścior(?:o|ga|gu|giem)|szesnaści|szesnast(?:ego|emu|ymi?|ych|ej|[eaąy]))',
+    'siedemnaście' => '(?:siedemnaście|siedemnast(?:u|oma)|siedemnaścior(?:o|ga|gu|giem)|siedemnaści|siedemnast(?:ego|emu|ymi?|ych|ej|[eaąy]))',
+    'osiemnaście' => '(?:osiemnaście|osiemnast(?:u|oma)|osiemnaścior(?:o|ga|gu|giem)|osiemnaści|osiemnast(?:ego|emu|ymi?|ych|ej|[eaąy]))',
+    'dziewiętnaście' => '(?:dziewiętnaście|dziewiętnast(?:u|oma)|dziewiętnaścior(?:o|ga|gu|giem)|dziewiętnaści|dziewiętnast(?:ego|emu|ymi?|ych|ej|[eaąy]))',
+    'dwadzieścia' => '(?:dwadzieścia|dwadziest(?:u|oma)|dwadzieścior(?:o|ga|gu|giem)|dwudzieści|dwudziest(?:ego|emu|ymi?|ych|ej|[eaąy]))',
+    'trzydzieści' => '(?:trzydzieści|trzydziest(?:u|oma)|trzydzieścior(?:o|ga|gu|giem)|trzydzieści|trzydziest(?:ego|emu|ymi?|ych|ej|[eaąy]))',
+    'czterdzieści' => '(?:czterdzieści|czterdziest(?:u|oma)|czterdzieścior(?:o|ga|gu|giem)|czterdzieści|czterdziest(?:ego|emu|ymi?|ych|ej|[eaąy]))',
+    'pięćdziesiąt' => '(?:pięćdziesiąt|pięćdziesięci(?:u|oma)|pięćdziesięcior(?:o|ga|gu|giem)|pięćdziesiąci|pięćdziesiąt(?:ego|emu|ymi?|ych|ej|[eaąy]))',
+    'sześćdziesiąt' => '(?:sześćdziesiąt|sześćdziesięci(?:u|oma)|sześćdziesięcior(?:o|ga|gu|giem)|sześćdziesiąci|sześćdziesiąt(?:ego|emu|ymi?|ych|ej|[eaąy]))',
+    'siedemdziesiąt' => '(?:siedemdziesiąt|siedemdziesięci(?:u|oma)|siedemdziesięcior(?:o|ga|gu|giem)|siedemdziesiąci|siedemdziesiąt(?:ego|emu|ymi?|ych|ej|[eaąy]))',
+    'osiemdziesiąt' => '(?:osiemdziesiąt|osiemdziesięci(?:u|oma)|osiemdziesięcior(?:o|ga|gu|giem)|osiemdziesiąci|osiemdziesiąt(?:ego|emu|ymi?|ych|ej|[eaąy]))',
+    'dziewięćdziesiąt' => '(?:dziewięćdziesiąt|dziewięćdziesięci(?:u|oma)|dziewięćdziesięcior(?:o|ga|gu|giem)|dziewięćdziesiąci|dziewięćdziesiąt(?:ego|emu|ymi?|ych|ej|[eaąy]))',
+    'sto' => '(?:sto|st(?:u|oma)|set|st(?:ami|a|y)|setni|setn(?:ego|emu|ymi?|ych|ej|[eaąy]))',
+    'tysiąc' => '(?:tysięcy|tysiąc(?:owi|em|ami|om|ach|a|e|u)?|tysi[ęą]czn(?:ego|emu|ymi?|ych|ej|[eaąy]))',
+    'milion' => '(?:milion(?:owi|em|ami|om|ach|ie|ów|a|y)?|milionow(?:ego|emu|ymi?|ych|ej|[eaąy]))',
+    'miliard' => '(?:miliard(?:owi|em|ami|om|ach|zie|ów|a|y)?|miliardow(?:ego|emu|ymi?|ych|ej|[eaąy]))',
+    'biliard' => '(?:biliard(?:owi|em|ami|om|ach|zie|ów|a|y)?|biliardow(?:ego|emu|ymi?|ych|ej|[eaąy]))',
+    'zero' => '(?:zer(?:em|ami|om|ach|ze|[auo])?|zerow(?:ego|emu|ymi?|ych|ej|[eaąy]))',
+    'dwieście' => '(?:dwieście|dwust(?:u|oma)|dw(?:u|óch)setn(?:ego|emu|ymi?|ych|ej|[eaąy]))',
+    'trzysta' => '(?:trzysta|trzyst(?:u|oma)|trzechsetn(?:ego|emu|ymi?|ych|ej|[eaąy]))',
+    'czterysta' => '(?:czterysta|czteryst(?:u|oma)|czterechsetn(?:ego|emu|ymi?|ych|ej|[eaąy]))',
+    'pięćset' => '(?:pięćset|pięciuset|pięćsetn(?:ego|emu|ymi?|ych|ej|[eaąy]))',
+    'sześćset' => '(?:sześćset|sześciuset|sześćsetn(?:ego|emu|ymi?|ych|ej|[eaąy]))',
+    'siedemset' => '(?:siedemset|siedmiuset|siedemsetn(?:ego|emu|ymi?|ych|ej|[eaąy]))',
+    'osiemset' => '(?:osiemset|ośmset|ośmiuset|osiemsetn(?:ego|emu|ymi?|ych|ej|[eaąy]))',
+    'dziewięćset' => '(?:dziewięćset|dziewięciuset|dziewięćsetn(?:ego|emu|ymi?|ych|ej|[eaąy]))',
+);
+
+sub get_num_regex {
+    my $num = shift;
+    my $numtext = $num;
+    if($num =~ /^[0-9]+$/) {
+        $numtext = num2text($num);
+    }
+    if($numtext =~ / /) {
+        my @parts = split/ /, $numtext;
+        my @tmp = ();
+        for (my $i = 0; $i <= $#parts; $i++) {
+            if(!exists $numbers_regexes{$parts[$i]}) {
+            }
+            $tmp[$i] = $numbers_regexes{$parts[$i]};
+        }
+        return join(' ', @tmp);
+    } else {
+        if(!exists $numbers_regexes{$numtext}) {
+        }
+        return $numbers_regexes{$numtext};
+    }
+}
+
 sub year_card_to_ord {
     my $num = $_[0];
     my $gen = 'm';
@@ -180,6 +246,9 @@ sub expand_year {
 sub inflect_ordinal {
     shift if($_[0] eq 'inflect_ordinal');
     my $ordinal = $_[0];
+    if($ordinal =~ /^[0-9]+$/) {
+      $ordinal = expand_year($ordinal)
+    }
     my $gender = 'm';
     if($#_ > 0) {
         $gender = $_[1];
