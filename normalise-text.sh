@@ -41,18 +41,27 @@ remove_line() {
 header_replace() {
     echo "Stage 2: Replace headers"
     slowka_headers
-    for i in balzac-komedia-ludzka-bank-nucingena.txt fortepian-chopina.txt \
-        boy-swietoszek.txt wspomnienia-niebieskiego-mundurka.txt \
-        powiesci-fantastyczne-wybor-narzeczonej.txt \
-        gloria-victis-gloria-victis.txt przygody-tomka-sawyera.txt \
-        ballada-z-tamtej-strony-imieniny.txt przedwiosnie.txt \
-        ojciec-goriot.txt \
-        piesn-o-rolandzie.txt spowiedz-dzieciecia-wieku.txt \
-        bajki-i-przypowiesci-dwa-zolwie.txt \
-        don-kichot-z-la-manchy.txt \
-        balzac-komedia-ludzka-kobieta-porzucona.txt \
-        powiesci-fantastyczne-kawaler-gluck.txt \
-        ksiega-dzungli.txt
+    for i in bajki-i-przypowiesci-dwa-zolwie.txt \
+ballada-z-tamtej-strony-imieniny.txt \
+balzac-komedia-ludzka-bank-nucingena.txt \
+balzac-komedia-ludzka-jaszczur.txt \
+balzac-komedia-ludzka-kobieta-porzucona.txt \
+balzac-komedia-ludzka-kobieta-trzydziestoletnia.txt \
+boy-swietoszek.txt \
+brazownicy.txt \
+but-w-butonierce-marsz.txt \
+don-kichot-z-la-manchy.txt \
+fortepian-chopina.txt \
+gloria-victis-gloria-victis.txt \
+ksiega-dzungli.txt \
+ojciec-goriot.txt \
+piesn-o-rolandzie.txt \
+powiesci-fantastyczne-kawaler-gluck.txt \
+powiesci-fantastyczne-wybor-narzeczonej.txt \
+przedwiosnie.txt \
+przygody-tomka-sawyera.txt \
+spowiedz-dzieciecia-wieku.txt \
+wspomnienia-niebieskiego-mundurka.txt
     do
         echo "Replacing header in $i"
         perl ../header-replace.pl $i > $i.tmp
@@ -67,15 +76,20 @@ additions() {
     echo 'Czytał Wiktor Korzeniewski' >> balzac-komedia-ludzka-eugenia-grandet.txt
     echo 'Czytał Wiktor Korzeniewski' >> balzac-komedia-ludzka-male-niedole-pozycia-malzenskiego.txt
     echo 'Czytał Wiktor Korzeniewski' >> don-kichot-z-la-manchy.txt
+    echo 'Czytał Wiktor Korzeniewski' >> balzac-komedia-ludzka-jaszczur.txt-22.txt
     echo 'Czytał Jacek Rozenek' >> przedwiosnie.txt
     echo 'Czytał Jacek Rozenek' >> bartek-zwyciezca.txt
     echo 'Czytała Joanna Domańska' >> balzac-komedia-ludzka-kobieta-porzucona.txt
     echo 'Czytała Joanna Domańska' >> balzac-komedia-ludzka-kobieta-trzydziestoletnia.txt
     echo 'Czytała Joanna Domańska' >> chlopi-czesc-pierwsza-jesien.txt
     echo 'Czytała Joanna Domańska' >> balzac-komedia-ludzka-muza-z-zascianka.txt
+    echo 'Czytała Joanna Domańska' >> balzac-komedia-ludzka-bank-nucingena.txt
+    echo 'Czytała Joanna Domańska' >> balzac-komedia-ludzka-gobseck.txt
     echo 'Czytał Jan Peszek' >> cierpienia-mlodego-wertera.txt
     echo 'Czytał Jan Peszek' >> antek.txt
     echo 'Czytała Danuta Stenka' >> gloria-victis-dziwna-historia.txt
+    echo 'Pochwała ta upoiła panią de La Baudraye; panu de Clagny, generalnemu poborcy i młodemu Boirouge wydało się, iż jest serdeczniejsza ze Stefanem niż w wilię.' >> balzac-komedia-ludzka-muza-z-zascianka.txt-08.txt
+    echo 'Koniec wstępu. Czytał Piotr Nater.' >> brazownicy.txt-00.txt
     #echo 'Czytał Adam Fidusiewicz' >> pasewicz-dolina-wilda-w-starym-stylu.txt
     #echo 'Wolne Lektury p l' >> pasewicz-dolina-wilda-w-starym-stylu.txt
     #echo 'Zostań naszym Przyjacielem' >> pasewicz-dolina-wilda-w-starym-stylu.txt
@@ -87,6 +101,7 @@ norm_chapters() {
         z-wichrow-i-hal-z-tatr-krzak-dzikiej-rozy-w-ciemnych-smreczy.txt \
         fortepian-chopina.txt bartek-zwyciezca.txt \
         chlopi-czesc-pierwsza-jesien.txt \
+	sztuka-kochania.txt \
         lange-miranda.txt
     do
         perl ../norm-roman-by-text.pl $i > $i.tmp
@@ -104,6 +119,7 @@ split_chapters() {
         balzac-komedia-ludzka-muza-z-zascianka.txt \
         bartek-zwyciezca.txt \
         boy-swietoszek.txt \
+        brazownicy.txt \
         chlopi-czesc-pierwsza-jesien.txt \
         cierpienia-mlodego-wertera.txt \
         don-kichot-z-la-manchy.txt \
@@ -152,7 +168,12 @@ remove_unread_lines() {
     remove_line wierna-rzeka.txt-03.txt '^IV$'
     prepend_text balzac-komedia-ludzka-muza-z-zascianka.txt-02.txt 'Honoré Balzac'
     remove_line zaglada-domu-usherow.txt '^\(III\|II\|I\|IV\|VI\|V\)$'
+    remove_line ballada-z-tamtej-strony-erotyk.txt '^ballada z tamtej strony$'
+    remove_line ballada-z-tamtej-strony-melancholia.txt '^ballada z tamtej strony$'
+    remove_line ballada-z-tamtej-strony-zdrada.txt '^ballada z tamtej strony$'
     #remove_line pasewicz-dolina-wilda-w-starym-stylu.txt 'Dolna Wilda'
+    #brazownicy_lines=$(wc -l brazownicy.txt-00.txt|awk '{print $1}')
+    #head -n $(($brazownicy_lines - 2)) > tmp && mv tmp brazownicy.txt-00.txt
 }
 
 text_norm() {
