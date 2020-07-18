@@ -164,6 +164,7 @@ my %numbers_regexes = (
     'pięć' => '(?:pię(?:ć|ciu|cioma)|pięcior(?:o|ga|gu|giem)|piąci|piąt(?:ego|emu|ymi?|ych|ej|[eaąy]))',
     'sześć' => '(?:sześ(?:ć|ciu|cioma)|sześcior(?:o|ga|gu|giem)|szóści|szóst(?:ego|emu|ymi?|ych|ej|[eaąy]))',
     'siedem' => '(?:siedem|siedm(?:iu|ioma)|siedmior(?:o|ga|gu|giem)|siódmi|siódm(?:ego|emu|ymi?|ych|ej|[eaąy]))',
+    'osiem' => '(?:osiem|ośm(?:iu|ioma)|ośmior(?:o|ga|gu|giem)|óśmi|ósm(?:ego|emu|ymi?|ych|ej|[eaąy]))',
     'dziewięć' => '(?:dziewięć|dziewięc(?:iu|ioma)|dziewięcior(?:o|ga|gu|giem)|dziewiąci|dziewiąt(?:ego|emu|ymi?|ych|ej|[eaąy]))',
     'dziesięć' => '(?:dziesięć|dziesięc(?:iu|ioma)|dziesięcior(?:o|ga|gu|giem)|dziesiąci|dziesiąt(?:ego|emu|ymi?|ych|ej|[eaąy]))',
     'jedenaście' => '(?:jedenaście|jedenast(?:u|oma)|jedenaścior(?:o|ga|gu|giem)|jedenaści|jedenast(?:ego|emu|ymi?|ych|ej|[eaąy]))',
