@@ -15,11 +15,9 @@ au -> a w
 a -> a
 ą -> ɔ m / _ [p|b]
 ą -> ɔ ŋ / _ [g|k]
+ą -> ɔ ɲ / _ [ć|ś|ź|dź]
+ą -> ɔ ɲ / _ [c|s|z|dz] i
 ą -> ɔ n / _ [t|d]
-ą -> ɔ ɲ / _ [ć|ś|ź]
-ą -> ɔ ɲ / _ dź
-ą -> ɔ ɲ / _ [c|s|z] i
-ą -> ɔ ɲ / _ dzi
 ą -> ɔ̃
 b -> p / _ #
 b -> p / _ VOICED #
@@ -35,6 +33,7 @@ ci -> t͡ɕ / _ VOWELNOTI
 ci -> t͡ɕ i
 c -> k / p i z z i _ a t
 c -> t͡s
+ć -> ∅ / p i ę _ d z i
 ć -> t͡ɕ
 dz -> d͡ʑ / _ VOWELNOTI
 dz -> d͡ʑ / _ i
@@ -53,6 +52,12 @@ d -> d
 ee -> i / w _ k e n d
 ee -> ɛ ʔ ɛ
 eu -> ɛ w
+ę -> ɛ m / _ [p|b]
+ę -> ɛ ŋ / _ [g|k]
+ę -> ɛ ɲ / _ [ć|ś|ź|dź]
+ę -> ɛ ɲ / _ [c|s|z|dz] i
+ę -> ɛ n / _ [t|d]
+ę -> (ɛ̃, ɛ) / _ #
 ę -> ɛ̃
 e -> ɛ
 f -> fʲ / _ [i|j]
@@ -92,6 +97,10 @@ rz -> ʂ / [p|k|t] _
 rz -> ʂ / _ VOICED #
 rz -> ʂ / _ DEVOICED
 rz -> ʂ / _ #
+rz -> r z / t a _ a n
+rz -> r z / m u _ a s i c h l
+rz -> r z / e _ a c
+rz -> r ʑ / _ i
 rz -> ʐ
 r -> r
 sz -> ʂ
@@ -154,4 +163,10 @@ TEST sześćset -> (ʂ ɛ ɕ s ɛ t, ʂ ɛ j s ɛ t)
 TEST mózg -> m u s k
 #TEST krwawy -> k r f a v ɨ
 TEST krwawy -> k r v a v ɨ
-
+TEST łabędź -> w a b ɛ ɲ t͡ɕ
+TEST łabędzi -> w a b ɛ ɲ d͡ʑ i
+TEST pięćdziesiąt -> pʲ j ɛ ɲ d͡ʑ ɛ ɕ ɔ n t
+TEST mierzić -> mʲ j ɛ r ʑ i t͡ɕ
+TEST proszę -> (p r ɔ ʂ ɛ̃ , p r ɔ ʂ ɛ)
+TEST tarzan -> t a r z a n
+TEST erzac -> ɛ r z a t͡s
