@@ -1,0 +1,133 @@
+CHARACTER_SET "aąbcćdeęfghijklłmnńoópqrsśtuvwxyzżź'-"
+DEFAULT_PHONEME "_"
+PHONEME_DELIMITER " "
+
+VAR VOICED [b|d|g|w|ż|ź|z]
+VAR DEVOICED [p|t|k|f|s|ś|c|ć]
+#VAR VOWEL [a|ą|e|ę|i|o|ó|u|y]
+VAR VOWELNOTI [a|ą|e|ę|o|ó|u|y]
+VAR CONSONANT [b|c|ć|d|f|g|h|j|k|l|ł|m|n|ń|p|q|r|s|t|v|w|x|z|ż|ź]
+
+' -> ∅
+- -> ∅
+aa -> a ʔ a
+au -> a w
+a -> a
+ą -> ɔ̃
+b -> p / _ #
+b -> p / _ VOICED #
+b -> p / _ DEVOICED
+b -> bʲ / _ [i|j]
+b -> b
+ch -> xʲ / _ i
+ch -> x
+cz -> t͡ʂ
+ci -> t͡ɕ / _ VOWELNOTI
+ci -> t͡ɕ i
+c -> t͡s
+ć -> t͡ɕ
+dz -> d͡ʑ / _ VOWELNOTI
+dz -> d͡ʑ i
+dż -> t͡ʂ / _ #
+dż -> t͡ʂ / _ VOICED #
+dż -> t͡ʂ / _ DEVOICED
+dż -> d͡ʐ
+dź -> t͡ɕ / _ #
+dź -> t͡ɕ / _ VOICED #
+dź -> t͡ɕ / _ DEVOICED
+dź -> d͡ʑ
+d -> t / _ #
+d -> t / _ VOICED #
+d -> t / _ DEVOICED
+d -> d
+ee -> i / w _ k e n d
+ee -> ɛ ʔ ɛ
+eu -> ɛ w
+ę -> ɛ̃
+e -> ɛ
+f -> fʲ / _ [i|j]
+f -> f
+g -> ɡʲ / _ [i|j]
+g -> k / _ VOICED #
+g -> k / _ DEVOICED
+g -> k / _ #
+g -> ɡ
+h -> xʲ / _ i
+h -> x
+i -> j / _ i #
+i -> ∅ / [s|c|n|z] _ VOWELNOTI
+i -> i
+j -> j
+k -> ɡ / _ ż
+k -> kʲ / _ [i|j]
+k -> k
+l -> lʲ / _ [i|j]
+l -> l
+ł -> w
+m -> mʲ / _ i
+m -> m
+n -> ɲ / _ i
+n -> (n, ŋ) / _ [g|k]
+n -> n
+ń -> ɲ
+oo -> ɔ ʔ ɔ
+o -> ɔ
+ó -> u
+p -> pʲ / _ [i|k]
+p -> p
+qu -> k v
+q -> k u
+r -> rʲ / _ i
+rz -> ʂ / [p|k|t] _
+rz -> ʂ / _ VOICED #
+rz -> ʂ / _ DEVOICED
+rz -> ʂ / _ #
+rz -> ʐ
+r -> r
+sz -> ʂ
+s -> ɕ / _ i
+s -> s
+ść -> (ɕ, j) / s z e _ s
+ść -> ʑ / s z e _ d z i
+ś -> ɕ
+t -> t
+u -> u
+v -> vʲ / _ [i|j]
+v -> v
+w -> w / _ e e k e n d
+w -> fʲ / [s|c] z _ [i|j]
+w -> f / [s|c] z _
+w -> fʲ / [s|ś|k|p] _ [i|j]
+w -> f / [s|ś|k|p] _
+w -> vʲ / _ [i|l]
+w -> v
+x -> k s
+y -> j / VOWELNOTI _ CONSONANT
+y -> j / VOWELNOTI _ #
+y -> j / VOWELNOTI _ -
+y -> ɨ
+z -> s / _ VOICED #
+z -> s / _ DEVOICED
+z -> s / _ #
+z -> ʑ / _ i
+z -> z
+ż -> ʂ / _ VOICED #
+ż -> ʂ / _ DEVOICED
+ż -> ʂ / _ #
+ż -> ʐ
+ź -> ɕ / _ #
+ź -> ɕ / _ VOICED #
+ź -> ɕ / _ DEVOICED
+ź -> ʑ
+
+TEST ab -> a p
+TEST bi -> bʲ i
+TEST bii -> bʲ j i
+TEST ci -> t͡ɕ i
+TEST cie -> t͡ɕ ɛ
+TEST czwartek -> t͡ʂ f a r t ɛ k
+TEST weekendowy -> w i k ɛ n d ɔ v ɨ
+TEST weekend -> w i k ɛ n t
+TEST bank -> (b a n k, b a ŋ k)
+TEST siano -> ɕ a n ɔ
+TEST quo -> k v ɔ
