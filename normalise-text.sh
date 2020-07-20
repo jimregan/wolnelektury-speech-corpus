@@ -187,8 +187,15 @@ remove_unread_lines() {
 }
 
 text_norm() {
-    echo "Stage 7: broad & narrow normalisations"
+    echo "Stage 7a: specific normalisations"
     ../apply-specific.pl
+    echo "Stage 7b: specific normalisations, take two"
+    # quoting doesn't quite work for these
+    cat spowiedz-dzieciecia-wieku.txt-38.txt |sed -e 's/23\. \*grudnia\* 18…/dwudziesty trzeci grudnia tysiąc osiemset/' > sed.tmp
+    mv sed.tmp spowiedz-dzieciecia-wieku.txt-38.txt
+    cat balzac-komedia-ludzka-muza-z-zascianka.txt-03.txt | sed -e 's/wymawiała \*Dür\*//' > sed.tmp
+    mv sed.tmp balzac-komedia-ludzka-muza-z-zascianka.txt-03.txt
+    echo "Stace 7c: broad normalisations"
     for i in *.txt
     do
         cat $i | perl ../apply-broad.pl > $i.bak
