@@ -34,7 +34,7 @@ while(<INPUT>) {
         my $year = $3;
         my $outyear = expand_year($year, 'loc');
         print "$outfile\t$m\t$prep roku $outyear\n";
-    } elsif(/(([Ww]|[Pp]o) ([IXV]+)) w(?:ieku|\.)/) {
+    } elsif(/(([Ww]|[Pp]o) ([IXV]+) w(?:ieku|\.))/) {
         my $m = $1;
         my $ord = $2;
         my $prep = $3;
@@ -56,13 +56,13 @@ while(<INPUT>) {
         my $m = $1;
         my $king = $2;
         my $ord = $3;
-        my $outord = inflect_ordinal_roman($ord, 'm', 'nom');
+        my $outord = inflect_ordinal_roman($ord, 'm', 'gen');
         print "$outfile\t$m\t$king $outord\n";
     } elsif(/(($kings_ins) ([IXV]+))/) {
         my $m = $1;
         my $king = $2;
         my $ord = $3;
-        my $outord = inflect_ordinal_roman($ord, 'm', 'nom');
+        my $outord = inflect_ordinal_roman($ord, 'm', 'ins');
         print "$outfile\t$m\t$king $outord\n";
     }
 }
