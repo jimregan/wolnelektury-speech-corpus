@@ -32,6 +32,7 @@ my %skip_until = (
     'brazownicy.txt' => 'Znana jest historia',
     'powiesci-fantastyczne-kawaler-gluck.txt' => 'Schyłek jesieni',
     'powiesci-fantastyczne-majorat.txt' => 'Niedaleko od brzegów morza Bałtyckiego',
+    'powiesci-fantastyczne-don-juan.txt' => 'Dźwięczny a mocny głos',
 );
 my %head_replace = (
     'bajki-i-przypowiesci-dwa-zolwie.txt' => "Ignacy Krasicki\nBajki i przypowieści\nCzęść pierwsza",
@@ -55,7 +56,8 @@ my %head_replace = (
     'but-w-butonierce-marsz.txt' => "Bruno Jasieński\nBut w butonierce\nMarsz\nDedykacja",
     'brazownicy.txt' => "Tadeusz Boy-Żeleński\nBrązownicy\nWstęp\nTo nagranie Legamus może być kopiowane i rozpowszechniane bez ograniczeń",
     'powiesci-fantastyczne-kawaler-gluck.txt' => "Ernst Teodor Amadeusz Hoffmann\nPowieści fantastyczne\ntłumaczenie Antoni Lange\nKawaler Gluck\nWspomnienie z roku tysiąc osiemset dziewiątego",
-    'powiesci-fantastyczne-majorat.txt' => ""Ernst Teodor Amadeusz Hoffmann\nPowieści fantastyczne\nPrzekład Józefa Prackiego\nMajorat",
+    'powiesci-fantastyczne-majorat.txt' => "Ernst Teodor Amadeusz Hoffmann\nPowieści fantastyczne\nPrzekład Józefa Prackiego\nMajorat",
+    'powiesci-fantastyczne-don-juan.txt' => "Ernst Teodor Amadeusz Hoffmann\nPowieści fantastyczne\ntłumaczenie Antoni Lange\nDon Juan\nZ dziennika podróżującego entuzjasty",
 );
 
 if (!exists $skip_until{$ARGV[0]}) {
