@@ -36,8 +36,8 @@ while(<INPUT>) {
         print "$outfile\t$m\t$prep roku $outyear\n";
     } elsif(/(([Ww]|[Pp]o) ([IXV]+) w(?:ieku|\.))/) {
         my $m = $1;
-        my $ord = $2;
-        my $prep = $3;
+        my $prep = $2;
+        my $ord = $3;
         my $outord = inflect_ordinal_roman($ord, 'm', 'loc');
         print "$outfile\t$m\t$prep $outord wieku\n";
     } elsif(/(([Ww]|[Pp]o) w(?:ieku|\.) ([IXV]+))/) {
