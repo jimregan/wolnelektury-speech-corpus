@@ -33,7 +33,7 @@ prepend_text() {
 check_truncation() {
     stage=$1
     zero=$(find . -name '*.txt' -size 0|wc -l|awk '{print $1}')
-    if [ $zero -eq 0 ]; then
+    if [ $zero -ne 0 ]; then
         echo "Truncation at stage $stage"
         exit
     fi
