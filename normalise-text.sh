@@ -30,6 +30,15 @@ prepend_text() {
     rm "$fname.bak"
 }
 
+check_truncation() {
+    stage=$1
+    zero=$(find . -name '*.txt' -size 0|wc -l|awk '{print $1}')
+    if [ $zero -eq 0 ]; then
+        echo "Truncation at stage $stage"
+        exit
+    fi
+}
+
 remove_line() {
     file="$1"
     line="$2"
@@ -212,8 +221,11 @@ run_all() {
     fi
 
     broad_norm
+    check_truncation broad_norm
     header_replace
+    check_truncation header_replace
     additions
+    check_truncation additions
     norm_chapters
     split_chapters
     remove_unread_lines
