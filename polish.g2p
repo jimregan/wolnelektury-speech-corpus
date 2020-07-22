@@ -4,7 +4,7 @@ PHONEME_DELIMITER " "
 
 VAR VOICED [b|d|g|w|ż|ź|z]
 VAR DEVOICED [p|t|k|f|s|ś|c|ć]
-#VAR VOWEL [a|ą|e|ę|i|o|ó|u|y]
+VAR VOWEL [a|ą|e|ę|i|o|ó|u|y]
 VAR VOWELNOTI [a|ą|e|ę|o|ó|u|y]
 VAR CONSONANT [b|c|ć|d|f|g|h|j|k|l|ł|m|n|ń|p|q|r|s|t|v|w|x|z|ż|ź]
 
@@ -13,21 +13,32 @@ VAR CONSONANT [b|c|ć|d|f|g|h|j|k|l|ł|m|n|ń|p|q|r|s|t|v|w|x|z|ż|ź]
 aa -> a ʔ a
 au -> a w
 a -> a
+ą -> ɔ̃ / _ [ż|rz|sz]
+ą -> ɔ m / _ [p|b]
+ą -> ɔ ŋ / _ [g|k]
+ą -> ɔ ɲ / _ [ć|ś|ź|dź]
+ą -> ɔ ɲ / _ [c|s|z|dz] i
+ą -> ɔ n / _ [t|d|cz|dż|drz]
 ą -> ɔ̃
 b -> p / _ #
 b -> p / _ VOICED #
 b -> p / _ DEVOICED
 b -> bʲ / _ [i|j]
+bł -> (b w, p) / j a _ k
 b -> b
+ch -> t͡ʂ / _ i p s
 ch -> xʲ / _ i
+ch -> ɣ / _ ż
 ch -> x
 cz -> t͡ʂ
 ci -> t͡ɕ / _ VOWELNOTI
 ci -> t͡ɕ i
+c -> k / p i z z i _ a t
 c -> t͡s
+ć -> ∅ / p i ę _ d z i
 ć -> t͡ɕ
 dz -> d͡ʑ / _ VOWELNOTI
-dz -> d͡ʑ i
+dz -> d͡ʑ / _ i
 dż -> t͡ʂ / _ #
 dż -> t͡ʂ / _ VOICED #
 dż -> t͡ʂ / _ DEVOICED
@@ -43,6 +54,13 @@ d -> d
 ee -> i / w _ k e n d
 ee -> ɛ ʔ ɛ
 eu -> ɛ w
+ę -> ɛ̃ / _ [ż|rz|sz]
+ę -> ɛ m / _ [p|b]
+ę -> ɛ ŋ / _ [g|k]
+ę -> ɛ ɲ / _ [ć|ś|ź|dź]
+ę -> ɛ ɲ / _ [c|s|z|dz] i
+ę -> ɛ n / _ [t|d|cz|dż|drz]
+ę -> (ɛ̃, ɛ) / _ #
 ę -> ɛ̃
 e -> ɛ
 f -> fʲ / _ [i|j]
@@ -54,8 +72,8 @@ g -> k / _ #
 g -> ɡ
 h -> xʲ / _ i
 h -> x
-i -> j / _ i #
 i -> ∅ / [s|c|n|z] _ VOWELNOTI
+i -> j / _ VOWEL
 i -> i
 j -> j
 k -> ɡ / _ ż
@@ -82,6 +100,10 @@ rz -> ʂ / [p|k|t] _
 rz -> ʂ / _ VOICED #
 rz -> ʂ / _ DEVOICED
 rz -> ʂ / _ #
+rz -> r z / t a _ a n
+rz -> r z / m u _ a s i c h l
+rz -> r z / e _ a c
+rz -> r ʑ / _ i
 rz -> ʐ
 r -> r
 sz -> ʂ
@@ -97,15 +119,19 @@ v -> v
 w -> w / _ e e k e n d
 w -> fʲ / [s|c] z _ [i|j]
 w -> f / [s|c] z _
+#w -> fʲ / [s|ś|k|p] r? _ [i|j]
+#w -> f / [s|ś|k|p] r? _
 w -> fʲ / [s|ś|k|p] _ [i|j]
 w -> f / [s|ś|k|p] _
 w -> vʲ / _ [i|l]
 w -> v
+x -> k ɕ / _ i
 x -> k s
 y -> j / VOWELNOTI _ CONSONANT
 y -> j / VOWELNOTI _ #
 y -> j / VOWELNOTI _ -
 y -> ɨ
+zz -> t͡s / p i _
 z -> s / _ VOICED #
 z -> s / _ DEVOICED
 z -> s / _ #
@@ -131,3 +157,19 @@ TEST weekend -> w i k ɛ n t
 TEST bank -> (b a n k, b a ŋ k)
 TEST siano -> ɕ a n ɔ
 TEST quo -> k v ɔ
+TEST pizza -> pʲ i t͡s a
+TEST pizzicato -> pʲ i t͡s i k a t ɔ
+TEST przepraszam -> p ʂ ɛ p r a ʂ a m
+TEST pies -> pʲ j ɛ s
+TEST jabłko -> (j a b w k ɔ, j a p k ɔ)
+TEST sześćset -> (ʂ ɛ ɕ s ɛ t, ʂ ɛ j s ɛ t)
+TEST mózg -> m u s k
+#TEST krwawy -> k r f a v ɨ
+TEST krwawy -> k r v a v ɨ
+TEST łabędź -> w a b ɛ ɲ t͡ɕ
+TEST łabędzi -> w a b ɛ ɲ d͡ʑ i
+TEST pięćdziesiąt -> pʲ j ɛ ɲ d͡ʑ ɛ ɕ ɔ n t
+TEST mierzić -> mʲ j ɛ r ʑ i t͡ɕ
+TEST proszę -> (p r ɔ ʂ ɛ̃ , p r ɔ ʂ ɛ)
+TEST tarzan -> t a r z a n
+TEST erzac -> ɛ r z a t͡s
