@@ -2,8 +2,8 @@ CHARACTER_SET "aąbcćdeęfghijklłmnńoópqrsśtuvwxyzżź'-"
 DEFAULT_PHONEME "_"
 PHONEME_DELIMITER " "
 
-VAR VOICED [b|d|g|w|ż|ź|z]
-VAR DEVOICED [p|t|k|f|s|ś|c|ć]
+VAR VOICED (b|d|g|w|ż|ź|z|dż)
+VAR DEVOICED (p|t|k|f|s|ś|c|ć|cz|sz)
 VAR VOWEL [a|ą|e|ę|i|o|ó|u|y]
 VAR VOWELNOTI [a|ą|e|ę|o|ó|u|y]
 VAR CONSONANT [b|c|ć|d|f|g|h|j|k|l|ł|m|n|ń|p|q|r|s|t|v|w|x|z|ż|ź]
@@ -23,6 +23,7 @@ a -> a
 b -> p / _ #
 b -> p / _ VOICED #
 b -> p / _ DEVOICED
+b -> p / _ VOICED DEVOICED
 b -> bʲ / _ [i|j]
 bł -> (b w, p) / j a _ k
 b -> b
@@ -41,6 +42,7 @@ dz -> d͡ʑ / _ VOWELNOTI
 dz -> d͡ʑ / _ i
 dż -> t͡ʂ / _ #
 dż -> t͡ʂ / _ -? VOICED #
+dż -> t͡ʂ / _ VOICED DEVOICED
 dż -> t͡ʂ / _ DEVOICED
 dż -> d͡ʐ
 dź -> t͡ɕ / _ #
@@ -49,6 +51,7 @@ dź -> t͡ɕ / _ DEVOICED
 dź -> d͡ʑ
 d -> t / _ #
 d -> t / _ -? VOICED #
+d -> t / _ VOICED DEVOICED
 d -> t / _ DEVOICED
 d -> d
 ee -> i / w _ k e n d
@@ -57,9 +60,11 @@ eu -> ɛ w
 ę -> ɛ̃ / _ [ż|rz|sz]
 ę -> ɛ m / _ [p|b]
 ę -> ɛ ŋ / _ [g|k]
+ę -> ɛ ɲ / _ d ź
+ę -> ɛ ɲ / _ d z i
 ę -> ɛ n / _ [t|d|cz|dż|drz]
-ę -> ɛ ɲ / _ [ć|ś|ź|dź]
-ę -> ɛ ɲ / _ [c|s|z|dz] i
+ę -> ɛ ɲ / _ [ć|ś|ź]
+ę -> ɛ ɲ / _ [c|s|z] i
 ę -> (ɛ̃, ɛ) / _ #
 ę -> ɛ̃
 e -> ɛ
@@ -67,6 +72,7 @@ f -> fʲ / _ [i|j]
 f -> f
 g -> ɡʲ / _ [i|j]
 g -> k / _ -? VOICED #
+g -> k / _ VOICED DEVOICED
 g -> k / _ DEVOICED
 g -> k / _ #
 g -> ɡ
@@ -98,6 +104,7 @@ q -> k u
 r -> rʲ / _ i
 rz -> ʂ / [p|k|t] _
 rz -> ʂ / _ -? VOICED #
+rz -> ʂ / _ VOICED DEVOICED
 rz -> ʂ / _ DEVOICED
 rz -> ʂ / _ #
 rz -> r z / t a _ a n
@@ -121,8 +128,9 @@ w -> fʲ / [s|c] z _ [i|j]
 w -> f / [s|c] z _
 #w -> fʲ / [s|ś|k|p] r? _ [i|j]
 #w -> f / [s|ś|k|p] r? _
-w -> fʲ / [s|ś|k|p] _ [i|j]
-w -> f / [s|ś|k|p] _
+w -> fʲ / [s|ś|k|p|t] _ [i|j]
+w -> f / [s|ś|k|p|t] _
+w -> f / _ [s|ś|k|p]
 w -> vʲ / _ [i|l]
 w -> v
 x -> k ɕ / _ i
@@ -133,16 +141,19 @@ y -> j / VOWELNOTI _ -
 y -> ɨ
 zz -> t͡s / p i _
 z -> s / _ -? VOICED #
+z -> s / _ VOICED DEVOICED
 z -> s / _ DEVOICED
 z -> s / _ #
 z -> ʑ / _ i
 z -> z
-ż -> ʂ / _ -? VOICED #
-ż -> ʂ / _ DEVOICED
 ż -> ʂ / _ #
+ż -> ʂ / _ -? VOICED #
+ż -> ʂ / _ VOICED DEVOICED
+ż -> ʂ / _ DEVOICED
 ż -> ʐ
 ź -> ɕ / _ #
 ź -> ɕ / _ -? VOICED #
+ź -> ɕ / _ VOICED DEVOICED
 ź -> ɕ / _ DEVOICED
 ź -> ʑ
 
@@ -190,5 +201,5 @@ TEST krzak -> k ʂ a k
 TEST odtworzyć -> ɔ t t f ɔ ʐ ɨ t͡ɕ
 TEST kawka -> k a f k a
 TEST kwaz-inorma -> k f a z i n ɔ r m a
-TEST na-ukowiec -> n a u k ɔ vʲ ɛ t͡s
+TEST na-ukowiec -> n a u k ɔ vʲ j ɛ t͡s
 TEST dżawa -> d͡ʐ a v a
