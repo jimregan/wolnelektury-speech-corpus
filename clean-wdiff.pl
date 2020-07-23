@@ -12,6 +12,7 @@ my $text = <$f>;
 
 close $f;
 
+$text =~ s/\n/ /g;
 $text =~ s/\{\+[^+]+\+\}//g;
 $text =~ s/\[\-[^-]+\-\]//g;
 $text =~ s/  */ /g;
