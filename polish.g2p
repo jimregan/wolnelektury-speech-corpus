@@ -40,15 +40,15 @@ c -> t͡s
 dz -> d͡ʑ / _ VOWELNOTI
 dz -> d͡ʑ / _ i
 dż -> t͡ʂ / _ #
-dż -> t͡ʂ / _ VOICED #
+dż -> t͡ʂ / _ -? VOICED #
 dż -> t͡ʂ / _ DEVOICED
 dż -> d͡ʐ
 dź -> t͡ɕ / _ #
-dź -> t͡ɕ / _ VOICED #
+dź -> t͡ɕ / _ -? VOICED #
 dź -> t͡ɕ / _ DEVOICED
 dź -> d͡ʑ
 d -> t / _ #
-d -> t / _ VOICED #
+d -> t / _ -? VOICED #
 d -> t / _ DEVOICED
 d -> d
 ee -> i / w _ k e n d
@@ -57,16 +57,16 @@ eu -> ɛ w
 ę -> ɛ̃ / _ [ż|rz|sz]
 ę -> ɛ m / _ [p|b]
 ę -> ɛ ŋ / _ [g|k]
+ę -> ɛ n / _ [t|d|cz|dż|drz]
 ę -> ɛ ɲ / _ [ć|ś|ź|dź]
 ę -> ɛ ɲ / _ [c|s|z|dz] i
-ę -> ɛ n / _ [t|d|cz|dż|drz]
 ę -> (ɛ̃, ɛ) / _ #
 ę -> ɛ̃
 e -> ɛ
 f -> fʲ / _ [i|j]
 f -> f
 g -> ɡʲ / _ [i|j]
-g -> k / _ VOICED #
+g -> k / _ -? VOICED #
 g -> k / _ DEVOICED
 g -> k / _ #
 g -> ɡ
@@ -76,7 +76,7 @@ i -> ∅ / [s|c|n|z] _ VOWELNOTI
 i -> j / _ VOWEL
 i -> i
 j -> j
-k -> ɡ / _ ż
+k -> ɡ / _ [ż|b]
 k -> kʲ / _ [i|j]
 k -> k
 l -> lʲ / _ [i|j]
@@ -97,7 +97,7 @@ qu -> k v
 q -> k u
 r -> rʲ / _ i
 rz -> ʂ / [p|k|t] _
-rz -> ʂ / _ VOICED #
+rz -> ʂ / _ -? VOICED #
 rz -> ʂ / _ DEVOICED
 rz -> ʂ / _ #
 rz -> r z / t a _ a n
@@ -132,17 +132,17 @@ y -> j / VOWELNOTI _ #
 y -> j / VOWELNOTI _ -
 y -> ɨ
 zz -> t͡s / p i _
-z -> s / _ VOICED #
+z -> s / _ -? VOICED #
 z -> s / _ DEVOICED
 z -> s / _ #
 z -> ʑ / _ i
 z -> z
-ż -> ʂ / _ VOICED #
+ż -> ʂ / _ -? VOICED #
 ż -> ʂ / _ DEVOICED
 ż -> ʂ / _ #
 ż -> ʐ
 ź -> ɕ / _ #
-ź -> ɕ / _ VOICED #
+ź -> ɕ / _ -? VOICED #
 ź -> ɕ / _ DEVOICED
 ź -> ʑ
 
@@ -173,3 +173,22 @@ TEST mierzić -> mʲ j ɛ r ʑ i t͡ɕ
 TEST proszę -> (p r ɔ ʂ ɛ̃ , p r ɔ ʂ ɛ)
 TEST tarzan -> t a r z a n
 TEST erzac -> ɛ r z a t͡s
+TEST klacz -> k l a t͡ʂ
+TEST odrzut -> ɔ d ʐ u t
+TEST zupa -> z u p a
+TEST przeżytek -> p ʂ ɛ ʐ ɨ t ɛ k
+TEST awers -> a v ɛ r s
+TEST abażur -> a b a ʐ u r
+TEST haczyk -> x a t͡ʂ ɨ k
+TEST różdżka -> r u ʂ t͡ʂ k a
+TEST będąc -> b ɛ n d ɔ n t͡s
+TEST względnie -> v z ɡ l ɛ n d ɲ ɛ
+TEST łódka -> w u t k a
+TEST także -> t a ɡ ʐ ɛ
+TEST jakby -> j a ɡ b ɨ
+TEST krzak -> k ʂ a k
+TEST odtworzyć -> ɔ t t f ɔ ʐ ɨ t͡ɕ
+TEST kawka -> k a f k a
+TEST kwaz-inorma -> k f a z i n ɔ r m a
+TEST na-ukowiec -> n a u k ɔ vʲ ɛ t͡s
+TEST dżawa -> d͡ʐ a v a
