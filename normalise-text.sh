@@ -178,6 +178,7 @@ remove_unread_lines() {
     remove_line ballada-z-tamtej-strony-erotyk.txt '^ballada z tamtej strony$'
     remove_line ballada-z-tamtej-strony-melancholia.txt '^ballada z tamtej strony$'
     remove_line ballada-z-tamtej-strony-zdrada.txt '^ballada z tamtej strony$'
+    remove_line dzien-jak-co-dzien-zapowiedz.txt '^dzień jak codzień$'
     #remove_line pasewicz-dolina-wilda-w-starym-stylu.txt 'Dolna Wilda'
     #brazownicy_lines=$(wc -l brazownicy.txt-00.txt|awk '{print $1}')
     #head -n $(($brazownicy_lines - 2)) > tmp && mv tmp brazownicy.txt-00.txt
