@@ -66,6 +66,7 @@ ksiega-dzungli.txt \
 ojciec-goriot.txt \
 piesn-o-rolandzie.txt \
 powiesci-fantastyczne-kawaler-gluck.txt \
+powiesci-fantastyczne-piaskun.txt \
 powiesci-fantastyczne-wybor-narzeczonej.txt \
 przedwiosnie.txt \
 przygody-tomka-sawyera.txt \

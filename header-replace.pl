@@ -33,6 +33,7 @@ my %skip_until = (
     'powiesci-fantastyczne-kawaler-gluck.txt' => 'Schyłek jesieni',
     'powiesci-fantastyczne-majorat.txt' => 'Niedaleko od brzegów morza Bałtyckiego',
     'powiesci-fantastyczne-don-juan.txt' => 'Dźwięczny a mocny głos',
+    'powiesci-fantastyczne-piaskun.txt' => 'Nathanael do Lotara',
 );
 my %head_replace = (
     'bajki-i-przypowiesci-dwa-zolwie.txt' => "Ignacy Krasicki\nBajki i przypowieści\nCzęść pierwsza",
@@ -58,6 +59,7 @@ my %head_replace = (
     'powiesci-fantastyczne-kawaler-gluck.txt' => "Ernst Teodor Amadeusz Hoffmann\nPowieści fantastyczne\ntłumaczenie Antoni Lange\nKawaler Gluck\nWspomnienie z roku tysiąc osiemset dziewiątego",
     'powiesci-fantastyczne-majorat.txt' => "Ernst Teodor Amadeusz Hoffmann\nPowieści fantastyczne\nPrzekład Józefa Prackiego\nMajorat",
     'powiesci-fantastyczne-don-juan.txt' => "Ernst Teodor Amadeusz Hoffmann\nPowieści fantastyczne\ntłumaczenie Antoni Lange\nDon Juan\nZ dziennika podróżującego entuzjasty",
+    'powiesci-fantastyczne-piaskun.txt' => "Ernst Teodor Amadeusz Hoffmann\nPowieści fantastyczne\ntłumaczenie Antoni Lange\nPiaskun\nJeden.",
 );
 
 if (!exists $skip_until{$ARGV[0]}) {
