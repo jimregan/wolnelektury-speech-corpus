@@ -78,29 +78,6 @@ my %chapter_ord_fem = (
     'XL' => 'czterdziesta',
 );
 
-my %title_names = (
-    'wspomnienia-niebieskiego-mundurka.txt' => {
-        'I' => 'Dzwonek szkolny',
-        'II' => '"Knot"',
-        'III' => '"Zabacuł"',
-        'IV' => 'Prymus-lizus',
-        'V' => 'O chłopcu, co sypiał w trumnie',
-        'VI' => 'Artyści klasowi',
-        'VII' => 'Nauczyciel starej daty',
-        'VIII' => 'Dawid i Goliat',
-        'IX' => 'Stancje',
-        'X' => 'Kąpiele i katastrofy',
-        'XI' => 'Dzień chrabąszczowy',
-        'XII' => 'Poeta',
-        'XIII' => 'Chora noga',
-        'XIV' => 'Szkoła i klasztor',
-        'XV' => 'Kuracja mleczna profesora Jastrebowa',
-        'XVI' => 'Mali bohaterowie',
-        'XVII' => 'Nowy zwierzchnik',
-        'XVIII' => 'Ostatnie zebranie',
-    },
-);
-
 my $units = "IX|IV|III|II|I|VIII|VII|VI|V";
 my $tens = "XXX|XX|XL?";
 
@@ -145,11 +122,6 @@ if(exists $single{$ARGV[0]}) {
 my $what = $spec{$ARGV[0]};
 open(INPUT, '<', $ARGV[0]);
 binmode(INPUT, ":utf8");
-
-my %chapter_titles = ();
-if(exists $title_names{$ARGV[0]}) {
-    %chapter_titles = %{$title_names{$ARGV[0]}};
-}
 while(<INPUT>) {
     chomp;
     s/\r//;
@@ -163,23 +135,14 @@ while(<INPUT>) {
             my $tn = $1;
             my $un = $2;
             print get_norm($what, $tn, $un);
-            if(exists $chapter_titles{$tn . $un}) {
-                print "\n" . $chapter_titles{$tn . $un};
-            }
             next;
         } elsif(/^($tens)$/) {
             my $tn = $1;
             print get_norm($what, $tn, '');
-            if(exists $chapter_titles{$tn}) {
-                print "\n" . $chapter_titles{$tn};
-            }
             next;
         } elsif(/^($units)$/) {
             my $un = $1;
             print get_norm($what, '', $un);
-            if(exists $chapter_titles{$un}) {
-                print "\n" . $chapter_titles{$un};
-            }
             next;
         } else {
             print "$_\n";
