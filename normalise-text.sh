@@ -244,7 +244,7 @@ text_norm() {
     mv sed.tmp spowiedz-dzieciecia-wieku.txt-38.txt
     cat balzac-komedia-ludzka-muza-z-zascianka.txt-03.txt | sed -e 's/wymawiała \*Dür\*//' > sed.tmp
     mv sed.tmp balzac-komedia-ludzka-muza-z-zascianka.txt-03.txt
-    cat wspomnienia-niebieskiego-mundurka.txt-09.txt | sed -e 's/^Rozdział dziewiąty/Rozdział dziewiąty. Stancje/;s/pan \*prefesor\*…/pan *profesor*…/;s/\*prefesor\* pozwoli/*profesor* pozwoli/;s/\*prefesorowi\*/*profesorowi*/;' > sed.tmp
+    cat wspomnienia-niebieskiego-mundurka.txt-09.txt | sed -e 's/pan \*prefesor\*…/pan *profesor*…/;s/\*prefesor\* pozwoli/*profesor* pozwoli/;s/\*prefesorowi\*/*profesorowi*/;' > sed.tmp
     mv sed.tmp wspomnienia-niebieskiego-mundurka.txt-09.txt
     echo "Stace 7c: broad normalisations"
     for i in *.txt
