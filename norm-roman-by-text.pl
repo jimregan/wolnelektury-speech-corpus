@@ -14,6 +14,7 @@ my %spec = (
     'chlopi-czesc-pierwsza-jesien.txt' => 'Rozdział',
     'lange-miranda.txt' => 'Rozdział',
     'sztuka-kochania.txt' => 'Pieśń',
+    'slowka-zbior-o-bardzo-niegrzecznej-literaturze-polskiej-i-jej-strapionej-ciotce.txt' => 'card',
 );
 
 my %del = (
@@ -27,6 +28,7 @@ my %single = (
     'chlopi-czesc-pierwsza-jesien.txt' => 1,
     'lange-miranda.txt' => 1,
     'sztuka-kochania.txt' => 1,
+    'slowka-zbior-o-bardzo-niegrzecznej-literaturze-polskiej-i-jej-strapionej-ciotce.txt' => 1,
 );
 
 my %chapter_ord_masc = (
@@ -79,13 +81,40 @@ my %chapter_ord_fem = (
     'XL' => 'czterdziesta',
 );
 
+my %chapter_card = (
+    'I' => 'jeden',
+    'II' => 'dwa',
+    'III' => 'trzy',
+    'IV' => 'cztery',
+    'V' => 'pięć',
+    'VI' => 'sześć',
+    'VII' => 'siedem',
+    'VIII' => 'osiem',
+    'IX' => 'dziewięć',
+    'X' => 'dziesięć',
+    'XI' => 'jedenaście',
+    'XII' => 'dwanaście',
+    'XIII' => 'trzynaście',
+    'XIV' => 'czternaście',
+    'XV' => 'piętnaście',
+    'XVI' => 'szesnaście',
+    'XVII' => 'siedemnaście',
+    'XVIII' => 'osiemnaście',
+    'XIX' => 'dziewiętnaście',
+    'XX' => 'dwadzieścia',
+    'XXX' => 'trzydzieści',
+    'XL' => 'czterdzieści',
+);
+
 my $units = "IX|IV|III|II|I|VIII|VII|VI|V";
 my $tens = "XXX|XX|XL?";
 
 sub gendered_ordinal {
     my $gen = shift;
     my $ord = shift;
-    if($gen eq 'f') {
+    if($gen eq 'card') {
+        return $chapter_card{$ord};
+    } elsif($gen eq 'f') {
         return $chapter_ord_fem{$ord};
     } else {
         return $chapter_ord_masc{$ord};
@@ -97,17 +126,23 @@ sub get_norm {
     my $tn = shift;
     my $un = shift;
     my $gen = 'm';
-    if($what eq 'Pieśń') {
+    my $spc = ' ';
+    if($what eq 'card') {
+        $gen = 'card';
+        $what = '';
+        $spc = '';
+    } elsif($what eq 'Pieśń') {
         $gen = 'f';
     }
+    my $num = '';
     if($un eq '') {
-        return "$what " . gendered_ordinal($gen, $tn) . "\n";
+        return "$what" . $spc . gendered_ordinal($gen, $tn) . "\n";
     } elsif($tn eq '') {
-        return "$what " . gendered_ordinal($gen, $un) . "\n";
+        return "$what" . $spc . gendered_ordinal($gen, $un) . "\n";
     } elsif($tn eq 'X') {
-        return "$what " . gendered_ordinal($gen, $tn . $un) . "\n";
+        return "$what" . $spc . gendered_ordinal($gen, $tn . $un) . "\n";
     } else {
-        return "$what " . gendered_ordinal($gen, $tn) . ' ' . gendered_ordinal($gen, $un) . "\n";
+        return "$what" . $spc . gendered_ordinal($gen, $tn) . ' ' . gendered_ordinal($gen, $un) . "\n";
     }
 }
 

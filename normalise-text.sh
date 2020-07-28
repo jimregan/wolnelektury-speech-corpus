@@ -113,6 +113,7 @@ norm_chapters() {
         chlopi-czesc-pierwsza-jesien.txt \
 	sztuka-kochania.txt \
         bema-pamieci-zalobny-rapsod.txt \
+        slowka-zbior-o-bardzo-niegrzecznej-literaturze-polskiej-i-jej-strapionej-ciotce.txt \
         lange-miranda.txt
     do
         perl ../norm-roman-by-text.pl $i > $i.tmp
@@ -232,6 +233,7 @@ remove_unread_lines() {
     remove_line napoj-cienisty-wspomnienie.txt  '^Napój cienisty$'
     remove_line nuta-czlowiecza-westchnienie.txt '^nuta człowiecza$'
     remove_line nuta-czlowiecza-zal.txt '^nuta człowiecza$'
+    remove_line slowka-zbior-o-bardzo-niegrzecznej-literaturze-polskiej-i-jej-strapionej-ciotce.txt  '^J. E. Prof. Dr. Hr. St. Tarnowskiemu poświęcam.$'
     #remove_line pasewicz-dolina-wilda-w-starym-stylu.txt 'Dolna Wilda'
     echo 'Pochwała ta upoiła panią de La Baudraye; panu de Clagny, generalnemu poborcy i młodemu Boirouge wydało się, iż jest serdeczniejsza ze Stefanem niż w wilię.' >> balzac-komedia-ludzka-muza-z-zascianka.txt-08.txt
     echo 'Koniec tomu trzeciego. Czytał Wiktor Korzeniewski.' >> ojciec-goriot.txt-11.txt
