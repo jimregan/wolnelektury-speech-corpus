@@ -112,6 +112,7 @@ norm_chapters() {
         fortepian-chopina.txt bartek-zwyciezca.txt \
         chlopi-czesc-pierwsza-jesien.txt \
 	sztuka-kochania.txt \
+        bema-pamieci-zalobny-rapsod.txt \
         lange-miranda.txt
     do
         perl ../norm-roman-by-text.pl $i > $i.tmp

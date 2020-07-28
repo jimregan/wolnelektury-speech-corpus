@@ -20,6 +20,7 @@ my %del = (
     'z-wichrow-i-hal-z-tatr-krzak-dzikiej-rozy-w-ciemnych-smreczy.txt' => 1,
     'fortepian-chopina.txt' => 1,
     'bartek-zwyciezca.txt' => 1,
+    'bema-pamieci-zalobny-rapsod.txt' => 1,
 );
 
 my %single = (
