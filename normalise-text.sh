@@ -229,10 +229,7 @@ remove_unread_lines() {
     remove_line napoj-cienisty-wiosna.txt  '^Napój cienisty$'
     remove_line napoj-cienisty-wspomnienie.txt  '^Napój cienisty$'
     #remove_line pasewicz-dolina-wilda-w-starym-stylu.txt 'Dolna Wilda'
-    #brazownicy_lines=$(wc -l brazownicy.txt-00.txt|awk '{print $1}')
-    #head -n $(($brazownicy_lines - 2)) > tmp && mv tmp brazownicy.txt-00.txt
     echo 'Pochwała ta upoiła panią de La Baudraye; panu de Clagny, generalnemu poborcy i młodemu Boirouge wydało się, iż jest serdeczniejsza ze Stefanem niż w wilię.' >> balzac-komedia-ludzka-muza-z-zascianka.txt-08.txt
-    echo 'Koniec wstępu. Czytał Piotr Nater.' >> brazownicy.txt-00.txt
     echo 'Koniec tomu trzeciego. Czytał Wiktor Korzeniewski.' >> ojciec-goriot.txt-11.txt
 }
 

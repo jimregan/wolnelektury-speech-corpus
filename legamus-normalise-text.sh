@@ -28,7 +28,7 @@ remove_line() {
 
 header_replace() {
     echo "Stage 2: Replace headers"
-    for i in brazownicy.txt
+    for i in brazownicy.txt widziadla_prus.txt
     do
         echo "Replacing header in $i"
         perl ../header-replace.pl $i > $i.tmp
@@ -62,6 +62,8 @@ remove_unread_lines() {
     echo "Stage 6: add/remove lines to/from split texts"
     # Introductory sentences have no final punctuation, so sentence splitting is per line
     # This doesn't work with this header, so handle here and re-add in the specific norms
+    #brazownicy_lines=$(wc -l brazownicy.txt-00.txt|awk '{print $1}')
+    #head -n $(($brazownicy_lines - 2)) > tmp && mv tmp brazownicy.txt-00.txt
     echo 'Koniec wstępu' >> brazownicy.txt-00.txt
     echo 'Czytał Piotr Nater' >> brazownicy.txt-00.txt
     prepend_text brazownicy.txt-01.txt "Tadeusz Boy-Żeleński\nBrązownicy\nRozdział pierwszy\nBrązownicy\nTo nagranie Legamus może być kopiowane i rozpowszechniane bez ograniczeń"
