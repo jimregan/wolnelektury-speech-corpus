@@ -31,6 +31,10 @@ my %skip_until = (
     'but-w-butonierce-marsz.txt' => 'Siostrom od św.',
     'brazownicy.txt' => 'Znana jest historia',
     'powiesci-fantastyczne-kawaler-gluck.txt' => 'Schyłek jesieni',
+    'powiesci-fantastyczne-majorat.txt' => 'Niedaleko od brzegów morza Bałtyckiego',
+    'powiesci-fantastyczne-don-juan.txt' => 'Dźwięczny a mocny głos',
+    'powiesci-fantastyczne-piaskun.txt' => 'Nathanael do Lotara',
+    'widziadla_prus.txt' => '   Oto jest dokładna',
 );
 my %head_replace = (
     'bajki-i-przypowiesci-dwa-zolwie.txt' => "Ignacy Krasicki\nBajki i przypowieści\nCzęść pierwsza",
@@ -53,7 +57,11 @@ my %head_replace = (
     'ojciec-goriot.txt' => "Honoriusz Balzac\nOjciec Goriot\nTom trzeci Komedii ludzkiej",
     'but-w-butonierce-marsz.txt' => "Bruno Jasieński\nBut w butonierce\nMarsz\nDedykacja",
     'brazownicy.txt' => "Tadeusz Boy-Żeleński\nBrązownicy\nWstęp\nTo nagranie Legamus może być kopiowane i rozpowszechniane bez ograniczeń",
+    'widziadla_prus.txt' => "Widziadła\nBolesław Prus\nTo nagranie stworzone przez Legamus e u może być rozpowszechniane i przerabiane bez ograniczeń",
     'powiesci-fantastyczne-kawaler-gluck.txt' => "Ernst Teodor Amadeusz Hoffmann\nPowieści fantastyczne\ntłumaczenie Antoni Lange\nKawaler Gluck\nWspomnienie z roku tysiąc osiemset dziewiątego",
+    'powiesci-fantastyczne-majorat.txt' => "Ernst Teodor Amadeusz Hoffmann\nPowieści fantastyczne\nPrzekład Józefa Prackiego\nMajorat",
+    'powiesci-fantastyczne-don-juan.txt' => "Ernst Teodor Amadeusz Hoffmann\nPowieści fantastyczne\ntłumaczenie Antoni Lange\nDon Juan\nZ dziennika podróżującego entuzjasty",
+    'powiesci-fantastyczne-piaskun.txt' => "Ernst Teodor Amadeusz Hoffmann\nPowieści fantastyczne\ntłumaczenie Antoni Lange\nPiaskun\nJeden.",
 );
 
 if (!exists $skip_until{$ARGV[0]}) {

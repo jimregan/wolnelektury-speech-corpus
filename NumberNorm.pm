@@ -7,7 +7,7 @@ use utf8;
 use Exporter;
 
 our @ISA = qw/Exporter/;
-our @EXPORT = qw/num2text inflect_ordinal expand_year get_num_regex/;
+our @EXPORT = qw/num2text inflect_ordinal expand_year get_num_regex inflect_ordinal_roman/;
 
 my %roman_ord_masc = (
     'I' => 'pierwszy',
@@ -38,6 +38,29 @@ my %roman_ord_masc = (
     'LXXX' => 'osiemdziesiąty',
     'XC' => 'dziewięćdziesiąty',
 );
+
+sub romans_to_ordinal {
+    my $in = shift;
+    my $units = "IX|IV|III|II|I|VIII|VII|VI|V";
+    my $tens = "XL|XC|XXX|XX|X|LXXX|LXX|LX";
+    if($in =~ /^($tens)($units)$/) {
+        my $tens = $1;
+        my $units = $2;
+        if($tens eq 'X') {
+            return $roman_ord_masc{$tens . $units};
+        } else {
+            return $roman_ord_masc{$tens} . " " . $roman_ord_masc{$units};
+        }
+    } elsif($in =~ /^($tens)$/) {
+        my $tens = $1;
+        return $roman_ord_masc{$tens};
+    } elsif($in =~ /^($units)$/) {
+        my $units = $1;
+        return $roman_ord_masc{$units};
+    } else {
+        return '';
+    }
+}
 
 my %plurals = (
     'milion' => ['milion', 'miliony', 'milionów'],
@@ -284,6 +307,20 @@ sub inflect_ordinal {
             return $ordinal;
         }
     }
+}
+sub inflect_ordinal_roman {
+    shift if($_[0] eq 'inflect_ordinal_roman');
+    my $in = $_[0];
+    my $gender = 'm';
+    if($#_ > 0) {
+        $gender = $_[1];
+    }
+    my $case = 'nom';
+    if($#_ > 1) {
+        $case = $_[2];
+    }
+    my $ord = romans_to_ordinal($in);
+    return inflect_ordinal($ord, $gender, $case);
 }
 
 sub num2text_hundreds {

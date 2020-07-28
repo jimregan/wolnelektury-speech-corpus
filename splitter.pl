@@ -312,7 +312,7 @@ my %split_by_starts = (
         'Nazajutrz rozmowa przy stole'
     ],
     'powiesci-fantastyczne-piaskun.txt' => [
-        'I\.',
+        'Jeden\.',
         'II\.',
         'III\.',
         'IV\.',

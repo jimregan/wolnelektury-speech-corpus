@@ -30,6 +30,15 @@ prepend_text() {
     rm "$fname.bak"
 }
 
+check_truncation() {
+    stage=$1
+    zero=$(find . -name '*.txt' -size 0|wc -l|awk '{print $1}')
+    if [ $zero -ne 0 ]; then
+        echo "Truncation at stage $stage"
+        exit
+    fi
+}
+
 remove_line() {
     file="$1"
     line="$2"
@@ -57,6 +66,7 @@ ksiega-dzungli.txt \
 ojciec-goriot.txt \
 piesn-o-rolandzie.txt \
 powiesci-fantastyczne-kawaler-gluck.txt \
+powiesci-fantastyczne-piaskun.txt \
 powiesci-fantastyczne-wybor-narzeczonej.txt \
 przedwiosnie.txt \
 przygody-tomka-sawyera.txt \
@@ -77,6 +87,7 @@ additions() {
     echo 'Czytał Wiktor Korzeniewski' >> balzac-komedia-ludzka-male-niedole-pozycia-malzenskiego.txt
     echo 'Czytał Wiktor Korzeniewski' >> don-kichot-z-la-manchy.txt
     echo 'Czytał Wiktor Korzeniewski' >> balzac-komedia-ludzka-jaszczur.txt-22.txt
+    echo 'Czytał Wiktor Korzeniewski' >> beczka-amontillada.txt
     echo 'Czytał Jacek Rozenek' >> przedwiosnie.txt
     echo 'Czytał Jacek Rozenek' >> bartek-zwyciezca.txt
     echo 'Czytała Joanna Domańska' >> balzac-komedia-ludzka-kobieta-porzucona.txt
@@ -88,8 +99,6 @@ additions() {
     echo 'Czytał Jan Peszek' >> cierpienia-mlodego-wertera.txt
     echo 'Czytał Jan Peszek' >> antek.txt
     echo 'Czytała Danuta Stenka' >> gloria-victis-dziwna-historia.txt
-    echo 'Pochwała ta upoiła panią de La Baudraye; panu de Clagny, generalnemu poborcy i młodemu Boirouge wydało się, iż jest serdeczniejsza ze Stefanem niż w wilię.' >> balzac-komedia-ludzka-muza-z-zascianka.txt-08.txt
-    echo 'Koniec wstępu. Czytał Piotr Nater.' >> brazownicy.txt-00.txt
     #echo 'Czytał Adam Fidusiewicz' >> pasewicz-dolina-wilda-w-starym-stylu.txt
     #echo 'Wolne Lektury p l' >> pasewicz-dolina-wilda-w-starym-stylu.txt
     #echo 'Zostań naszym Przyjacielem' >> pasewicz-dolina-wilda-w-starym-stylu.txt
@@ -171,14 +180,73 @@ remove_unread_lines() {
     remove_line ballada-z-tamtej-strony-erotyk.txt '^ballada z tamtej strony$'
     remove_line ballada-z-tamtej-strony-melancholia.txt '^ballada z tamtej strony$'
     remove_line ballada-z-tamtej-strony-zdrada.txt '^ballada z tamtej strony$'
+    remove_line dzien-jak-co-dzien-zapowiedz.txt '^dzień jak codzień$'
+    remove_line napoj-cienisty-akteon.txt  '^Napój cienisty$'
+    remove_line napoj-cienisty-aniol.txt  '^Napój cienisty$'
+    remove_line napoj-cienisty-balwan-ze-sniegu.txt  '^Napój cienisty$'
+    remove_line napoj-cienisty-brat.txt  '^Napój cienisty$'
+    remove_line napoj-cienisty-chalupa.txt  '^Napój cienisty$'
+    remove_line napoj-cienisty-cmentarz.txt  '^Napój cienisty$'
+    remove_line napoj-cienisty-cmy.txt  '^Napój cienisty$'
+    remove_line napoj-cienisty-cos-tam-mignelo-dalekiego.txt  '^Napój cienisty$'
+    remove_line napoj-cienisty-dokola-klombu.txt  '^Napój cienisty$'
+    remove_line napoj-cienisty-do-siostry.txt  '^Napój cienisty$'
+    remove_line napoj-cienisty-dziewczyna.txt  '^Napój cienisty$'
+    remove_line napoj-cienisty-jadwiga.txt  '^Napój cienisty$'
+    remove_line napoj-cienisty-kochankowie.txt  '^Napój cienisty$'
+    remove_line napoj-cienisty-kocmoluch.txt  '^Napój cienisty$'
+    remove_line napoj-cienisty-kopciuszek.txt  '^Napój cienisty$'
+    remove_line napoj-cienisty-lalka.txt  '^Napój cienisty$'
+    remove_line napoj-cienisty-ludzie.txt  '^Napój cienisty$'
+    remove_line napoj-cienisty-magda.txt  '^Napój cienisty$'
+    remove_line napoj-cienisty-marcin-swoboda.txt  '^Napój cienisty$'
+    remove_line napoj-cienisty-matysek.txt  '^Napój cienisty$'
+    remove_line napoj-cienisty-migon-i-jawrzon.txt  '^Napój cienisty$'
+    remove_line napoj-cienisty-modlitwa.txt  '^Napój cienisty$'
+    remove_line napoj-cienisty-modlmy-sie-srod-drzew.txt  '^Napój cienisty$'
+    remove_line napoj-cienisty-nad-ranem.txt  '^Napój cienisty$'
+    remove_line napoj-cienisty-namowa.txt  '^Napój cienisty$'
+    remove_line napoj-cienisty-na-poddaszu.txt  '^Napój cienisty$'
+    remove_line napoj-cienisty-niedziela.txt  '^Napój cienisty$'
+    remove_line napoj-cienisty-niewiara.txt  '^Napój cienisty$'
+    remove_line napoj-cienisty-niewidzialni.txt  '^Napój cienisty$'
+    remove_line napoj-cienisty-niewiedza.txt  '^Napój cienisty$'
+    remove_line napoj-cienisty-noc.txt  '^Napój cienisty$'
+    remove_line napoj-cienisty-noca.txt  '^Napój cienisty$'
+    remove_line napoj-cienisty-pejzaz-wspolczesny.txt  '^Napój cienisty$'
+    remove_line napoj-cienisty-poeta.txt  '^Napój cienisty$'
+    remove_line napoj-cienisty-tamten.txt  '^Napój cienisty$'
+    remove_line napoj-cienisty-trupiegi.txt  '^Napój cienisty$'
+    remove_line napoj-cienisty-ubostwo.txt  '^Napój cienisty$'
+    remove_line napoj-cienisty-urszula-kochanowska.txt  '^Napój cienisty$'
+    remove_line napoj-cienisty-uwiedly-sad.txt  '^Napój cienisty$'
+    remove_line napoj-cienisty-w-chmur-odbiciu.txt  '^Napój cienisty$'
+    remove_line napoj-cienisty-w-czas-zmartwychwstania.txt  '^Napój cienisty$'
+    remove_line napoj-cienisty-we-snie.txt  '^Napój cienisty$'
+    remove_line napoj-cienisty-wieczor.txt  '^Napój cienisty$'
+    remove_line napoj-cienisty-wiedza.txt  '^Napój cienisty$'
+    remove_line napoj-cienisty-wiersz-ksiezycowy.txt  '^Napój cienisty$'
+    remove_line napoj-cienisty-wiosna.txt  '^Napój cienisty$'
+    remove_line napoj-cienisty-wspomnienie.txt  '^Napój cienisty$'
+    remove_line nuta-czlowiecza-westchnienie.txt '^nuta człowiecza$'
+    remove_line nuta-czlowiecza-zal.txt '^nuta człowiecza$'
     #remove_line pasewicz-dolina-wilda-w-starym-stylu.txt 'Dolna Wilda'
-    #brazownicy_lines=$(wc -l brazownicy.txt-00.txt|awk '{print $1}')
-    #head -n $(($brazownicy_lines - 2)) > tmp && mv tmp brazownicy.txt-00.txt
+    echo 'Pochwała ta upoiła panią de La Baudraye; panu de Clagny, generalnemu poborcy i młodemu Boirouge wydało się, iż jest serdeczniejsza ze Stefanem niż w wilię.' >> balzac-komedia-ludzka-muza-z-zascianka.txt-08.txt
+    echo 'Koniec tomu trzeciego. Czytał Wiktor Korzeniewski.' >> ojciec-goriot.txt-11.txt
 }
 
 text_norm() {
-    echo "Stage 7: broad & narrow normalisations"
+    echo "Stage 7a: specific normalisations"
     ../apply-specific.pl
+    echo "Stage 7b: specific normalisations, take two"
+    # quoting doesn't quite work for these
+    cat spowiedz-dzieciecia-wieku.txt-38.txt |sed -e 's/23\. \*grudnia\* 18…/dwudziesty trzeci grudnia tysiąc osiemset/' > sed.tmp
+    mv sed.tmp spowiedz-dzieciecia-wieku.txt-38.txt
+    cat balzac-komedia-ludzka-muza-z-zascianka.txt-03.txt | sed -e 's/wymawiała \*Dür\*//' > sed.tmp
+    mv sed.tmp balzac-komedia-ludzka-muza-z-zascianka.txt-03.txt
+    cat wspomnienia-niebieskiego-mundurka.txt-09.txt | sed -e 's/pan \*prefesor\*…/pan *profesor*…/;s/\*prefesor\* pozwoli/*profesor* pozwoli/;s/\*prefesorowi\*/*profesorowi*/;' > sed.tmp
+    mv sed.tmp wspomnienia-niebieskiego-mundurka.txt-09.txt
+    echo "Stace 7c: broad normalisations"
     for i in *.txt
     do
         cat $i | perl ../apply-broad.pl > $i.bak
@@ -211,8 +279,11 @@ run_all() {
     fi
 
     broad_norm
+    check_truncation broad_norm
     header_replace
+    check_truncation header_replace
     additions
+    check_truncation additions
     norm_chapters
     split_chapters
     remove_unread_lines

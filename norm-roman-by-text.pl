@@ -154,16 +154,19 @@ while(<INPUT>) {
         my $un = $2;
         my $rest = $3;
         print get_norm($what, $tn, $un);
+        print "$rest";
         next;
     } elsif(/^($tens)\. ?(.*)$/) {
         my $tn = $1;
         my $rest = $2;
         print get_norm($what, $tn, '');
+        print "$rest";
         next;
     } elsif(/^($units)\. ?(.*)$/) {
         my $un = $1;
         my $rest = $2;
         print get_norm($what, '', $un);
+        print "$rest";
         next;
     } else {
         print "$_\n";

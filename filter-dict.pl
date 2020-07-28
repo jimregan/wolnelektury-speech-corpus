@@ -33,7 +33,7 @@ if($#ARGV >= 1) {
 
 while(<STDIN>) {
 	chomp;
-	if(!exists $dict{$_}) {
+	if(!exists $dict{lc($_)}) {
 		print "$_\n";
 	}
 }
