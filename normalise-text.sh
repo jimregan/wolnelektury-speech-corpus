@@ -246,6 +246,8 @@ text_norm() {
     # quoting doesn't quite work for these
     cat spowiedz-dzieciecia-wieku.txt-38.txt |sed -e 's/23\. \*grudnia\* 18…/dwudziesty trzeci grudnia tysiąc osiemset/' > sed.tmp
     mv sed.tmp spowiedz-dzieciecia-wieku.txt-38.txt
+    cat balzac-komedia-ludzka-eugenia-grandet.txt-10.txt|sed -e 's/\*etc\./etcetera./' > sed.tmp
+    mv sed.tmp balzac-komedia-ludzka-eugenia-grandet.txt-10.txt
     cat balzac-komedia-ludzka-muza-z-zascianka.txt-03.txt | sed -e 's/wymawiała \*Dür\*//' > sed.tmp
     mv sed.tmp balzac-komedia-ludzka-muza-z-zascianka.txt-03.txt
     cat wspomnienia-niebieskiego-mundurka.txt-09.txt | sed -e 's/pan \*prefesor\*…/pan *profesor*…/;s/\*prefesor\* pozwoli/*profesor* pozwoli/;s/\*prefesorowi\*/*profesorowi*/;' > sed.tmp
