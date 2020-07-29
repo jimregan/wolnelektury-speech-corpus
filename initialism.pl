@@ -42,6 +42,9 @@ my %alfa = (
     "ź" => "ziet"
 );
 
+my @just_append = qw/a ej ie em owie u o/;
+my %append = map { $_ => 1 } @just_append;
+
 binmode(STDIN, ":utf8");
 binmode(STDOUT, ":utf8");
 
@@ -61,7 +64,9 @@ while(<STDIN>) {
 	if($ending && $ending ne '') {
 		my $last_letter = $spelled[$#spelled];
 		my $first_of_ending = substr($ending, 0, 1);
-		if($last_letter =~ /$first_of_ending/) {
+		if(exists $append{$ending}) {
+			$outword .= $ending;
+		} elsif($last_letter =~ /$first_of_ending/) {
 			my $pos = rindex($base, substr($ending, 0, 1));
 			$outword = substr($base, 0, $pos) . $ending;
 		} else {
