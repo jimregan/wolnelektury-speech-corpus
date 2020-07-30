@@ -89,6 +89,7 @@ additions() {
     echo 'Czytał Wiktor Korzeniewski' >> don-kichot-z-la-manchy.txt
     echo 'Czytał Wiktor Korzeniewski' >> balzac-komedia-ludzka-jaszczur.txt-22.txt
     echo 'Czytał Wiktor Korzeniewski' >> beczka-amontillada.txt
+    echo 'Czytał Wiktor Korzeniewski' >> studnia-i-wahadlo.txt
     echo 'Czytał Jacek Rozenek' >> przedwiosnie.txt
     echo 'Czytał Jacek Rozenek' >> bartek-zwyciezca.txt
     echo 'Czytała Joanna Domańska' >> balzac-komedia-ludzka-kobieta-porzucona.txt
