@@ -36,6 +36,7 @@ my %skip_until = (
     'powiesci-fantastyczne-piaskun.txt' => 'Nathanael do Lotara',
     'widziadla_prus.txt' => '   Oto jest dokładna',
     'bema-pamieci-zalobny-rapsod.txt' => '— Czemu, cieniu, odjeżdżasz',
+    'balzac-komedia-ludzka-gobseck.txt' => 'tłumaczenie Tadeusz Boy-Żeleński',
 );
 my %head_replace = (
     'bajki-i-przypowiesci-dwa-zolwie.txt' => "Ignacy Krasicki\nBajki i przypowieści\nCzęść pierwsza",
@@ -64,6 +65,7 @@ my %head_replace = (
     'powiesci-fantastyczne-don-juan.txt' => "Ernst Teodor Amadeusz Hoffmann\nPowieści fantastyczne\ntłumaczenie Antoni Lange\nDon Juan\nZ dziennika podróżującego entuzjasty",
     'powiesci-fantastyczne-piaskun.txt' => "Ernst Teodor Amadeusz Hoffmann\nPowieści fantastyczne\ntłumaczenie Antoni Lange\nPiaskun\nJeden.",
     'bema-pamieci-zalobny-rapsod.txt' => "Cyprian Kamil Norwid\nBema pamięci żałobny-rapsod",
+    'balzac-komedia-ludzka-gobseck.txt' => "Gobseck\nHonoré Balzac",
 );
 
 if (!exists $skip_until{$ARGV[0]}) {
