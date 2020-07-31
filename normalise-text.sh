@@ -71,6 +71,7 @@ powiesci-fantastyczne-wybor-narzeczonej.txt \
 przedwiosnie.txt \
 przygody-tomka-sawyera.txt \
 spowiedz-dzieciecia-wieku.txt \
+bema-pamieci-zalobny-rapsod.txt \
 wspomnienia-niebieskiego-mundurka.txt
     do
         echo "Replacing header in $i"
@@ -88,6 +89,7 @@ additions() {
     echo 'Czytał Wiktor Korzeniewski' >> don-kichot-z-la-manchy.txt
     echo 'Czytał Wiktor Korzeniewski' >> balzac-komedia-ludzka-jaszczur.txt-22.txt
     echo 'Czytał Wiktor Korzeniewski' >> beczka-amontillada.txt
+    echo 'Czytał Wiktor Korzeniewski' >> studnia-i-wahadlo.txt
     echo 'Czytał Jacek Rozenek' >> przedwiosnie.txt
     echo 'Czytał Jacek Rozenek' >> bartek-zwyciezca.txt
     echo 'Czytała Joanna Domańska' >> balzac-komedia-ludzka-kobieta-porzucona.txt
@@ -111,6 +113,8 @@ norm_chapters() {
         fortepian-chopina.txt bartek-zwyciezca.txt \
         chlopi-czesc-pierwsza-jesien.txt \
 	sztuka-kochania.txt \
+        bema-pamieci-zalobny-rapsod.txt \
+        slowka-zbior-o-bardzo-niegrzecznej-literaturze-polskiej-i-jej-strapionej-ciotce.txt \
         lange-miranda.txt
     do
         perl ../norm-roman-by-text.pl $i > $i.tmp
@@ -230,6 +234,7 @@ remove_unread_lines() {
     remove_line napoj-cienisty-wspomnienie.txt  '^Napój cienisty$'
     remove_line nuta-czlowiecza-westchnienie.txt '^nuta człowiecza$'
     remove_line nuta-czlowiecza-zal.txt '^nuta człowiecza$'
+    remove_line slowka-zbior-o-bardzo-niegrzecznej-literaturze-polskiej-i-jej-strapionej-ciotce.txt  '^J. E. Prof. Dr. Hr. St. Tarnowskiemu poświęcam.$'
     #remove_line pasewicz-dolina-wilda-w-starym-stylu.txt 'Dolna Wilda'
     echo 'Pochwała ta upoiła panią de La Baudraye; panu de Clagny, generalnemu poborcy i młodemu Boirouge wydało się, iż jest serdeczniejsza ze Stefanem niż w wilię.' >> balzac-komedia-ludzka-muza-z-zascianka.txt-08.txt
     echo 'Koniec tomu trzeciego. Czytał Wiktor Korzeniewski.' >> ojciec-goriot.txt-11.txt
@@ -242,6 +247,8 @@ text_norm() {
     # quoting doesn't quite work for these
     cat spowiedz-dzieciecia-wieku.txt-38.txt |sed -e 's/23\. \*grudnia\* 18…/dwudziesty trzeci grudnia tysiąc osiemset/' > sed.tmp
     mv sed.tmp spowiedz-dzieciecia-wieku.txt-38.txt
+    cat balzac-komedia-ludzka-eugenia-grandet.txt-10.txt|sed -e 's/\*etc\./etcetera./' > sed.tmp
+    mv sed.tmp balzac-komedia-ludzka-eugenia-grandet.txt-10.txt
     cat balzac-komedia-ludzka-muza-z-zascianka.txt-03.txt | sed -e 's/wymawiała \*Dür\*//' > sed.tmp
     mv sed.tmp balzac-komedia-ludzka-muza-z-zascianka.txt-03.txt
     cat wspomnienia-niebieskiego-mundurka.txt-09.txt | sed -e 's/pan \*prefesor\*…/pan *profesor*…/;s/\*prefesor\* pozwoli/*profesor* pozwoli/;s/\*prefesorowi\*/*profesorowi*/;' > sed.tmp
