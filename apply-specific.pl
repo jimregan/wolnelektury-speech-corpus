@@ -66,7 +66,7 @@ sub do_file {
     while(<IN>) {
         chomp;
         my $last_match = '';
-        while(/($regex)/g) {
+        while(/\b($regex)\b/g) {
             my $m = $1;
             if($m eq $last_match) {
                 print STDERR "Loop matching $file: $_\n";
