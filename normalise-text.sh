@@ -238,6 +238,8 @@ remove_unread_lines() {
     #remove_line pasewicz-dolina-wilda-w-starym-stylu.txt 'Dolna Wilda'
     echo 'Pochwała ta upoiła panią de La Baudraye; panu de Clagny, generalnemu poborcy i młodemu Boirouge wydało się, iż jest serdeczniejsza ze Stefanem niż w wilię.' >> balzac-komedia-ludzka-muza-z-zascianka.txt-08.txt
     echo 'Koniec tomu trzeciego. Czytał Wiktor Korzeniewski.' >> ojciec-goriot.txt-11.txt
+    cat ballady-i-romanse-romantycznosc.txt |sed -e '/^Shakespeare/d'|sed -e '/In my mind/a Shakespeare' > normtmp
+    mv normtmp ballady-i-romanse-romantycznosc.txt
 }
 
 text_norm() {
