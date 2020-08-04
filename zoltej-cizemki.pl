@@ -40,7 +40,7 @@ sub expand_inner {
 		push @repls, $letter;
 	}
 	my @stack = ();
-	if($#{$arr} <= 0) {
+	if($#{$arr} < 0) {
 		for my $i (@repls) {
 			push @stack, "$i";
 		}
@@ -62,19 +62,25 @@ sub expand {
 while(<STDIN>) {
 	chomp;
 	my $word = $_;
+	if($word !~ /.*[szc].*/i) {
+		print STDOUT "Skipping $word\n";
+	}
 	if($speller->check($word)) {
 		print STDOUT "OK: $word\n";
-		next;
 	}
-	my @exp = expand($word);
+	my @exp = expand(lc($word));
 	my @tmp = ();
 	for my $e (@exp) {
 		if($speller->check($e)) {
 			push @tmp, $e;
 		}
 	}
-	if($#tmp <= 0) {
-		print OUT "$word\t" . join(", ", @tmp) . "\n";
+	if($#tmp >= 0) {
+		if($#tmp == 0 && $tmp[0] eq $word) {
+			print STDOUT "SKIP: $word\n";
+		} else {
+			print OUT "$word\t" . join(", ", @tmp) . "\n";
+		}
 	} else {
 		print STDOUT "Missing: $word\n";
 	}
