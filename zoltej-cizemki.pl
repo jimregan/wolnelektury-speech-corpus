@@ -76,7 +76,7 @@ while(<STDIN>) {
 		}
 	}
 	if($#tmp >= 0) {
-		if($#tmp == 0 && $tmp[0] eq $word) {
+		if($#tmp == 0 && $tmp[0] eq lc($word)) {
 			print STDOUT "SKIP: $word\n";
 		} else {
 			print OUT "$word\t" . join(", ", @tmp) . "\n";
