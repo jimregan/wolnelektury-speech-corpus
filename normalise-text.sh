@@ -92,6 +92,7 @@ additions() {
     echo 'Czytał Wiktor Korzeniewski' >> studnia-i-wahadlo.txt
     echo 'Czytał Jacek Rozenek' >> przedwiosnie.txt
     echo 'Czytał Jacek Rozenek' >> bartek-zwyciezca.txt
+    echo 'Czytał Jacek Rozenek' >> wierna-rzeka.txt
     echo 'Czytała Joanna Domańska' >> balzac-komedia-ludzka-kobieta-porzucona.txt
     echo 'Czytała Joanna Domańska' >> balzac-komedia-ludzka-kobieta-trzydziestoletnia.txt
     echo 'Czytała Joanna Domańska' >> chlopi-czesc-pierwsza-jesien.txt
