@@ -1,7 +1,12 @@
+#!/usr/bin/env python
 import textgrid
 import sys
 
-tg = textgrid.TextGrid.fromFile('akslop.TextGrid')
+if len(sys.argv) != 2:
+    print("textgrid-to-audacity.py [filename]")
+    quit()
+
+tg = textgrid.TextGrid.fromFile(sys.argv[1])
 started = False
 start=0.0
 end=0.0
