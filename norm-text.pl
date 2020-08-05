@@ -102,7 +102,7 @@ while(<STDIN>) {
         print "$what " . $chapter_ord_masc{$un} . "\n";
         next;
     }
-    if(/^(Pieśń) ($tens)($units) *$/) {
+    if(/^(Pieśń|Panna) ($tens)($units) *$/) {
         my $what = $1;
         my $tn = $2;
         my $un = $3;
@@ -113,12 +113,12 @@ while(<STDIN>) {
             print "$what " . $chapter_ord_fem{$tn} . " " . $chapter_ord_fem{$un} . "\n";
             next;
         }
-    } elsif(/^(Pieśń) ($tens) *$/) {
+    } elsif(/^(Pieśń|Panna) ($tens) *$/) {
         my $what = $1;
         my $tn = $2;
         print "$what " . $chapter_ord_fem{$tn} . "\n";
         next;
-    } elsif(/^(Pieśń) ($units) *$/) {
+    } elsif(/^(Pieśń|Panna) ($units) *$/) {
         my $what = $1;
         my $un = $2;
         print "$what " . $chapter_ord_fem{$un} . "\n";
