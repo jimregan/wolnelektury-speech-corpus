@@ -92,6 +92,7 @@ additions() {
     echo 'Czytał Wiktor Korzeniewski' >> studnia-i-wahadlo.txt
     echo 'Czytał Jacek Rozenek' >> przedwiosnie.txt
     echo 'Czytał Jacek Rozenek' >> bartek-zwyciezca.txt
+    echo 'Czytał Jacek Rozenek' >> wierna-rzeka.txt
     echo 'Czytała Joanna Domańska' >> balzac-komedia-ludzka-kobieta-porzucona.txt
     echo 'Czytała Joanna Domańska' >> balzac-komedia-ludzka-kobieta-trzydziestoletnia.txt
     echo 'Czytała Joanna Domańska' >> chlopi-czesc-pierwsza-jesien.txt
@@ -180,6 +181,7 @@ remove_unread_lines() {
     prepend_text ksiega-dzungli.txt-05.txt 'Rudyard Kipling\nKsięga dżungli'
     remove_line wierna-rzeka.txt-03.txt '^IV$'
     prepend_text balzac-komedia-ludzka-muza-z-zascianka.txt-02.txt 'Honoré Balzac'
+    prepend_text slowka-zbior-piosenki-zb-kilka-slow-o-piosence.txt 'Piosenki Zielonego Balonika'
     remove_line zaglada-domu-usherow.txt '^\(III\|II\|I\|IV\|VI\|V\)$'
     remove_line ballada-z-tamtej-strony-erotyk.txt '^ballada z tamtej strony$'
     remove_line ballada-z-tamtej-strony-melancholia.txt '^ballada z tamtej strony$'

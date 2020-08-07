@@ -23,7 +23,7 @@ my %patterns = (
     'w-pustyni-i-w-puszczy.txt' => '^(ROZDZIAŁ|ZAKOŃCZENIE)',
     'hoffmann-dziadek-do-orzechow.txt' => '^(Rozdział|Zakończenie)',
     'lange-miranda.txt' => '^Rozdział ',
-    'pan-tadeusz.txt' => '^Księga ',
+    'pan-tadeusz.txt' => '^Księga [pdtcsój]',
     'pierscien-i-roza.txt' => '^Rozdział ',
 );
 
