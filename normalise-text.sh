@@ -1,7 +1,7 @@
 #!/bin/bash
 
 broad_norm() {
-    echo "Stage 1: Broad normalisations"
+    echo "Broad normalisations"
     for i in *.txt
     do
         cat $i | perl ../norm-text.pl > $i.tmp
@@ -48,7 +48,7 @@ remove_line() {
 }
 
 header_replace() {
-    echo "Stage 2: Replace headers"
+    echo "Replace headers"
     slowka_headers
     for i in bajki-i-przypowiesci-dwa-zolwie.txt \
 ballada-z-tamtej-strony-imieniny.txt \
@@ -81,7 +81,7 @@ wspomnienia-niebieskiego-mundurka.txt
 }
 
 additions() {
-    echo "Stage 3: Final additions"
+    echo "Final additions"
     echo 'Tobie, leniu' >> but-w-butonierce-deszcz.txt
     echo 'Czytał Wiktor Korzeniewski' >> zajac-i-jez.txt
     echo 'Czytał Wiktor Korzeniewski' >> balzac-komedia-ludzka-eugenia-grandet.txt
@@ -108,7 +108,7 @@ additions() {
 }
 
 norm_chapters() {
-    echo "Stage 4: Add missing chapter word"
+    echo "Add missing chapter word"
     for i in wyspa-skarbow.txt wspomnienia-niebieskiego-mundurka.txt \
         z-wichrow-i-hal-z-tatr-krzak-dzikiej-rozy-w-ciemnych-smreczy.txt \
         fortepian-chopina.txt bartek-zwyciezca.txt \
@@ -124,7 +124,7 @@ norm_chapters() {
 }
 
 split_chapters() {
-    echo "Stage 5: Split texts to match audio"
+    echo "Split texts to match audio"
     for i in balzac-komedia-ludzka-corka-ewy.txt \
         balzac-komedia-ludzka-eugenia-grandet.txt \
         balzac-komedia-ludzka-jaszczur.txt \
@@ -169,7 +169,7 @@ split_chapters() {
 }
 
 remove_unread_lines() {
-    echo "Stage 6: add/remove lines to/from split texts"
+    echo "Add/remove lines to/from split texts"
     # Introductory sentences have no final punctuation, so sentence splitting is per line
     # This doesn't work with this header, so handle here and re-add in the specific norms
     remove_line balzac-komedia-ludzka-male-niedole-pozycia-malzenskiego.txt-40.txt '^operowych$'
@@ -245,12 +245,12 @@ remove_unread_lines() {
 }
 
 text_norm() {
-    echo "Stage 7a: pre-normalisation"
+    echo "Pre-normalisation"
     cat slowka-zbior-ach-co-za-przesliczne-abecadlo.txt | tr -d '*' > norm.tmp
     mv norm.tmp slowka-zbior-ach-co-za-przesliczne-abecadlo.txt
-    echo "Stage 7b: specific normalisations"
+    echo "Specific normalisations"
     ../apply-specific.pl
-    echo "Stage 7c: specific normalisations, take two"
+    echo "Specific normalisations, take two"
     # quoting doesn't quite work for these
     cat spowiedz-dzieciecia-wieku.txt-38.txt |sed -e 's/23\. \*grudnia\* 18…/dwudziesty trzeci grudnia tysiąc osiemset/' > sed.tmp
     mv sed.tmp spowiedz-dzieciecia-wieku.txt-38.txt
@@ -271,7 +271,7 @@ text_norm() {
 }
 
 split_sentences() {
-    echo "Stage 8: split sentences"
+    echo "Split sentences"
     for i in *.txt
     do
         cat $i | perl ../split-sentence.pl > $i.sent
@@ -279,7 +279,7 @@ split_sentences() {
 }
 
 clean_punct() {
-    echo "Stage 9: stripping punctuation"
+    echo "Stripping punctuation"
     for i in *.sent
     do
         cat $i | perl ../clean-punctuation.pl > $i.bak
