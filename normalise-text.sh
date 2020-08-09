@@ -244,10 +244,13 @@ remove_unread_lines() {
     mv normtmp ballady-i-romanse-romantycznosc.txt
 }
 
-text_norm() {
+pre_norm() {
     echo "Pre-normalisation"
     cat slowka-zbior-ach-co-za-przesliczne-abecadlo.txt | tr -d '*' > norm.tmp
     mv norm.tmp slowka-zbior-ach-co-za-przesliczne-abecadlo.txt
+}
+
+text_norm() {
     echo "Specific normalisations"
     ../apply-specific.pl
     echo "Specific normalisations, take two"
@@ -287,6 +290,13 @@ clean_punct() {
     done
 }
 
+unwrap_lines() {
+	for i in slowka-zbior-gdy-sie-czlowiek-robi-starszy.txt; do
+		cat $i | perl ../unwrap-lines.pl > $i.bak
+		mv $i.bak $i
+	done
+}
+
 run_all() {
     if [ x$1 != x"" ]
     then
@@ -302,7 +312,9 @@ run_all() {
     check_truncation additions
     norm_chapters
     split_chapters
+    unwrap_lines
     remove_unread_lines
+    pre_norm
     text_norm
     split_sentences
     clean_punct
