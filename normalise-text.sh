@@ -292,10 +292,10 @@ clean_punct() {
 
 unwrap_lines() {
 	echo "Unwrapping poetry lines"
-	for i in slowka-zbior-gdy-sie-czlowiek-robi-starszy.txt; do
-		cat $i | perl ../unwrap-lines.pl > $i.bak
-		mv $i.bak $i
-	done
+#	for i in slowka-zbior-gdy-sie-czlowiek-robi-starszy.txt; do
+#		cat $i | perl ../unwrap-lines.pl > $i.bak
+#		mv $i.bak $i
+#	done
 }
 
 run_all() {
