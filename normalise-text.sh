@@ -250,6 +250,8 @@ pre_norm() {
     echo "Pre-normalisation"
     cat slowka-zbior-ach-co-za-przesliczne-abecadlo.txt | tr -d '*' > norm.tmp
     mv norm.tmp slowka-zbior-ach-co-za-przesliczne-abecadlo.txt
+    cat slowka-zbior-piosenki-zb-piesn-o-naszych-stolicach-i-jak-je-opatrznosc-obdzielila.txt | tr -d '*' > norm.tmp
+    mv norm.tmp slowka-zbior-piosenki-zb-piesn-o-naszych-stolicach-i-jak-je-opatrznosc-obdzielila.txt
 }
 
 text_norm() {
