@@ -242,6 +242,8 @@ remove_unread_lines() {
     echo 'Koniec tomu trzeciego. Czytał Wiktor Korzeniewski.' >> ojciec-goriot.txt-11.txt
     cat ballady-i-romanse-romantycznosc.txt |sed -e '/^Shakespeare/d'|sed -e '/In my mind/a Shakespeare' > normtmp
     mv normtmp ballady-i-romanse-romantycznosc.txt
+    cat slowka-zbior-piosenki-zb-glos-dziadkowy-o-restauracji-kosciola-parafialnego.txt|sed -e '2iNota do usunięcia, D K' > normtmp
+    mv normtmp slowka-zbior-piosenki-zb-glos-dziadkowy-o-restauracji-kosciola-parafialnego.txt
 }
 
 pre_norm() {
