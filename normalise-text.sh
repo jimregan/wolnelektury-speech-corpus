@@ -252,6 +252,8 @@ pre_norm() {
     mv norm.tmp slowka-zbior-ach-co-za-przesliczne-abecadlo.txt
     cat slowka-zbior-piosenki-zb-piesn-o-naszych-stolicach-i-jak-je-opatrznosc-obdzielila.txt | tr -d '*' > norm.tmp
     mv norm.tmp slowka-zbior-piosenki-zb-piesn-o-naszych-stolicach-i-jak-je-opatrznosc-obdzielila.txt
+    cat slowka-zbior-piosenki-zb-wiersz-inauguracyjny.txt | tr -d '*' > norm.tmp
+    mv norm.tmp slowka-zbior-piosenki-zb-wiersz-inauguracyjny.txt
 }
 
 text_norm() {
