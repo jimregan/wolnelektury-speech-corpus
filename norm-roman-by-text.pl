@@ -22,6 +22,7 @@ my %del = (
     'fortepian-chopina.txt' => 1,
     'bartek-zwyciezca.txt' => 1,
     'bema-pamieci-zalobny-rapsod.txt' => 1,
+    'cos-ty-atenom-zrobil-sokratesie.txt' => 1,
 );
 
 my %single = (

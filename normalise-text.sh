@@ -113,10 +113,11 @@ norm_chapters() {
         z-wichrow-i-hal-z-tatr-krzak-dzikiej-rozy-w-ciemnych-smreczy.txt \
         fortepian-chopina.txt bartek-zwyciezca.txt \
         chlopi-czesc-pierwsza-jesien.txt \
-	sztuka-kochania.txt \
+        sztuka-kochania.txt \
         bema-pamieci-zalobny-rapsod.txt \
         slowka-zbior-o-bardzo-niegrzecznej-literaturze-polskiej-i-jej-strapionej-ciotce.txt \
-        lange-miranda.txt
+        lange-miranda.txt \
+        cos-ty-atenom-zrobil-sokratesie.txt
     do
         perl ../norm-roman-by-text.pl $i > $i.tmp
         mv $i.tmp $i
