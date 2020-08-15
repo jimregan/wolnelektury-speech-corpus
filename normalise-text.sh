@@ -246,6 +246,7 @@ remove_unread_lines() {
     cat slowka-zbior-piosenki-zb-glos-dziadkowy-o-restauracji-kosciola-parafialnego.txt|sed -e '2iNota do usunięcia, D K' > normtmp
     mv normtmp slowka-zbior-piosenki-zb-glos-dziadkowy-o-restauracji-kosciola-parafialnego.txt
     remove_line cos-ty-atenom-zrobil-sokratesie.txt '^Pisałem w Paryżu'
+    remove_line brzydkie-kaczatko.txt '^tłumaczenie Cecylia Niewiadomska$'
 }
 
 pre_norm() {
