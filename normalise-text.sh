@@ -72,6 +72,7 @@ przedwiosnie.txt \
 przygody-tomka-sawyera.txt \
 spowiedz-dzieciecia-wieku.txt \
 bema-pamieci-zalobny-rapsod.txt \
+powiesci-fantastyczne-skrzypce-z-cremony.txt \
 wspomnienia-niebieskiego-mundurka.txt
     do
         echo "Replacing header in $i"
@@ -117,6 +118,7 @@ norm_chapters() {
         bema-pamieci-zalobny-rapsod.txt \
         slowka-zbior-o-bardzo-niegrzecznej-literaturze-polskiej-i-jej-strapionej-ciotce.txt \
         lange-miranda.txt \
+        powiesci-fantastyczne-skrzypce-z-cremony.txt \
         cos-ty-atenom-zrobil-sokratesie.txt
     do
         perl ../norm-roman-by-text.pl $i > $i.tmp

@@ -15,6 +15,7 @@ my %spec = (
     'lange-miranda.txt' => 'Rozdział',
     'sztuka-kochania.txt' => 'Pieśń',
     'slowka-zbior-o-bardzo-niegrzecznej-literaturze-polskiej-i-jej-strapionej-ciotce.txt' => 'card',
+    'powiesci-fantastyczne-skrzypce-z-cremony.txt' => 'card',
 );
 
 my %del = (
@@ -30,6 +31,7 @@ my %single = (
     'lange-miranda.txt' => 1,
     'sztuka-kochania.txt' => 1,
     'slowka-zbior-o-bardzo-niegrzecznej-literaturze-polskiej-i-jej-strapionej-ciotce.txt' => 1,
+    'powiesci-fantastyczne-skrzypce-z-cremony.txt' => 1,
 );
 
 my %chapter_ord_masc = (
