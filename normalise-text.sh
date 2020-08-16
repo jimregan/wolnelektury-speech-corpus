@@ -247,6 +247,7 @@ remove_unread_lines() {
     mv normtmp slowka-zbior-piosenki-zb-glos-dziadkowy-o-restauracji-kosciola-parafialnego.txt
     remove_line cos-ty-atenom-zrobil-sokratesie.txt '^Pisałem w Paryżu'
     remove_line brzydkie-kaczatko.txt '^tłumaczenie Cecylia Niewiadomska$'
+    remove_line wierna-rzeka.txt-01.txt '^I$'
 }
 
 pre_norm() {
