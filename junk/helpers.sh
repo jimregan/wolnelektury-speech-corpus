@@ -19,3 +19,15 @@ pa_ski_adj(){
 	simpleas ${basempl}cy ${outmpl}cy
 	simpleas nie${basempl}cy nie${outmpl}cy
 }
+mv_ski_adj(){
+	ba=$1
+	basea=$(echo $ba|sed -e 's/i$//')
+	for i in i ich iego iemu im imi o a ą ie iej;do
+		mkvoc $basea$i
+		mkvoc nie$basea$i
+	done
+	mkvoc ${basea}u
+	basempl=$(echo $ba|sed -e 's/ki$//')
+	mkvoc ${basempl}cy
+	mkvoc nie${basempl}cy
+}
