@@ -182,6 +182,8 @@ remove_unread_lines() {
     prepend_text ksiega-dzungli.txt-03.txt 'Rudyard Kipling\nKsięga dżungli'
     prepend_text ksiega-dzungli.txt-04.txt 'Rudyard Kipling\nKsięga dżungli'
     prepend_text ksiega-dzungli.txt-05.txt 'Rudyard Kipling\nKsięga dżungli'
+    cat ksiega-dzungli.txt-05.txt| sed -e '4,46d' > ksiega-dzungli.txt-05.txt.tmp
+    mv ksiega-dzungli.txt-05.txt.tmp ksiega-dzungli.txt-05.txt
     remove_line wierna-rzeka.txt-03.txt '^IV$'
     prepend_text balzac-komedia-ludzka-muza-z-zascianka.txt-02.txt 'Honoré Balzac'
     prepend_text slowka-zbior-piosenki-zb-kilka-slow-o-piosence.txt 'Piosenki Zielonego Balonika'
