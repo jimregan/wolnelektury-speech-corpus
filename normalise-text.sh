@@ -260,6 +260,7 @@ remove_unread_lines() {
     remove_line przedwiosnie.txt-02.txt '^Caroline, Caroline,$'
     remove_line przedwiosnie.txt-02.txt '^Prends ton chapeau fleuri,$'
     remove_line przedwiosnie.txt-02.txt '^Ta robe blanche…$'
+    remove_line diabel-na-wiezy.txt '^tłumaczenie Bolesław Leśmian$'
 }
 
 pre_norm() {
