@@ -63,6 +63,7 @@ don-kichot-z-la-manchy.txt \
 fortepian-chopina.txt \
 gloria-victis-gloria-victis.txt \
 ksiega-dzungli.txt \
+obrona-sokratesa.txt \
 ojciec-goriot.txt \
 piesn-o-rolandzie.txt \
 powiesci-fantastyczne-kawaler-gluck.txt \
