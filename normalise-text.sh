@@ -253,7 +253,12 @@ remove_unread_lines() {
     remove_line brzydkie-kaczatko.txt '^tłumaczenie Cecylia Niewiadomska$'
     remove_line wierna-rzeka.txt-01.txt '^I$'
     remove_line przedwiosnie.txt-02.txt '^Prends ton chapeau fleuri…$'
-    #remove_line przedwiosnie.txt-02.txt '^Caroline, Caroline,$'
+    remove_line przedwiosnie.txt-02.txt '^Ta robe blanche$'
+    remove_line przedwiosnie.txt-02.txt '^De dimanche$'
+    remove_line przedwiosnie.txt-02.txt '^Et tes petits souliers vernis…$'
+    remove_line przedwiosnie.txt-02.txt '^Caroline, Caroline,$'
+    remove_line przedwiosnie.txt-02.txt '^Prends ton chapeau fleuri,$'
+    remove_line przedwiosnie.txt-02.txt '^Ta robe blanche…$'
 }
 
 pre_norm() {
