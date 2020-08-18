@@ -252,6 +252,8 @@ remove_unread_lines() {
     remove_line cos-ty-atenom-zrobil-sokratesie.txt '^Pisałem w Paryżu'
     remove_line brzydkie-kaczatko.txt '^tłumaczenie Cecylia Niewiadomska$'
     remove_line wierna-rzeka.txt-01.txt '^I$'
+    remove_line przedwiosnie.txt-02.txt '^Prends ton chapeau fleuri…$'
+    #remove_line przedwiosnie.txt-02.txt '^Caroline, Caroline,$'
 }
 
 pre_norm() {
