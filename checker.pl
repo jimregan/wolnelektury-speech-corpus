@@ -5,9 +5,14 @@ use strict;
 use utf8;
 
 use Text::LevenshteinXS qw/distance/;
+use Text::Aspell;
 
 binmode(STDIN, ":utf8");
 binmode(STDOUT, ":utf8");
+
+my $speller = Text::Aspell->new;
+die unless $speller;
+$speller->set_option('lang', 'pl');
 
 my $vowels = '[aąeęiouy]+';
 my $cons = '[bcćdfghjklłmnńpqrsśtvwxzżź]+';
@@ -30,6 +35,22 @@ sub final_vowel {
 		}
 		if($stem_a eq $stem_b) {
 			print "VOWEL_SWAP_SUFFIX\t$end_a\t$end_b\t$text_a\t$text_b\n";
+			return 1;
+		}
+	}
+	return 0;
+}
+
+sub check_lexicon {
+	my $text_a = shift;
+	my $text_b = shift;
+	if($speller->check($text_a) || $speller->check(ucfirst($text_a))) {
+		return 0;
+	}
+	my @sugg = $speller->suggest($text_a);
+	for my $sug (@sugg) {
+		if(lc($sug) eq $text_b) {
+			print "LEXICON_ERROR\t$text_a\t$text_b\n";
 			return 1;
 		}
 	}
@@ -71,6 +92,8 @@ while(<>) {
 			print "ADDED_PFX\t$pfx+\t$text_a\t$text_b\n";
 		}
 	} elsif(final_vowel($text_a, $text_b)) {
+		next;
+	} elsif(check_lexicon($text_a, $text_b)) {
 		next;
 	} else {
 		my $dist = distance($text_a, $text_b);
