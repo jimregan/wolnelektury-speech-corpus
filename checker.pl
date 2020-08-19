@@ -12,6 +12,30 @@ binmode(STDOUT, ":utf8");
 my $vowels = '[aąeęiouy]+';
 my $cons = '[bcćdfghjklłmnńpqrsśtvwxzżź]+';
 
+sub final_vowel {
+	my $text_a = shift;
+	my $text_b = shift;
+	if($text_a =~ /$vowels$/ && $text_b =~ /$vowels$/) {
+		my $stem_a = $text_a;
+		my $stem_b = $text_b;
+		my $end_a = '';
+		my $end_b = '';
+		if($text_a =~ /(.*$cons)($vowels)$/) {
+			$stem_a = $1;
+			$end_a = $2;
+		}
+		if($text_b =~ /(.*$cons)($vowels)$/) {
+			$stem_b = $1;
+			$end_b = $2;
+		}
+		if($stem_a eq $stem_b) {
+			print "VOWEL_SWAP_SUFFIX\t$end_a\t$end_b\t$text_a\t$text_b\n";
+			return 1;
+		}
+	}
+	return 0;
+}
+
 while(<>) {
 	chomp;
 	my @parts = split/\t/;
@@ -46,26 +70,11 @@ while(<>) {
 			$pfx =~ s/$text_b$//;
 			print "ADDED_PFX\t$pfx+\t$text_a\t$text_b\n";
 		}
+	} elsif(final_vowel($text_a, $text_b)) {
+		next;
 	} else {
 		my $dist = distance($text_a, $text_b);
 		my $pdist = distance($phon_a, $phon_b);
 		print "$text_a\t$text_b\t$dist\t$pdist\n";
-	}
-	if($text_a =~ /$vowels$/ && $text_b =~ /$vowels$/) {
-		my $stem_a = $text_a;
-		my $stem_b = $text_b;
-		my $end_a = '';
-		my $end_b = '';
-		if($text_a =~ /(.*$cons)($vowels)$/) {
-			$stem_a = $1;
-			$end_a = $2;
-		}
-		if($text_b =~ /(.*$cons)($vowels)$/) {
-			$stem_b = $1;
-			$end_b = $2;
-		}
-		if($stem_a eq $stem_b) {
-			print "VOWEL_SWAP_SUFFIX\t$end_a\t$end_b\t$text_a\t$text_b\n";
-		}
 	}
 }
