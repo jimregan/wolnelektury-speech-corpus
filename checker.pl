@@ -6,15 +6,21 @@ use utf8;
 
 use Text::LevenshteinXS qw/distance/;
 
+binmode(STDIN, ":utf8");
+binmode(STDOUT, ":utf8");
+
 my $vowels = '[aąeęiouy]+';
 my $cons = '[bcćdfghjklłmnńpqrsśtvwxzżź]+';
 
 while(<>) {
+	chomp;
 	my @parts = split/\t/;
 	my $text_a = $parts[1];
 	my $phon_a = $parts[2];
 	my $text_b = $parts[3];
 	my $phon_b = $parts[4];
+	$phon_a =~ s/[\.ˈ]//g;
+	$phon_b =~ s/[\.ˈ]//g;
 	if($text_a eq $text_b) {
 		# shouldn't happen
 		print "TEXT_EQUAL\t$text_a\t$text_b\n";
@@ -42,11 +48,7 @@ while(<>) {
 		}
 	} else {
 		my $dist = distance($text_a, $text_b);
-		my $p_a = $phon_a;
-		$p_a =~ s/[\.ˈ]//g;
-		my $p_b = $phon_b;
-		$p_b =~ s/[\.ˈ]//g;
-		my $pdist = distance($p_a, $p_b);
+		my $pdist = distance($phon_a, $phon_b);
 		print "$text_a\t$text_b\t$dist\t$pdist\n";
 	}
 	if($text_a =~ /$vowels$/ && $text_b =~ /$vowels$/) {
