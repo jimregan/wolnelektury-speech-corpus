@@ -5,14 +5,14 @@ use strict;
 use utf8;
 
 use Text::LevenshteinXS qw/distance/;
-use Text::Aspell;
+#use Text::Aspell;
 
 binmode(STDIN, ":utf8");
 binmode(STDOUT, ":utf8");
 
-my $speller = Text::Aspell->new;
-die unless $speller;
-$speller->set_option('lang', 'pl');
+#my $speller = Text::Aspell->new;
+#die unless $speller;
+#$speller->set_option('lang', 'pl');
 
 my $vowels = '[aąeęiouy]+';
 my $cons = '[bcćdfghjklłmnńpqrsśtvwxzżź]+';
@@ -93,8 +93,8 @@ while(<>) {
 		}
 	} elsif(final_vowel($text_a, $text_b)) {
 		next;
-	} elsif(check_lexicon($text_a, $text_b)) {
-		next;
+#	} elsif(check_lexicon($text_a, $text_b)) {
+#		next;
 	} else {
 		my $dist = distance($text_a, $text_b);
 		my $pdist = distance($phon_a, $phon_b);
