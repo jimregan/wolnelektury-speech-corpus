@@ -26,7 +26,7 @@ my %skip_until = (
     'balzac-komedia-ludzka-kobieta-trzydziestoletnia.txt' => 'I. Pierwsze błędy',
     'bajki-i-przypowiesci-dwa-zolwie.txt' => 'Dwa żółwie',
     'don-kichot-z-la-manchy.txt' => 'Księga pierwsza',
-    'ksiega-dzungli.txt' => 'Bracia małego Mauli',
+    'ksiega-dzungli.txt' => '^Bracia małego Mauli$',
     'ojciec-goriot.txt' => 'Pani Vauquer',
     'but-w-butonierce-marsz.txt' => 'Siostrom od św.',
     'brazownicy.txt' => 'Znana jest historia',
@@ -37,6 +37,8 @@ my %skip_until = (
     'widziadla_prus.txt' => '   Oto jest dokładna',
     'bema-pamieci-zalobny-rapsod.txt' => '— Czemu, cieniu, odjeżdżasz',
     'balzac-komedia-ludzka-gobseck.txt' => 'tłumaczenie Tadeusz Boy-Żeleński',
+    'powiesci-fantastyczne-skrzypce-z-cremony.txt' => 'Radca Crespel jest',
+    'obrona-sokratesa.txt' => 'Jakie na was, Ateńczycy',
 );
 my %head_replace = (
     'bajki-i-przypowiesci-dwa-zolwie.txt' => "Ignacy Krasicki\nBajki i przypowieści\nCzęść pierwsza",
@@ -66,6 +68,8 @@ my %head_replace = (
     'powiesci-fantastyczne-piaskun.txt' => "Ernst Teodor Amadeusz Hoffmann\nPowieści fantastyczne\ntłumaczenie Antoni Lange\nPiaskun\nJeden.",
     'bema-pamieci-zalobny-rapsod.txt' => "Cyprian Kamil Norwid\nBema pamięci żałobny-rapsod",
     'balzac-komedia-ludzka-gobseck.txt' => "Gobseck\nHonoré Balzac",
+    'powiesci-fantastyczne-skrzypce-z-cremony.txt' => "Ernst Teodor Amadeusz Hoffmann\nPowieści fantastyczne\ntłumaczenie Antoni Lange\nSkrzypce z Cremony (Radca Crespel)",
+    'obrona-sokratesa.txt' => '',
 );
 
 if (!exists $skip_until{$ARGV[0]}) {
