@@ -121,6 +121,7 @@ norm_chapters() {
         lange-miranda.txt \
         powiesci-fantastyczne-skrzypce-z-cremony.txt \
 	hold-dwa-sonety.txt \
+	legendy-warszawskie-zlota-kaczka.txt \
         cos-ty-atenom-zrobil-sokratesie.txt
     do
         perl ../norm-roman-by-text.pl $i > $i.tmp
