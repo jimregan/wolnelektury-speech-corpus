@@ -120,8 +120,9 @@ norm_chapters() {
         slowka-zbior-o-bardzo-niegrzecznej-literaturze-polskiej-i-jej-strapionej-ciotce.txt \
         lange-miranda.txt \
         powiesci-fantastyczne-skrzypce-z-cremony.txt \
-	hold-dwa-sonety.txt \
-	legendy-warszawskie-zlota-kaczka.txt \
+        hold-dwa-sonety.txt \
+        legendy-warszawskie-zlota-kaczka.txt \
+        legendy-warszawskie-syrena.txt \
         cos-ty-atenom-zrobil-sokratesie.txt
     do
         perl ../norm-roman-by-text.pl $i > $i.tmp
