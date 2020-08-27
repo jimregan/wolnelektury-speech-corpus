@@ -39,6 +39,7 @@ my %skip_until = (
     'balzac-komedia-ludzka-gobseck.txt' => 'tłumaczenie Tadeusz Boy-Żeleński',
     'powiesci-fantastyczne-skrzypce-z-cremony.txt' => 'Radca Crespel jest',
     'obrona-sokratesa.txt' => 'Jakie na was, Ateńczycy',
+    'powiesci-fantastyczne-slub.txt' => 'W dzień Świętego Michała,',
 );
 my %head_replace = (
     'bajki-i-przypowiesci-dwa-zolwie.txt' => "Ignacy Krasicki\nBajki i przypowieści\nCzęść pierwsza",
@@ -70,6 +71,7 @@ my %head_replace = (
     'balzac-komedia-ludzka-gobseck.txt' => "Gobseck\nHonoré Balzac",
     'powiesci-fantastyczne-skrzypce-z-cremony.txt' => "Ernst Teodor Amadeusz Hoffmann\nPowieści fantastyczne\ntłumaczenie Antoni Lange\nSkrzypce z Cremony (Radca Crespel)",
     'obrona-sokratesa.txt' => '',
+    'powiesci-fantastyczne-slub.txt' => "Ernst Teodor Amadeusz Hoffmann\nPowieści fantastyczne\ntłumaczenie Antoni Lange\nŚlub",
 );
 
 if (!exists $skip_until{$ARGV[0]}) {

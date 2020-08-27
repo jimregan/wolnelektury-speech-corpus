@@ -74,6 +74,7 @@ przygody-tomka-sawyera.txt \
 spowiedz-dzieciecia-wieku.txt \
 bema-pamieci-zalobny-rapsod.txt \
 powiesci-fantastyczne-skrzypce-z-cremony.txt \
+powiesci-fantastyczne-slub.txt \
 wspomnienia-niebieskiego-mundurka.txt
     do
         echo "Replacing header in $i"
