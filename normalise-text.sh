@@ -264,6 +264,8 @@ remove_unread_lines() {
     remove_line przedwiosnie.txt-02.txt '^Prends ton chapeau fleuri,$'
     remove_line przedwiosnie.txt-02.txt '^Ta robe blanche…$'
     remove_line diabel-na-wiezy.txt '^tłumaczenie Bolesław Leśmian$'
+    remove_line but-w-butonierce-but-w-butonierce.txt '^One jeszcze nie wiedzą, że, gdy nastał Jasieński,$'
+    remove_line but-w-butonierce-but-w-butonierce.txt '^Bezpowrotnie umarli i Tetmajer i Staff.$'
 }
 
 pre_norm() {
