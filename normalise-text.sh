@@ -268,6 +268,7 @@ remove_unread_lines() {
     remove_line but-w-butonierce-but-w-butonierce.txt '^One jeszcze nie wiedzą, że, gdy nastał Jasieński,$'
     remove_line but-w-butonierce-but-w-butonierce.txt '^Bezpowrotnie umarli i Tetmajer i Staff.$'
     remove_line krol-dzumiec.txt '^tłumaczenie Bolesław Leśmian$'
+    remove_line krolowa-sniegu.txt '^tłumaczenie Cecylia Niewiadomska$'
 }
 
 pre_norm() {
