@@ -27,6 +27,7 @@ my %del = (
     'hold-dwa-sonety.txt' => 1,
     'legendy-warszawskie-zlota-kaczka.txt' => 1,
     'legendy-warszawskie-syrena.txt' => 1,
+    'latarnik.txt' => 1,
 );
 
 my %single = (

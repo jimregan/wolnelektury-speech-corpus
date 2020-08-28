@@ -124,6 +124,7 @@ norm_chapters() {
         hold-dwa-sonety.txt \
         legendy-warszawskie-zlota-kaczka.txt \
         legendy-warszawskie-syrena.txt \
+	latarnik.txt \
         cos-ty-atenom-zrobil-sokratesie.txt
     do
         perl ../norm-roman-by-text.pl $i > $i.tmp
