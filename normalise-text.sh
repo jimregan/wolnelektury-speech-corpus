@@ -53,9 +53,11 @@ header_replace() {
     for i in bajki-i-przypowiesci-dwa-zolwie.txt \
 ballada-z-tamtej-strony-imieniny.txt \
 balzac-komedia-ludzka-bank-nucingena.txt \
+balzac-komedia-ludzka-gobseck.txt \
 balzac-komedia-ludzka-jaszczur.txt \
 balzac-komedia-ludzka-kobieta-porzucona.txt \
 balzac-komedia-ludzka-kobieta-trzydziestoletnia.txt \
+bema-pamieci-zalobny-rapsod.txt \
 boy-swietoszek.txt \
 brazownicy.txt \
 but-w-butonierce-marsz.txt \
@@ -66,15 +68,17 @@ ksiega-dzungli.txt \
 obrona-sokratesa.txt \
 ojciec-goriot.txt \
 piesn-o-rolandzie.txt \
+powiesci-fantastyczne-don-juan.txt \
 powiesci-fantastyczne-kawaler-gluck.txt \
+powiesci-fantastyczne-majorat.txt \
 powiesci-fantastyczne-piaskun.txt \
+powiesci-fantastyczne-skrzypce-z-cremony.txt \
+powiesci-fantastyczne-slub.txt \
 powiesci-fantastyczne-wybor-narzeczonej.txt \
 przedwiosnie.txt \
 przygody-tomka-sawyera.txt \
 spowiedz-dzieciecia-wieku.txt \
-bema-pamieci-zalobny-rapsod.txt \
-powiesci-fantastyczne-skrzypce-z-cremony.txt \
-powiesci-fantastyczne-slub.txt \
+widziadla_prus.txt \
 wspomnienia-niebieskiego-mundurka.txt
     do
         echo "Replacing header in $i"
