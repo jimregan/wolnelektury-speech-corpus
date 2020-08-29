@@ -116,20 +116,22 @@ additions() {
 
 norm_chapters() {
     echo "Add missing chapter word"
-    for i in wyspa-skarbow.txt wspomnienia-niebieskiego-mundurka.txt \
-        z-wichrow-i-hal-z-tatr-krzak-dzikiej-rozy-w-ciemnych-smreczy.txt \
-        fortepian-chopina.txt bartek-zwyciezca.txt \
-        chlopi-czesc-pierwsza-jesien.txt \
-        sztuka-kochania.txt \
-        bema-pamieci-zalobny-rapsod.txt \
-        slowka-zbior-o-bardzo-niegrzecznej-literaturze-polskiej-i-jej-strapionej-ciotce.txt \
-        lange-miranda.txt \
-        powiesci-fantastyczne-skrzypce-z-cremony.txt \
-        hold-dwa-sonety.txt \
-        legendy-warszawskie-zlota-kaczka.txt \
-        legendy-warszawskie-syrena.txt \
-	latarnik.txt \
-        cos-ty-atenom-zrobil-sokratesie.txt
+    for i in bartek-zwyciezca.txt \
+bema-pamieci-zalobny-rapsod.txt \
+chlopi-czesc-pierwsza-jesien.txt \
+cos-ty-atenom-zrobil-sokratesie.txt \
+fortepian-chopina.txt \
+hold-dwa-sonety.txt \
+lange-miranda.txt \
+latarnik.txt \
+legendy-warszawskie-syrena.txt \
+legendy-warszawskie-zlota-kaczka.txt \
+powiesci-fantastyczne-skrzypce-z-cremony.txt \
+slowka-zbior-o-bardzo-niegrzecznej-literaturze-polskiej-i-jej-strapionej-ciotce.txt \
+sztuka-kochania.txt \
+wspomnienia-niebieskiego-mundurka.txt \
+wyspa-skarbow.txt \
+z-wichrow-i-hal-z-tatr-krzak-dzikiej-rozy-w-ciemnych-smreczy.txt
     do
         perl ../norm-roman-by-text.pl $i > $i.tmp
         mv $i.tmp $i
