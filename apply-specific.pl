@@ -61,7 +61,7 @@ sub do_file {
         %curnorms = %{$norms{$file}};
     }
     my @keys = keys(%curnorms);
-    my $regex = join("|", map{quotemeta} @keys);
+    my $regex = join("|", map{quotemeta $_} @keys);
     my $replaced = 0;
     while(<IN>) {
         chomp;
@@ -75,10 +75,10 @@ sub do_file {
             my $in = quotemeta($m);
             my $out = $curnorms{$m};
             if($out eq ' ') {
-                s/$m//;
+                s/$in//;
                 $replaced++;
             } else {
-                s/$m/$out/;
+                s/$in/$out/;
                 $replaced++;
             }
             $last_match = $m;
