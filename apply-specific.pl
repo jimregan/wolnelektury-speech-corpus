@@ -70,7 +70,6 @@ sub do_file {
             my $m = $1;
             if($m eq $last_match) {
                 print STDERR "Loop matching $file: $_\n";
-            #    next;
             }
             my $in = quotemeta($m);
             my $out = $curnorms{$m};
