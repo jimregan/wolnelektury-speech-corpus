@@ -657,11 +657,11 @@ my %split_by_whole = (
         "XVII"
     ],
     'powiesci-fantastyczne-skrzypce-z-cremony.txt' => [
-        "I",
-        "II",
-        "III",
-        "IV",
-        "V",
+        "Powieści fantastyczne",
+        "dwa",
+        "trzy",
+        "cztery",
+        "pięć",
     ]
 );
 
