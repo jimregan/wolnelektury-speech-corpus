@@ -105,6 +105,7 @@ additions() {
     echo 'Czytał Jan Peszek' >> antek.txt
     echo 'Czytała Danuta Stenka' >> gloria-victis-dziwna-historia.txt
     echo 'Czytał Tata Mariusz czyli Mariusz Rzepka' >> katechizm-polskiego-dziecka-polska-mowa.txt
+    echo 'Czytał Tata Mariusz czyli Mariusz Rzepka' >> co-ja-wyczytam-w-ksiazeczce.txt
     #echo 'Czytał Adam Fidusiewicz' >> pasewicz-dolina-wilda-w-starym-stylu.txt
     #echo 'Wolne Lektury p l' >> pasewicz-dolina-wilda-w-starym-stylu.txt
     #echo 'Zostań naszym Przyjacielem' >> pasewicz-dolina-wilda-w-starym-stylu.txt
