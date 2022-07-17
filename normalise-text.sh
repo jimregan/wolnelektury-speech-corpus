@@ -264,6 +264,7 @@ remove_unread_lines() {
     remove_line przedwiosnie.txt-02.txt '^Ta robe blanche…$'
     remove_line diabel-na-wiezy.txt '^tłumaczenie Bolesław Leśmian$'
     remove_line katechizm-polskiego-dziecka-polska-mowa.txt '^Katechizm polskiego dziecka$'
+    remove_line legenda-o-sw-aleksym.txt '^('
 }
 
 pre_norm() {
