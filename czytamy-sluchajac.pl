@@ -17,7 +17,7 @@ my $catalogue = 'https://wolnelektury.pl/katalog/audiobooki/';
 
 my $booklister = scraper {
     process '//div[@id="books-list"]/div/div/p', "books[]" => scraper {
-        process '//a', 'uri' => '@href';
+        process '//p/a', 'uri' => '@href';
     };
 };
 
@@ -30,16 +30,10 @@ my $bookinfo = scraper {
     process '//a[contains(.,"XML")]', 'source' => '@href';
 };
 
-print "Scraping catalogue\n";
-my $uri = URI->new($catalogue);
-print "Read URI: $uri\n";
-my $booksres = $booklister->scrape($uri);
-print "Scraping catalogue done\n";
+my $booksres = $booklister->scrape(URI->new($catalogue));
 
 for my $book (@{$booksres->{'books'}}) {
-    print "Book $book\n";
     if(exists $book->{'uri'}) {
-	print "procpage" . $book->{'uri'} . "\n";
         procpage($book->{'uri'});
     }
 }
