@@ -14,6 +14,8 @@ use LWP::UserAgent;
 use URI;
 
 my $catalogue = 'https://wolnelektury.pl/katalog/audiobooki/';
+open(TSV, ">", "audiobooks.tsv");
+binmode(TSV, ":utf8");
 
 my $booklister = scraper {
     process '//div[@id="books-list"]/div/div/p', "books[]" => scraper {
@@ -68,5 +70,5 @@ sub procpage {
     } else {
         die "No source found";
     }
-    print $out;
+    print TSV $out;
 }
