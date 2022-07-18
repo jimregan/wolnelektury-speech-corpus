@@ -39,6 +39,7 @@ my %skip_until = (
     'balzac-komedia-ludzka-gobseck.txt' => 'tłumaczenie Tadeusz Boy-Żeleński',
     'powiesci-fantastyczne-skrzypce-z-cremony.txt' => 'Radca Crespel jest',
     'obrona-sokratesa.txt' => 'Jakie na was, Ateńczycy',
+    'legenda-o-sw-aleksym.txt' => '^  Ach, krolu wieliki nasz,',
 );
 my %head_replace = (
     'bajki-i-przypowiesci-dwa-zolwie.txt' => "Ignacy Krasicki\nBajki i przypowieści\nCzęść pierwsza",
@@ -69,6 +70,7 @@ my %head_replace = (
     'bema-pamieci-zalobny-rapsod.txt' => "Cyprian Kamil Norwid\nBema pamięci żałobny-rapsod",
     'balzac-komedia-ludzka-gobseck.txt' => "Gobseck\nHonoré Balzac",
     'powiesci-fantastyczne-skrzypce-z-cremony.txt' => "Ernst Teodor Amadeusz Hoffmann\nPowieści fantastyczne\ntłumaczenie Antoni Lange\nSkrzypce z Cremony (Radca Crespel)",
+    'legenda-o-sw-aleksym.txt' => "Legenda o świętym Aleksym\nVita sancti Allexii rikmice\nCzyta Masza Bogucka",
     'obrona-sokratesa.txt' => '',
 );
 

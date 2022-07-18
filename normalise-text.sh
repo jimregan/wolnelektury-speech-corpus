@@ -104,6 +104,8 @@ additions() {
     echo 'Czytał Jan Peszek' >> cierpienia-mlodego-wertera.txt
     echo 'Czytał Jan Peszek' >> antek.txt
     echo 'Czytała Danuta Stenka' >> gloria-victis-dziwna-historia.txt
+    echo 'Czytał Tata Mariusz czyli Mariusz Rzepka' >> katechizm-polskiego-dziecka-polska-mowa.txt
+    echo 'Czytał Tata Mariusz czyli Mariusz Rzepka' >> co-ja-wyczytam-w-ksiazeczce.txt
     #echo 'Czytał Adam Fidusiewicz' >> pasewicz-dolina-wilda-w-starym-stylu.txt
     #echo 'Wolne Lektury p l' >> pasewicz-dolina-wilda-w-starym-stylu.txt
     #echo 'Zostań naszym Przyjacielem' >> pasewicz-dolina-wilda-w-starym-stylu.txt
@@ -262,6 +264,8 @@ remove_unread_lines() {
     remove_line przedwiosnie.txt-02.txt '^Prends ton chapeau fleuri,$'
     remove_line przedwiosnie.txt-02.txt '^Ta robe blanche…$'
     remove_line diabel-na-wiezy.txt '^tłumaczenie Bolesław Leśmian$'
+    remove_line katechizm-polskiego-dziecka-polska-mowa.txt '^Katechizm polskiego dziecka$'
+    remove_line legenda-o-sw-aleksym.txt '^('
 }
 
 pre_norm() {
