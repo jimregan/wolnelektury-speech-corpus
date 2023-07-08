@@ -76,9 +76,14 @@ bema-pamieci-zalobny-rapsod.txt \
 powiesci-fantastyczne-skrzypce-z-cremony.txt \
 wspomnienia-niebieskiego-mundurka.txt
     do
-        echo "Replacing header in $i"
-        perl ../header-replace.pl $i > $i.tmp
-        mv $i.tmp $i
+        if [ ! -e "$i" ]
+        then
+            echo "Missing file in header replace: $i"
+        else
+            echo "Replacing header in $i"
+            perl ../header-replace.pl $i > $i.tmp
+            mv $i.tmp $i
+        fi
     done
 }
 
@@ -170,8 +175,13 @@ split_chapters() {
         wspomnienia-niebieskiego-mundurka.txt \
         wyspa-skarbow.txt
     do
-        echo "Splitting $i"
-        perl ../splitter.pl $i
+        if [ ! -e "$i" ]
+        then
+            echo "Missing file: $i"
+        else
+            echo "Splitting $i"
+            perl ../splitter.pl $i
+        fi
     done
 }
 
